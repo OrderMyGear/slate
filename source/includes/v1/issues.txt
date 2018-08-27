@@ -1,0 +1,17 @@
+No examples: List line items
+No examples: Show line item
+No params: List of decoration methods for a product
+No params: List of product images
+No examples: Update product image
+No params: List of inventories for product
+No examples: Create inventory
+No params: List of logo locations for a product
+No params: List of option groups for product
+No params: List of options for product
+No params: List personalization forms
+No params: List quantity discounts
+No examples: List split items
+No examples: Show split item
+No examples: Update split item
+No examples: Update split item
+No examples: Delete split item

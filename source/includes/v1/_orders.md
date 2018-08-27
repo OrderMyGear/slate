@@ -1,0 +1,188 @@
+#  Orders 
+
+## List orders
+
+```shell
+ GET https://subdomain.mybrightsites.com/api/v1/orders?token=GXzAxWkkyYLsESGQTU15 
+```
+
+> The above request returns JSON structured like this:
+
+```json
+ { "orders": [ { "order_id": 1, "shipping_method": "Best Way", "tracking": "12234tracking2123", "date": "2015-08-28T08:34:37-06:00", "status": "new", "customer": "test@johndoe.com", } ], "meta": { "total": 1, "offset": 0, "limit": 0 } } 
+```
+
+### HTTP Request
+
+`GET /api/v1/orders`
+
+### Query Parameters
+
+Parameter | Required | Description | Validations
+--------- | -------- | ----------- | -----------
+status  |  optional  | Filter by order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending | 
+customer  |  optional  | Filter by customer |  Must be one of: Array, String. 
+date_from  |  optional  | Filter by date created from |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
+date_to  |  optional  | Filter by date created to |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
+page  |  optional  | Pagination page number |  Must be a number. 
+per_page  |  optional  | Pagination per page number |  Must be a number. 
+
+
+## Show order
+
+```shell
+ GET https://subdomain.mybrightsites.com/api/v1/orders/1?token=GXzAxWkkyYLsESGQTU15 
+```
+
+> The above request returns JSON structured like this:
+
+```json
+ { "order_id": 1, "date": "2015-08-25T05:06:36-06:00", "status": "new", "custom_data_collections": [ { "title": "Add a Gift Card To Your Order", "attributes": [ { "key": "Please select your Gift Card below:", "value": "Forever 21" } ], "price_modifier": { "modifier_type": "$", "amount": "25.0" } } ], "customer_email": "test@johndoe.com", "customer_id": null, "username": "Guest", "item_total": "4703.0", "grand_total": "3069.15", "shipping_contact": { "first_name": "John", "last_name": "Doe", "email": "test@johndoe.com", "phone": "1234123456" }, "shipping_address": { "first_address": "2658 East 26th Street", "company": "Testco LLC", "second_address": "John Doe", "city": "Brooklyn", "state": "New York", "country": "United States", "zip": "11235" }, "billing_contact": { "first_name": "John", "last_name": "Doe", "email": "test@johndoe.com", "phone": "1234123456" }, "billing_address": { "first_address": "2658 East 26th Street", "company": "Testco LLC", "second_address": "John Doe", "city": "Brooklyn", "state": "New York", "country": "United States", "zip": "11235" }, "payment": { "id": 4305, "authorization": "A70A9B840C12", "created_at": "2016-06-23T10:19:22-06:00", "amount": "82.0", "state": "refunded", "details": { "method": "credit card", "card type": "Visa", "card": "**** **** **** 1111", "amount": "$82.00" } }, "payments": [ { "id": 4305, "authorization": "A10AA3EC513B", "created_at": "2016-06-23T10:19:22-06:00", "amount": "82.0", "state": "refunded", "details": { "method": "credit card", "card type": "Visa", "card": "**** **** **** 1111", "amount": "$82.00" } }, { "id": 6215, "authorization": "A10AA3EC513A", "created_at": "2017-03-10T04:29:10-07:00", "amount": "-82.0", "state": "completed", "details": { "method": "credit card", "card type": "Visa", "card": "**** **** **** 1111", "type": "Credit", "amount": "-$82.00" } } ], "shipment": { "tracking_number": "12234tracking2123", "cost": "0.0", "created_at": "2015-08-25T05:06:23-06:00", "shipping_method": "Best Way", "ship_date": "2016-08-25", "in_hands_date": "2018-06-15" }, "line_items": [ { "name": "helloworld", "final_sku": "sku", "final_internal_id": "431234", "quantity": 18, "product_price": "150.0", "options_price": "5.0", "total_price": "2790.0", "tax_price": "7.75", "unit_price": "155.0", "product_id": 10, "logo_name": "fedex", "product_options": [ { "option_id": 25, "sub_option_id": 152, "option_name": "Size", "option_type": "size", "sub_option_name": "X-Small" } ], "logos": [{ "name": "fedex", "charge": "10.0", "image_url": "/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png", "location": { "id": 4, "name": "Top" } }, { "name": "cop", "charge": null, "image_url": "/uploads/website/line_item_logo/image/05-01-2018/763/11.png", "location": { "id": 5, "name": "Right Chest" } } ], "product_personalizations": [], "split_items":[ { "id":27, "quantity":10, "tracking_number":"500", "status":"In progress", "ship_date":"2017-03-16", "shipping_method":"Best Way123" }, { "id":36, "quantity":8, "tracking_number":"Test123123", "status":"In progress", "ship_date":"2017-03-08", "shipping_method":"UPS Today Dedicated Courier" } ] }, { "name": "helloworld", "final_sku": "sku", "final_internal_id": "431234", "quantity": 2, "product_price": "150.0", "options_price": "10.0", "total_price": "320.0", "tax_price": "8.0", "unit_price": "160.0", "product_id": 10, "product_options": [ { "option_id": 25, "sub_option_id": 153, "option_name": "Size", "option_type": "size", "sub_option_name": "Small" } ], "product_personalizations": [], "split_items":[] } ], "coupons_adjustments": [], "balance_adjustments": [], "custom_adjustments": [ { "note": "quantity discount", "amount": "-1080.0", "modifier_type": "$" }, { "note": "quantity discount", "amount": "-120.0", "modifier_type": "$" }, { "note": "quantity discount", "amount": "-60.0", "modifier_type": "$" }, { "note": "quantity discount", "amount": "-180.0", "modifier_type": "$" }, { "note": "quantity discount", "amount": "-360.0", "modifier_type": "$" } ], "required_adjustments": [ { "note": "Setup Charge for helloworld", "amount": "20.0", "modifier_type": "$" }, { "note": null, "amount": "146.15", "modifier_type": "$" }, { "note": null, "amount": "0.0", "modifier_type": "$" } ], "notes": [] } 
+```
+
+### HTTP Request
+
+`GET /api/v1/orders/:id`
+
+### Query Parameters
+
+Parameter | Required | Description | Validations
+--------- | -------- | ----------- | -----------
+id  |  required  | Order ID |  Must be a number. 
+
+
+## Update order
+
+```shell
+ PUT https://subdomain.mybrightsites.com/api/v1/orders/1?token=GXzAxWkkyYLsESGQTU15 { "order": { "status": "completed", "shipping_method": "Ground", "tracking_number": "AA123456789", "note": "new note", "send_shipping_confirmation": true, "shipping_address": {"first_address":"2658 East 26th Street"}, "shipping_contact":{"first_name":"John"}, "ship_date": "2016-12-20", "in_hands_date": "2018-12-20", "billing_contact":{"first_name":"John"}, "billing_address": { "company": "Testco LLC", "first_address": "2658 East", "second_address": "26th Street", "city": "Brooklyn", "state": "New York", "country": "United States", "zip": "11235" } } 
+```
+
+> The above request returns JSON structured like this:
+
+```json
+ { "order_id": 9, "date": "2015-07-07T07:13:56-06:00", "status": "completed", "custom_data_collections": [ { "title": "Add a Gift Card To Your Order", "attributes": [ { "key": "Please select your Gift Card below:", "value": "Hot Topic" } ], "price_modifier": { "modifier_type": "$", "amount": "25.0" } } ], "customer_email": "storetesting16@email.brightstores.com", "customer_id": 429, "username": "trex", "item_total": "75.0", "grand_total": "136.11", "shipping_contact": { "first_name": "John", "last_name": "Rex", "email": "storetesting16@email.brightstores.com", "phone": "303-555-8989" }, "shipping_address": { "company": "Testco LLC", "first_address": "2658 East 26th Street", "second_address": "", "city": "Spokane", "state": "Washington", "country": "United States", "zip": "99208" }, "billing_contact": { "first_name": "John", "last_name": "Rex", "email": "storetesting16@email.brightstores.com", "phone": "303-555-8989" }, "billing_address": { "company": "Testco LLC", "first_address": "2658 East", "second_address": "26th Street", "city": "Brooklyn", "state": "New York", "country": "United States", "zip": "11235" }, "payment": { "id": 4305, "authorization": "A70A9B840C12", "created_at": "2016-06-23T10:19:22-06:00", "amount": "82.0", "state": "refunded", "details": { "method": "credit card", "card type": "Visa", "card": "**** **** **** 1111", "amount": "$82.00" } }, "payments": [ { "id": 4305, "authorization": "A10AA3EC513B", "created_at": "2016-06-23T10:19:22-06:00", "amount": "82.0", "state": "refunded", "details": { "method": "credit card", "card type": "Visa", "card": "**** **** **** 1111", "amount": "$82.00" } }, { "id": 6215, "authorization": "A10AA3EC513A", "created_at": "2017-03-10T04:29:10-07:00", "amount": "-82.0", "state": "completed", "details": { "method": "credit card", "card type": "Visa", "card": "**** **** **** 1111", "type": "Credit", "amount": "-$82.00" } } ], "shipment": { "tracking_number": "AA123456789", "cost": "25.55", "created_at": "2015-07-07T07:13:27-06:00", "shipping_method": "Ground", "ship_date": "2016-12-20", "in_hands_date": "2018-12-20" }, "line_items": [ { "name": "Shoes", "final_sku": "Shoes-1234", "final_internal_id": "431234", "quantity": 2, "product_price": "37.5", "options_price": "0.0", "total_price": "75.0", "tax_price": "3.75", "unit_price": "37.5", "product_options": [ { "option_name": "Size", "sub_option_name": "Small" }, { "option_name": "Color", "sub_option_name": "White" } ], "logos": [{ "name": "fedex", "charge": "10.0", "image_url": "/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png", "location": { "id": 4, "name": "Top" } }, { "name": "cop", "charge": null, "image_url": "/uploads/website/line_item_logo/image/05-01-2018/763/11.png", "location": { "id": 5, "name": "Right Chest" } } ], "product_personalizations": [ { "title": "Enter Name Here", "attributes": [ { "key": "Name", "value": "" } ], "price_modifier": { "modifier_type": "$", "amount": "1.99" } } ] } ], "coupons_adjustments": [], "balance_adjustments": [], "custom_adjustments": [], "required_adjustments": [ { "note": "add a gift card to your order", "amount": "25.0", "modifier_type": "$" }, { "note": "sales tax", "amount": "7.88", "modifier_type": "$" }, { "note": "shipment", "amount": "25.55", "modifier_type": "$" }, { "note": "shipping sales tax", "amount": "2.68", "modifier_type": "$" } ], "notes": [ { "username": "API", "created_at": "2016-02-08T04:45:18-07:00", "note": "new note" } ] } 
+```
+
+### HTTP Request
+
+`PATCH /api/v1/orders/:id`
+
+### Query Parameters
+
+Parameter | Required | Description | Validations
+--------- | -------- | ----------- | -----------
+order  |  required  | Validations: |  Must be a Hash 
+order[status]  |  optional  | Order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending | 
+order[shipping_method]  |  optional  | Shipping Method |  Must be a String 
+order[tracking_number]  |  optional  | Tracking Number |  Must be a String 
+order[ship_date]  |  optional  | Ship Date |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
+order[in_hands_date]  |  optional  | In Hands Date |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
+order[note]  |  optional  | Create Comment |  Must be a String 
+order[send_shipping_confirmation]  |  optional  | If true, send a shipping confirmation email with updated order data |  Must be one of: true, false, 1, 0 
+order[shipping_address]  |  optional  | Shipping Address |  Must be a Hash 
+order[shipping_address][company]  |  optional  | Company |  Must be a String 
+order[shipping_address][first_address]  |  optional  | Address Line 1 |  Must be a String 
+order[shipping_address][second_address]  |  optional  | Address Line 2 |  Must be a String 
+order[shipping_address][state]  |  optional  | State |  Must be a String 
+order[shipping_address][city]  |  optional  | City |  Must be a String 
+order[shipping_address][country]  |  optional  | Country |  Must be a String 
+order[shipping_address][zip]  |  optional  | Zip Code |  Must be a String 
+order[shipping_contact]  |  optional  | Shipping Contact |  Must be a Hash 
+order[shipping_contact][first_name]  |  optional  | First Name |  Must be a String 
+order[shipping_contact][last_name]  |  optional  | Last Name |  Must be a String 
+order[shipping_contact][email]  |  optional  | Email |  Must be a String 
+order[shipping_contact][phone]  |  optional  | Phone |  Must be a String 
+order[billing_address]  |  optional  | Billing Address |  Must be a Hash 
+order[billing_address][company]  |  optional  | Company |  Must be a String 
+order[billing_address][first_address]  |  optional  | Address Line 1 |  Must be a String 
+order[billing_address][second_address]  |  optional  | Address Line 2 |  Must be a String 
+order[billing_address][state]  |  optional  | State |  Must be a String 
+order[billing_address][city]  |  optional  | City |  Must be a String 
+order[billing_address][country]  |  optional  | Country |  Must be a String 
+order[billing_address][zip]  |  optional  | Zip Code |  Must be a String 
+order[billing_contact]  |  optional  | Billing Contact |  Must be a Hash 
+order[billing_contact][first_name]  |  optional  | First Name |  Must be a String 
+order[billing_contact][last_name]  |  optional  | Last Name |  Must be a String 
+order[billing_contact][email]  |  optional  | Email |  Must be a String 
+order[billing_contact][phone]  |  optional  | Phone |  Must be a String 
+
+
+## Update order
+
+```shell
+ PUT https://subdomain.mybrightsites.com/api/v1/orders/1?token=GXzAxWkkyYLsESGQTU15 { "order": { "status": "completed", "shipping_method": "Ground", "tracking_number": "AA123456789", "note": "new note", "send_shipping_confirmation": true, "shipping_address": {"first_address":"2658 East 26th Street"}, "shipping_contact":{"first_name":"John"}, "ship_date": "2016-12-20", "in_hands_date": "2018-12-20", "billing_contact":{"first_name":"John"}, "billing_address": { "company": "Testco LLC", "first_address": "2658 East", "second_address": "26th Street", "city": "Brooklyn", "state": "New York", "country": "United States", "zip": "11235" } } 
+```
+
+> The above request returns JSON structured like this:
+
+```json
+ { "order_id": 9, "date": "2015-07-07T07:13:56-06:00", "status": "completed", "custom_data_collections": [ { "title": "Add a Gift Card To Your Order", "attributes": [ { "key": "Please select your Gift Card below:", "value": "Hot Topic" } ], "price_modifier": { "modifier_type": "$", "amount": "25.0" } } ], "customer_email": "storetesting16@email.brightstores.com", "customer_id": 429, "username": "trex", "item_total": "75.0", "grand_total": "136.11", "shipping_contact": { "first_name": "John", "last_name": "Rex", "email": "storetesting16@email.brightstores.com", "phone": "303-555-8989" }, "shipping_address": { "company": "Testco LLC", "first_address": "2658 East 26th Street", "second_address": "", "city": "Spokane", "state": "Washington", "country": "United States", "zip": "99208" }, "billing_contact": { "first_name": "John", "last_name": "Rex", "email": "storetesting16@email.brightstores.com", "phone": "303-555-8989" }, "billing_address": { "company": "Testco LLC", "first_address": "2658 East", "second_address": "26th Street", "city": "Brooklyn", "state": "New York", "country": "United States", "zip": "11235" }, "payment": { "id": 4305, "authorization": "A70A9B840C12", "created_at": "2016-06-23T10:19:22-06:00", "amount": "82.0", "state": "refunded", "details": { "method": "credit card", "card type": "Visa", "card": "**** **** **** 1111", "amount": "$82.00" } }, "payments": [ { "id": 4305, "authorization": "A10AA3EC513B", "created_at": "2016-06-23T10:19:22-06:00", "amount": "82.0", "state": "refunded", "details": { "method": "credit card", "card type": "Visa", "card": "**** **** **** 1111", "amount": "$82.00" } }, { "id": 6215, "authorization": "A10AA3EC513A", "created_at": "2017-03-10T04:29:10-07:00", "amount": "-82.0", "state": "completed", "details": { "method": "credit card", "card type": "Visa", "card": "**** **** **** 1111", "type": "Credit", "amount": "-$82.00" } } ], "shipment": { "tracking_number": "AA123456789", "cost": "25.55", "created_at": "2015-07-07T07:13:27-06:00", "shipping_method": "Ground", "ship_date": "2016-12-20", "in_hands_date": "2018-12-20" }, "line_items": [ { "name": "Shoes", "final_sku": "Shoes-1234", "final_internal_id": "431234", "quantity": 2, "product_price": "37.5", "options_price": "0.0", "total_price": "75.0", "tax_price": "3.75", "unit_price": "37.5", "product_options": [ { "option_name": "Size", "sub_option_name": "Small" }, { "option_name": "Color", "sub_option_name": "White" } ], "logos": [{ "name": "fedex", "charge": "10.0", "image_url": "/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png", "location": { "id": 4, "name": "Top" } }, { "name": "cop", "charge": null, "image_url": "/uploads/website/line_item_logo/image/05-01-2018/763/11.png", "location": { "id": 5, "name": "Right Chest" } } ], "product_personalizations": [ { "title": "Enter Name Here", "attributes": [ { "key": "Name", "value": "" } ], "price_modifier": { "modifier_type": "$", "amount": "1.99" } } ] } ], "coupons_adjustments": [], "balance_adjustments": [], "custom_adjustments": [], "required_adjustments": [ { "note": "add a gift card to your order", "amount": "25.0", "modifier_type": "$" }, { "note": "sales tax", "amount": "7.88", "modifier_type": "$" }, { "note": "shipment", "amount": "25.55", "modifier_type": "$" }, { "note": "shipping sales tax", "amount": "2.68", "modifier_type": "$" } ], "notes": [ { "username": "API", "created_at": "2016-02-08T04:45:18-07:00", "note": "new note" } ] } 
+```
+
+### HTTP Request
+
+`PUT /api/v1/orders/:id`
+
+### Query Parameters
+
+Parameter | Required | Description | Validations
+--------- | -------- | ----------- | -----------
+order  |  required  | Validations: |  Must be a Hash 
+order[status]  |  optional  | Order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending | 
+order[shipping_method]  |  optional  | Shipping Method |  Must be a String 
+order[tracking_number]  |  optional  | Tracking Number |  Must be a String 
+order[ship_date]  |  optional  | Ship Date |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
+order[in_hands_date]  |  optional  | In Hands Date |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
+order[note]  |  optional  | Create Comment |  Must be a String 
+order[send_shipping_confirmation]  |  optional  | If true, send a shipping confirmation email with updated order data |  Must be one of: true, false, 1, 0 
+order[shipping_address]  |  optional  | Shipping Address |  Must be a Hash 
+order[shipping_address][company]  |  optional  | Company |  Must be a String 
+order[shipping_address][first_address]  |  optional  | Address Line 1 |  Must be a String 
+order[shipping_address][second_address]  |  optional  | Address Line 2 |  Must be a String 
+order[shipping_address][state]  |  optional  | State |  Must be a String 
+order[shipping_address][city]  |  optional  | City |  Must be a String 
+order[shipping_address][country]  |  optional  | Country |  Must be a String 
+order[shipping_address][zip]  |  optional  | Zip Code |  Must be a String 
+order[shipping_contact]  |  optional  | Shipping Contact |  Must be a Hash 
+order[shipping_contact][first_name]  |  optional  | First Name |  Must be a String 
+order[shipping_contact][last_name]  |  optional  | Last Name |  Must be a String 
+order[shipping_contact][email]  |  optional  | Email |  Must be a String 
+order[shipping_contact][phone]  |  optional  | Phone |  Must be a String 
+order[billing_address]  |  optional  | Billing Address |  Must be a Hash 
+order[billing_address][company]  |  optional  | Company |  Must be a String 
+order[billing_address][first_address]  |  optional  | Address Line 1 |  Must be a String 
+order[billing_address][second_address]  |  optional  | Address Line 2 |  Must be a String 
+order[billing_address][state]  |  optional  | State |  Must be a String 
+order[billing_address][city]  |  optional  | City |  Must be a String 
+order[billing_address][country]  |  optional  | Country |  Must be a String 
+order[billing_address][zip]  |  optional  | Zip Code |  Must be a String 
+order[billing_contact]  |  optional  | Billing Contact |  Must be a Hash 
+order[billing_contact][first_name]  |  optional  | First Name |  Must be a String 
+order[billing_contact][last_name]  |  optional  | Last Name |  Must be a String 
+order[billing_contact][email]  |  optional  | Email |  Must be a String 
+order[billing_contact][phone]  |  optional  | Phone |  Must be a String 
+
+
+## Cancel order
+
+```shell
+PUT https://subdomain.mybrightsites.com/api/v1/orders/1/cancel?token=GXzAxWkkyYLsESGQTU15 
+```
+
+> The above request returns JSON structured like this:
+
+```json
+ { "success": [ "Set status to 'Canceled'", "Restock inventory", "Refund balance for budget 'Sales'", "Updated product statistics", "Order canceled by System. IP: 127.0.0.1" ], "errors": [ "Unable to refund payment" ] } 
+```
+
+### HTTP Request
+
+`PUT /api/v1/orders/:id/cancel`
+
+### Query Parameters
+
+Parameter | Required | Description | Validations
+--------- | -------- | ----------- | -----------
+id  |  required  | Order ID |  Must be a number. 
+
+
