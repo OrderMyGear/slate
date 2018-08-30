@@ -53,6 +53,16 @@ end
 # If you want Middleman to listen on a different port, you can set that below
 set :port, 4567
 
+set :versions, ['1.0', '1.1']
+set :default_version, '1.1'
+
 helpers do
   require './lib/toc_data.rb'
+end
+
+after_build do |builder|
+  version_html = config[:default_version] + '.html'
+  default_version_path = File.join(config[:build_dir], version_html)
+  index_path = File.join(config[:build_dir], 'index.html')
+  FileUtils.cp(default_version_path, index_path)
 end

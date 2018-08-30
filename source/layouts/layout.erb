@@ -52,6 +52,15 @@ under the License.
     </a>
     <div class="toc-wrapper">
       <%= image_tag "logo.png", class: 'logo' %>
+
+      <div class="versions">
+        <%= label_tag :version, caption: 'API version:' %>
+        <%= select_tag :version,
+              options: config[:versions],
+              selected: current_page.data.version,
+              class: 'version-select' %>
+      </div>
+
       <% if language_tabs.any? %>
         <div class="lang-selector">
           <% language_tabs.each do |lang| %>
