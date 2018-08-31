@@ -3,13 +3,28 @@
 ## List of related products
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/product/:product_id/related_products?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/product/:product_id/related_products?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "enabled": true, "type": "custom", "related_products": [ { "id": 1, "name": "product", "sku": "SKU" } ], "meta": { "total": 1, "offset": 0, "limit": 0 } } 
+{
+  "enabled": true,
+  "type": "custom",
+  "related_products": [
+    {
+      "id": 1,
+      "name": "product",
+      "sku": "SKU"
+    }
+  ],
+  "meta": {
+    "total": 1,
+    "offset": 0,
+    "limit": 0
+  }
+}
 ```
 
 ### HTTP Request
@@ -27,13 +42,18 @@ Parameter | Description
 ## Add custom related product
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1/product/1/related_products/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/product/1/related_products/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "product1", "sku": "sku1" } 
+{
+  "id": 579,
+  "name": "product1",
+  "sku": "sku1"
+}
 ```
 
 ### HTTP Request
@@ -50,13 +70,18 @@ Parameter | Description
 ## Remove custom related product
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1/product/1/related_products/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/product/1/related_products/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "product1", "sku": "sku1" } 
+{
+  "id": 579,
+  "name": "product1",
+  "sku": "sku1"
+}
 ```
 
 ### HTTP Request

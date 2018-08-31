@@ -3,13 +3,41 @@
 ## List products
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/products?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "products": [ { "id": 579, "name": "Chocalate", "sku": "choc-1", "internal_id": "431234", "categories": [ { "id": 123, "name": "Chocolates" } ], "vendors": [ { "id": 234, "name": "The Willy Wonka Company" } ], "active": true, "last_edited_date": "2016-03-29T22:53:03-06:00" } ], "meta": { "total": 1, "offset": 0, "limit": 0 } } 
+{
+  "products": [
+    {
+      "id": 579,
+      "name": "Chocalate",
+      "sku": "choc-1",
+      "internal_id": "431234",
+      "categories": [
+        {
+          "id": 123,
+          "name": "Chocolates"
+        }
+      ],
+      "vendors": [
+        {
+          "id": 234,
+          "name": "The Willy Wonka Company"
+        }
+      ],
+      "active": true,
+      "last_edited_date": "2016-03-29T22:53:03-06:00"
+    }
+  ],
+  "meta": {
+    "total": 1,
+    "offset": 0,
+    "limit": 0
+  }
+}
 ```
 
 ### HTTP Request
@@ -32,13 +60,59 @@ Parameter | Description
 ## Show product
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/products/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "name": "Chocolate", "sku": "choc-1", "internal_id": "431234", "base_price": "10", "retail_price": "10", "cost": "10", "setup_charge": "10", "minimum_order_quantity": 10, "maximum_order_quantity": 20, "custom_tic": "12345", "weight": "10", "width": "10", "height": "10", "length": "10", "shipping_modifier": "10", "meta_title": "choco", "meta_description": "tasty choco", "meta_keywords": "tasty chocolate wonka", "custom_url": "chocolate", "description": "Very Tasty Dark Chocolate", "active": true, "featured": false, "tax_exempt": false, "shipping_exempt": false, "categories": [ { "id": 123, "name": "Chocolates" } ], "vendors": [ { "id": 234, "name": "The Willy Wonka Company" } ], "enable_quantity_discount": false, "related_products_type": "auto", "enable_related_products": false, "enable_product_personalization": false, "enable_inventory": false, "enable_logo_locations": false, "enable_decoration_methods": false, "primary_category_id": 36, "last_edited_date": "2016-03-29T22:53:03-06:00" } 
+{
+  "name": "Chocolate",
+  "sku": "choc-1",
+  "internal_id": "431234",
+  "base_price": "10",
+  "retail_price": "10",
+  "cost": "10",
+  "setup_charge": "10",
+  "minimum_order_quantity": 10,
+  "maximum_order_quantity": 20,
+  "custom_tic": "12345",
+  "weight": "10",
+  "width": "10",
+  "height": "10",
+  "length": "10",
+  "shipping_modifier": "10",
+  "meta_title": "choco",
+  "meta_description": "tasty choco",
+  "meta_keywords": "tasty chocolate wonka",
+  "custom_url": "chocolate",
+  "description": "Very Tasty Dark Chocolate",
+  "active": true,
+  "featured": false,
+  "tax_exempt": false,
+  "shipping_exempt": false,
+  "categories": [
+    {
+      "id": 123,
+      "name": "Chocolates"
+    }
+  ],
+  "vendors": [
+    {
+      "id": 234,
+      "name": "The Willy Wonka Company"
+    }
+  ],
+  "enable_quantity_discount": false,
+  "related_products_type": "auto",
+  "enable_related_products": false,
+  "enable_product_personalization": false,
+  "enable_inventory": false,
+  "enable_logo_locations": false,
+  "enable_decoration_methods": false,
+  "primary_category_id": 36,
+  "last_edited_date": "2016-03-29T22:53:03-06:00"
+}
 ```
 
 ### HTTP Request
@@ -55,13 +129,101 @@ Parameter | Description
 ## Create product
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1.1/products?token=GXzAxWkkyYLsESGQTU15 { "product": { "name": "Chocolate", "sku": "choc-1", "internal_id": "431234", "base_price": 10, "retail_price": 10, "cost": 10, "setup_charge": 10, "minimum_order_quantity": 10, "maximum_order_quantity": 20, "custom_tic": "12345", "weight": 10, "width": 10, "height": 10, "length": 10, "shipping_modifier": 10, "meta_title": "choco", "meta_description": "tasty choco", "meta_keywords": "tasty chocolate wonka", "custom_url": "chocolate", "description": "Very Tasty Dark Chocolate", "active": true, "featured": false, "tax_exempt": false, "shipping_exempt": false, "vendor_ids": [ 234 ], "category_ids": [ 123 ], "enable_quantity_discount": false, "related_products_type": "auto", "enable_related_products": false, "enable_product_personalization": false, "enable_inventory": false, "enable_logo_locations": false, "enable_decoration_methods": false, "primary_category_id": 36 } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "product": {
+    "name": "Chocolate",
+    "sku": "choc-1",
+    "internal_id": "431234",
+    "base_price": 10,
+    "retail_price": 10,
+    "cost": 10,
+    "setup_charge": 10,
+    "minimum_order_quantity": 10,
+    "maximum_order_quantity": 20,
+    "custom_tic": "12345",
+    "weight": 10,
+    "width": 10,
+    "height": 10,
+    "length": 10,
+    "shipping_modifier": 10,
+    "meta_title": "choco",
+    "meta_description": "tasty choco",
+    "meta_keywords": "tasty chocolate wonka",
+    "custom_url": "chocolate",
+    "description": "Very Tasty Dark Chocolate",
+    "active": true,
+    "featured": false,
+    "tax_exempt": false,
+    "shipping_exempt": false,
+    "vendor_ids": [ 234 ],
+    "category_ids": [ 123 ],
+    "enable_quantity_discount": false,
+    "related_products_type": "auto",
+    "enable_related_products": false,
+    "enable_product_personalization": false,
+    "enable_inventory": false,
+    "enable_logo_locations": false,
+    "enable_decoration_methods": false,
+    "primary_category_id": 36
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "name": "Chocolate", "sku": "choc-1", "internal_id": "431234", "base_price": "10", "retail_price": "10", "cost": "10", "setup_charge": "10", "minimum_order_quantity": 10, "maximum_order_quantity": 20, "custom_tic": "12345", "weight": "10", "width": "10", "height": "10", "length": "10", "shipping_modifier": "10", "meta_title": "choco", "meta_description": "tasty choco", "meta_keywords": "tasty chocolate wonka", "custom_url": "chocolate", "description": "Very Tasty Dark Chocolate", "active": true, "featured": false, "tax_exempt": false, "shipping_exempt": false, "categories": [ { "id": 123, "name": "Chocolates" } ], "vendors": [ { "id": 234, "name": "The Willy Wonka Company" } ], "enable_quantity_discount": false, "related_products_type": "auto", "enable_related_products": false, "enable_product_personalization": false, "enable_inventory": false, "enable_logo_locations": false, "enable_decoration_methods": false, "primary_category_id": 36, "last_edited_date": "2016-03-29" } 
+{
+  "name": "Chocolate",
+  "sku": "choc-1",
+  "internal_id": "431234",
+  "base_price": "10",
+  "retail_price": "10",
+  "cost": "10",
+  "setup_charge": "10",
+  "minimum_order_quantity": 10,
+  "maximum_order_quantity": 20,
+  "custom_tic": "12345",
+  "weight": "10",
+  "width": "10",
+  "height": "10",
+  "length": "10",
+  "shipping_modifier": "10",
+  "meta_title": "choco",
+  "meta_description": "tasty choco",
+  "meta_keywords": "tasty chocolate wonka",
+  "custom_url": "chocolate",
+  "description": "Very Tasty Dark Chocolate",
+  "active": true,
+  "featured": false,
+  "tax_exempt": false,
+  "shipping_exempt": false,
+  "categories": [
+    {
+      "id": 123,
+      "name": "Chocolates"
+    }
+  ],
+  "vendors": [
+    {
+      "id": 234,
+      "name": "The Willy Wonka Company"
+    }
+  ],
+  "enable_quantity_discount": false,
+  "related_products_type": "auto",
+  "enable_related_products": false,
+  "enable_product_personalization": false,
+  "enable_inventory": false,
+  "enable_logo_locations": false,
+  "enable_decoration_methods": false,
+  "primary_category_id": 36,
+  "last_edited_date": "2016-03-29"
+}
 ```
 
 ### HTTP Request
@@ -113,13 +275,68 @@ Parameter | Description
 ## Update product
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/579?token=GXzAxWkkyYLsESGQTU15 { "product": { "name": "Dark Chocolate" } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "product": {
+    "name": "Dark Chocolate"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "name": "Dark Chocolate", "sku": "choc-1", "internal_id": "431234", "base_price": "10", "retail_price": "10", "cost": "10", "setup_charge": "10", "minimum_order_quantity": 10, "maximum_order_quantity": 20, "custom_tic": "12345", "weight": "10", "width": "10", "height": "10", "length": "10", "shipping_modifier": "10", "meta_title": "choco", "meta_description": "tasty choco", "meta_keywords": "tasty chocolate wonka", "custom_url": "chocolate", "description": "Very Tasty Dark Chocolate", "active": true, "featured": false, "tax_exempt": false, "shipping_exempt": false, "categories": [ { "id": 123, "name": "Chocolates" } ], "vendors": [ { "id": 234, "name": "The Willy Wonka Company" } ], "enable_quantity_discount": false, "related_products_type": "auto", "enable_related_products": false, "enable_product_personalization": false, "enable_inventory": false, "enable_logo_locations": false, "enable_decoration_methods": false, "primary_category_id": 36, "last_edited_date": "2016-03-29" } 
+{
+  "name": "Dark Chocolate",
+  "sku": "choc-1",
+  "internal_id": "431234",
+  "base_price": "10",
+  "retail_price": "10",
+  "cost": "10",
+  "setup_charge": "10",
+  "minimum_order_quantity": 10,
+  "maximum_order_quantity": 20,
+  "custom_tic": "12345",
+  "weight": "10",
+  "width": "10",
+  "height": "10",
+  "length": "10",
+  "shipping_modifier": "10",
+  "meta_title": "choco",
+  "meta_description": "tasty choco",
+  "meta_keywords": "tasty chocolate wonka",
+  "custom_url": "chocolate",
+  "description": "Very Tasty Dark Chocolate",
+  "active": true,
+  "featured": false,
+  "tax_exempt": false,
+  "shipping_exempt": false,
+  "categories": [
+    {
+      "id": 123,
+      "name": "Chocolates"
+    }
+  ],
+  "vendors": [
+    {
+      "id": 234,
+      "name": "The Willy Wonka Company"
+    }
+  ],
+  "enable_quantity_discount": false,
+  "related_products_type": "auto",
+  "enable_related_products": false,
+  "enable_product_personalization": false,
+  "enable_inventory": false,
+  "enable_logo_locations": false,
+  "enable_decoration_methods": false,
+  "primary_category_id": 36,
+  "last_edited_date": "2016-03-29"
+}
 ```
 
 ### HTTP Request
@@ -172,13 +389,68 @@ Parameter | Description
 ## Update product
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/579?token=GXzAxWkkyYLsESGQTU15 { "product": { "name": "Dark Chocolate" } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "product": {
+    "name": "Dark Chocolate"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "name": "Dark Chocolate", "sku": "choc-1", "internal_id": "431234", "base_price": "10", "retail_price": "10", "cost": "10", "setup_charge": "10", "minimum_order_quantity": 10, "maximum_order_quantity": 20, "custom_tic": "12345", "weight": "10", "width": "10", "height": "10", "length": "10", "shipping_modifier": "10", "meta_title": "choco", "meta_description": "tasty choco", "meta_keywords": "tasty chocolate wonka", "custom_url": "chocolate", "description": "Very Tasty Dark Chocolate", "active": true, "featured": false, "tax_exempt": false, "shipping_exempt": false, "categories": [ { "id": 123, "name": "Chocolates" } ], "vendors": [ { "id": 234, "name": "The Willy Wonka Company" } ], "enable_quantity_discount": false, "related_products_type": "auto", "enable_related_products": false, "enable_product_personalization": false, "enable_inventory": false, "enable_logo_locations": false, "enable_decoration_methods": false, "primary_category_id": 36, "last_edited_date": "2016-03-29" } 
+{
+  "name": "Dark Chocolate",
+  "sku": "choc-1",
+  "internal_id": "431234",
+  "base_price": "10",
+  "retail_price": "10",
+  "cost": "10",
+  "setup_charge": "10",
+  "minimum_order_quantity": 10,
+  "maximum_order_quantity": 20,
+  "custom_tic": "12345",
+  "weight": "10",
+  "width": "10",
+  "height": "10",
+  "length": "10",
+  "shipping_modifier": "10",
+  "meta_title": "choco",
+  "meta_description": "tasty choco",
+  "meta_keywords": "tasty chocolate wonka",
+  "custom_url": "chocolate",
+  "description": "Very Tasty Dark Chocolate",
+  "active": true,
+  "featured": false,
+  "tax_exempt": false,
+  "shipping_exempt": false,
+  "categories": [
+    {
+      "id": 123,
+      "name": "Chocolates"
+    }
+  ],
+  "vendors": [
+    {
+      "id": 234,
+      "name": "The Willy Wonka Company"
+    }
+  ],
+  "enable_quantity_discount": false,
+  "related_products_type": "auto",
+  "enable_related_products": false,
+  "enable_product_personalization": false,
+  "enable_inventory": false,
+  "enable_logo_locations": false,
+  "enable_decoration_methods": false,
+  "primary_category_id": 36,
+  "last_edited_date": "2016-03-29"
+}
 ```
 
 ### HTTP Request
@@ -231,13 +503,60 @@ Parameter | Description
 ## Delete product
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1.1/products/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "name": "Dark Chocolate", "sku": "choc-1", "internal_id": "431234", "base_price": "10", "retail_price": "10", "cost": "10", "setup_charge": "10", "minimum_order_quantity": 10, "maximum_order_quantity": 20, "custom_tic": "12345", "weight": "10", "width": "10", "height": "10", "length": "10", "shipping_modifier": "10", "meta_title": "choco", "meta_description": "tasty choco", "meta_keywords": "tasty chocolate wonka", "custom_url": "chocolate", "description": "Very Tasty Dark Chocolate", "active": true, "featured": false, "tax_exempt": false, "shipping_exempt": false, "categories": [ { "id": 123, "name": "Chocolates" } ], "vendors": [ { "id": 234, "name": "The Willy Wonka Company" } ], "enable_quantity_discount": false, "related_products_type": "auto", "enable_related_products": false, "enable_product_personalization": false, "enable_inventory": false, "enable_logo_locations": false, "enable_decoration_methods": false, "primary_category_id": 36, "last_edited_date": "2016-03-29" } 
+{
+  "name": "Dark Chocolate",
+  "sku": "choc-1",
+  "internal_id": "431234",
+  "base_price": "10",
+  "retail_price": "10",
+  "cost": "10",
+  "setup_charge": "10",
+  "minimum_order_quantity": 10,
+  "maximum_order_quantity": 20,
+  "custom_tic": "12345",
+  "weight": "10",
+  "width": "10",
+  "height": "10",
+  "length": "10",
+  "shipping_modifier": "10",
+  "meta_title": "choco",
+  "meta_description": "tasty choco",
+  "meta_keywords": "tasty chocolate wonka",
+  "custom_url": "chocolate",
+  "description": "Very Tasty Dark Chocolate",
+  "active": true,
+  "featured": false,
+  "tax_exempt": false,
+  "shipping_exempt": false,
+  "categories": [
+    {
+      "id": 123,
+      "name": "Chocolates"
+    }
+  ],
+  "vendors": [
+    {
+      "id": 234,
+      "name": "The Willy Wonka Company"
+    }
+  ],
+  "enable_quantity_discount": false,
+  "related_products_type": "auto",
+  "enable_related_products": false,
+  "enable_product_personalization": false,
+  "enable_inventory": false,
+  "enable_logo_locations": false,
+  "enable_decoration_methods": false,
+  "primary_category_id": 36,
+  "last_edited_date": "2016-03-29"
+}
 ```
 
 ### HTTP Request

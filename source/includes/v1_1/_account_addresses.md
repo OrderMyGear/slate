@@ -3,13 +3,38 @@
 ## List of addresses for user
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "addresses": [ { "id": 1006, "nickname": "order #13 shipping address", "first_name": "John", "last_name": "Doe", "company": "Testco LLC", "first_address": "Florida", "second_address": "", "state": "Alabama", "city": "City", "country": "United States", "zip": "222222", "email": "john@example.com", "phone": "+1234567890", "default_billing": false, "default_shipping": false } ], "meta": { "total": 6, "offset": 0, "limit": 50 } } 
+{
+  "addresses": [
+    {
+      "id": 1006,
+      "nickname": "order #13 shipping address",
+      "first_name": "John",
+      "last_name": "Doe",
+      "company": "Testco LLC",
+      "first_address": "Florida",
+      "second_address": "",
+      "state": "Alabama",
+      "city": "City",
+      "country": "United States",
+      "zip": "222222",
+      "email": "john@example.com",
+      "phone": "+1234567890",
+      "default_billing": false,
+      "default_shipping": false
+    }
+  ],
+  "meta": {
+    "total": 6,
+    "offset": 0,
+    "limit": 50
+  }
+}
 ```
 
 ### HTTP Request
@@ -28,13 +53,29 @@ Parameter | Description
 ## Show address
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1006?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1006?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 1006, "nickname": "order #13 shipping address", "first_name": "John", "last_name": "Doe", "company": "Testco LLC", "first_address": "Florida", "second_address": "", "state": "Alabama", "city": "City", "country": "United States", "zip": "222222", "email": "john@example.com", "phone": "+1234567890", "default_billing": false, "default_shipping": false } 
+{
+  "id": 1006,
+  "nickname": "order #13 shipping address",
+  "first_name": "John",
+  "last_name": "Doe",
+  "company": "Testco LLC",
+  "first_address": "Florida",
+  "second_address": "",
+  "state": "Alabama",
+  "city": "City",
+  "country": "United States",
+  "zip": "222222",
+  "email": "john@example.com",
+  "phone": "+1234567890",
+  "default_billing": false,
+  "default_shipping": false
+}
 ```
 
 ### HTTP Request
@@ -52,13 +93,50 @@ Parameter | Description
 ## Create address
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses?token=GXzAxWkkyYLsESGQTU15 { "address": { "nickname": "Work", "first_name": "John", "last_name": "Doe", "company": "Testco LLC", "first_address": "301", "second_address": "W 6th Ave", "state": "Colorado", "city": "Denver", "country": "United States", "zip": "80204", "email": "john@example.com", "phone": "+1234567890", "default_shipping": true } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "address": {
+    "nickname": "Work",
+    "first_name": "John",
+    "last_name": "Doe",
+    "company": "Testco LLC",
+    "first_address": "301",
+    "second_address": "W 6th Ave",
+    "state": "Colorado",
+    "city": "Denver",
+    "country": "United States",
+    "zip": "80204",
+    "email": "john@example.com",
+    "phone": "+1234567890",
+    "default_shipping": true
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 1556, "nickname": "Work", "first_name": "John", "last_name": "Doe", "company": "Testco LLC", "first_address": "301", "second_address": "W 6th Ave", "state": "Colorado", "city": "Denver", "country": "United States", "zip": "80204", "email": "john@example.com", "phone": "+1234567890", "default_billing": false, "default_shipping": true } 
+{
+  "id": 1556,
+  "nickname": "Work",
+  "first_name": "John",
+  "last_name": "Doe",
+  "company": "Testco LLC",
+  "first_address": "301",
+  "second_address": "W 6th Ave",
+  "state": "Colorado",
+  "city": "Denver",
+  "country": "United States",
+  "zip": "80204",
+  "email": "john@example.com",
+  "phone": "+1234567890",
+  "default_billing": false,
+  "default_shipping": true
+}
 ```
 
 ### HTTP Request
@@ -88,13 +166,51 @@ Parameter | Description
 ## Update address
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1556?token=GXzAxWkkyYLsESGQTU15 { "address": { "nickname": "Work", "first_name": "John", "last_name": "Doe", "company": "Testco LLC", "first_address": "301", "second_address": "W 6th Ave", "state": "Colorado", "city": "Denver", "country": "United States", "zip": "80204", "email": "john@example.com", "phone": "+1234567890", "default_billing": false, "default_shipping": true } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1556?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "address": {
+    "nickname": "Work",
+    "first_name": "John",
+    "last_name": "Doe",
+    "company": "Testco LLC",
+    "first_address": "301",
+    "second_address": "W 6th Ave",
+    "state": "Colorado",
+    "city": "Denver",
+    "country": "United States",
+    "zip": "80204",
+    "email": "john@example.com",
+    "phone": "+1234567890",
+    "default_billing": false,
+    "default_shipping": true
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 1556, "nickname": "Work", "first_name": "John", "last_name": "Doe", "company": "Testco LLC", "first_address": "301", "second_address": "W 6th Ave", "state": "Colorado", "city": "Denver", "country": "United States", "zip": "80204", "email": "john@example.com", "phone": "+1234567890", "default_billing": false, "default_shipping": true } 
+{
+  "id": 1556,
+  "nickname": "Work",
+  "first_name": "John",
+  "last_name": "Doe",
+  "company": "Testco LLC",
+  "first_address": "301",
+  "second_address": "W 6th Ave",
+  "state": "Colorado",
+  "city": "Denver",
+  "country": "United States",
+  "zip": "80204",
+  "email": "john@example.com",
+  "phone": "+1234567890",
+  "default_billing": false,
+  "default_shipping": true
+}
 ```
 
 ### HTTP Request
@@ -124,13 +240,51 @@ Parameter | Description
 ## Update address
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1556?token=GXzAxWkkyYLsESGQTU15 { "address": { "nickname": "Work", "first_name": "John", "last_name": "Doe", "company": "Testco LLC", "first_address": "301", "second_address": "W 6th Ave", "state": "Colorado", "city": "Denver", "country": "United States", "zip": "80204", "email": "john@example.com", "phone": "+1234567890", "default_billing": false, "default_shipping": true } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1556?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "address": {
+    "nickname": "Work",
+    "first_name": "John",
+    "last_name": "Doe",
+    "company": "Testco LLC",
+    "first_address": "301",
+    "second_address": "W 6th Ave",
+    "state": "Colorado",
+    "city": "Denver",
+    "country": "United States",
+    "zip": "80204",
+    "email": "john@example.com",
+    "phone": "+1234567890",
+    "default_billing": false,
+    "default_shipping": true
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 1556, "nickname": "Work", "first_name": "John", "last_name": "Doe", "company": "Testco LLC", "first_address": "301", "second_address": "W 6th Ave", "state": "Colorado", "city": "Denver", "country": "United States", "zip": "80204", "email": "john@example.com", "phone": "+1234567890", "default_billing": false, "default_shipping": true } 
+{
+  "id": 1556,
+  "nickname": "Work",
+  "first_name": "John",
+  "last_name": "Doe",
+  "company": "Testco LLC",
+  "first_address": "301",
+  "second_address": "W 6th Ave",
+  "state": "Colorado",
+  "city": "Denver",
+  "country": "United States",
+  "zip": "80204",
+  "email": "john@example.com",
+  "phone": "+1234567890",
+  "default_billing": false,
+  "default_shipping": true
+}
 ```
 
 ### HTTP Request
@@ -160,13 +314,30 @@ Parameter | Description
 ## Delete address
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1556?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1556?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 1556, "nickname": "Work", "first_name": "John", "last_name": "Doe", "company": "Testco LLC", "first_address": "301", "second_address": "W 6th Ave", "state": "Colorado", "city": "Denver", "country": "United States", "zip": "80204", "email": "john@example.com", "phone": "+1234567890", "default_billing": false, "default_shipping": true } 
+{
+  "id": 1556,
+  "nickname": "Work",
+  "first_name": "John",
+  "last_name": "Doe",
+  "company": "Testco LLC",
+  "first_address": "301",
+  "second_address": "W 6th Ave",
+  "state": "Colorado",
+  "city": "Denver",
+  "country": "United States",
+  "zip": "80204",
+  "email": "john@example.com",
+  "phone": "+1234567890",
+  "default_billing": false,
+  "default_shipping": true
+}
 ```
 
 ### HTTP Request

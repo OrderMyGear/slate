@@ -3,13 +3,29 @@
 ## List users
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/users?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/users?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "users": [ { "id": 579, "name": "John Doe", "username": "johndoe", "balance": "12.5", "active": true, "last_edited_date": "2016-07-01T22:53:03-06:00" } ], "meta": { "total": 1, "offset": 0, "limit": 0 } } 
+{
+  "users": [
+    {
+      "id": 579,
+      "name": "John Doe",
+      "username": "johndoe",
+      "balance": "12.5",
+      "active": true,
+      "last_edited_date": "2016-07-01T22:53:03-06:00"
+    }
+  ],
+  "meta": {
+    "total": 1,
+    "offset": 0,
+    "limit": 0
+  }
+}
 ```
 
 ### HTTP Request
@@ -32,13 +48,28 @@ Parameter | Description
 ## Show user
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "username": "johndoe", "first_name": "John", "last_name": "Doe", "active": true, "confirmed": true, "email": "johndoe@email.com", "phone": "+1234567890", "company": "BSI", "title": "Support Leader", "groups": ["Public"], "balance": "12.5", "orders": [], "last_edited_date": "2016-07-01T22:53:03-06:00" } 
+{
+  "id": 579,
+  "username": "johndoe",
+  "first_name": "John",
+  "last_name": "Doe",
+  "active": true,
+  "confirmed": true,
+  "email": "johndoe@email.com",
+  "phone": "+1234567890",
+  "company": "BSI",
+  "title": "Support Leader",
+  "groups": ["Public"],
+  "balance": "12.5",
+  "orders": [],
+  "last_edited_date": "2016-07-01T22:53:03-06:00"
+}
 ```
 
 ### HTTP Request
@@ -55,13 +86,49 @@ Parameter | Description
 ## Create user
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1/users?token=GXzAxWkkyYLsESGQTU15 { "user": { "username": "johndoe", "first_name":"John", "last_name":"Doe", "active":true, "email":"johndoe@email.com", "phone":"+1234567890", "company":"BSI", "title":"Support Leader", "groups":["Public"], "balance":12.5, "password":"12345678", "cuf_1": "helloworld" } } 
+curl "https://subdomain.mybrightsites.com/api/v1/users?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "user": {
+    "username": "johndoe",
+    "first_name":"John",
+    "last_name":"Doe",
+    "active":true,
+    "email":"johndoe@email.com",
+    "phone":"+1234567890",
+    "company":"BSI",
+    "title":"Support Leader",
+    "groups":["Public"],
+    "balance":12.5,
+    "password":"12345678",
+    "cuf_1": "helloworld"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "username": "johndoe", "first_name": "John", "last_name": "Doe", "active": true, "confirmed": true, "email": "johndoe@email.com", "phone": "+1234567890", "company": "BSI", "title": "Support Leader", "groups": ["Public"], "balance": "12.5", "orders": [], "last_edited_date": "2016-07-01", "cuf_1": "helloworld" } 
+{
+  "id": 579,
+  "username": "johndoe",
+  "first_name": "John",
+  "last_name": "Doe",
+  "active": true,
+  "confirmed": true,
+  "email": "johndoe@email.com",
+  "phone": "+1234567890",
+  "company": "BSI",
+  "title": "Support Leader",
+  "groups": ["Public"],
+  "balance": "12.5",
+  "orders": [],
+  "last_edited_date": "2016-07-01",
+  "cuf_1": "helloworld"
+}
 ```
 
 ### HTTP Request
@@ -90,13 +157,49 @@ Parameter | Description
 ## Update user
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsESGQTU15 { "user": { "username": "johndoe", "first_name":"John", "last_name":"Doe", "active":true, "email":"johndoe@email.com", "phone":"+1234567890", "company":"BSI", "title":"Support Leader", "groups":["Public"], "balance":12.5, "password":"12345678", "cuf_1": "12345678" } } 
+curl "https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "user": {
+    "username": "johndoe",
+    "first_name":"John",
+    "last_name":"Doe",
+    "active":true,
+    "email":"johndoe@email.com",
+    "phone":"+1234567890",
+    "company":"BSI",
+    "title":"Support Leader",
+    "groups":["Public"],
+    "balance":12.5,
+    "password":"12345678",
+    "cuf_1": "12345678"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "username": "johndoe", "first_name": "John", "last_name": "Doe", "active": true, "confirmed": true, "email": "johndoe@email.com", "phone": "+1234567890", "company": "BSI", "title": "Support Leader", "groups": ["Public"], "balance": "12.5", "orders": [], "last_edited_date": "2016-07-01", "cuf_1": "12345678" } 
+{
+  "id": 579,
+  "username": "johndoe",
+  "first_name": "John",
+  "last_name": "Doe",
+  "active": true,
+  "confirmed": true,
+  "email": "johndoe@email.com",
+  "phone": "+1234567890",
+  "company": "BSI",
+  "title": "Support Leader",
+  "groups": ["Public"],
+  "balance": "12.5",
+  "orders": [],
+  "last_edited_date": "2016-07-01",
+  "cuf_1": "12345678"
+}
 ```
 
 ### HTTP Request
@@ -127,13 +230,49 @@ Parameter | Description
 ## Update user
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsESGQTU15 { "user": { "username": "johndoe", "first_name":"John", "last_name":"Doe", "active":true, "email":"johndoe@email.com", "phone":"+1234567890", "company":"BSI", "title":"Support Leader", "groups":["Public"], "balance":12.5, "password":"12345678", "cuf_1": "12345678" } } 
+curl "https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "user": {
+    "username": "johndoe",
+    "first_name":"John",
+    "last_name":"Doe",
+    "active":true,
+    "email":"johndoe@email.com",
+    "phone":"+1234567890",
+    "company":"BSI",
+    "title":"Support Leader",
+    "groups":["Public"],
+    "balance":12.5,
+    "password":"12345678",
+    "cuf_1": "12345678"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "username": "johndoe", "first_name": "John", "last_name": "Doe", "active": true, "confirmed": true, "email": "johndoe@email.com", "phone": "+1234567890", "company": "BSI", "title": "Support Leader", "groups": ["Public"], "balance": "12.5", "orders": [], "last_edited_date": "2016-07-01", "cuf_1": "12345678" } 
+{
+  "id": 579,
+  "username": "johndoe",
+  "first_name": "John",
+  "last_name": "Doe",
+  "active": true,
+  "confirmed": true,
+  "email": "johndoe@email.com",
+  "phone": "+1234567890",
+  "company": "BSI",
+  "title": "Support Leader",
+  "groups": ["Public"],
+  "balance": "12.5",
+  "orders": [],
+  "last_edited_date": "2016-07-01",
+  "cuf_1": "12345678"
+}
 ```
 
 ### HTTP Request
@@ -164,13 +303,29 @@ Parameter | Description
 ## Delete user
 
 ```shell
-DELETE https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "username": "johndoe", "first_name": "John", "last_name": "Doe", "active": true, "confirmed": true, "email": "johndoe@email.com", "phone": "+1234567890", "company": "BSI", "title": "Support Leader", "groups": [], "balance": "12.5", "orders": [], "last_edited_date": "2016-07-01" } 
+{
+  "id": 579,
+  "username": "johndoe",
+  "first_name": "John",
+  "last_name": "Doe",
+  "active": true,
+  "confirmed": true,
+  "email": "johndoe@email.com",
+  "phone": "+1234567890",
+  "company": "BSI",
+  "title": "Support Leader",
+  "groups": [],
+  "balance": "12.5",
+  "orders": [],
+  "last_edited_date": "2016-07-01"
+}
 ```
 
 ### HTTP Request

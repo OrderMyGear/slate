@@ -3,13 +3,23 @@
 ## List of option groups for product
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "enabled": true, "option_groups": [ { "id": 4, "name": "OptionGroup", "wrap_options": true, "option_ids": [12, 15] } ] } 
+{
+  "enabled": true,
+  "option_groups": [
+    {
+      "id": 4,
+      "name": "OptionGroup",
+      "wrap_options": true,
+      "option_ids": [12, 15]
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -21,13 +31,18 @@
 ## Show option group
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups/4?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups/4?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 47204, "name": "OptionGroup", "wrap_options": true, "option_ids": [12, 15] } 
+{
+  "id": 47204,
+  "name": "OptionGroup",
+  "wrap_options": true,
+  "option_ids": [12, 15]
+}
 ```
 
 ### HTTP Request
@@ -44,13 +59,29 @@ Parameter | Description
 ## Create group
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups?token=GXzAxWkkyYLsESGQTU15 { "option_group": { "name": "OptionGroup", "wrap_options": true, "option_ids": [12, 15] } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "option_group": {
+    "name": "OptionGroup",
+    "wrap_options": true,
+    "option_ids": [12, 15]
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 5, "name": "OptionGroup", "wrap_options": true, "option_ids": [12, 15] } 
+{
+  "id": 5,
+  "name": "OptionGroup",
+  "wrap_options": true,
+  "option_ids": [12, 15]
+}
 ```
 
 ### HTTP Request
@@ -70,13 +101,28 @@ Parameter | Description
 ## Update group
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups/5?token=GXzAxWkkyYLsESGQTU15 { "option_group": { "name": "OptionGroup2", "option_ids": [12] } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups/5?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "option_group": {
+    "name": "OptionGroup2",
+    "option_ids": [12]
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 5, "name": "OptionGroup2", "wrap_options": true, "option_ids": [12] } 
+{
+  "id": 5,
+  "name": "OptionGroup2",
+  "wrap_options": true,
+  "option_ids": [12]
+}
 ```
 
 ### HTTP Request
@@ -96,13 +142,28 @@ Parameter | Description
 ## Update group
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups/5?token=GXzAxWkkyYLsESGQTU15 { "option_group": { "name": "OptionGroup2", "option_ids": [12] } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups/5?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "option_group": {
+    "name": "OptionGroup2",
+    "option_ids": [12]
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 5, "name": "OptionGroup2", "wrap_options": true, "option_ids": [12] } 
+{
+  "id": 5,
+  "name": "OptionGroup2",
+  "wrap_options": true,
+  "option_ids": [12]
+}
 ```
 
 ### HTTP Request
@@ -122,13 +183,19 @@ Parameter | Description
 ## Delete group
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups/5?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups/5?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 5, "name": "OptionGroup2", "wrap_options": true, "option_ids": [] } 
+{
+  "id": 5,
+  "name": "OptionGroup2",
+  "wrap_options": true,
+  "option_ids": []
+}
 ```
 
 ### HTTP Request

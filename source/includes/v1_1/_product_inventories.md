@@ -3,13 +3,29 @@
 ## List of inventories for product
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "enabled": true, "inventories": [ { "id": 774, "inventory": 23, "trigger": 6, "track": false, "allow_negative": false, "sub_sku": "S-Green", "sub_option_ids": [ 556255, 556155 ] } ] } 
+{
+  "enabled": true,
+  "inventories": [
+    {
+      "id": 774,
+      "inventory": 23,
+      "trigger": 6,
+      "track": false,
+      "allow_negative": false,
+      "sub_sku": "S-Green",
+      "sub_option_ids": [
+        556255,
+        556155
+      ]
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -26,13 +42,24 @@ Parameter | Description
 ## Show inventories
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 774, "inventory": 23, "trigger": 6, "track": false, "allow_negative": false, "sub_sku": "S-Green", "sub_option_ids": [ 556255, 556155 ] } 
+{
+  "id": 774,
+  "inventory": 23,
+  "trigger": 6,
+  "track": false,
+  "allow_negative": false,
+  "sub_sku": "S-Green",
+  "sub_option_ids": [
+    556255,
+    556155
+  ]
+}
 ```
 
 ### HTTP Request
@@ -69,13 +96,33 @@ Parameter | Description
 ## Update inventory
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15 { "inventory": { "inventory": 25 } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "inventory": {
+    "inventory": 25
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 774, "inventory": 25, "trigger": 6, "track": false, "allow_negative": false, "sub_sku": "S-Red", "sub_option_ids": [ 556255, 556156 ] } 
+{
+  "id": 774,
+  "inventory": 25,
+  "trigger": 6,
+  "track": false,
+  "allow_negative": false,
+  "sub_sku": "S-Red",
+  "sub_option_ids": [
+    556255,
+    556156
+  ]
+}
 ```
 
 ### HTTP Request
@@ -97,13 +144,33 @@ Parameter | Description
 ## Update inventory
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15 { "inventory": { "inventory": 25 } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "inventory": {
+    "inventory": 25
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 774, "inventory": 25, "trigger": 6, "track": false, "allow_negative": false, "sub_sku": "S-Red", "sub_option_ids": [ 556255, 556156 ] } 
+{
+  "id": 774,
+  "inventory": 25,
+  "trigger": 6,
+  "track": false,
+  "allow_negative": false,
+  "sub_sku": "S-Red",
+  "sub_option_ids": [
+    556255,
+    556156
+  ]
+}
 ```
 
 ### HTTP Request
@@ -125,13 +192,25 @@ Parameter | Description
 ## Delete inventory
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 774, "inventory": 25, "trigger": 6, "track": false, "allow_negative": false, "sub_sku": "S-Red", "sub_option_ids": [ 556255, 556156 ] } 
+{
+  "id": 774,
+  "inventory": 25,
+  "trigger": 6,
+  "track": false,
+  "allow_negative": false,
+  "sub_sku": "S-Red",
+  "sub_option_ids": [
+    556255,
+    556156
+  ]
+}
 ```
 
 ### HTTP Request

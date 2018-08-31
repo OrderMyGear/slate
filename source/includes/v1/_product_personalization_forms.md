@@ -3,13 +3,31 @@
 ## List personalization forms
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "enabled": true, "personalization_forms": [ { "id": 579, "title": "Additional info", "price_modifier_type": "$", "price_modifier_value": 0.0, "position": "1" }, { "id": 580, "title": "Custom print", "price_modifier_type": "%", "price_modifier_value": 10.0, "position": "2" } ] } 
+{
+  "enabled": true,
+  "personalization_forms": [
+    {
+      "id": 579,
+      "title": "Additional info",
+      "price_modifier_type": "$",
+      "price_modifier_value": 0.0,
+      "position": "1"
+    },
+    {
+      "id": 580,
+      "title": "Custom print",
+      "price_modifier_type": "%",
+      "price_modifier_value": 10.0,
+      "position": "2"
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -21,13 +39,19 @@
 ## Show personalization form
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms/580?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms/580?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 580, "title": "Custom print", "price_modifier_type": "%", "price_modifier_value": 10.0, "position": "2" } 
+{
+  "id": 580,
+  "title": "Custom print",
+  "price_modifier_type": "%",
+  "price_modifier_value": 10.0,
+  "position": "2"
+}
 ```
 
 ### HTTP Request
@@ -44,13 +68,31 @@ Parameter | Description
 ## Create personalization form
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms?token=GXzAxWkkyYLsESGQTU15 { "personalization_form": { "title": "Custom print", "price_modifier_type": "%", "price_modifier_value": 10.0, "position": "2" } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "personalization_form": {
+    "title": "Custom print",
+    "price_modifier_type": "%",
+    "price_modifier_value": 10.0,
+    "position": "2"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 580, "title": "Custom print", "price_modifier_type": "%", "price_modifier_value": 10.0, "position": "2" } 
+{
+  "id": 580,
+  "title": "Custom print",
+  "price_modifier_type": "%",
+  "price_modifier_value": 10.0,
+  "position": "2"
+}
 ```
 
 ### HTTP Request
@@ -71,13 +113,30 @@ Parameter | Description
 ## Update personalization form
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms/580?token=GXzAxWkkyYLsESGQTU15 { "personalization_form": { "price_modifier_type": "$", "price_modifier_value": 5.0, "position": "3" } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms/580?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "personalization_form": {
+    "price_modifier_type": "$",
+    "price_modifier_value": 5.0,
+    "position": "3"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 580, "title": "Custom print", "price_modifier_type": "$", "price_modifier_value": 5.0, "position": "3" } 
+{
+  "id": 580,
+  "title": "Custom print",
+  "price_modifier_type": "$",
+  "price_modifier_value": 5.0,
+  "position": "3"
+}
 ```
 
 ### HTTP Request
@@ -98,13 +157,30 @@ Parameter | Description
 ## Update personalization form
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms/580?token=GXzAxWkkyYLsESGQTU15 { "personalization_form": { "price_modifier_type": "$", "price_modifier_value": 5.0, "position": "3" } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms/580?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "personalization_form": {
+    "price_modifier_type": "$",
+    "price_modifier_value": 5.0,
+    "position": "3"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 580, "title": "Custom print", "price_modifier_type": "$", "price_modifier_value": 5.0, "position": "3" } 
+{
+  "id": 580,
+  "title": "Custom print",
+  "price_modifier_type": "$",
+  "price_modifier_value": 5.0,
+  "position": "3"
+}
 ```
 
 ### HTTP Request
@@ -125,13 +201,20 @@ Parameter | Description
 ## Delete personalization form
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms/580?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms/580?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 580, "title": "Custom print", "price_modifier_type": "$", "price_modifier_value": 5.0, "position": "3" } 
+{
+  "id": 580,
+  "title": "Custom print",
+  "price_modifier_type": "$",
+  "price_modifier_value": 5.0,
+  "position": "3"
+}
 ```
 
 ### HTTP Request

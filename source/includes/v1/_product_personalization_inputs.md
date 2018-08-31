@@ -3,13 +3,30 @@
 ## List personalization inputs
 
 ```shell
- GET https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "personalization_inputs": [ { "id": 579, "label": "Front print", "type": "text_field", "required": true, "position": 1 }, { "id": 580, "label": "Back print", "type": "text_area", "required": false, "position": 2 } ] } 
+{
+  "personalization_inputs": [
+    {
+      "id": 579,
+      "label": "Front print",
+      "type": "text_field",
+      "required": true,
+      "position": 1
+    },
+    {
+      "id": 580,
+      "label": "Back print",
+      "type": "text_area",
+      "required": false,
+      "position": 2
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -26,13 +43,19 @@ Parameter | Description
 ## Show personalization input
 
 ```shell
- GET https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "label": "Front print", "type": "text_field", "required": true, "position": 1 } 
+{
+  "id": 579,
+  "label": "Front print",
+  "type": "text_field",
+  "required": true,
+  "position": 1
+}
 ```
 
 ### HTTP Request
@@ -50,13 +73,31 @@ Parameter | Description
 ## Create personalization input
 
 ```shell
- POST https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15 { "personalization_input": { "label": "Back print", "type": "text_area", "required": false, "position": 2 } } 
+curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "personalization_input": {
+    "label": "Back print",
+    "type": "text_area",
+    "required": false,
+    "position": 2
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 580, "label": "Back print", "type": "text_area", "required": false, "position": 2 } 
+{
+  "id": 580,
+  "label": "Back print",
+  "type": "text_area",
+  "required": false,
+  "position": 2
+}
 ```
 
 ### HTTP Request
@@ -78,13 +119,30 @@ Parameter | Description
 ## Update personalization input
 
 ```shell
- PUT https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15 { "personalization_input": { "label": "Front left print", "required": false, "position": 3 } } 
+curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "personalization_input": {
+    "label": "Front left print",
+    "required": false,
+    "position": 3
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "label": "Front left print", "type": "text_field", "required": false, "position": 3 } 
+{
+  "id": 579,
+  "label": "Front left print",
+  "type": "text_field",
+  "required": false,
+  "position": 3
+}
 ```
 
 ### HTTP Request
@@ -106,13 +164,30 @@ Parameter | Description
 ## Update personalization input
 
 ```shell
- PUT https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15 { "personalization_input": { "label": "Front left print", "required": false, "position": 3 } } 
+curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "personalization_input": {
+    "label": "Front left print",
+    "required": false,
+    "position": 3
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "label": "Front left print", "type": "text_field", "required": false, "position": 3 } 
+{
+  "id": 579,
+  "label": "Front left print",
+  "type": "text_field",
+  "required": false,
+  "position": 3
+}
 ```
 
 ### HTTP Request
@@ -134,13 +209,20 @@ Parameter | Description
 ## Delete personalization input
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "label": "Front left print", "type": "text_field", "required": false, "position": 3 } 
+{
+  "id": 579,
+  "label": "Front left print",
+  "type": "text_field",
+  "required": false,
+  "position": 3
+}
 ```
 
 ### HTTP Request

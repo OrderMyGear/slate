@@ -3,13 +3,33 @@
 ## List vendors
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/vendors?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/vendors?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "vendors": [ { "id": 579, "name": "The Willy Wonka Company", "products": [ { "id": 100, "name": "Licorice", "sku": "lic-1" } ], "active": true } ], "meta": { "total": 1, "offset": 0, "limit": 0 } } 
+{
+  "vendors": [
+    {
+      "id": 579,
+      "name": "The Willy Wonka Company",
+      "products": [
+        {
+          "id": 100,
+          "name": "Licorice",
+          "sku": "lic-1"
+        }
+      ],
+      "active": true
+    }
+  ],
+  "meta": {
+    "total": 1,
+    "offset": 0,
+    "limit": 0
+  }
+}
 ```
 
 ### HTTP Request
@@ -27,13 +47,33 @@ Parameter | Description
 ## Show vendor
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/vendors/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/vendors/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "The Willy Wonka Company", "products": [ { "id": 100, "name": "Licorice", "sku": "lic-1" } ], "address1": "2010 Oompa-Loompa drive", "address2": "", "city": "Sweetstown", "state": "Texas", "zip_code": "99099", "phone": "123123123123", "email": "test@test.com", "account_number": "account123123", "asi_number": "asi123456", "active": true } 
+{
+  "id": 579,
+  "name": "The Willy Wonka Company",
+  "products": [
+    {
+      "id": 100,
+      "name": "Licorice",
+      "sku": "lic-1"
+    }
+  ],
+  "address1": "2010 Oompa-Loompa drive",
+  "address2": "",
+  "city": "Sweetstown",
+  "state": "Texas",
+  "zip_code": "99099",
+  "phone": "123123123123",
+  "email": "test@test.com",
+  "account_number": "account123123",
+  "asi_number": "asi123456",
+  "active": true
+}
 ```
 
 ### HTTP Request
@@ -50,13 +90,42 @@ Parameter | Description
 ## Create vendor
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1/vendors?token=GXzAxWkkyYLsESGQTU15 { "vendor": { "name": "The Willy Wonka Company", "address1": "2010 Oompa-Loompa drive", "city": "Sweetstown", "state": "Texas", "zip_code": "99099", "phone": "123123123123", "email": "test@test.com", "account_number": "account123123" } } 
+curl "https://subdomain.mybrightsites.com/api/v1/vendors?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "vendor": {
+    "name": "The Willy Wonka Company",
+    "address1": "2010 Oompa-Loompa drive",
+    "city": "Sweetstown",
+    "state": "Texas",
+    "zip_code": "99099",
+    "phone": "123123123123",
+    "email": "test@test.com",
+    "account_number": "account123123"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "The Willy Wonka Company", "products": [], "address1": "2010 Oompa-Loompa drive", "address2": "", "city": Sweetstown, "state": Texas, "zip_code": 99099, "phone": "123123123123", "email": "test@test.com", "account_number": "account123123", "active": true } 
+{
+  "id": 579,
+  "name": "The Willy Wonka Company",
+  "products": [],
+  "address1": "2010 Oompa-Loompa drive",
+  "address2": "",
+  "city": Sweetstown,
+  "state": Texas,
+  "zip_code": 99099,
+  "phone": "123123123123",
+  "email": "test@test.com",
+  "account_number": "account123123",
+  "active": true
+}
 ```
 
 ### HTTP Request
@@ -84,13 +153,41 @@ Parameter | Description
 ## Update vendor
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/vendors/579?token=GXzAxWkkyYLsESGQTU15 { "vendor": { "name": "The Willy Wonka Great Company", } } 
+curl "https://subdomain.mybrightsites.com/api/v1/vendors/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "vendor": {
+    "name": "The Willy Wonka Great Company",
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "The Willy Wonka Great Company", "products": [ { "id": 100, "name": "Licorice", "sku": "lic-1" } ], "address1": "2010 Oompa-Loompa drive", "address2": "", "city": "Sweetstown", "state": "Texas", "zip_code": "99099", "phone": "123123123123", "email": "test@test.com", "account_number": "account123123", "active": true } 
+{
+  "id": 579,
+  "name": "The Willy Wonka Great Company",
+  "products": [
+    {
+      "id": 100,
+      "name": "Licorice",
+      "sku": "lic-1"
+    }
+  ],
+  "address1": "2010 Oompa-Loompa drive",
+  "address2": "",
+  "city": "Sweetstown",
+  "state": "Texas",
+  "zip_code": "99099",
+  "phone": "123123123123",
+  "email": "test@test.com",
+  "account_number": "account123123",
+  "active": true
+}
 ```
 
 ### HTTP Request
@@ -118,13 +215,41 @@ Parameter | Description
 ## Update vendor
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/vendors/579?token=GXzAxWkkyYLsESGQTU15 { "vendor": { "name": "The Willy Wonka Great Company", } } 
+curl "https://subdomain.mybrightsites.com/api/v1/vendors/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "vendor": {
+    "name": "The Willy Wonka Great Company",
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "The Willy Wonka Great Company", "products": [ { "id": 100, "name": "Licorice", "sku": "lic-1" } ], "address1": "2010 Oompa-Loompa drive", "address2": "", "city": "Sweetstown", "state": "Texas", "zip_code": "99099", "phone": "123123123123", "email": "test@test.com", "account_number": "account123123", "active": true } 
+{
+  "id": 579,
+  "name": "The Willy Wonka Great Company",
+  "products": [
+    {
+      "id": 100,
+      "name": "Licorice",
+      "sku": "lic-1"
+    }
+  ],
+  "address1": "2010 Oompa-Loompa drive",
+  "address2": "",
+  "city": "Sweetstown",
+  "state": "Texas",
+  "zip_code": "99099",
+  "phone": "123123123123",
+  "email": "test@test.com",
+  "account_number": "account123123",
+  "active": true
+}
 ```
 
 ### HTTP Request
@@ -152,13 +277,33 @@ Parameter | Description
 ## Delete vendor
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1/vendors/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/vendors/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "The Willy Wonka Great Company", "products": [ { "id": 100, "name": "Licorice", "sku": "lic-1" } ], "address1": "2010 Oompa-Loompa drive", "address2": "", "city": "Sweetstown", "state": "Texas", "zip_code": "99099", "phone": "123123123123", "email": "test@test.com", "account_number": "account123123", "active": true } 
+{
+  "id": 579,
+  "name": "The Willy Wonka Great Company",
+  "products": [
+    {
+      "id": 100,
+      "name": "Licorice",
+      "sku": "lic-1"
+    }
+  ],
+  "address1": "2010 Oompa-Loompa drive",
+  "address2": "",
+  "city": "Sweetstown",
+  "state": "Texas",
+  "zip_code": "99099",
+  "phone": "123123123123",
+  "email": "test@test.com",
+  "account_number": "account123123",
+  "active": true
+}
 ```
 
 ### HTTP Request

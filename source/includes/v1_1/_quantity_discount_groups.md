@@ -3,13 +3,42 @@
 ## List of quantity discount groups
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discount_groups?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discount_groups?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "enabled": true, "quantity_discount_groups": [ { id: 123, name: 'Default', type: 'fixed_price' product_options: [ { product_option_id: 1234, sub_option_ids: [432, 654] }, { product_option_id: 4443, sub_option_ids: [985, 765] } ], discounts: [ { "quantity": 10, "modifier": 10.0 }, { "quantity": 20, "modifier": 8.0 } ] } ] } 
+{
+  "enabled": true,
+  "quantity_discount_groups": [
+    {
+      id: 123,
+      name: 'Default',
+      type: 'fixed_price'
+      product_options: [
+        {
+          product_option_id: 1234,
+          sub_option_ids: [432, 654]
+        },
+        {
+          product_option_id: 4443,
+          sub_option_ids: [985, 765]
+        }
+      ],
+      discounts: [
+        {
+          "quantity": 10,
+          "modifier": 10.0
+        },
+        {
+          "quantity": 20,
+          "modifier": 8.0
+        }
+      ]
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -26,13 +55,37 @@ Parameter | Description
 ## Show quantity discount group
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { id: 123, name: 'Default', type: 'fixed_price' product_options: [ { product_option_id: 1234, sub_option_ids: [432, 654] }, { product_option_id: 4443, sub_option_ids: [985, 765] } ], discounts: [ { "quantity": 10, "modifier": 10.0 }, { "quantity": 20, "modifier": 8.0 } ] } 
+{
+  id: 123,
+  name: 'Default',
+  type: 'fixed_price'
+  product_options: [
+    {
+      product_option_id: 1234,
+      sub_option_ids: [432, 654]
+    },
+    {
+      product_option_id: 4443,
+      sub_option_ids: [985, 765]
+    }
+  ],
+  discounts: [
+    {
+      "quantity": 10,
+      "modifier": 10.0
+    },
+    {
+      "quantity": 20,
+      "modifier": 8.0
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -50,13 +103,79 @@ Parameter | Description
 ## Create quantity discount group
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discount_groups?token=GXzAxWkkyYLsESGQTU15 { "quantity_discount_group": { "type": "percentage", "name": "apitest", "product_options": [ { "product_option_id": 85315, "sub_option_ids": [ 733287, 733292 ] }, { "product_option_id": 85359, "sub_option_ids": [ 733525, 733530 ] } ], "discounts": [ { "quantity": 10, "modifier": "10.0" }, { "quantity": 20, "modifier": "15.0" } ] } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discount_groups?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "quantity_discount_group": {
+    "type": "percentage",
+    "name": "apitest",
+    "product_options": [
+      {
+        "product_option_id": 85315,
+        "sub_option_ids": [
+          733287,
+          733292
+        ]
+      },
+      {
+        "product_option_id": 85359,
+        "sub_option_ids": [
+          733525,
+          733530
+        ]
+      }
+    ],
+    "discounts": [
+      {
+        "quantity": 10,
+        "modifier": "10.0"
+      },
+      {
+        "quantity": 20,
+        "modifier": "15.0"
+      }
+    ]
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "type": "percentage", "id": 579, "name": "apitest", "product_options": [ { "product_option_id": 85315, "sub_option_ids": [ 733287, 733292 ] }, { "product_option_id": 85359, "sub_option_ids": [ 733525, 733530 ] } ], "discounts": [ { "quantity": 10, "modifier": "10.0" }, { "quantity": 20, "modifier": "15.0" } ] } 
+{
+  "type": "percentage",
+  "id": 579,
+  "name": "apitest",
+  "product_options": [
+    {
+      "product_option_id": 85315,
+      "sub_option_ids": [
+        733287,
+        733292
+      ]
+    },
+    {
+      "product_option_id": 85359,
+      "sub_option_ids": [
+        733525,
+        733530
+      ]
+    }
+  ],
+  "discounts": [
+    {
+      "quantity": 10,
+      "modifier": "10.0"
+    },
+    {
+      "quantity": 20,
+      "modifier": "15.0"
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -82,13 +201,52 @@ Parameter | Description
 ## Update quantity discount group
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15 { "quantity_discount_group": { "name": "apitest2" } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "quantity_discount_group": {
+    "name": "apitest2"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "type": "percentage", "id": 579, "name": "apitest2", "product_options": [ { "product_option_id": 85315, "sub_option_ids": [ 733287, 733292 ] }, { "product_option_id": 85359, "sub_option_ids": [ 733525, 733530 ] } ], "discounts": [ { "quantity": 10, "modifier": "10.0" }, { "quantity": 20, "modifier": "15.0" } ] } 
+{
+  "type": "percentage",
+  "id": 579,
+  "name": "apitest2",
+  "product_options": [
+    {
+      "product_option_id": 85315,
+      "sub_option_ids": [
+        733287,
+        733292
+      ]
+    },
+    {
+      "product_option_id": 85359,
+      "sub_option_ids": [
+        733525,
+        733530
+      ]
+    }
+  ],
+  "discounts": [
+    {
+      "quantity": 10,
+      "modifier": "10.0"
+    },
+    {
+      "quantity": 20,
+      "modifier": "15.0"
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -114,13 +272,52 @@ Parameter | Description
 ## Update quantity discount group
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15 { "quantity_discount_group": { "name": "apitest2" } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "quantity_discount_group": {
+    "name": "apitest2"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "type": "percentage", "id": 579, "name": "apitest2", "product_options": [ { "product_option_id": 85315, "sub_option_ids": [ 733287, 733292 ] }, { "product_option_id": 85359, "sub_option_ids": [ 733525, 733530 ] } ], "discounts": [ { "quantity": 10, "modifier": "10.0" }, { "quantity": 20, "modifier": "15.0" } ] } 
+{
+  "type": "percentage",
+  "id": 579,
+  "name": "apitest2",
+  "product_options": [
+    {
+      "product_option_id": 85315,
+      "sub_option_ids": [
+        733287,
+        733292
+      ]
+    },
+    {
+      "product_option_id": 85359,
+      "sub_option_ids": [
+        733525,
+        733530
+      ]
+    }
+  ],
+  "discounts": [
+    {
+      "quantity": 10,
+      "modifier": "10.0"
+    },
+    {
+      "quantity": 20,
+      "modifier": "15.0"
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -146,13 +343,20 @@ Parameter | Description
 ## Delete quantity discount group
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "type": "percentage", "id": 579, "name": "apitest", "product_options": [], "discounts": [] } 
+{
+    "type": "percentage",
+    "id": 579,
+    "name": "apitest",
+    "product_options": [],
+    "discounts": []
+}
 ```
 
 ### HTTP Request

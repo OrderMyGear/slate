@@ -3,13 +3,16 @@
 ## Generate authentication token for a user
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1/user_auth_tokens?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/user_auth_tokens?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "login_url": "https://subdomain.mybrightsites.com/account/token_auth?token=62BMxzbhY9GFpETFwzeu" } 
+{
+  "login_url": "https://subdomain.mybrightsites.com/account/token_auth?token=62BMxzbhY9GFpETFwzeu"
+}
 ```
 
 ### HTTP Request

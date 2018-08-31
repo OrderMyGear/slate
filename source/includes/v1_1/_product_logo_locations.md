@@ -3,13 +3,24 @@
 ## List of logo locations for a product
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/products/22287/logo_locations?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/logo_locations?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "enabled": true, "logo_locations": [ { "id": 1, "name": "Right Chest", "enabled": true, "required": true, "chargable": true } ] } 
+{
+  "enabled": true,
+  "logo_locations": [
+    {
+      "id": 1,
+      "name": "Right Chest",
+      "enabled": true,
+      "required": true,
+      "chargable": true
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -26,13 +37,30 @@ Parameter | Description
 ## Update logo location
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/22287/logo_locations/1?token=GXzAxWkkyYLsESGQTU15 { "logo_location": { "enabled": true, "required": true, "chargable": false } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/logo_locations/1?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "logo_location": {
+    "enabled": true,
+    "required": true,
+    "chargable": false
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 1, "name": "Right Chest", "enabled": true, "required": true, "chargable": false } 
+{
+  "id": 1,
+  "name": "Right Chest",
+  "enabled": true,
+  "required": true,
+  "chargable": false
+}
 ```
 
 ### HTTP Request
@@ -53,13 +81,30 @@ Parameter | Description
 ## Update logo location
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/22287/logo_locations/1?token=GXzAxWkkyYLsESGQTU15 { "logo_location": { "enabled": true, "required": true, "chargable": false } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/logo_locations/1?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "logo_location": {
+    "enabled": true,
+    "required": true,
+    "chargable": false
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 1, "name": "Right Chest", "enabled": true, "required": true, "chargable": false } 
+{
+  "id": 1,
+  "name": "Right Chest",
+  "enabled": true,
+  "required": true,
+  "chargable": false
+}
 ```
 
 ### HTTP Request

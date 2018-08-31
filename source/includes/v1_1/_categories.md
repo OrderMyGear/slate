@@ -3,13 +3,31 @@
 ## List categories
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/categories?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/categories?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "categories": [ { "id": 579, "name": "Dark Chocolates", "price_modifier": "10.0", "active": true, "parent": { "id": 578, "name": "Chocolates" } } ], "meta": { "total": 1, "offset": 0, "limit": 0 } } 
+{
+  "categories": [
+    {
+      "id": 579,
+      "name": "Dark Chocolates",
+      "price_modifier": "10.0",
+      "active": true,
+      "parent": {
+        "id": 578,
+        "name": "Chocolates"
+      }
+    }
+  ],
+  "meta": {
+    "total": 1,
+    "offset": 0,
+    "limit": 0
+  }
+}
 ```
 
 ### HTTP Request
@@ -27,13 +45,24 @@ Parameter | Description
 ## Show category
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/categories/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/categories/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "Dark Chocolates", "position": 2, "parent": { "id": 578, "name": "Chocolates" }, "products_order": "name_asc", "price_modifier": "10.0", "active": true } 
+{
+  "id": 579,
+  "name": "Dark Chocolates",
+  "position": 2,
+  "parent": {
+    "id": 578,
+    "name": "Chocolates"
+  },
+  "products_order": "name_asc",
+  "price_modifier": "10.0",
+  "active": true
+}
 ```
 
 ### HTTP Request
@@ -50,13 +79,38 @@ Parameter | Description
 ## Create category
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1.1/categories?token=GXzAxWkkyYLsESGQTU15 { "category": { "name": "Dark Chocolates", "position": 2, "parent_id": 578, "products_order": "name_asc", "price_modifier": 10, "active": true } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/categories?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "category": {
+    "name": "Dark Chocolates",
+    "position": 2,
+    "parent_id": 578,
+    "products_order": "name_asc",
+    "price_modifier": 10,
+    "active": true
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "Dark Chocolates", "position": 2, "parent": { "id": 578, "name": "Chocolates" }, "products_order": "name_asc", "price_modifier": "10.0", "active": true } 
+{
+  "id": 579,
+  "name": "Dark Chocolates",
+  "position": 2,
+  "parent": {
+    "id": 578,
+    "name": "Chocolates"
+  },
+  "products_order": "name_asc",
+  "price_modifier": "10.0",
+  "active": true
+}
 ```
 
 ### HTTP Request
@@ -79,13 +133,33 @@ Parameter | Description
 ## Update category
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/categories/579?token=GXzAxWkkyYLsESGQTU15 { "category": { "name": "White Chocolates", } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/categories/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "category": {
+    "name": "White Chocolates",
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "White Chocolates", "position": 2, "parent": { "id": 578, "name": "Chocolates" }, "products_order": "name_asc", "price_modifier": "10.0", "active": true } 
+{
+  "id": 579,
+  "name": "White Chocolates",
+  "position": 2,
+  "parent": {
+    "id": 578,
+    "name": "Chocolates"
+  },
+  "products_order": "name_asc",
+  "price_modifier": "10.0",
+  "active": true
+}
 ```
 
 ### HTTP Request
@@ -108,13 +182,33 @@ Parameter | Description
 ## Update category
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/categories/579?token=GXzAxWkkyYLsESGQTU15 { "category": { "name": "White Chocolates", } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/categories/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "category": {
+    "name": "White Chocolates",
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "White Chocolates", "position": 2, "parent": { "id": 578, "name": "Chocolates" }, "products_order": "name_asc", "price_modifier": "10.0", "active": true } 
+{
+  "id": 579,
+  "name": "White Chocolates",
+  "position": 2,
+  "parent": {
+    "id": 578,
+    "name": "Chocolates"
+  },
+  "products_order": "name_asc",
+  "price_modifier": "10.0",
+  "active": true
+}
 ```
 
 ### HTTP Request
@@ -137,13 +231,25 @@ Parameter | Description
 ## Delete category
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1.1/categories/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/categories/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "name": "White Chocolates", "position": 2, "parent": { "id": 578, "name": "Chocolates" }, "products_order": "name_asc", "price_modifier": "10.0", "active": true } 
+{
+  "id": 579,
+  "name": "White Chocolates",
+  "position": 2,
+  "parent": {
+    "id": 578,
+    "name": "Chocolates"
+  },
+  "products_order": "name_asc",
+  "price_modifier": "10.0",
+  "active": true
+}
 ```
 
 ### HTTP Request

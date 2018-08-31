@@ -3,13 +3,33 @@
 ## List quantity discounts
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "enabled": true, "type": "fixed_price", "quantity_discounts": [ { "id": 579, "quantity": 5, "modifier": 1000.0 }, { "id": 580, "quantity": 10, "modifier": 990.0 }, { "id": 581, "quantity": 100, "modifier": 900.0 } ] } 
+{
+  "enabled": true,
+  "type": "fixed_price",
+  "quantity_discounts": [
+    {
+      "id": 579,
+      "quantity": 5,
+      "modifier": 1000.0
+    },
+    {
+      "id": 580,
+      "quantity": 10,
+      "modifier": 990.0
+    },
+    {
+      "id": 581,
+      "quantity": 100,
+      "modifier": 900.0
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -21,13 +41,17 @@
 ## Show quantity discount
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "quantity": 10, "modifier": 990.0 } 
+{
+  "id": 579,
+  "quantity": 10,
+  "modifier": 990.0
+}
 ```
 
 ### HTTP Request
@@ -44,13 +68,27 @@ Parameter | Description
 ## Create quantity discount
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts?token=GXzAxWkkyYLsESGQTU15 { "quantity_discount": { "quantity": 10, "modifier": 990.0 } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "quantity_discount": {
+    "quantity": 10,
+    "modifier": 990.0
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 581, "quantity": 10, "modifier": 990.0 } 
+{
+  "id": 581,
+  "quantity": 10,
+  "modifier": 990.0
+}
 ```
 
 ### HTTP Request
@@ -69,13 +107,26 @@ Parameter | Description
 ## Update quantity discount
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15 { "quantity_discount": { "modifier": 980.0 } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "quantity_discount": {
+    "modifier": 980.0
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "quantity": 10, "modifier": 980.0 } 
+{
+  "id": 579,
+  "quantity": 10,
+  "modifier": 980.0
+}
 ```
 
 ### HTTP Request
@@ -94,13 +145,26 @@ Parameter | Description
 ## Update quantity discount
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15 { "quantity_discount": { "modifier": 980.0 } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "quantity_discount": {
+    "modifier": 980.0
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "quantity": 10, "modifier": 980.0 } 
+{
+  "id": 579,
+  "quantity": 10,
+  "modifier": 980.0
+}
 ```
 
 ### HTTP Request
@@ -119,13 +183,18 @@ Parameter | Description
 ## Delete quantity discount
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 579, "quantity": 10, "modifier": 980.0 } 
+{
+  "id": 579,
+  "quantity": 10,
+  "modifier": 980.0
+}
 ```
 
 ### HTTP Request

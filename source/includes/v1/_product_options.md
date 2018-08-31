@@ -3,13 +3,30 @@
 ## List of options for product
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "enabled": true, "options": [ { "id": 47204, "name": "size", "friendly_name": "Size", "option_type": "size", "price_modifier_type": "$", "show_in_inventory": true, "show_as_thumbs": false, "include_in_images": false, "required": false, "multiple_quantity": false, "position": 1 } ] } 
+{
+  "enabled": true,
+  "options": [
+    {
+      "id": 47204,
+      "name": "size",
+      "friendly_name": "Size",
+      "option_type": "size",
+      "price_modifier_type": "$",
+      "show_in_inventory": true,
+      "show_as_thumbs": false,
+      "include_in_images": false,
+      "required": false,
+      "multiple_quantity": false,
+      "position": 1
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -21,13 +38,25 @@
 ## Show option
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 47204, "name": "size", "friendly_name": "Size", "option_type": "size", "price_modifier_type": "$", "show_in_inventory": true, "show_as_thumbs": false, "include_in_images": false, "required": false, "multiple_quantity": false, "position": 1 } 
+{
+  "id": 47204,
+  "name": "size",
+  "friendly_name": "Size",
+  "option_type": "size",
+  "price_modifier_type": "$",
+  "show_in_inventory": true,
+  "show_as_thumbs": false,
+  "include_in_images": false,
+  "required": false,
+  "multiple_quantity": false,
+  "position": 1
+}
 ```
 
 ### HTTP Request
@@ -44,13 +73,45 @@ Parameter | Description
 ## Create option
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GXzAxWkkyYLsESGQTU15 { "option": { "name": "size", "friendly_name": "Size", "option_type": "size", "price_modifier_type": "$", "show_in_inventory": true, "show_as_thumbs": false, "include_in_images": false, "required": true, "multiple_quantity": true, "position": 2 } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "option": {
+    "name": "size",
+    "friendly_name": "Size",
+    "option_type": "size",
+    "price_modifier_type": "$",
+    "show_in_inventory": true,
+    "show_as_thumbs": false,
+    "include_in_images": false,
+    "required": true,
+    "multiple_quantity": true,
+    "position": 2
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "option": { "id": 47204, "name": "size", "friendly_name": "Size", "option_type": "size", "price_modifier_type": "$", "show_in_inventory": true, "show_as_thumbs": false, "include_in_images": false, "required": true, "multiple_quantity": true, "position": 2 } } 
+{
+  "option": {
+    "id": 47204,
+    "name": "size",
+    "friendly_name": "Size",
+    "option_type": "size",
+    "price_modifier_type": "$",
+    "show_in_inventory": true,
+    "show_as_thumbs": false,
+    "include_in_images": false,
+    "required": true,
+    "multiple_quantity": true,
+    "position": 2
+  }
+}
 ```
 
 ### HTTP Request
@@ -77,13 +138,41 @@ Parameter | Description
 ## Update option
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15 { "option": { "name": "color", "option_type": "color", "price_modifier_type": "$", "show_in_inventory": true, "required": false, "multiple_quantity": false, } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "option": {
+    "name": "color",
+    "option_type": "color",
+    "price_modifier_type": "$",
+    "show_in_inventory": true,
+    "required": false,
+    "multiple_quantity": false,
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "option": { "id": 47204, "name": "color", "friendly_name": "Size", "option_type": "color", "price_modifier_type": "$", "show_in_inventory": true, "show_as_thumbs": true, "include_in_images": false, "required": false, "multiple_quantity": false, "position": 2 } } 
+{
+  "option": {
+    "id": 47204,
+    "name": "color",
+    "friendly_name": "Size",
+    "option_type": "color",
+    "price_modifier_type": "$",
+    "show_in_inventory": true,
+    "show_as_thumbs": true,
+    "include_in_images": false,
+    "required": false,
+    "multiple_quantity": false,
+    "position": 2
+  }
+}
 ```
 
 ### HTTP Request
@@ -110,13 +199,41 @@ Parameter | Description
 ## Update option
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15 { "option": { "name": "color", "option_type": "color", "price_modifier_type": "$", "show_in_inventory": true, "required": false, "multiple_quantity": false, } } 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "option": {
+    "name": "color",
+    "option_type": "color",
+    "price_modifier_type": "$",
+    "show_in_inventory": true,
+    "required": false,
+    "multiple_quantity": false,
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "option": { "id": 47204, "name": "color", "friendly_name": "Size", "option_type": "color", "price_modifier_type": "$", "show_in_inventory": true, "show_as_thumbs": true, "include_in_images": false, "required": false, "multiple_quantity": false, "position": 2 } } 
+{
+  "option": {
+    "id": 47204,
+    "name": "color",
+    "friendly_name": "Size",
+    "option_type": "color",
+    "price_modifier_type": "$",
+    "show_in_inventory": true,
+    "show_as_thumbs": true,
+    "include_in_images": false,
+    "required": false,
+    "multiple_quantity": false,
+    "position": 2
+  }
+}
 ```
 
 ### HTTP Request
@@ -143,13 +260,28 @@ Parameter | Description
 ## Delete option
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "option": { "id": 47204, "name": "color", "friendly_name": "Size", "option_type": "size", "price_modifier_type": "$", "show_in_inventory": true, "show_as_thumbs": false, "include_in_images": false, "required": false, "multiple_quantity": false, "position": 2 } } 
+{
+  "option": {
+    "id": 47204,
+    "name": "color",
+    "friendly_name": "Size",
+    "option_type": "size",
+    "price_modifier_type": "$",
+    "show_in_inventory": true,
+    "show_as_thumbs": false,
+    "include_in_images": false,
+    "required": false,
+    "multiple_quantity": false,
+    "position": 2
+  }
+}
 ```
 
 ### HTTP Request

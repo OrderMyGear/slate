@@ -3,13 +3,23 @@
 ## List of sub options for option
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "sub_options": [ { "id": 556155, "name": "Small", "sub_sku": "", "price_modifier": "0.0", "position": 1 } ] } 
+{
+  "sub_options": [
+    {
+      "id": 556155,
+      "name": "Small",
+      "sub_sku": "",
+      "price_modifier": "0.0",
+      "position": 1
+    }
+  ]
+}
 ```
 
 ### HTTP Request
@@ -27,13 +37,20 @@ Parameter | Description
 ## Show sub option
 
 ```shell
- GET https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options/1234?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options/1234?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 556155, "name": "Small", "sub_sku": "", "image_src": "http://www.imageprovider.com/image.jpg" "price_modifier": "0.0", "position": 2 } 
+{
+  "id": 556155,
+  "name": "Small",
+  "sub_sku": "",
+  "image_src": "http://www.imageprovider.com/image.jpg"
+  "price_modifier": "0.0",
+  "position": 2
+}
 ```
 
 ### HTTP Request
@@ -52,13 +69,34 @@ Parameter | Description
 ## Create sub option
 
 ```shell
- POST https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options?token=GXzAxWkkyYLsESGQTU15 { "sub_option": { "name": "X-Small", "sub_sku": "SKU123", "price_modifier": 2, "image_data": "R0lGODlhbgCMAPf/APbr48VySrxTO7IgKt2qmKQdJeK8lsFjROG5p", "filename": "myimage.jpg", "position": 3 } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "sub_option": {
+    "name": "X-Small",
+    "sub_sku": "SKU123",
+    "price_modifier": 2,
+    "image_data": "R0lGODlhbgCMAPf/APbr48VySrxTO7IgKt2qmKQdJeK8lsFjROG5p",
+    "filename": "myimage.jpg",
+    "position": 3
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 559579, "name": "X-Small", "sub_sku": "SKU123", "image_src": "http://www.imageprovider.com/image.jpg" "price_modifier": "2.0", "position": 3 } 
+{
+  "id": 559579,
+  "name": "X-Small",
+  "sub_sku": "SKU123",
+  "image_src": "http://www.imageprovider.com/image.jpg"
+  "price_modifier": "2.0",
+  "position": 3
+}
 ```
 
 ### HTTP Request
@@ -83,13 +121,29 @@ Parameter | Description
 ## Update sub option
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options/1234?token=GXzAxWkkyYLsESGQTU15 { "sub_option": { "name": "Large" } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options/1234?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "sub_option": {
+    "name": "Large"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 559579, "name": "Large", "sub_sku": "SKU123", "image_src": "http://www.imageprovider.com/image.jpg" "price_modifier": "2.0", "position": 3 } 
+{
+  "id": 559579,
+  "name": "Large",
+  "sub_sku": "SKU123",
+  "image_src": "http://www.imageprovider.com/image.jpg"
+  "price_modifier": "2.0",
+  "position": 3
+}
 ```
 
 ### HTTP Request
@@ -114,13 +168,29 @@ Parameter | Description
 ## Update sub option
 
 ```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options/1234?token=GXzAxWkkyYLsESGQTU15 { "sub_option": { "name": "Large" } } 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options/1234?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "sub_option": {
+    "name": "Large"
+  }
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 559579, "name": "Large", "sub_sku": "SKU123", "image_src": "http://www.imageprovider.com/image.jpg" "price_modifier": "2.0", "position": 3 } 
+{
+  "id": 559579,
+  "name": "Large",
+  "sub_sku": "SKU123",
+  "image_src": "http://www.imageprovider.com/image.jpg"
+  "price_modifier": "2.0",
+  "position": 3
+}
 ```
 
 ### HTTP Request
@@ -145,13 +215,21 @@ Parameter | Description
 ## Delete sub option
 
 ```shell
- DELETE https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options/559579?token=GXzAxWkkyYLsESGQTU15 
+curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/options/47204/sub_options/559579?token=GXzAxWkkyYLsESGQTU15" \
+  -X DELETE
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
- { "id": 559579, "name": "Large", "sub_sku": "SKU123", "image_src": "http://www.imageprovider.com/image.jpg" "price_modifier": "2.0" "position": 3 } 
+{
+  "id": 559579,
+  "name": "Large",
+  "sub_sku": "SKU123",
+  "image_src": "http://www.imageprovider.com/image.jpg"
+  "price_modifier": "2.0"
+  "position": 3
+}
 ```
 
 ### HTTP Request
