@@ -18,8 +18,8 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-username  |  required  | Username |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>username </strong></div><div> required </div> | <div>Username</div><div> Must be a String </div>
 
 

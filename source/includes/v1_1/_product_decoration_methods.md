@@ -18,9 +18,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
 ## Update decoration method
@@ -41,11 +41,11 @@ product_id  |  required  | Product ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-decoration_method  |  required  | Validations: |  Must be a Hash 
-decoration_method[enabled]  |  optional  | Enable decoration method |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>decoration_method </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>decoration_method[enabled] </strong></div><div> optional </div> | <div>Enable decoration method</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update decoration method
@@ -66,10 +66,10 @@ decoration_method[enabled]  |  optional  | Enable decoration method |  Must be o
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-decoration_method  |  required  | Validations: |  Must be a Hash 
-decoration_method[enabled]  |  optional  | Enable decoration method |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>decoration_method </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>decoration_method[enabled] </strong></div><div> optional </div> | <div>Enable decoration method</div><div> Must be one of: true, false, 1, 0 </div>
 
 

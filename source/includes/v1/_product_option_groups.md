@@ -36,9 +36,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Group ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Group ID</div><div> Must be a number. </div>
 
 
 ## Create group
@@ -59,12 +59,12 @@ id  |  required  | Group ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-option_group  |  required  | Validations: |  Must be a Hash 
-option_group[name]  |  required  | Name of option group |  Must be a String 
-option_group[wrap_options]  |  optional , nil allowed  | Wrap options |  Must be one of: true, false, 1, 0 
-option_group[option_ids]  |  optional , nil allowed  | Wrap options |  Must be an Array of Integer 
+Parameter | Description
+--------- | -----------
+<div><strong>option_group </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>option_group[name] </strong></div><div> required </div> | <div>Name of option group</div><div> Must be a String </div>
+<div><strong>option_group[wrap_options] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option_group[option_ids] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be an Array of Integer </div>
 
 
 ## Update group
@@ -85,12 +85,12 @@ option_group[option_ids]  |  optional , nil allowed  | Wrap options |  Must be a
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-option_group  |  required  | Validations: |  Must be a Hash 
-option_group[name]  |  optional  | Name of option group |  Must be a String 
-option_group[wrap_options]  |  optional , nil allowed  | Wrap options |  Must be one of: true, false, 1, 0 
-option_group[option_ids]  |  optional , nil allowed  | Wrap options |  Must be an Array of Integer 
+Parameter | Description
+--------- | -----------
+<div><strong>option_group </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>option_group[name] </strong></div><div> optional </div> | <div>Name of option group</div><div> Must be a String </div>
+<div><strong>option_group[wrap_options] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option_group[option_ids] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be an Array of Integer </div>
 
 
 ## Update group
@@ -111,12 +111,12 @@ option_group[option_ids]  |  optional , nil allowed  | Wrap options |  Must be a
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-option_group  |  required  | Validations: |  Must be a Hash 
-option_group[name]  |  optional  | Name of option group |  Must be a String 
-option_group[wrap_options]  |  optional , nil allowed  | Wrap options |  Must be one of: true, false, 1, 0 
-option_group[option_ids]  |  optional , nil allowed  | Wrap options |  Must be an Array of Integer 
+Parameter | Description
+--------- | -----------
+<div><strong>option_group </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>option_group[name] </strong></div><div> optional </div> | <div>Name of option group</div><div> Must be a String </div>
+<div><strong>option_group[wrap_options] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option_group[option_ids] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be an Array of Integer </div>
 
 
 ## Delete group
@@ -137,8 +137,8 @@ option_group[option_ids]  |  optional , nil allowed  | Wrap options |  Must be a
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Group ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Group ID</div><div> Must be a number. </div>
 
 

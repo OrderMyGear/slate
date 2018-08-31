@@ -36,9 +36,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Quantity discount ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
 
 
 ## Create quantity discount
@@ -59,11 +59,11 @@ id  |  required  | Quantity discount ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-quantity_discount  |  required  | Validations: |  Must be a Hash 
-quantity_discount[quantity]  |  required  | Quantity |  Must be a number. 
-quantity_discount[modifier]  |  required  | Base price / Discount percentage |  Must be a float. 
+Parameter | Description
+--------- | -----------
+<div><strong>quantity_discount </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>quantity_discount[quantity] </strong></div><div> required </div> | <div>Quantity</div><div> Must be a number. </div>
+<div><strong>quantity_discount[modifier] </strong></div><div> required </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
 
 
 ## Update quantity discount
@@ -84,11 +84,11 @@ quantity_discount[modifier]  |  required  | Base price / Discount percentage |  
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-quantity_discount  |  required  | Validations: |  Must be a Hash 
-quantity_discount[quantity]  |  optional  | Quantity |  Must be a number. 
-quantity_discount[modifier]  |  optional  | Base price / Discount percentage |  Must be a float. 
+Parameter | Description
+--------- | -----------
+<div><strong>quantity_discount </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>quantity_discount[quantity] </strong></div><div> optional </div> | <div>Quantity</div><div> Must be a number. </div>
+<div><strong>quantity_discount[modifier] </strong></div><div> optional </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
 
 
 ## Update quantity discount
@@ -109,11 +109,11 @@ quantity_discount[modifier]  |  optional  | Base price / Discount percentage |  
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-quantity_discount  |  required  | Validations: |  Must be a Hash 
-quantity_discount[quantity]  |  optional  | Quantity |  Must be a number. 
-quantity_discount[modifier]  |  optional  | Base price / Discount percentage |  Must be a float. 
+Parameter | Description
+--------- | -----------
+<div><strong>quantity_discount </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>quantity_discount[quantity] </strong></div><div> optional </div> | <div>Quantity</div><div> Must be a number. </div>
+<div><strong>quantity_discount[modifier] </strong></div><div> optional </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
 
 
 ## Delete quantity discount
@@ -134,8 +134,8 @@ quantity_discount[modifier]  |  optional  | Base price / Discount percentage |  
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Quantity discount ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
 
 

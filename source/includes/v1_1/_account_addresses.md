@@ -18,11 +18,11 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-user_id  |  required  | User ID |  Must be a number. 
-page  |  optional  | Pagination page number |  Must be a number. 
-per_page  |  optional  | Pagination per page number |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>user_id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>page </strong></div><div> optional </div> | <div>Pagination page number</div><div> Must be a number. </div>
+<div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
 ## Show address
@@ -43,10 +43,10 @@ per_page  |  optional  | Pagination per page number |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-user_id  |  required  | User ID |  Must be a number. 
-id  |  required  | Address ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>user_id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Address ID</div><div> Must be a number. </div>
 
 
 ## Create address
@@ -67,22 +67,22 @@ id  |  required  | Address ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-user_id  |  required  | User ID |  Must be a number. 
-address  |  required  | Validations: |  Must be a Hash 
-address[nickname]  |  required  | Name of address |  Must be a String 
-address[first_name]  |  optional , nil allowed  | First name |  Must be a String 
-address[last_name]  |  optional , nil allowed  | Last name |  Must be a String 
-address[company]  |  optional , nil allowed  | Company |  Must be a String 
-address[first_address]  |  required  | First address |  Must be a String 
-address[second_address]  |  optional , nil allowed  | Second address |  Must be a String 
-address[state]  |  required  | State |  Must be a String 
-address[city]  |  required  | City |  Must be a String 
-address[country]  |  required  | Country |  Must be a String 
-address[zip]  |  required  | Zip Code |  Must be a String 
-address[email]  |  optional , nil allowed  | E-mail |  Must be a String 
-address[phone]  |  optional , nil allowed  | Phone |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>user_id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>address </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>address[nickname] </strong></div><div> required </div> | <div>Name of address</div><div> Must be a String </div>
+<div><strong>address[first_name] </strong></div><div> optional , nil allowed </div> | <div>First name</div><div> Must be a String </div>
+<div><strong>address[last_name] </strong></div><div> optional , nil allowed </div> | <div>Last name</div><div> Must be a String </div>
+<div><strong>address[company] </strong></div><div> optional , nil allowed </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>address[first_address] </strong></div><div> required </div> | <div>First address</div><div> Must be a String </div>
+<div><strong>address[second_address] </strong></div><div> optional , nil allowed </div> | <div>Second address</div><div> Must be a String </div>
+<div><strong>address[state] </strong></div><div> required </div> | <div>State</div><div> Must be a String </div>
+<div><strong>address[city] </strong></div><div> required </div> | <div>City</div><div> Must be a String </div>
+<div><strong>address[country] </strong></div><div> required </div> | <div>Country</div><div> Must be a String </div>
+<div><strong>address[zip] </strong></div><div> required </div> | <div>Zip Code</div><div> Must be a String </div>
+<div><strong>address[email] </strong></div><div> optional , nil allowed </div> | <div>E-mail</div><div> Must be a String </div>
+<div><strong>address[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone</div><div> Must be a String </div>
 
 
 ## Update address
@@ -103,22 +103,22 @@ address[phone]  |  optional , nil allowed  | Phone |  Must be a String
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-user_id  |  required  | User ID |  Must be a number. 
-address  |  required  | Validations: |  Must be a Hash 
-address[nickname]  |  optional  | Name of address |  Must be a String 
-address[first_name]  |  optional , nil allowed  | First name |  Must be a String 
-address[last_name]  |  optional , nil allowed  | Last name |  Must be a String 
-address[company]  |  optional , nil allowed  | Company |  Must be a String 
-address[first_address]  |  optional  | First address |  Must be a String 
-address[second_address]  |  optional , nil allowed  | Second address |  Must be a String 
-address[state]  |  optional  | State |  Must be a String 
-address[city]  |  optional  | City |  Must be a String 
-address[country]  |  optional  | Country |  Must be a String 
-address[zip]  |  optional  | Zip Code |  Must be a String 
-address[email]  |  optional , nil allowed  | E-mail |  Must be a String 
-address[phone]  |  optional , nil allowed  | Phone |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>user_id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>address </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>address[nickname] </strong></div><div> optional </div> | <div>Name of address</div><div> Must be a String </div>
+<div><strong>address[first_name] </strong></div><div> optional , nil allowed </div> | <div>First name</div><div> Must be a String </div>
+<div><strong>address[last_name] </strong></div><div> optional , nil allowed </div> | <div>Last name</div><div> Must be a String </div>
+<div><strong>address[company] </strong></div><div> optional , nil allowed </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>address[first_address] </strong></div><div> optional </div> | <div>First address</div><div> Must be a String </div>
+<div><strong>address[second_address] </strong></div><div> optional , nil allowed </div> | <div>Second address</div><div> Must be a String </div>
+<div><strong>address[state] </strong></div><div> optional </div> | <div>State</div><div> Must be a String </div>
+<div><strong>address[city] </strong></div><div> optional </div> | <div>City</div><div> Must be a String </div>
+<div><strong>address[country] </strong></div><div> optional </div> | <div>Country</div><div> Must be a String </div>
+<div><strong>address[zip] </strong></div><div> optional </div> | <div>Zip Code</div><div> Must be a String </div>
+<div><strong>address[email] </strong></div><div> optional , nil allowed </div> | <div>E-mail</div><div> Must be a String </div>
+<div><strong>address[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone</div><div> Must be a String </div>
 
 
 ## Update address
@@ -139,22 +139,22 @@ address[phone]  |  optional , nil allowed  | Phone |  Must be a String
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-user_id  |  required  | User ID |  Must be a number. 
-address  |  required  | Validations: |  Must be a Hash 
-address[nickname]  |  optional  | Name of address |  Must be a String 
-address[first_name]  |  optional , nil allowed  | First name |  Must be a String 
-address[last_name]  |  optional , nil allowed  | Last name |  Must be a String 
-address[company]  |  optional , nil allowed  | Company |  Must be a String 
-address[first_address]  |  optional  | First address |  Must be a String 
-address[second_address]  |  optional , nil allowed  | Second address |  Must be a String 
-address[state]  |  optional  | State |  Must be a String 
-address[city]  |  optional  | City |  Must be a String 
-address[country]  |  optional  | Country |  Must be a String 
-address[zip]  |  optional  | Zip Code |  Must be a String 
-address[email]  |  optional , nil allowed  | E-mail |  Must be a String 
-address[phone]  |  optional , nil allowed  | Phone |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>user_id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>address </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>address[nickname] </strong></div><div> optional </div> | <div>Name of address</div><div> Must be a String </div>
+<div><strong>address[first_name] </strong></div><div> optional , nil allowed </div> | <div>First name</div><div> Must be a String </div>
+<div><strong>address[last_name] </strong></div><div> optional , nil allowed </div> | <div>Last name</div><div> Must be a String </div>
+<div><strong>address[company] </strong></div><div> optional , nil allowed </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>address[first_address] </strong></div><div> optional </div> | <div>First address</div><div> Must be a String </div>
+<div><strong>address[second_address] </strong></div><div> optional , nil allowed </div> | <div>Second address</div><div> Must be a String </div>
+<div><strong>address[state] </strong></div><div> optional </div> | <div>State</div><div> Must be a String </div>
+<div><strong>address[city] </strong></div><div> optional </div> | <div>City</div><div> Must be a String </div>
+<div><strong>address[country] </strong></div><div> optional </div> | <div>Country</div><div> Must be a String </div>
+<div><strong>address[zip] </strong></div><div> optional </div> | <div>Zip Code</div><div> Must be a String </div>
+<div><strong>address[email] </strong></div><div> optional , nil allowed </div> | <div>E-mail</div><div> Must be a String </div>
+<div><strong>address[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone</div><div> Must be a String </div>
 
 
 ## Delete address
@@ -175,9 +175,9 @@ address[phone]  |  optional , nil allowed  | Phone |  Must be a String
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-user_id  |  required  | User ID |  Must be a number. 
-id  |  required  | Address ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>user_id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Address ID</div><div> Must be a number. </div>
 
 

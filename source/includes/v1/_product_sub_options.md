@@ -18,9 +18,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-option_id  |  required  | Option ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
 
 
 ## Show sub option
@@ -41,10 +41,10 @@ option_id  |  required  | Option ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-option_id  |  required  | Option ID |  Must be a number. 
-id  |  required  | Sub option ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Sub option ID</div><div> Must be a number. </div>
 
 
 ## Create sub option
@@ -65,16 +65,16 @@ id  |  required  | Sub option ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-option_id  |  required  | Option ID |  Must be a number. 
-sub_option  |  required  | Validations: |  Must be a Hash 
-sub_option[name]  |  required  | Name of sub option |  Must be a String 
-sub_option[sub_sku]  |  optional , nil allowed  | SKU |  Must be a String 
-sub_option[price_modifier]  |  optional , nil allowed  | Price Modifier |  Must be a float. 
-sub_option[position]  |  optional , nil allowed  | Position of order |  Must be a number. 
-sub_option[image_data]  |  optional , nil allowed  | Base64 Image representation |  Must be a String 
-sub_option[filename]  |  optional , nil allowed  | Image file name |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
+<div><strong>sub_option </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>sub_option[name] </strong></div><div> required </div> | <div>Name of sub option</div><div> Must be a String </div>
+<div><strong>sub_option[sub_sku] </strong></div><div> optional , nil allowed </div> | <div>SKU</div><div> Must be a String </div>
+<div><strong>sub_option[price_modifier] </strong></div><div> optional , nil allowed </div> | <div>Price Modifier</div><div> Must be a float. </div>
+<div><strong>sub_option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
+<div><strong>sub_option[image_data] </strong></div><div> optional , nil allowed </div> | <div>Base64 Image representation</div><div> Must be a String </div>
+<div><strong>sub_option[filename] </strong></div><div> optional , nil allowed </div> | <div>Image file name</div><div> Must be a String </div>
 
 
 ## Update sub option
@@ -95,16 +95,16 @@ sub_option[filename]  |  optional , nil allowed  | Image file name |  Must be a 
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-option_id  |  required  | Option ID |  Must be a number. 
-sub_option  |  required  | Validations: |  Must be a Hash 
-sub_option[name]  |  optional  | Name of sub option |  Must be a String 
-sub_option[sub_sku]  |  optional , nil allowed  | SKU |  Must be a String 
-sub_option[price_modifier]  |  optional , nil allowed  | Price Modifier |  Must be a float. 
-sub_option[position]  |  optional , nil allowed  | Position of order |  Must be a number. 
-sub_option[image_data]  |  optional , nil allowed  | Base64 Image representation |  Must be a String 
-sub_option[filename]  |  optional , nil allowed  | Image file name |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
+<div><strong>sub_option </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>sub_option[name] </strong></div><div> optional </div> | <div>Name of sub option</div><div> Must be a String </div>
+<div><strong>sub_option[sub_sku] </strong></div><div> optional , nil allowed </div> | <div>SKU</div><div> Must be a String </div>
+<div><strong>sub_option[price_modifier] </strong></div><div> optional , nil allowed </div> | <div>Price Modifier</div><div> Must be a float. </div>
+<div><strong>sub_option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
+<div><strong>sub_option[image_data] </strong></div><div> optional , nil allowed </div> | <div>Base64 Image representation</div><div> Must be a String </div>
+<div><strong>sub_option[filename] </strong></div><div> optional , nil allowed </div> | <div>Image file name</div><div> Must be a String </div>
 
 
 ## Update sub option
@@ -125,16 +125,16 @@ sub_option[filename]  |  optional , nil allowed  | Image file name |  Must be a 
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-option_id  |  required  | Option ID |  Must be a number. 
-sub_option  |  required  | Validations: |  Must be a Hash 
-sub_option[name]  |  optional  | Name of sub option |  Must be a String 
-sub_option[sub_sku]  |  optional , nil allowed  | SKU |  Must be a String 
-sub_option[price_modifier]  |  optional , nil allowed  | Price Modifier |  Must be a float. 
-sub_option[position]  |  optional , nil allowed  | Position of order |  Must be a number. 
-sub_option[image_data]  |  optional , nil allowed  | Base64 Image representation |  Must be a String 
-sub_option[filename]  |  optional , nil allowed  | Image file name |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
+<div><strong>sub_option </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>sub_option[name] </strong></div><div> optional </div> | <div>Name of sub option</div><div> Must be a String </div>
+<div><strong>sub_option[sub_sku] </strong></div><div> optional , nil allowed </div> | <div>SKU</div><div> Must be a String </div>
+<div><strong>sub_option[price_modifier] </strong></div><div> optional , nil allowed </div> | <div>Price Modifier</div><div> Must be a float. </div>
+<div><strong>sub_option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
+<div><strong>sub_option[image_data] </strong></div><div> optional , nil allowed </div> | <div>Base64 Image representation</div><div> Must be a String </div>
+<div><strong>sub_option[filename] </strong></div><div> optional , nil allowed </div> | <div>Image file name</div><div> Must be a String </div>
 
 
 ## Delete sub option
@@ -155,9 +155,9 @@ sub_option[filename]  |  optional , nil allowed  | Image file name |  Must be a 
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-option_id  |  required  | Option ID |  Must be a number. 
-id  |  required  | Sub Option ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Sub Option ID</div><div> Must be a number. </div>
 
 

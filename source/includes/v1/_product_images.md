@@ -36,9 +36,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Product Image ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Product Image ID</div><div> Must be a number. </div>
 
 
 ## Create product image
@@ -59,14 +59,14 @@ id  |  required  | Product Image ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-image  |  required  | Validations: |  Must be a Hash 
-image[primary]  |  optional  | Primary Image switcher |  Must be one of: true, false, 1, 0 
-image[thumbnail]  |  optional  | Thumbnail Image switcher |  Must be one of: true, false, 1, 0 
-image[position]  |  optional  | Image list order |  Must be a number. 
-image[image_data]  |  required  | Base64 Image representation |  Must be a String 
-image[filename]  |  required  | Image file name |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>image </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>image[primary] </strong></div><div> optional </div> | <div>Primary Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>image[thumbnail] </strong></div><div> optional </div> | <div>Thumbnail Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>image[position] </strong></div><div> optional </div> | <div>Image list order</div><div> Must be a number. </div>
+<div><strong>image[image_data] </strong></div><div> required </div> | <div>Base64 Image representation</div><div> Must be a String </div>
+<div><strong>image[filename] </strong></div><div> required </div> | <div>Image file name</div><div> Must be a String </div>
 
 
 ## Update product image
@@ -77,15 +77,15 @@ image[filename]  |  required  | Image file name |  Must be a String
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  optional  | Product Image ID |  Must be a number. 
-image  |  required  | Validations: |  Must be a Hash 
-image[primary]  |  optional  | Primary Image switcher |  Must be one of: true, false, 1, 0 
-image[thumbnail]  |  optional  | Thumbnail Image switcher |  Must be one of: true, false, 1, 0 
-image[position]  |  optional  | Image list order |  Must be a number. 
-image[image_data]  |  optional  | Base64 Image representation |  Must be a String 
-image[filename]  |  optional  | Image file name |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> optional </div> | <div>Product Image ID</div><div> Must be a number. </div>
+<div><strong>image </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>image[primary] </strong></div><div> optional </div> | <div>Primary Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>image[thumbnail] </strong></div><div> optional </div> | <div>Thumbnail Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>image[position] </strong></div><div> optional </div> | <div>Image list order</div><div> Must be a number. </div>
+<div><strong>image[image_data] </strong></div><div> optional </div> | <div>Base64 Image representation</div><div> Must be a String </div>
+<div><strong>image[filename] </strong></div><div> optional </div> | <div>Image file name</div><div> Must be a String </div>
 
 
 ## Delete product image
@@ -106,8 +106,8 @@ image[filename]  |  optional  | Image file name |  Must be a String
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Product Image ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Product Image ID</div><div> Must be a number. </div>
 
 

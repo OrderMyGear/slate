@@ -18,9 +18,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
 ## Show quantity discount group
@@ -41,10 +41,10 @@ product_id  |  required  | Product ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-id  |  required  | Quantity discount ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
 
 
 ## Create quantity discount group
@@ -65,18 +65,18 @@ id  |  required  | Quantity discount ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-quantity_discount_group  |  required  | Validations: |  Must be a Hash 
-quantity_discount_group[name]  |  required  | Validations: |  Must be a String 
-quantity_discount_group[type]  |  required  | Type |  Must be one of: percentage, fixed_price. 
-quantity_discount_group[product_options]  |  optional , nil allowed  | Validations: |  Must be an Array of nested elements 
-quantity_discount_group[product_options][product_option_id]  |  required  | Validations: |  Must be a number. 
-quantity_discount_group[product_options][sub_option_ids]  |  required  | Validations: |  Must be an Array of Integer 
-quantity_discount_group[discounts]  |  optional , nil allowed  | Validations: |  Must be an Array of nested elements 
-quantity_discount_group[discounts][quantity]  |  optional , nil allowed  | Validations: |  Must be a number. 
-quantity_discount_group[discounts][modifier]  |  optional , nil allowed  | Validations: |  Must be a float. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>quantity_discount_group </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>quantity_discount_group[name] </strong></div><div> required </div> | <div> Must be a String </div>
+<div><strong>quantity_discount_group[type] </strong></div><div> required </div> | <div>Type</div><div> Must be one of: percentage, fixed_price. </div>
+<div><strong>quantity_discount_group[product_options] </strong></div><div> optional , nil allowed </div> | <div> Must be an Array of nested elements </div>
+<div><strong>quantity_discount_group[product_options][product_option_id] </strong></div><div> required </div> | <div> Must be a number. </div>
+<div><strong>quantity_discount_group[product_options][sub_option_ids] </strong></div><div> required </div> | <div> Must be an Array of Integer </div>
+<div><strong>quantity_discount_group[discounts] </strong></div><div> optional , nil allowed </div> | <div> Must be an Array of nested elements </div>
+<div><strong>quantity_discount_group[discounts][quantity] </strong></div><div> optional , nil allowed </div> | <div> Must be a number. </div>
+<div><strong>quantity_discount_group[discounts][modifier] </strong></div><div> optional , nil allowed </div> | <div> Must be a float. </div>
 
 
 ## Update quantity discount group
@@ -97,18 +97,18 @@ quantity_discount_group[discounts][modifier]  |  optional , nil allowed  | Valid
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-quantity_discount_group  |  required  | Validations: |  Must be a Hash 
-quantity_discount_group[name]  |  optional  | Validations: |  Must be a String 
-quantity_discount_group[type]  |  optional  | Type |  Must be one of: percentage, fixed_price. 
-quantity_discount_group[product_options]  |  optional , nil allowed  | Validations: |  Must be an Array of nested elements 
-quantity_discount_group[product_options][product_option_id]  |  optional  | Validations: |  Must be a number. 
-quantity_discount_group[product_options][sub_option_ids]  |  optional  | Validations: |  Must be an Array of Integer 
-quantity_discount_group[discounts]  |  optional , nil allowed  | Validations: |  Must be an Array of nested elements 
-quantity_discount_group[discounts][quantity]  |  optional , nil allowed  | Validations: |  Must be a number. 
-quantity_discount_group[discounts][modifier]  |  optional , nil allowed  | Validations: |  Must be a float. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>quantity_discount_group </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>quantity_discount_group[name] </strong></div><div> optional </div> | <div> Must be a String </div>
+<div><strong>quantity_discount_group[type] </strong></div><div> optional </div> | <div>Type</div><div> Must be one of: percentage, fixed_price. </div>
+<div><strong>quantity_discount_group[product_options] </strong></div><div> optional , nil allowed </div> | <div> Must be an Array of nested elements </div>
+<div><strong>quantity_discount_group[product_options][product_option_id] </strong></div><div> optional </div> | <div> Must be a number. </div>
+<div><strong>quantity_discount_group[product_options][sub_option_ids] </strong></div><div> optional </div> | <div> Must be an Array of Integer </div>
+<div><strong>quantity_discount_group[discounts] </strong></div><div> optional , nil allowed </div> | <div> Must be an Array of nested elements </div>
+<div><strong>quantity_discount_group[discounts][quantity] </strong></div><div> optional , nil allowed </div> | <div> Must be a number. </div>
+<div><strong>quantity_discount_group[discounts][modifier] </strong></div><div> optional , nil allowed </div> | <div> Must be a float. </div>
 
 
 ## Update quantity discount group
@@ -129,18 +129,18 @@ quantity_discount_group[discounts][modifier]  |  optional , nil allowed  | Valid
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-quantity_discount_group  |  required  | Validations: |  Must be a Hash 
-quantity_discount_group[name]  |  optional  | Validations: |  Must be a String 
-quantity_discount_group[type]  |  optional  | Type |  Must be one of: percentage, fixed_price. 
-quantity_discount_group[product_options]  |  optional , nil allowed  | Validations: |  Must be an Array of nested elements 
-quantity_discount_group[product_options][product_option_id]  |  optional  | Validations: |  Must be a number. 
-quantity_discount_group[product_options][sub_option_ids]  |  optional  | Validations: |  Must be an Array of Integer 
-quantity_discount_group[discounts]  |  optional , nil allowed  | Validations: |  Must be an Array of nested elements 
-quantity_discount_group[discounts][quantity]  |  optional , nil allowed  | Validations: |  Must be a number. 
-quantity_discount_group[discounts][modifier]  |  optional , nil allowed  | Validations: |  Must be a float. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>quantity_discount_group </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>quantity_discount_group[name] </strong></div><div> optional </div> | <div> Must be a String </div>
+<div><strong>quantity_discount_group[type] </strong></div><div> optional </div> | <div>Type</div><div> Must be one of: percentage, fixed_price. </div>
+<div><strong>quantity_discount_group[product_options] </strong></div><div> optional , nil allowed </div> | <div> Must be an Array of nested elements </div>
+<div><strong>quantity_discount_group[product_options][product_option_id] </strong></div><div> optional </div> | <div> Must be a number. </div>
+<div><strong>quantity_discount_group[product_options][sub_option_ids] </strong></div><div> optional </div> | <div> Must be an Array of Integer </div>
+<div><strong>quantity_discount_group[discounts] </strong></div><div> optional , nil allowed </div> | <div> Must be an Array of nested elements </div>
+<div><strong>quantity_discount_group[discounts][quantity] </strong></div><div> optional , nil allowed </div> | <div> Must be a number. </div>
+<div><strong>quantity_discount_group[discounts][modifier] </strong></div><div> optional , nil allowed </div> | <div> Must be a float. </div>
 
 
 ## Delete quantity discount group
@@ -161,9 +161,9 @@ quantity_discount_group[discounts][modifier]  |  optional , nil allowed  | Valid
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-id  |  required  | Quantity discount group ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Quantity discount group ID</div><div> Must be a number. </div>
 
 

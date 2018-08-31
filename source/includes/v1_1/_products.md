@@ -18,15 +18,15 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-categories  |  optional  | Filter by categories |  Must be one of: Array, String. 
-sku  |  optional  | Filter by sku |  Must be a String 
-internal_id  |  optional  | Filter by Internal ID |  Must be a String 
-name  |  optional  | Filter by name |  Must be a String 
-vendors  |  optional  | Filter by vendors |  Must be one of: Array, String. 
-page  |  optional  | Pagination page number |  Must be a number. 
-per_page  |  optional  | Pagination per page number |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>categories </strong></div><div> optional </div> | <div>Filter by categories</div><div> Must be one of: Array, String. </div>
+<div><strong>sku </strong></div><div> optional </div> | <div>Filter by sku</div><div> Must be a String </div>
+<div><strong>internal_id </strong></div><div> optional </div> | <div>Filter by Internal ID</div><div> Must be a String </div>
+<div><strong>name </strong></div><div> optional </div> | <div>Filter by name</div><div> Must be a String </div>
+<div><strong>vendors </strong></div><div> optional </div> | <div>Filter by vendors</div><div> Must be one of: Array, String. </div>
+<div><strong>page </strong></div><div> optional </div> | <div>Pagination page number</div><div> Must be a number. </div>
+<div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
 ## Show product
@@ -47,9 +47,9 @@ per_page  |  optional  | Pagination per page number |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | User ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
 
 
 ## Create product
@@ -70,44 +70,44 @@ id  |  required  | User ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product  |  required  | Validations: |  Must be a Hash 
-product[name]  |  required  | Product name |  Must be a String 
-product[sku]  |  required  | Unique sku |  Must be a String 
-product[internal_id]  |  optional , nil allowed  | Internal ID |  Must be a String 
-product[base_price]  |  required  | Base price ($) |  Must be a float. 
-product[retail_price]  |  optional , nil allowed  | Retail price ($) |  Must be a float. 
-product[cost]  |  optional , nil allowed  | Cost ($) |  Must be a float. 
-product[setup_charge]  |  optional , nil allowed  | Setup charge ($) |  Must be a float. 
-product[minimum_order_quantity]  |  optional , nil allowed  | Minimum Order Quantity |  Must be a number. 
-product[maximum_order_quantity]  |  optional , nil allowed  | Maximum Order Quantity |  Must be a number. 
-product[custom_tic]  |  optional , nil allowed  | Product tax code |  Must be a String 
-product[primary_category_id]  |  optional , nil allowed  | ID of primary category |  Must be a number. 
-product[weight]  |  optional , nil allowed  | Weight (lbs) |  Must be a float. 
-product[width]  |  optional , nil allowed  | Width (in) |  Must be a float. 
-product[height]  |  optional , nil allowed  | Height (in) |  Must be a float. 
-product[length]  |  optional , nil allowed  | Length (in) |  Must be a float. 
-product[shipping_modifier]  |  optional , nil allowed  | Shipping modifier ($) |  Must be a float. 
-product[meta_title]  |  optional , nil allowed  | Custom title for search engine optimization (SEO) |  Must be a String 
-product[meta_description]  |  optional , nil allowed  | Description for SEO |  Must be a String 
-product[meta_keywords]  |  optional , nil allowed  | Keywords for SEO |  Must be a String 
-product[custom_url]  |  optional , nil allowed  | Custom URL |  Must be a String 
-product[description]  |  optional , nil allowed  | Product description |  Must be a String 
-product[category_ids]  |  optional , nil allowed  | Category IDs |  Must be an Array of Integer 
-product[vendor_ids]  |  optional , nil allowed  | Vendor IDs |  Must be an Array of Integer 
-product[active]  |  optional , nil allowed  | Active product |  Must be one of: true, false, 1, 0 
-product[featured]  |  optional , nil allowed  | Featured product |  Must be one of: true, false, 1, 0 
-product[tax_exempt]  |  optional , nil allowed  | Tax exempt |  Must be one of: true, false, 1, 0 
-product[shipping_exempt]  |  optional , nil allowed  | Shipping exempt |  Must be one of: true, false, 1, 0 
-product[enable_quantity_discount]  |  optional , nil allowed  | Enable/Disable quantity discounts |  Must be one of: true, false, 1, 0 
-product[related_products_type]  |  optional , nil allowed  | Related products type |  Must be one of: auto, custom. 
-product[enable_related_products]  |  optional , nil allowed  | Enable/Disable related products |  Must be one of: true, false, 1, 0 
-product[enable_product_personalization]  |  optional , nil allowed  | Enable/Disable product personalization |  Must be one of: true, false, 1, 0 
-product[enable_inventory]  |  optional , nil allowed  | Enable/Disable inventory |  Must be one of: true, false, 1, 0 
-product[enable_product_options]  |  optional , nil allowed  | Enable/Disable product Options |  Must be one of: true, false, 1, 0 
-product[enable_logo_locations]  |  optional , nil allowed  | Enable/Disable product logo locations |  Must be one of: true, false, 1, 0 
-product[enable_decoration_methods]  |  optional , nil allowed  | Enabled/Disable product decoration methods |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>product </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>product[name] </strong></div><div> required </div> | <div>Product name</div><div> Must be a String </div>
+<div><strong>product[sku] </strong></div><div> required </div> | <div>Unique sku</div><div> Must be a String </div>
+<div><strong>product[internal_id] </strong></div><div> optional , nil allowed </div> | <div>Internal ID</div><div> Must be a String </div>
+<div><strong>product[base_price] </strong></div><div> required </div> | <div>Base price ($)</div><div> Must be a float. </div>
+<div><strong>product[retail_price] </strong></div><div> optional , nil allowed </div> | <div>Retail price ($)</div><div> Must be a float. </div>
+<div><strong>product[cost] </strong></div><div> optional , nil allowed </div> | <div>Cost ($)</div><div> Must be a float. </div>
+<div><strong>product[setup_charge] </strong></div><div> optional , nil allowed </div> | <div>Setup charge ($)</div><div> Must be a float. </div>
+<div><strong>product[minimum_order_quantity] </strong></div><div> optional , nil allowed </div> | <div>Minimum Order Quantity</div><div> Must be a number. </div>
+<div><strong>product[maximum_order_quantity] </strong></div><div> optional , nil allowed </div> | <div>Maximum Order Quantity</div><div> Must be a number. </div>
+<div><strong>product[custom_tic] </strong></div><div> optional , nil allowed </div> | <div>Product tax code</div><div> Must be a String </div>
+<div><strong>product[primary_category_id] </strong></div><div> optional , nil allowed </div> | <div>ID of primary category</div><div> Must be a number. </div>
+<div><strong>product[weight] </strong></div><div> optional , nil allowed </div> | <div>Weight (lbs)</div><div> Must be a float. </div>
+<div><strong>product[width] </strong></div><div> optional , nil allowed </div> | <div>Width (in)</div><div> Must be a float. </div>
+<div><strong>product[height] </strong></div><div> optional , nil allowed </div> | <div>Height (in)</div><div> Must be a float. </div>
+<div><strong>product[length] </strong></div><div> optional , nil allowed </div> | <div>Length (in)</div><div> Must be a float. </div>
+<div><strong>product[shipping_modifier] </strong></div><div> optional , nil allowed </div> | <div>Shipping modifier ($)</div><div> Must be a float. </div>
+<div><strong>product[meta_title] </strong></div><div> optional , nil allowed </div> | <div>Custom title for search engine optimization (SEO)</div><div> Must be a String </div>
+<div><strong>product[meta_description] </strong></div><div> optional , nil allowed </div> | <div>Description for SEO</div><div> Must be a String </div>
+<div><strong>product[meta_keywords] </strong></div><div> optional , nil allowed </div> | <div>Keywords for SEO</div><div> Must be a String </div>
+<div><strong>product[custom_url] </strong></div><div> optional , nil allowed </div> | <div>Custom URL</div><div> Must be a String </div>
+<div><strong>product[description] </strong></div><div> optional , nil allowed </div> | <div>Product description</div><div> Must be a String </div>
+<div><strong>product[category_ids] </strong></div><div> optional , nil allowed </div> | <div>Category IDs</div><div> Must be an Array of Integer </div>
+<div><strong>product[vendor_ids] </strong></div><div> optional , nil allowed </div> | <div>Vendor IDs</div><div> Must be an Array of Integer </div>
+<div><strong>product[active] </strong></div><div> optional , nil allowed </div> | <div>Active product</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[featured] </strong></div><div> optional , nil allowed </div> | <div>Featured product</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[tax_exempt] </strong></div><div> optional , nil allowed </div> | <div>Tax exempt</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[shipping_exempt] </strong></div><div> optional , nil allowed </div> | <div>Shipping exempt</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_quantity_discount] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable quantity discounts</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[related_products_type] </strong></div><div> optional , nil allowed </div> | <div>Related products type</div><div> Must be one of: auto, custom. </div>
+<div><strong>product[enable_related_products] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable related products</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_product_personalization] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product personalization</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_inventory] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable inventory</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_product_options] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product Options</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_logo_locations] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product logo locations</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_decoration_methods] </strong></div><div> optional , nil allowed </div> | <div>Enabled/Disable product decoration methods</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update product
@@ -128,45 +128,45 @@ product[enable_decoration_methods]  |  optional , nil allowed  | Enabled/Disable
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | User ID |  Must be a number. 
-product  |  required  | Validations: |  Must be a Hash 
-product[name]  |  optional  | Product name |  Must be a String 
-product[sku]  |  optional  | Unique sku |  Must be a String 
-product[internal_id]  |  optional , nil allowed  | Internal ID |  Must be a String 
-product[base_price]  |  optional  | Base price ($) |  Must be a float. 
-product[retail_price]  |  optional , nil allowed  | Retail price ($) |  Must be a float. 
-product[cost]  |  optional , nil allowed  | Cost ($) |  Must be a float. 
-product[setup_charge]  |  optional , nil allowed  | Setup charge ($) |  Must be a float. 
-product[minimum_order_quantity]  |  optional , nil allowed  | Minimum Order Quantity |  Must be a number. 
-product[maximum_order_quantity]  |  optional , nil allowed  | Maximum Order Quantity |  Must be a number. 
-product[custom_tic]  |  optional , nil allowed  | Product tax code |  Must be a String 
-product[primary_category_id]  |  optional , nil allowed  | ID of primary category |  Must be a number. 
-product[weight]  |  optional , nil allowed  | Weight (lbs) |  Must be a float. 
-product[width]  |  optional , nil allowed  | Width (in) |  Must be a float. 
-product[height]  |  optional , nil allowed  | Height (in) |  Must be a float. 
-product[length]  |  optional , nil allowed  | Length (in) |  Must be a float. 
-product[shipping_modifier]  |  optional , nil allowed  | Shipping modifier ($) |  Must be a float. 
-product[meta_title]  |  optional , nil allowed  | Custom title for search engine optimization (SEO) |  Must be a String 
-product[meta_description]  |  optional , nil allowed  | Description for SEO |  Must be a String 
-product[meta_keywords]  |  optional , nil allowed  | Keywords for SEO |  Must be a String 
-product[custom_url]  |  optional , nil allowed  | Custom URL |  Must be a String 
-product[description]  |  optional , nil allowed  | Product description |  Must be a String 
-product[category_ids]  |  optional , nil allowed  | Category IDs |  Must be an Array of Integer 
-product[vendor_ids]  |  optional , nil allowed  | Vendor IDs |  Must be an Array of Integer 
-product[active]  |  optional , nil allowed  | Active product |  Must be one of: true, false, 1, 0 
-product[featured]  |  optional , nil allowed  | Featured product |  Must be one of: true, false, 1, 0 
-product[tax_exempt]  |  optional , nil allowed  | Tax exempt |  Must be one of: true, false, 1, 0 
-product[shipping_exempt]  |  optional , nil allowed  | Shipping exempt |  Must be one of: true, false, 1, 0 
-product[enable_quantity_discount]  |  optional , nil allowed  | Enable/Disable quantity discounts |  Must be one of: true, false, 1, 0 
-product[related_products_type]  |  optional , nil allowed  | Related products type |  Must be one of: auto, custom. 
-product[enable_related_products]  |  optional , nil allowed  | Enable/Disable related products |  Must be one of: true, false, 1, 0 
-product[enable_product_personalization]  |  optional , nil allowed  | Enable/Disable product personalization |  Must be one of: true, false, 1, 0 
-product[enable_inventory]  |  optional , nil allowed  | Enable/Disable inventory |  Must be one of: true, false, 1, 0 
-product[enable_product_options]  |  optional , nil allowed  | Enable/Disable product Options |  Must be one of: true, false, 1, 0 
-product[enable_logo_locations]  |  optional , nil allowed  | Enable/Disable product logo locations |  Must be one of: true, false, 1, 0 
-product[enable_decoration_methods]  |  optional , nil allowed  | Enabled/Disable product decoration methods |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>product </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>product[name] </strong></div><div> optional </div> | <div>Product name</div><div> Must be a String </div>
+<div><strong>product[sku] </strong></div><div> optional </div> | <div>Unique sku</div><div> Must be a String </div>
+<div><strong>product[internal_id] </strong></div><div> optional , nil allowed </div> | <div>Internal ID</div><div> Must be a String </div>
+<div><strong>product[base_price] </strong></div><div> optional </div> | <div>Base price ($)</div><div> Must be a float. </div>
+<div><strong>product[retail_price] </strong></div><div> optional , nil allowed </div> | <div>Retail price ($)</div><div> Must be a float. </div>
+<div><strong>product[cost] </strong></div><div> optional , nil allowed </div> | <div>Cost ($)</div><div> Must be a float. </div>
+<div><strong>product[setup_charge] </strong></div><div> optional , nil allowed </div> | <div>Setup charge ($)</div><div> Must be a float. </div>
+<div><strong>product[minimum_order_quantity] </strong></div><div> optional , nil allowed </div> | <div>Minimum Order Quantity</div><div> Must be a number. </div>
+<div><strong>product[maximum_order_quantity] </strong></div><div> optional , nil allowed </div> | <div>Maximum Order Quantity</div><div> Must be a number. </div>
+<div><strong>product[custom_tic] </strong></div><div> optional , nil allowed </div> | <div>Product tax code</div><div> Must be a String </div>
+<div><strong>product[primary_category_id] </strong></div><div> optional , nil allowed </div> | <div>ID of primary category</div><div> Must be a number. </div>
+<div><strong>product[weight] </strong></div><div> optional , nil allowed </div> | <div>Weight (lbs)</div><div> Must be a float. </div>
+<div><strong>product[width] </strong></div><div> optional , nil allowed </div> | <div>Width (in)</div><div> Must be a float. </div>
+<div><strong>product[height] </strong></div><div> optional , nil allowed </div> | <div>Height (in)</div><div> Must be a float. </div>
+<div><strong>product[length] </strong></div><div> optional , nil allowed </div> | <div>Length (in)</div><div> Must be a float. </div>
+<div><strong>product[shipping_modifier] </strong></div><div> optional , nil allowed </div> | <div>Shipping modifier ($)</div><div> Must be a float. </div>
+<div><strong>product[meta_title] </strong></div><div> optional , nil allowed </div> | <div>Custom title for search engine optimization (SEO)</div><div> Must be a String </div>
+<div><strong>product[meta_description] </strong></div><div> optional , nil allowed </div> | <div>Description for SEO</div><div> Must be a String </div>
+<div><strong>product[meta_keywords] </strong></div><div> optional , nil allowed </div> | <div>Keywords for SEO</div><div> Must be a String </div>
+<div><strong>product[custom_url] </strong></div><div> optional , nil allowed </div> | <div>Custom URL</div><div> Must be a String </div>
+<div><strong>product[description] </strong></div><div> optional , nil allowed </div> | <div>Product description</div><div> Must be a String </div>
+<div><strong>product[category_ids] </strong></div><div> optional , nil allowed </div> | <div>Category IDs</div><div> Must be an Array of Integer </div>
+<div><strong>product[vendor_ids] </strong></div><div> optional , nil allowed </div> | <div>Vendor IDs</div><div> Must be an Array of Integer </div>
+<div><strong>product[active] </strong></div><div> optional , nil allowed </div> | <div>Active product</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[featured] </strong></div><div> optional , nil allowed </div> | <div>Featured product</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[tax_exempt] </strong></div><div> optional , nil allowed </div> | <div>Tax exempt</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[shipping_exempt] </strong></div><div> optional , nil allowed </div> | <div>Shipping exempt</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_quantity_discount] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable quantity discounts</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[related_products_type] </strong></div><div> optional , nil allowed </div> | <div>Related products type</div><div> Must be one of: auto, custom. </div>
+<div><strong>product[enable_related_products] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable related products</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_product_personalization] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product personalization</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_inventory] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable inventory</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_product_options] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product Options</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_logo_locations] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product logo locations</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_decoration_methods] </strong></div><div> optional , nil allowed </div> | <div>Enabled/Disable product decoration methods</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update product
@@ -187,45 +187,45 @@ product[enable_decoration_methods]  |  optional , nil allowed  | Enabled/Disable
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | User ID |  Must be a number. 
-product  |  required  | Validations: |  Must be a Hash 
-product[name]  |  optional  | Product name |  Must be a String 
-product[sku]  |  optional  | Unique sku |  Must be a String 
-product[internal_id]  |  optional , nil allowed  | Internal ID |  Must be a String 
-product[base_price]  |  optional  | Base price ($) |  Must be a float. 
-product[retail_price]  |  optional , nil allowed  | Retail price ($) |  Must be a float. 
-product[cost]  |  optional , nil allowed  | Cost ($) |  Must be a float. 
-product[setup_charge]  |  optional , nil allowed  | Setup charge ($) |  Must be a float. 
-product[minimum_order_quantity]  |  optional , nil allowed  | Minimum Order Quantity |  Must be a number. 
-product[maximum_order_quantity]  |  optional , nil allowed  | Maximum Order Quantity |  Must be a number. 
-product[custom_tic]  |  optional , nil allowed  | Product tax code |  Must be a String 
-product[primary_category_id]  |  optional , nil allowed  | ID of primary category |  Must be a number. 
-product[weight]  |  optional , nil allowed  | Weight (lbs) |  Must be a float. 
-product[width]  |  optional , nil allowed  | Width (in) |  Must be a float. 
-product[height]  |  optional , nil allowed  | Height (in) |  Must be a float. 
-product[length]  |  optional , nil allowed  | Length (in) |  Must be a float. 
-product[shipping_modifier]  |  optional , nil allowed  | Shipping modifier ($) |  Must be a float. 
-product[meta_title]  |  optional , nil allowed  | Custom title for search engine optimization (SEO) |  Must be a String 
-product[meta_description]  |  optional , nil allowed  | Description for SEO |  Must be a String 
-product[meta_keywords]  |  optional , nil allowed  | Keywords for SEO |  Must be a String 
-product[custom_url]  |  optional , nil allowed  | Custom URL |  Must be a String 
-product[description]  |  optional , nil allowed  | Product description |  Must be a String 
-product[category_ids]  |  optional , nil allowed  | Category IDs |  Must be an Array of Integer 
-product[vendor_ids]  |  optional , nil allowed  | Vendor IDs |  Must be an Array of Integer 
-product[active]  |  optional , nil allowed  | Active product |  Must be one of: true, false, 1, 0 
-product[featured]  |  optional , nil allowed  | Featured product |  Must be one of: true, false, 1, 0 
-product[tax_exempt]  |  optional , nil allowed  | Tax exempt |  Must be one of: true, false, 1, 0 
-product[shipping_exempt]  |  optional , nil allowed  | Shipping exempt |  Must be one of: true, false, 1, 0 
-product[enable_quantity_discount]  |  optional , nil allowed  | Enable/Disable quantity discounts |  Must be one of: true, false, 1, 0 
-product[related_products_type]  |  optional , nil allowed  | Related products type |  Must be one of: auto, custom. 
-product[enable_related_products]  |  optional , nil allowed  | Enable/Disable related products |  Must be one of: true, false, 1, 0 
-product[enable_product_personalization]  |  optional , nil allowed  | Enable/Disable product personalization |  Must be one of: true, false, 1, 0 
-product[enable_inventory]  |  optional , nil allowed  | Enable/Disable inventory |  Must be one of: true, false, 1, 0 
-product[enable_product_options]  |  optional , nil allowed  | Enable/Disable product Options |  Must be one of: true, false, 1, 0 
-product[enable_logo_locations]  |  optional , nil allowed  | Enable/Disable product logo locations |  Must be one of: true, false, 1, 0 
-product[enable_decoration_methods]  |  optional , nil allowed  | Enabled/Disable product decoration methods |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>product </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>product[name] </strong></div><div> optional </div> | <div>Product name</div><div> Must be a String </div>
+<div><strong>product[sku] </strong></div><div> optional </div> | <div>Unique sku</div><div> Must be a String </div>
+<div><strong>product[internal_id] </strong></div><div> optional , nil allowed </div> | <div>Internal ID</div><div> Must be a String </div>
+<div><strong>product[base_price] </strong></div><div> optional </div> | <div>Base price ($)</div><div> Must be a float. </div>
+<div><strong>product[retail_price] </strong></div><div> optional , nil allowed </div> | <div>Retail price ($)</div><div> Must be a float. </div>
+<div><strong>product[cost] </strong></div><div> optional , nil allowed </div> | <div>Cost ($)</div><div> Must be a float. </div>
+<div><strong>product[setup_charge] </strong></div><div> optional , nil allowed </div> | <div>Setup charge ($)</div><div> Must be a float. </div>
+<div><strong>product[minimum_order_quantity] </strong></div><div> optional , nil allowed </div> | <div>Minimum Order Quantity</div><div> Must be a number. </div>
+<div><strong>product[maximum_order_quantity] </strong></div><div> optional , nil allowed </div> | <div>Maximum Order Quantity</div><div> Must be a number. </div>
+<div><strong>product[custom_tic] </strong></div><div> optional , nil allowed </div> | <div>Product tax code</div><div> Must be a String </div>
+<div><strong>product[primary_category_id] </strong></div><div> optional , nil allowed </div> | <div>ID of primary category</div><div> Must be a number. </div>
+<div><strong>product[weight] </strong></div><div> optional , nil allowed </div> | <div>Weight (lbs)</div><div> Must be a float. </div>
+<div><strong>product[width] </strong></div><div> optional , nil allowed </div> | <div>Width (in)</div><div> Must be a float. </div>
+<div><strong>product[height] </strong></div><div> optional , nil allowed </div> | <div>Height (in)</div><div> Must be a float. </div>
+<div><strong>product[length] </strong></div><div> optional , nil allowed </div> | <div>Length (in)</div><div> Must be a float. </div>
+<div><strong>product[shipping_modifier] </strong></div><div> optional , nil allowed </div> | <div>Shipping modifier ($)</div><div> Must be a float. </div>
+<div><strong>product[meta_title] </strong></div><div> optional , nil allowed </div> | <div>Custom title for search engine optimization (SEO)</div><div> Must be a String </div>
+<div><strong>product[meta_description] </strong></div><div> optional , nil allowed </div> | <div>Description for SEO</div><div> Must be a String </div>
+<div><strong>product[meta_keywords] </strong></div><div> optional , nil allowed </div> | <div>Keywords for SEO</div><div> Must be a String </div>
+<div><strong>product[custom_url] </strong></div><div> optional , nil allowed </div> | <div>Custom URL</div><div> Must be a String </div>
+<div><strong>product[description] </strong></div><div> optional , nil allowed </div> | <div>Product description</div><div> Must be a String </div>
+<div><strong>product[category_ids] </strong></div><div> optional , nil allowed </div> | <div>Category IDs</div><div> Must be an Array of Integer </div>
+<div><strong>product[vendor_ids] </strong></div><div> optional , nil allowed </div> | <div>Vendor IDs</div><div> Must be an Array of Integer </div>
+<div><strong>product[active] </strong></div><div> optional , nil allowed </div> | <div>Active product</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[featured] </strong></div><div> optional , nil allowed </div> | <div>Featured product</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[tax_exempt] </strong></div><div> optional , nil allowed </div> | <div>Tax exempt</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[shipping_exempt] </strong></div><div> optional , nil allowed </div> | <div>Shipping exempt</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_quantity_discount] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable quantity discounts</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[related_products_type] </strong></div><div> optional , nil allowed </div> | <div>Related products type</div><div> Must be one of: auto, custom. </div>
+<div><strong>product[enable_related_products] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable related products</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_product_personalization] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product personalization</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_inventory] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable inventory</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_product_options] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product Options</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_logo_locations] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product logo locations</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>product[enable_decoration_methods] </strong></div><div> optional , nil allowed </div> | <div>Enabled/Disable product decoration methods</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Delete product
@@ -246,8 +246,8 @@ product[enable_decoration_methods]  |  optional , nil allowed  | Enabled/Disable
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | User ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
 
 

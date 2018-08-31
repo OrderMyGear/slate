@@ -18,10 +18,10 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-page  |  optional  | Pagination page number |  Must be a number. 
-per_page  |  optional  | Pagination per page number |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>page </strong></div><div> optional </div> | <div>Pagination page number</div><div> Must be a number. </div>
+<div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
 ## Add custom related product
@@ -42,9 +42,9 @@ per_page  |  optional  | Pagination per page number |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Related product ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Related product ID</div><div> Must be a number. </div>
 
 
 ## Remove custom related product
@@ -65,8 +65,8 @@ id  |  required  | Related product ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Related product ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Related product ID</div><div> Must be a number. </div>
 
 

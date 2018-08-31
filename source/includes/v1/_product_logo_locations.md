@@ -36,12 +36,12 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-logo_location  |  required  | Validations: |  Must be a Hash 
-logo_location[enabled]  |  optional  | Enable location |  Must be one of: true, false, 1, 0 
-logo_location[required]  |  optional  | Logo is required for this location |  Must be one of: true, false, 1, 0 
-logo_location[charge]  |  optional  | Allow charge for a logo |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>logo_location </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>logo_location[enabled] </strong></div><div> optional </div> | <div>Enable location</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>logo_location[required] </strong></div><div> optional </div> | <div>Logo is required for this location</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>logo_location[charge] </strong></div><div> optional </div> | <div>Allow charge for a logo</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update logo location
@@ -62,11 +62,11 @@ logo_location[charge]  |  optional  | Allow charge for a logo |  Must be one of:
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-logo_location  |  required  | Validations: |  Must be a Hash 
-logo_location[enabled]  |  optional  | Enable location |  Must be one of: true, false, 1, 0 
-logo_location[required]  |  optional  | Logo is required for this location |  Must be one of: true, false, 1, 0 
-logo_location[charge]  |  optional  | Allow charge for a logo |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>logo_location </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>logo_location[enabled] </strong></div><div> optional </div> | <div>Enable location</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>logo_location[required] </strong></div><div> optional </div> | <div>Logo is required for this location</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>logo_location[charge] </strong></div><div> optional </div> | <div>Allow charge for a logo</div><div> Must be one of: true, false, 1, 0 </div>
 
 

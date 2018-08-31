@@ -36,9 +36,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Inventory ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Inventory ID</div><div> Must be a number. </div>
 
 
 ## Create inventory
@@ -49,14 +49,14 @@ id  |  required  | Inventory ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-inventory  |  required  | Validations: |  Must be a Hash 
-inventory[sub_option_ids]  |  optional , nil allowed  | Array of sub_option ids. It can be blank if there are no options for this product |  Must be an array of any type 
-inventory[inventory]  |  required  | Available inventories |  Must be a number. 
-inventory[trigger]  |  required  | Notify when inventories are low |  Must be a number. 
-inventory[track]  |  required  | Validations: |  Must be one of: true, false, 1, 0 
-inventory[allow_negative]  |  required  | Allow negative value of inventories |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>inventory </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>inventory[sub_option_ids] </strong></div><div> optional , nil allowed </div> | <div>Array of sub_option ids. It can be blank if there are no options for this product</div><div> Must be an array of any type </div>
+<div><strong>inventory[inventory] </strong></div><div> required </div> | <div>Available inventories</div><div> Must be a number. </div>
+<div><strong>inventory[trigger] </strong></div><div> required </div> | <div>Notify when inventories are low</div><div> Must be a number. </div>
+<div><strong>inventory[track] </strong></div><div> required </div> | <div> Must be one of: true, false, 1, 0 </div>
+<div><strong>inventory[allow_negative] </strong></div><div> required </div> | <div>Allow negative value of inventories</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update inventory
@@ -77,13 +77,13 @@ inventory[allow_negative]  |  required  | Allow negative value of inventories | 
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-inventory  |  required  | Validations: |  Must be a Hash 
-inventory[inventory]  |  optional  | Available inventories |  Must be a number. 
-inventory[trigger]  |  optional  | Notify when inventories are low |  Must be a number. 
-inventory[track]  |  optional  | Validations: |  Must be one of: true, false, 1, 0 
-inventory[allow_negative]  |  optional  | Allow negative value of inventories |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>inventory </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>inventory[inventory] </strong></div><div> optional </div> | <div>Available inventories</div><div> Must be a number. </div>
+<div><strong>inventory[trigger] </strong></div><div> optional </div> | <div>Notify when inventories are low</div><div> Must be a number. </div>
+<div><strong>inventory[track] </strong></div><div> optional </div> | <div> Must be one of: true, false, 1, 0 </div>
+<div><strong>inventory[allow_negative] </strong></div><div> optional </div> | <div>Allow negative value of inventories</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update inventory
@@ -104,13 +104,13 @@ inventory[allow_negative]  |  optional  | Allow negative value of inventories | 
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-inventory  |  required  | Validations: |  Must be a Hash 
-inventory[inventory]  |  optional  | Available inventories |  Must be a number. 
-inventory[trigger]  |  optional  | Notify when inventories are low |  Must be a number. 
-inventory[track]  |  optional  | Validations: |  Must be one of: true, false, 1, 0 
-inventory[allow_negative]  |  optional  | Allow negative value of inventories |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>inventory </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>inventory[inventory] </strong></div><div> optional </div> | <div>Available inventories</div><div> Must be a number. </div>
+<div><strong>inventory[trigger] </strong></div><div> optional </div> | <div>Notify when inventories are low</div><div> Must be a number. </div>
+<div><strong>inventory[track] </strong></div><div> optional </div> | <div> Must be one of: true, false, 1, 0 </div>
+<div><strong>inventory[allow_negative] </strong></div><div> optional </div> | <div>Allow negative value of inventories</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Delete inventory
@@ -131,8 +131,8 @@ inventory[allow_negative]  |  optional  | Allow negative value of inventories | 
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Inventory ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Inventory ID</div><div> Must be a number. </div>
 
 

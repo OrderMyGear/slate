@@ -18,10 +18,10 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-page  |  optional  | Pagination page number |  Must be a number. 
-per_page  |  optional  | Pagination per page number |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>page </strong></div><div> optional </div> | <div>Pagination page number</div><div> Must be a number. </div>
+<div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
 ## Show category
@@ -42,9 +42,9 @@ per_page  |  optional  | Pagination per page number |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Category ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Category ID</div><div> Must be a number. </div>
 
 
 ## Create category
@@ -65,15 +65,15 @@ id  |  required  | Category ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-category  |  required  | Validations: |  Must be a Hash 
-category[name]  |  required  | Unique name |  Must be a String 
-category[position]  |  optional , nil allowed  | Category position in list |  Must be a number. 
-category[parent_id]  |  optional , nil allowed  | Category ID to be used as parent category |  Must be a number. 
-category[products_order]  |  optional , nil allowed  | Products ordering in this category |  Must be one of: website_products_order, name_asc, name_desc, price_asc, price_desc, rating_asc, rating_desc, most_reviews, custom. 
-category[price_modifier]  |  optional , nil allowed  | Price Modifier |  Must be a float. 
-category[active]  |  optional , nil allowed  | Enable / Disable category |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>category </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>category[name] </strong></div><div> required </div> | <div>Unique name</div><div> Must be a String </div>
+<div><strong>category[position] </strong></div><div> optional , nil allowed </div> | <div>Category position in list</div><div> Must be a number. </div>
+<div><strong>category[parent_id] </strong></div><div> optional , nil allowed </div> | <div>Category ID to be used as parent category</div><div> Must be a number. </div>
+<div><strong>category[products_order] </strong></div><div> optional , nil allowed </div> | <div>Products ordering in this category</div><div> Must be one of: website_products_order, name_asc, name_desc, price_asc, price_desc, rating_asc, rating_desc, most_reviews, custom. </div>
+<div><strong>category[price_modifier] </strong></div><div> optional , nil allowed </div> | <div>Price Modifier</div><div> Must be a float. </div>
+<div><strong>category[active] </strong></div><div> optional , nil allowed </div> | <div>Enable / Disable category</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update category
@@ -94,15 +94,15 @@ category[active]  |  optional , nil allowed  | Enable / Disable category |  Must
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-category  |  required  | Validations: |  Must be a Hash 
-category[name]  |  optional  | Unique name |  Must be a String 
-category[position]  |  optional , nil allowed  | Category position in list |  Must be a number. 
-category[parent_id]  |  optional , nil allowed  | Category ID to be used as parent category |  Must be a number. 
-category[products_order]  |  optional , nil allowed  | Products ordering in this category |  Must be one of: website_products_order, name_asc, name_desc, price_asc, price_desc, rating_asc, rating_desc, most_reviews, custom. 
-category[price_modifier]  |  optional , nil allowed  | Price Modifier |  Must be a float. 
-category[active]  |  optional , nil allowed  | Enable / Disable category |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>category </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>category[name] </strong></div><div> optional </div> | <div>Unique name</div><div> Must be a String </div>
+<div><strong>category[position] </strong></div><div> optional , nil allowed </div> | <div>Category position in list</div><div> Must be a number. </div>
+<div><strong>category[parent_id] </strong></div><div> optional , nil allowed </div> | <div>Category ID to be used as parent category</div><div> Must be a number. </div>
+<div><strong>category[products_order] </strong></div><div> optional , nil allowed </div> | <div>Products ordering in this category</div><div> Must be one of: website_products_order, name_asc, name_desc, price_asc, price_desc, rating_asc, rating_desc, most_reviews, custom. </div>
+<div><strong>category[price_modifier] </strong></div><div> optional , nil allowed </div> | <div>Price Modifier</div><div> Must be a float. </div>
+<div><strong>category[active] </strong></div><div> optional , nil allowed </div> | <div>Enable / Disable category</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update category
@@ -123,15 +123,15 @@ category[active]  |  optional , nil allowed  | Enable / Disable category |  Must
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-category  |  required  | Validations: |  Must be a Hash 
-category[name]  |  optional  | Unique name |  Must be a String 
-category[position]  |  optional , nil allowed  | Category position in list |  Must be a number. 
-category[parent_id]  |  optional , nil allowed  | Category ID to be used as parent category |  Must be a number. 
-category[products_order]  |  optional , nil allowed  | Products ordering in this category |  Must be one of: website_products_order, name_asc, name_desc, price_asc, price_desc, rating_asc, rating_desc, most_reviews, custom. 
-category[price_modifier]  |  optional , nil allowed  | Price Modifier |  Must be a float. 
-category[active]  |  optional , nil allowed  | Enable / Disable category |  Must be one of: true, false, 1, 0 
+Parameter | Description
+--------- | -----------
+<div><strong>category </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>category[name] </strong></div><div> optional </div> | <div>Unique name</div><div> Must be a String </div>
+<div><strong>category[position] </strong></div><div> optional , nil allowed </div> | <div>Category position in list</div><div> Must be a number. </div>
+<div><strong>category[parent_id] </strong></div><div> optional , nil allowed </div> | <div>Category ID to be used as parent category</div><div> Must be a number. </div>
+<div><strong>category[products_order] </strong></div><div> optional , nil allowed </div> | <div>Products ordering in this category</div><div> Must be one of: website_products_order, name_asc, name_desc, price_asc, price_desc, rating_asc, rating_desc, most_reviews, custom. </div>
+<div><strong>category[price_modifier] </strong></div><div> optional , nil allowed </div> | <div>Price Modifier</div><div> Must be a float. </div>
+<div><strong>category[active] </strong></div><div> optional , nil allowed </div> | <div>Enable / Disable category</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Delete category
@@ -152,8 +152,8 @@ category[active]  |  optional , nil allowed  | Enable / Disable category |  Must
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Category ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Category ID</div><div> Must be a number. </div>
 
 

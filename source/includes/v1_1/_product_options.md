@@ -18,9 +18,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
 ## Show option
@@ -41,10 +41,10 @@ product_id  |  required  | Product ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-id  |  required  | Option ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
 
 
 ## Create option
@@ -65,20 +65,20 @@ id  |  required  | Option ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-option  |  required  | Validations: |  Must be a Hash 
-option[name]  |  required  | Name of option |  Must be a String 
-option[friendly_name]  |  optional , nil allowed  | Friendly name |  Must be a String 
-option[option_type]  |  optional , nil allowed  | Product Option Type (general, size, color) |  Must be one of: general, size, color. 
-option[price_modifier_type]  |  required  | Price Modifier Type (“$” or “%”) |  Must be one of: %, $. 
-option[show_in_inventory]  |  optional , nil allowed  | Add ability to create an inventory for option |  Must be one of: true, false, 1, 0 
-option[show_as_thumbs]  |  optional , nil allowed  | Display option as thumbnails |  Must be one of: true, false, 1, 0 
-option[include_in_images]  |  optional , nil allowed  | Display sub option images on the storefront |  Must be one of: true, false, 1, 0 
-option[required]  |  optional , nil allowed  | Required |  Must be one of: true, false, 1, 0 
-option[multiple_quantity]  |  optional , nil allowed  | Multiple quantity |  Must be one of: true, false, 1, 0 
-option[position]  |  optional , nil allowed  | Position of order |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>option </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>option[name] </strong></div><div> required </div> | <div>Name of option</div><div> Must be a String </div>
+<div><strong>option[friendly_name] </strong></div><div> optional , nil allowed </div> | <div>Friendly name</div><div> Must be a String </div>
+<div><strong>option[option_type] </strong></div><div> optional , nil allowed </div> | <div>Product Option Type (general, size, color)</div><div> Must be one of: general, size, color. </div>
+<div><strong>option[price_modifier_type] </strong></div><div> required </div> | <div>Price Modifier Type (“$” or “%”)</div><div> Must be one of: %, $. </div>
+<div><strong>option[show_in_inventory] </strong></div><div> optional , nil allowed </div> | <div>Add ability to create an inventory for option</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[show_as_thumbs] </strong></div><div> optional , nil allowed </div> | <div>Display option as thumbnails</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[include_in_images] </strong></div><div> optional , nil allowed </div> | <div>Display sub option images on the storefront</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[required] </strong></div><div> optional , nil allowed </div> | <div>Required</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[multiple_quantity] </strong></div><div> optional , nil allowed </div> | <div>Multiple quantity</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
 
 
 ## Update option
@@ -99,20 +99,20 @@ option[position]  |  optional , nil allowed  | Position of order |  Must be a nu
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-option  |  required  | Validations: |  Must be a Hash 
-option[name]  |  optional  | Name of option |  Must be a String 
-option[friendly_name]  |  optional , nil allowed  | Friendly name |  Must be a String 
-option[option_type]  |  optional , nil allowed  | Product Option Type (general, size, color) |  Must be one of: general, size, color. 
-option[price_modifier_type]  |  optional  | Price Modifier Type (“$” or “%”) |  Must be one of: %, $. 
-option[show_in_inventory]  |  optional , nil allowed  | Add ability to create an inventory for option |  Must be one of: true, false, 1, 0 
-option[show_as_thumbs]  |  optional , nil allowed  | Display option as thumbnails |  Must be one of: true, false, 1, 0 
-option[include_in_images]  |  optional , nil allowed  | Display sub option images on the storefront |  Must be one of: true, false, 1, 0 
-option[required]  |  optional , nil allowed  | Required |  Must be one of: true, false, 1, 0 
-option[multiple_quantity]  |  optional , nil allowed  | Multiple quantity |  Must be one of: true, false, 1, 0 
-option[position]  |  optional , nil allowed  | Position of order |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>option </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>option[name] </strong></div><div> optional </div> | <div>Name of option</div><div> Must be a String </div>
+<div><strong>option[friendly_name] </strong></div><div> optional , nil allowed </div> | <div>Friendly name</div><div> Must be a String </div>
+<div><strong>option[option_type] </strong></div><div> optional , nil allowed </div> | <div>Product Option Type (general, size, color)</div><div> Must be one of: general, size, color. </div>
+<div><strong>option[price_modifier_type] </strong></div><div> optional </div> | <div>Price Modifier Type (“$” or “%”)</div><div> Must be one of: %, $. </div>
+<div><strong>option[show_in_inventory] </strong></div><div> optional , nil allowed </div> | <div>Add ability to create an inventory for option</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[show_as_thumbs] </strong></div><div> optional , nil allowed </div> | <div>Display option as thumbnails</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[include_in_images] </strong></div><div> optional , nil allowed </div> | <div>Display sub option images on the storefront</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[required] </strong></div><div> optional , nil allowed </div> | <div>Required</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[multiple_quantity] </strong></div><div> optional , nil allowed </div> | <div>Multiple quantity</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
 
 
 ## Update option
@@ -133,20 +133,20 @@ option[position]  |  optional , nil allowed  | Position of order |  Must be a nu
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-option  |  required  | Validations: |  Must be a Hash 
-option[name]  |  optional  | Name of option |  Must be a String 
-option[friendly_name]  |  optional , nil allowed  | Friendly name |  Must be a String 
-option[option_type]  |  optional , nil allowed  | Product Option Type (general, size, color) |  Must be one of: general, size, color. 
-option[price_modifier_type]  |  optional  | Price Modifier Type (“$” or “%”) |  Must be one of: %, $. 
-option[show_in_inventory]  |  optional , nil allowed  | Add ability to create an inventory for option |  Must be one of: true, false, 1, 0 
-option[show_as_thumbs]  |  optional , nil allowed  | Display option as thumbnails |  Must be one of: true, false, 1, 0 
-option[include_in_images]  |  optional , nil allowed  | Display sub option images on the storefront |  Must be one of: true, false, 1, 0 
-option[required]  |  optional , nil allowed  | Required |  Must be one of: true, false, 1, 0 
-option[multiple_quantity]  |  optional , nil allowed  | Multiple quantity |  Must be one of: true, false, 1, 0 
-option[position]  |  optional , nil allowed  | Position of order |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>option </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>option[name] </strong></div><div> optional </div> | <div>Name of option</div><div> Must be a String </div>
+<div><strong>option[friendly_name] </strong></div><div> optional , nil allowed </div> | <div>Friendly name</div><div> Must be a String </div>
+<div><strong>option[option_type] </strong></div><div> optional , nil allowed </div> | <div>Product Option Type (general, size, color)</div><div> Must be one of: general, size, color. </div>
+<div><strong>option[price_modifier_type] </strong></div><div> optional </div> | <div>Price Modifier Type (“$” or “%”)</div><div> Must be one of: %, $. </div>
+<div><strong>option[show_in_inventory] </strong></div><div> optional , nil allowed </div> | <div>Add ability to create an inventory for option</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[show_as_thumbs] </strong></div><div> optional , nil allowed </div> | <div>Display option as thumbnails</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[include_in_images] </strong></div><div> optional , nil allowed </div> | <div>Display sub option images on the storefront</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[required] </strong></div><div> optional , nil allowed </div> | <div>Required</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[multiple_quantity] </strong></div><div> optional , nil allowed </div> | <div>Multiple quantity</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
 
 
 ## Delete option
@@ -167,9 +167,9 @@ option[position]  |  optional , nil allowed  | Position of order |  Must be a nu
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-id  |  required  | Option ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
 
 

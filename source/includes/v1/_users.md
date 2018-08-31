@@ -18,15 +18,15 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-groups  |  optional  | Filter by groups |  Must be one of: Array, String. 
-date_created_from  |  optional  | Filter by date created from |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
-date_created_to  |  optional  | Filter by date created to |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
-username  |  optional  | Filter by username |  Must be a String 
-active  |  optional  | Filter by active/inactive users |  Must be one of: true, false, 1, 0 
-page  |  optional  | Pagination page number |  Must be a number. 
-per_page  |  optional  | Pagination per page number |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>groups </strong></div><div> optional </div> | <div>Filter by groups</div><div> Must be one of: Array, String. </div>
+<div><strong>date_created_from </strong></div><div> optional </div> | <div>Filter by date created from</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
+<div><strong>date_created_to </strong></div><div> optional </div> | <div>Filter by date created to</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
+<div><strong>username </strong></div><div> optional </div> | <div>Filter by username</div><div> Must be a String </div>
+<div><strong>active </strong></div><div> optional </div> | <div>Filter by active/inactive users</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>page </strong></div><div> optional </div> | <div>Pagination page number</div><div> Must be a number. </div>
+<div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
 ## Show user
@@ -47,9 +47,9 @@ per_page  |  optional  | Pagination per page number |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | User ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
 
 
 ## Create user
@@ -70,21 +70,21 @@ id  |  required  | User ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-user  |  required  | Validations: |  Must be a Hash 
-user[username]  |  required  | Unique username |  Must be a String 
-user[first_name]  |  required  | First name |  Must be a String 
-user[last_name]  |  required  | Last name |  Must be a String 
-user[email]  |  required  | Email |  Must be a String 
-user[phone]  |  optional , nil allowed  | Phone number |  Must be a String 
-user[company]  |  optional , nil allowed  | Company |  Must be a String 
-user[title]  |  optional , nil allowed  | Title |  Must be a String 
-user[groups]  |  optional , nil allowed  | Assign groups |  Must be an array of String 
-user[balance]  |  optional , nil allowed  | Balance |  Must be a float. 
-user[note]  |  optional , nil allowed  | Create comment |  Must be a String 
-user[password]  |  optional , nil allowed  | Password |  Must be a String 
-user[cuf_<custom user field id>]  |  optional , nil allowed  | Custom User Field |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>user </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>user[username] </strong></div><div> required </div> | <div>Unique username</div><div> Must be a String </div>
+<div><strong>user[first_name] </strong></div><div> required </div> | <div>First name</div><div> Must be a String </div>
+<div><strong>user[last_name] </strong></div><div> required </div> | <div>Last name</div><div> Must be a String </div>
+<div><strong>user[email] </strong></div><div> required </div> | <div>Email</div><div> Must be a String </div>
+<div><strong>user[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone number</div><div> Must be a String </div>
+<div><strong>user[company] </strong></div><div> optional , nil allowed </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>user[title] </strong></div><div> optional , nil allowed </div> | <div>Title</div><div> Must be a String </div>
+<div><strong>user[groups] </strong></div><div> optional , nil allowed </div> | <div>Assign groups</div><div> Must be an array of String </div>
+<div><strong>user[balance] </strong></div><div> optional , nil allowed </div> | <div>Balance</div><div> Must be a float. </div>
+<div><strong>user[note] </strong></div><div> optional , nil allowed </div> | <div>Create comment</div><div> Must be a String </div>
+<div><strong>user[password] </strong></div><div> optional , nil allowed </div> | <div>Password</div><div> Must be a String </div>
+<div><strong>user[cuf_<custom user field id>] </strong></div><div> optional , nil allowed </div> | <div>Custom User Field</div><div> Must be a String </div>
 
 
 ## Update user
@@ -105,23 +105,23 @@ user[cuf_<custom user field id>]  |  optional , nil allowed  | Custom User Field
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-user  |  required  | Validations: |  Must be a Hash 
-user[username]  |  optional  | Unique username |  Must be a String 
-user[first_name]  |  optional  | First name |  Must be a String 
-user[last_name]  |  optional  | Last name |  Must be a String 
-user[email]  |  optional  | Email |  Must be a String 
-user[phone]  |  optional , nil allowed  | Phone number |  Must be a String 
-user[company]  |  optional , nil allowed  | Company |  Must be a String 
-user[title]  |  optional , nil allowed  | Title |  Must be a String 
-user[groups]  |  optional , nil allowed  | Assign groups |  Must be an array of String 
-user[balance]  |  optional , nil allowed  | Balance |  Must be a float. 
-user[increase_balance]  |  optional , nil allowed  | Increase Balance |  Must be a float. 
-user[decrease_balance]  |  optional , nil allowed  | Decrease Balance |  Must be a float. 
-user[note]  |  optional , nil allowed  | Create comment |  Must be a String 
-user[password]  |  optional , nil allowed  | Password |  Must be a String 
-user[cuf_<custom user field id>]  |  optional , nil allowed  | Custom User Field |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>user </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>user[username] </strong></div><div> optional </div> | <div>Unique username</div><div> Must be a String </div>
+<div><strong>user[first_name] </strong></div><div> optional </div> | <div>First name</div><div> Must be a String </div>
+<div><strong>user[last_name] </strong></div><div> optional </div> | <div>Last name</div><div> Must be a String </div>
+<div><strong>user[email] </strong></div><div> optional </div> | <div>Email</div><div> Must be a String </div>
+<div><strong>user[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone number</div><div> Must be a String </div>
+<div><strong>user[company] </strong></div><div> optional , nil allowed </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>user[title] </strong></div><div> optional , nil allowed </div> | <div>Title</div><div> Must be a String </div>
+<div><strong>user[groups] </strong></div><div> optional , nil allowed </div> | <div>Assign groups</div><div> Must be an array of String </div>
+<div><strong>user[balance] </strong></div><div> optional , nil allowed </div> | <div>Balance</div><div> Must be a float. </div>
+<div><strong>user[increase_balance] </strong></div><div> optional , nil allowed </div> | <div>Increase Balance</div><div> Must be a float. </div>
+<div><strong>user[decrease_balance] </strong></div><div> optional , nil allowed </div> | <div>Decrease Balance</div><div> Must be a float. </div>
+<div><strong>user[note] </strong></div><div> optional , nil allowed </div> | <div>Create comment</div><div> Must be a String </div>
+<div><strong>user[password] </strong></div><div> optional , nil allowed </div> | <div>Password</div><div> Must be a String </div>
+<div><strong>user[cuf_<custom user field id>] </strong></div><div> optional , nil allowed </div> | <div>Custom User Field</div><div> Must be a String </div>
 
 
 ## Update user
@@ -142,23 +142,23 @@ user[cuf_<custom user field id>]  |  optional , nil allowed  | Custom User Field
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-user  |  required  | Validations: |  Must be a Hash 
-user[username]  |  optional  | Unique username |  Must be a String 
-user[first_name]  |  optional  | First name |  Must be a String 
-user[last_name]  |  optional  | Last name |  Must be a String 
-user[email]  |  optional  | Email |  Must be a String 
-user[phone]  |  optional , nil allowed  | Phone number |  Must be a String 
-user[company]  |  optional , nil allowed  | Company |  Must be a String 
-user[title]  |  optional , nil allowed  | Title |  Must be a String 
-user[groups]  |  optional , nil allowed  | Assign groups |  Must be an array of String 
-user[balance]  |  optional , nil allowed  | Balance |  Must be a float. 
-user[increase_balance]  |  optional , nil allowed  | Increase Balance |  Must be a float. 
-user[decrease_balance]  |  optional , nil allowed  | Decrease Balance |  Must be a float. 
-user[note]  |  optional , nil allowed  | Create comment |  Must be a String 
-user[password]  |  optional , nil allowed  | Password |  Must be a String 
-user[cuf_<custom user field id>]  |  optional , nil allowed  | Custom User Field |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>user </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>user[username] </strong></div><div> optional </div> | <div>Unique username</div><div> Must be a String </div>
+<div><strong>user[first_name] </strong></div><div> optional </div> | <div>First name</div><div> Must be a String </div>
+<div><strong>user[last_name] </strong></div><div> optional </div> | <div>Last name</div><div> Must be a String </div>
+<div><strong>user[email] </strong></div><div> optional </div> | <div>Email</div><div> Must be a String </div>
+<div><strong>user[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone number</div><div> Must be a String </div>
+<div><strong>user[company] </strong></div><div> optional , nil allowed </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>user[title] </strong></div><div> optional , nil allowed </div> | <div>Title</div><div> Must be a String </div>
+<div><strong>user[groups] </strong></div><div> optional , nil allowed </div> | <div>Assign groups</div><div> Must be an array of String </div>
+<div><strong>user[balance] </strong></div><div> optional , nil allowed </div> | <div>Balance</div><div> Must be a float. </div>
+<div><strong>user[increase_balance] </strong></div><div> optional , nil allowed </div> | <div>Increase Balance</div><div> Must be a float. </div>
+<div><strong>user[decrease_balance] </strong></div><div> optional , nil allowed </div> | <div>Decrease Balance</div><div> Must be a float. </div>
+<div><strong>user[note] </strong></div><div> optional , nil allowed </div> | <div>Create comment</div><div> Must be a String </div>
+<div><strong>user[password] </strong></div><div> optional , nil allowed </div> | <div>Password</div><div> Must be a String </div>
+<div><strong>user[cuf_<custom user field id>] </strong></div><div> optional , nil allowed </div> | <div>Custom User Field</div><div> Must be a String </div>
 
 
 ## Delete user
@@ -179,8 +179,8 @@ DELETE https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsES
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | User ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
 
 

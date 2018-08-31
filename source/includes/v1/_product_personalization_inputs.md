@@ -18,9 +18,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-personalization_form_id  |  required  | Personalization form ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>personalization_form_id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
 
 
 ## Show personalization input
@@ -41,10 +41,10 @@ personalization_form_id  |  required  | Personalization form ID |  Must be a num
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-personalization_form_id  |  required  | Personalization form ID |  Must be a number. 
-id  |  required  | Personalization input ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>personalization_form_id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Personalization input ID</div><div> Must be a number. </div>
 
 
 ## Create personalization input
@@ -65,14 +65,14 @@ id  |  required  | Personalization input ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-personalization_form_id  |  required  | Personalization form ID |  Must be a number. 
-personalization_input  |  required  | Validations: |  Must be a Hash 
-personalization_input[label]  |  required  | Label |  Must be a String 
-personalization_input[type]  |  required  | Type |  Must be one of: text_field, text_area. 
-personalization_input[required]  |  required  | Required |  Must be one of: true, false, 1, 0 
-personalization_input[position]  |  required  | Position |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>personalization_form_id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
+<div><strong>personalization_input </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>personalization_input[label] </strong></div><div> required </div> | <div>Label</div><div> Must be a String </div>
+<div><strong>personalization_input[type] </strong></div><div> required </div> | <div>Type</div><div> Must be one of: text_field, text_area. </div>
+<div><strong>personalization_input[required] </strong></div><div> required </div> | <div>Required</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>personalization_input[position] </strong></div><div> required </div> | <div>Position</div><div> Must be a number. </div>
 
 
 ## Update personalization input
@@ -93,14 +93,14 @@ personalization_input[position]  |  required  | Position |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-personalization_form_id  |  required  | Personalization form ID |  Must be a number. 
-personalization_input  |  required  | Validations: |  Must be a Hash 
-personalization_input[label]  |  optional  | Label |  Must be a String 
-personalization_input[type]  |  optional  | Type |  Must be one of: text_field, text_area. 
-personalization_input[required]  |  optional  | Required |  Must be one of: true, false, 1, 0 
-personalization_input[position]  |  optional  | Position |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>personalization_form_id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
+<div><strong>personalization_input </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>personalization_input[label] </strong></div><div> optional </div> | <div>Label</div><div> Must be a String </div>
+<div><strong>personalization_input[type] </strong></div><div> optional </div> | <div>Type</div><div> Must be one of: text_field, text_area. </div>
+<div><strong>personalization_input[required] </strong></div><div> optional </div> | <div>Required</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>personalization_input[position] </strong></div><div> optional </div> | <div>Position</div><div> Must be a number. </div>
 
 
 ## Update personalization input
@@ -121,14 +121,14 @@ personalization_input[position]  |  optional  | Position |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-personalization_form_id  |  required  | Personalization form ID |  Must be a number. 
-personalization_input  |  required  | Validations: |  Must be a Hash 
-personalization_input[label]  |  optional  | Label |  Must be a String 
-personalization_input[type]  |  optional  | Type |  Must be one of: text_field, text_area. 
-personalization_input[required]  |  optional  | Required |  Must be one of: true, false, 1, 0 
-personalization_input[position]  |  optional  | Position |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>personalization_form_id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
+<div><strong>personalization_input </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>personalization_input[label] </strong></div><div> optional </div> | <div>Label</div><div> Must be a String </div>
+<div><strong>personalization_input[type] </strong></div><div> optional </div> | <div>Type</div><div> Must be one of: text_field, text_area. </div>
+<div><strong>personalization_input[required] </strong></div><div> optional </div> | <div>Required</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>personalization_input[position] </strong></div><div> optional </div> | <div>Position</div><div> Must be a number. </div>
 
 
 ## Delete personalization input
@@ -149,9 +149,9 @@ personalization_input[position]  |  optional  | Position |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-personalization_form_id  |  required  | Personalization form ID |  Must be a number. 
-id  |  required  | Personalization input ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>personalization_form_id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Personalization input ID</div><div> Must be a number. </div>
 
 

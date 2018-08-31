@@ -18,9 +18,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
 ## Show personalization form
@@ -41,10 +41,10 @@ product_id  |  required  | Product ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-id  |  required  | Personalization form ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
 
 
 ## Create personalization form
@@ -65,14 +65,14 @@ id  |  required  | Personalization form ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-personalization_form  |  required  | Validations: |  Must be a Hash 
-personalization_form[title]  |  required  | Title |  Must be a String 
-personalization_form[price_modifier_type]  |  required  | Price modifier type |  Must be one of: $, %. 
-personalization_form[price_modifier_value]  |  required  | Price modifier value |  Must be a float. 
-personalization_form[position]  |  required  | Position |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>personalization_form </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>personalization_form[title] </strong></div><div> required </div> | <div>Title</div><div> Must be a String </div>
+<div><strong>personalization_form[price_modifier_type] </strong></div><div> required </div> | <div>Price modifier type</div><div> Must be one of: $, %. </div>
+<div><strong>personalization_form[price_modifier_value] </strong></div><div> required </div> | <div>Price modifier value</div><div> Must be a float. </div>
+<div><strong>personalization_form[position] </strong></div><div> required </div> | <div>Position</div><div> Must be a number. </div>
 
 
 ## Update personalization form
@@ -93,14 +93,14 @@ personalization_form[position]  |  required  | Position |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-personalization_form  |  required  | Validations: |  Must be a Hash 
-personalization_form[title]  |  optional  | Title |  Must be a String 
-personalization_form[price_modifier_type]  |  optional  | Price modifier type |  Must be one of: $, %. 
-personalization_form[price_modifier_value]  |  optional  | Price modifier value |  Must be a float. 
-personalization_form[position]  |  optional  | Position |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>personalization_form </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>personalization_form[title] </strong></div><div> optional </div> | <div>Title</div><div> Must be a String </div>
+<div><strong>personalization_form[price_modifier_type] </strong></div><div> optional </div> | <div>Price modifier type</div><div> Must be one of: $, %. </div>
+<div><strong>personalization_form[price_modifier_value] </strong></div><div> optional </div> | <div>Price modifier value</div><div> Must be a float. </div>
+<div><strong>personalization_form[position] </strong></div><div> optional </div> | <div>Position</div><div> Must be a number. </div>
 
 
 ## Update personalization form
@@ -121,14 +121,14 @@ personalization_form[position]  |  optional  | Position |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-personalization_form  |  required  | Validations: |  Must be a Hash 
-personalization_form[title]  |  optional  | Title |  Must be a String 
-personalization_form[price_modifier_type]  |  optional  | Price modifier type |  Must be one of: $, %. 
-personalization_form[price_modifier_value]  |  optional  | Price modifier value |  Must be a float. 
-personalization_form[position]  |  optional  | Position |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>personalization_form </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>personalization_form[title] </strong></div><div> optional </div> | <div>Title</div><div> Must be a String </div>
+<div><strong>personalization_form[price_modifier_type] </strong></div><div> optional </div> | <div>Price modifier type</div><div> Must be one of: $, %. </div>
+<div><strong>personalization_form[price_modifier_value] </strong></div><div> optional </div> | <div>Price modifier value</div><div> Must be a float. </div>
+<div><strong>personalization_form[position] </strong></div><div> optional </div> | <div>Position</div><div> Must be a number. </div>
 
 
 ## Delete personalization form
@@ -149,9 +149,9 @@ personalization_form[position]  |  optional  | Position |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-product_id  |  required  | Product ID |  Must be a number. 
-id  |  required  | Personalization form ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
 
 

@@ -8,9 +8,9 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-order_id  |  required  | Order ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>order_id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
 
 
 ## Show line item
@@ -21,9 +21,9 @@ order_id  |  required  | Order ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-order_id  |  required  | Order ID |  Must be a number. 
-id  |  required  | Line Item ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>order_id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Line Item ID</div><div> Must be a number. </div>
 
 

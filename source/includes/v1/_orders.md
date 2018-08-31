@@ -18,14 +18,14 @@
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-status  |  optional  | Filter by order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending | 
-customer  |  optional  | Filter by customer |  Must be one of: Array, String. 
-date_from  |  optional  | Filter by date created from |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
-date_to  |  optional  | Filter by date created to |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
-page  |  optional  | Pagination page number |  Must be a number. 
-per_page  |  optional  | Pagination per page number |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>status </strong></div><div> optional </div> | <div>Filter by order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending</div>
+<div><strong>customer </strong></div><div> optional </div> | <div>Filter by customer</div><div> Must be one of: Array, String. </div>
+<div><strong>date_from </strong></div><div> optional </div> | <div>Filter by date created from</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
+<div><strong>date_to </strong></div><div> optional </div> | <div>Filter by date created to</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
+<div><strong>page </strong></div><div> optional </div> | <div>Pagination page number</div><div> Must be a number. </div>
+<div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
 ## Show order
@@ -46,9 +46,9 @@ per_page  |  optional  | Pagination per page number |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Order ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
 
 
 ## Update order
@@ -69,42 +69,42 @@ id  |  required  | Order ID |  Must be a number.
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-order  |  required  | Validations: |  Must be a Hash 
-order[status]  |  optional  | Order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending | 
-order[shipping_method]  |  optional  | Shipping Method |  Must be a String 
-order[tracking_number]  |  optional  | Tracking Number |  Must be a String 
-order[ship_date]  |  optional  | Ship Date |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
-order[in_hands_date]  |  optional  | In Hands Date |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
-order[note]  |  optional  | Create Comment |  Must be a String 
-order[send_shipping_confirmation]  |  optional  | If true, send a shipping confirmation email with updated order data |  Must be one of: true, false, 1, 0 
-order[shipping_address]  |  optional  | Shipping Address |  Must be a Hash 
-order[shipping_address][company]  |  optional  | Company |  Must be a String 
-order[shipping_address][first_address]  |  optional  | Address Line 1 |  Must be a String 
-order[shipping_address][second_address]  |  optional  | Address Line 2 |  Must be a String 
-order[shipping_address][state]  |  optional  | State |  Must be a String 
-order[shipping_address][city]  |  optional  | City |  Must be a String 
-order[shipping_address][country]  |  optional  | Country |  Must be a String 
-order[shipping_address][zip]  |  optional  | Zip Code |  Must be a String 
-order[shipping_contact]  |  optional  | Shipping Contact |  Must be a Hash 
-order[shipping_contact][first_name]  |  optional  | First Name |  Must be a String 
-order[shipping_contact][last_name]  |  optional  | Last Name |  Must be a String 
-order[shipping_contact][email]  |  optional  | Email |  Must be a String 
-order[shipping_contact][phone]  |  optional  | Phone |  Must be a String 
-order[billing_address]  |  optional  | Billing Address |  Must be a Hash 
-order[billing_address][company]  |  optional  | Company |  Must be a String 
-order[billing_address][first_address]  |  optional  | Address Line 1 |  Must be a String 
-order[billing_address][second_address]  |  optional  | Address Line 2 |  Must be a String 
-order[billing_address][state]  |  optional  | State |  Must be a String 
-order[billing_address][city]  |  optional  | City |  Must be a String 
-order[billing_address][country]  |  optional  | Country |  Must be a String 
-order[billing_address][zip]  |  optional  | Zip Code |  Must be a String 
-order[billing_contact]  |  optional  | Billing Contact |  Must be a Hash 
-order[billing_contact][first_name]  |  optional  | First Name |  Must be a String 
-order[billing_contact][last_name]  |  optional  | Last Name |  Must be a String 
-order[billing_contact][email]  |  optional  | Email |  Must be a String 
-order[billing_contact][phone]  |  optional  | Phone |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>order </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>order[status] </strong></div><div> optional </div> | <div>Order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending</div>
+<div><strong>order[shipping_method] </strong></div><div> optional </div> | <div>Shipping Method</div><div> Must be a String </div>
+<div><strong>order[tracking_number] </strong></div><div> optional </div> | <div>Tracking Number</div><div> Must be a String </div>
+<div><strong>order[ship_date] </strong></div><div> optional </div> | <div>Ship Date</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
+<div><strong>order[in_hands_date] </strong></div><div> optional </div> | <div>In Hands Date</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
+<div><strong>order[note] </strong></div><div> optional </div> | <div>Create Comment</div><div> Must be a String </div>
+<div><strong>order[send_shipping_confirmation] </strong></div><div> optional </div> | <div>If true, send a shipping confirmation email with updated order data</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>order[shipping_address] </strong></div><div> optional </div> | <div>Shipping Address</div><div> Must be a Hash </div>
+<div><strong>order[shipping_address][company] </strong></div><div> optional </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>order[shipping_address][first_address] </strong></div><div> optional </div> | <div>Address Line 1</div><div> Must be a String </div>
+<div><strong>order[shipping_address][second_address] </strong></div><div> optional </div> | <div>Address Line 2</div><div> Must be a String </div>
+<div><strong>order[shipping_address][state] </strong></div><div> optional </div> | <div>State</div><div> Must be a String </div>
+<div><strong>order[shipping_address][city] </strong></div><div> optional </div> | <div>City</div><div> Must be a String </div>
+<div><strong>order[shipping_address][country] </strong></div><div> optional </div> | <div>Country</div><div> Must be a String </div>
+<div><strong>order[shipping_address][zip] </strong></div><div> optional </div> | <div>Zip Code</div><div> Must be a String </div>
+<div><strong>order[shipping_contact] </strong></div><div> optional </div> | <div>Shipping Contact</div><div> Must be a Hash </div>
+<div><strong>order[shipping_contact][first_name] </strong></div><div> optional </div> | <div>First Name</div><div> Must be a String </div>
+<div><strong>order[shipping_contact][last_name] </strong></div><div> optional </div> | <div>Last Name</div><div> Must be a String </div>
+<div><strong>order[shipping_contact][email] </strong></div><div> optional </div> | <div>Email</div><div> Must be a String </div>
+<div><strong>order[shipping_contact][phone] </strong></div><div> optional </div> | <div>Phone</div><div> Must be a String </div>
+<div><strong>order[billing_address] </strong></div><div> optional </div> | <div>Billing Address</div><div> Must be a Hash </div>
+<div><strong>order[billing_address][company] </strong></div><div> optional </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>order[billing_address][first_address] </strong></div><div> optional </div> | <div>Address Line 1</div><div> Must be a String </div>
+<div><strong>order[billing_address][second_address] </strong></div><div> optional </div> | <div>Address Line 2</div><div> Must be a String </div>
+<div><strong>order[billing_address][state] </strong></div><div> optional </div> | <div>State</div><div> Must be a String </div>
+<div><strong>order[billing_address][city] </strong></div><div> optional </div> | <div>City</div><div> Must be a String </div>
+<div><strong>order[billing_address][country] </strong></div><div> optional </div> | <div>Country</div><div> Must be a String </div>
+<div><strong>order[billing_address][zip] </strong></div><div> optional </div> | <div>Zip Code</div><div> Must be a String </div>
+<div><strong>order[billing_contact] </strong></div><div> optional </div> | <div>Billing Contact</div><div> Must be a Hash </div>
+<div><strong>order[billing_contact][first_name] </strong></div><div> optional </div> | <div>First Name</div><div> Must be a String </div>
+<div><strong>order[billing_contact][last_name] </strong></div><div> optional </div> | <div>Last Name</div><div> Must be a String </div>
+<div><strong>order[billing_contact][email] </strong></div><div> optional </div> | <div>Email</div><div> Must be a String </div>
+<div><strong>order[billing_contact][phone] </strong></div><div> optional </div> | <div>Phone</div><div> Must be a String </div>
 
 
 ## Update order
@@ -125,42 +125,42 @@ order[billing_contact][phone]  |  optional  | Phone |  Must be a String
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-order  |  required  | Validations: |  Must be a Hash 
-order[status]  |  optional  | Order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending | 
-order[shipping_method]  |  optional  | Shipping Method |  Must be a String 
-order[tracking_number]  |  optional  | Tracking Number |  Must be a String 
-order[ship_date]  |  optional  | Ship Date |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
-order[in_hands_date]  |  optional  | In Hands Date |  Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” 
-order[note]  |  optional  | Create Comment |  Must be a String 
-order[send_shipping_confirmation]  |  optional  | If true, send a shipping confirmation email with updated order data |  Must be one of: true, false, 1, 0 
-order[shipping_address]  |  optional  | Shipping Address |  Must be a Hash 
-order[shipping_address][company]  |  optional  | Company |  Must be a String 
-order[shipping_address][first_address]  |  optional  | Address Line 1 |  Must be a String 
-order[shipping_address][second_address]  |  optional  | Address Line 2 |  Must be a String 
-order[shipping_address][state]  |  optional  | State |  Must be a String 
-order[shipping_address][city]  |  optional  | City |  Must be a String 
-order[shipping_address][country]  |  optional  | Country |  Must be a String 
-order[shipping_address][zip]  |  optional  | Zip Code |  Must be a String 
-order[shipping_contact]  |  optional  | Shipping Contact |  Must be a Hash 
-order[shipping_contact][first_name]  |  optional  | First Name |  Must be a String 
-order[shipping_contact][last_name]  |  optional  | Last Name |  Must be a String 
-order[shipping_contact][email]  |  optional  | Email |  Must be a String 
-order[shipping_contact][phone]  |  optional  | Phone |  Must be a String 
-order[billing_address]  |  optional  | Billing Address |  Must be a Hash 
-order[billing_address][company]  |  optional  | Company |  Must be a String 
-order[billing_address][first_address]  |  optional  | Address Line 1 |  Must be a String 
-order[billing_address][second_address]  |  optional  | Address Line 2 |  Must be a String 
-order[billing_address][state]  |  optional  | State |  Must be a String 
-order[billing_address][city]  |  optional  | City |  Must be a String 
-order[billing_address][country]  |  optional  | Country |  Must be a String 
-order[billing_address][zip]  |  optional  | Zip Code |  Must be a String 
-order[billing_contact]  |  optional  | Billing Contact |  Must be a Hash 
-order[billing_contact][first_name]  |  optional  | First Name |  Must be a String 
-order[billing_contact][last_name]  |  optional  | Last Name |  Must be a String 
-order[billing_contact][email]  |  optional  | Email |  Must be a String 
-order[billing_contact][phone]  |  optional  | Phone |  Must be a String 
+Parameter | Description
+--------- | -----------
+<div><strong>order </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>order[status] </strong></div><div> optional </div> | <div>Order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending</div>
+<div><strong>order[shipping_method] </strong></div><div> optional </div> | <div>Shipping Method</div><div> Must be a String </div>
+<div><strong>order[tracking_number] </strong></div><div> optional </div> | <div>Tracking Number</div><div> Must be a String </div>
+<div><strong>order[ship_date] </strong></div><div> optional </div> | <div>Ship Date</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
+<div><strong>order[in_hands_date] </strong></div><div> optional </div> | <div>In Hands Date</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
+<div><strong>order[note] </strong></div><div> optional </div> | <div>Create Comment</div><div> Must be a String </div>
+<div><strong>order[send_shipping_confirmation] </strong></div><div> optional </div> | <div>If true, send a shipping confirmation email with updated order data</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>order[shipping_address] </strong></div><div> optional </div> | <div>Shipping Address</div><div> Must be a Hash </div>
+<div><strong>order[shipping_address][company] </strong></div><div> optional </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>order[shipping_address][first_address] </strong></div><div> optional </div> | <div>Address Line 1</div><div> Must be a String </div>
+<div><strong>order[shipping_address][second_address] </strong></div><div> optional </div> | <div>Address Line 2</div><div> Must be a String </div>
+<div><strong>order[shipping_address][state] </strong></div><div> optional </div> | <div>State</div><div> Must be a String </div>
+<div><strong>order[shipping_address][city] </strong></div><div> optional </div> | <div>City</div><div> Must be a String </div>
+<div><strong>order[shipping_address][country] </strong></div><div> optional </div> | <div>Country</div><div> Must be a String </div>
+<div><strong>order[shipping_address][zip] </strong></div><div> optional </div> | <div>Zip Code</div><div> Must be a String </div>
+<div><strong>order[shipping_contact] </strong></div><div> optional </div> | <div>Shipping Contact</div><div> Must be a Hash </div>
+<div><strong>order[shipping_contact][first_name] </strong></div><div> optional </div> | <div>First Name</div><div> Must be a String </div>
+<div><strong>order[shipping_contact][last_name] </strong></div><div> optional </div> | <div>Last Name</div><div> Must be a String </div>
+<div><strong>order[shipping_contact][email] </strong></div><div> optional </div> | <div>Email</div><div> Must be a String </div>
+<div><strong>order[shipping_contact][phone] </strong></div><div> optional </div> | <div>Phone</div><div> Must be a String </div>
+<div><strong>order[billing_address] </strong></div><div> optional </div> | <div>Billing Address</div><div> Must be a Hash </div>
+<div><strong>order[billing_address][company] </strong></div><div> optional </div> | <div>Company</div><div> Must be a String </div>
+<div><strong>order[billing_address][first_address] </strong></div><div> optional </div> | <div>Address Line 1</div><div> Must be a String </div>
+<div><strong>order[billing_address][second_address] </strong></div><div> optional </div> | <div>Address Line 2</div><div> Must be a String </div>
+<div><strong>order[billing_address][state] </strong></div><div> optional </div> | <div>State</div><div> Must be a String </div>
+<div><strong>order[billing_address][city] </strong></div><div> optional </div> | <div>City</div><div> Must be a String </div>
+<div><strong>order[billing_address][country] </strong></div><div> optional </div> | <div>Country</div><div> Must be a String </div>
+<div><strong>order[billing_address][zip] </strong></div><div> optional </div> | <div>Zip Code</div><div> Must be a String </div>
+<div><strong>order[billing_contact] </strong></div><div> optional </div> | <div>Billing Contact</div><div> Must be a Hash </div>
+<div><strong>order[billing_contact][first_name] </strong></div><div> optional </div> | <div>First Name</div><div> Must be a String </div>
+<div><strong>order[billing_contact][last_name] </strong></div><div> optional </div> | <div>Last Name</div><div> Must be a String </div>
+<div><strong>order[billing_contact][email] </strong></div><div> optional </div> | <div>Email</div><div> Must be a String </div>
+<div><strong>order[billing_contact][phone] </strong></div><div> optional </div> | <div>Phone</div><div> Must be a String </div>
 
 
 ## Cancel order
@@ -181,8 +181,8 @@ PUT https://subdomain.mybrightsites.com/api/v1/orders/1/cancel?token=GXzAxWkkyYL
 
 ### Query Parameters
 
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-id  |  required  | Order ID |  Must be a number. 
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
 
 
