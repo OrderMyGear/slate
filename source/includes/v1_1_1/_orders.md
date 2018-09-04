@@ -3,7 +3,7 @@
 ## List orders
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1/orders?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -30,7 +30,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/orders?token=GXzAxWkkyYLsESGQTU
 
 ### HTTP Request
 
-`GET /api/v1/orders`
+`GET /api/v1.1.1/orders`
 
 ### Query Parameters
 
@@ -47,7 +47,7 @@ Parameter | Description
 ## Show order
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1/orders/1?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -169,7 +169,6 @@ curl "https://subdomain.mybrightsites.com/api/v1/orders/1?token=GXzAxWkkyYLsESGQ
       "tax_price": "7.75",
       "unit_price": "155.0",
       "product_id": 10,
-      "logo_name": "fedex",
       "product_options": [
         {
           "option_id": 25,
@@ -341,7 +340,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/orders/1?token=GXzAxWkkyYLsESGQ
 
 ### HTTP Request
 
-`GET /api/v1/orders/:id`
+`GET /api/v1.1.1/orders/:id`
 
 ### Query Parameters
 
@@ -353,7 +352,7 @@ Parameter | Description
 ## Update order
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1/orders/1?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -587,7 +586,7 @@ EOF
 
 ### HTTP Request
 
-`PATCH /api/v1/orders/:id`
+`PATCH /api/v1.1.1/orders/:id`
 
 ### Query Parameters
 
@@ -632,7 +631,7 @@ Parameter | Description
 ## Update order
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1/orders/1?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -866,7 +865,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v1/orders/:id`
+`PUT /api/v1.1.1/orders/:id`
 
 ### Query Parameters
 
@@ -911,7 +910,7 @@ Parameter | Description
 ## Cancel order
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1/orders/1/cancel?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1/cancel?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT
 ```
 
@@ -934,7 +933,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/orders/1/cancel?token=GXzAxWkky
 
 ### HTTP Request
 
-`PUT /api/v1/orders/:id/cancel`
+`PUT /api/v1.1.1/orders/:id/cancel`
 
 ### Query Parameters
 
