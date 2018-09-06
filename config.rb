@@ -67,11 +67,3 @@ after_build do |builder|
   FileUtils.cp(default_version_path, index_path)
 end
 
-# Deploy:
-# bundle exec middleman build
-# Staging:
-# rsync -azP build/ deploy@10.80.67.189:/var/www/api-docs
-# Production:
-# rsync -azP build/ deploy@mybrightsites.com:/var/www/api-docs
-# Epromos:
-# rsync -azP build/ deploy@209.235.216.110:/var/www/api-docs
