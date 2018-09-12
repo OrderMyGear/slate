@@ -1,4 +1,4 @@
-#  Users 
+#  Users
 
 ## List users
 
@@ -149,79 +149,6 @@ Parameter | Description
 <div><strong>user[title] </strong></div><div> optional , nil allowed </div> | <div>Title</div><div> Must be a String </div>
 <div><strong>user[groups] </strong></div><div> optional , nil allowed </div> | <div>Assign groups</div><div> Must be an array of String </div>
 <div><strong>user[balance] </strong></div><div> optional , nil allowed </div> | <div>Balance</div><div> Must be a float. </div>
-<div><strong>user[note] </strong></div><div> optional , nil allowed </div> | <div>Create comment</div><div> Must be a String </div>
-<div><strong>user[password] </strong></div><div> optional , nil allowed </div> | <div>Password</div><div> Must be a String </div>
-<div><strong>user[cuf_<custom user field id>] </strong></div><div> optional , nil allowed </div> | <div>Custom User Field</div><div> Must be a String </div>
-
-
-## Update user
-
-```shell
-curl "https://subdomain.mybrightsites.com/api/v1/users/579?token=GXzAxWkkyYLsESGQTU15" \
-  -X PUT \
-  -H "Content-Type: application/json" \
-  -d @- <<'EOF'
-{
-  "user": {
-    "username": "johndoe",
-    "first_name":"John",
-    "last_name":"Doe",
-    "active":true,
-    "email":"johndoe@email.com",
-    "phone":"+1234567890",
-    "company":"BSI",
-    "title":"Support Leader",
-    "groups":["Public"],
-    "balance":12.5,
-    "password":"12345678",
-    "cuf_1": "12345678"
-  }
-}
-EOF
-```
-
-> The above request returns JSON structured like this:
-
-```json
-{
-  "id": 579,
-  "username": "johndoe",
-  "first_name": "John",
-  "last_name": "Doe",
-  "active": true,
-  "confirmed": true,
-  "email": "johndoe@email.com",
-  "phone": "+1234567890",
-  "company": "BSI",
-  "title": "Support Leader",
-  "groups": ["Public"],
-  "balance": "12.5",
-  "orders": [],
-  "last_edited_date": "2016-07-01",
-  "cuf_1": "12345678"
-}
-```
-
-### HTTP Request
-
-`PATCH /api/v1/users/:id`
-
-### Query Parameters
-
-Parameter | Description
---------- | -----------
-<div><strong>user </strong></div><div> required </div> | <div> Must be a Hash </div>
-<div><strong>user[username] </strong></div><div> optional </div> | <div>Unique username</div><div> Must be a String </div>
-<div><strong>user[first_name] </strong></div><div> optional </div> | <div>First name</div><div> Must be a String </div>
-<div><strong>user[last_name] </strong></div><div> optional </div> | <div>Last name</div><div> Must be a String </div>
-<div><strong>user[email] </strong></div><div> optional </div> | <div>Email</div><div> Must be a String </div>
-<div><strong>user[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone number</div><div> Must be a String </div>
-<div><strong>user[company] </strong></div><div> optional , nil allowed </div> | <div>Company</div><div> Must be a String </div>
-<div><strong>user[title] </strong></div><div> optional , nil allowed </div> | <div>Title</div><div> Must be a String </div>
-<div><strong>user[groups] </strong></div><div> optional , nil allowed </div> | <div>Assign groups</div><div> Must be an array of String </div>
-<div><strong>user[balance] </strong></div><div> optional , nil allowed </div> | <div>Balance</div><div> Must be a float. </div>
-<div><strong>user[increase_balance] </strong></div><div> optional , nil allowed </div> | <div>Increase Balance</div><div> Must be a float. </div>
-<div><strong>user[decrease_balance] </strong></div><div> optional , nil allowed </div> | <div>Decrease Balance</div><div> Must be a float. </div>
 <div><strong>user[note] </strong></div><div> optional , nil allowed </div> | <div>Create comment</div><div> Must be a String </div>
 <div><strong>user[password] </strong></div><div> optional , nil allowed </div> | <div>Password</div><div> Must be a String </div>
 <div><strong>user[cuf_<custom user field id>] </strong></div><div> optional , nil allowed </div> | <div>Custom User Field</div><div> Must be a String </div>

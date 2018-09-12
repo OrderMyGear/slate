@@ -1,4 +1,4 @@
-#  Product sub options 
+#  Product sub options
 
 ## List of sub options for option
 
@@ -108,52 +108,6 @@ Parameter | Description
 <div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
 <div><strong>sub_option </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>sub_option[name] </strong></div><div> required </div> | <div>Name of sub option</div><div> Must be a String </div>
-<div><strong>sub_option[sub_sku] </strong></div><div> optional , nil allowed </div> | <div>SKU</div><div> Must be a String </div>
-<div><strong>sub_option[price_modifier] </strong></div><div> optional , nil allowed </div> | <div>Price Modifier</div><div> Must be a float. </div>
-<div><strong>sub_option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
-<div><strong>sub_option[image_data] </strong></div><div> optional , nil allowed </div> | <div>Base64 Image representation</div><div> Must be a String </div>
-<div><strong>sub_option[filename] </strong></div><div> optional , nil allowed </div> | <div>Image file name</div><div> Must be a String </div>
-
-
-## Update sub option
-
-```shell
-curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204/sub_options/1234?token=GXzAxWkkyYLsESGQTU15" \
-  -X PUT \
-  -H "Content-Type: application/json" \
-  -d @- <<'EOF'
-{
-  "sub_option": {
-    "name": "Large"
-  }
-}
-EOF
-```
-
-> The above request returns JSON structured like this:
-
-```json
-{
-  "id": 559579,
-  "name": "Large",
-  "sub_sku": "SKU123",
-  "image_src": "http://www.imageprovider.com/image.jpg"
-  "price_modifier": "2.0",
-  "position": 3
-}
-```
-
-### HTTP Request
-
-`PATCH /api/v1/products/:product_id/options/:option_id/sub_options/:id`
-
-### Query Parameters
-
-Parameter | Description
---------- | -----------
-<div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
-<div><strong>sub_option </strong></div><div> required </div> | <div> Must be a Hash </div>
-<div><strong>sub_option[name] </strong></div><div> optional </div> | <div>Name of sub option</div><div> Must be a String </div>
 <div><strong>sub_option[sub_sku] </strong></div><div> optional , nil allowed </div> | <div>SKU</div><div> Must be a String </div>
 <div><strong>sub_option[price_modifier] </strong></div><div> optional , nil allowed </div> | <div>Price Modifier</div><div> Must be a float. </div>
 <div><strong>sub_option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>

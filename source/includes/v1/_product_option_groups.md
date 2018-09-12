@@ -1,4 +1,4 @@
-#  Product option groups 
+#  Product option groups
 
 ## List of option groups for product
 
@@ -94,47 +94,6 @@ Parameter | Description
 --------- | -----------
 <div><strong>option_group </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>option_group[name] </strong></div><div> required </div> | <div>Name of option group</div><div> Must be a String </div>
-<div><strong>option_group[wrap_options] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be one of: true, false, 1, 0 </div>
-<div><strong>option_group[option_ids] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be an Array of Integer </div>
-
-
-## Update group
-
-```shell
-curl "https://subdomain.mybrightsites.com/api/v1/products/22287/option_groups/5?token=GXzAxWkkyYLsESGQTU15" \
-  -X PUT \
-  -H "Content-Type: application/json" \
-  -d @- <<'EOF'
-{
-  "option_group": {
-    "name": "OptionGroup2",
-    "option_ids": [12]
-  }
-}
-EOF
-```
-
-> The above request returns JSON structured like this:
-
-```json
-{
-  "id": 5,
-  "name": "OptionGroup2",
-  "wrap_options": true,
-  "option_ids": [12]
-}
-```
-
-### HTTP Request
-
-`PATCH /api/v1/products/:product_id/option_groups/:id`
-
-### Query Parameters
-
-Parameter | Description
---------- | -----------
-<div><strong>option_group </strong></div><div> required </div> | <div> Must be a Hash </div>
-<div><strong>option_group[name] </strong></div><div> optional </div> | <div>Name of option group</div><div> Must be a String </div>
 <div><strong>option_group[wrap_options] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>option_group[option_ids] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be an Array of Integer </div>
 

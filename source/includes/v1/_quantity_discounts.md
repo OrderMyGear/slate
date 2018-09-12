@@ -1,4 +1,4 @@
-#  Quantity discounts 
+#  Quantity discounts
 
 ## List quantity discounts
 
@@ -102,44 +102,6 @@ Parameter | Description
 <div><strong>quantity_discount </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>quantity_discount[quantity] </strong></div><div> required </div> | <div>Quantity</div><div> Must be a number. </div>
 <div><strong>quantity_discount[modifier] </strong></div><div> required </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
-
-
-## Update quantity discount
-
-```shell
-curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
-  -X PUT \
-  -H "Content-Type: application/json" \
-  -d @- <<'EOF'
-{
-  "quantity_discount": {
-    "modifier": 980.0
-  }
-}
-EOF
-```
-
-> The above request returns JSON structured like this:
-
-```json
-{
-  "id": 579,
-  "quantity": 10,
-  "modifier": 980.0
-}
-```
-
-### HTTP Request
-
-`PATCH /api/v1/products/:product_id/quantity_discounts/:id`
-
-### Query Parameters
-
-Parameter | Description
---------- | -----------
-<div><strong>quantity_discount </strong></div><div> required </div> | <div> Must be a Hash </div>
-<div><strong>quantity_discount[quantity] </strong></div><div> optional </div> | <div>Quantity</div><div> Must be a number. </div>
-<div><strong>quantity_discount[modifier] </strong></div><div> optional </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
 
 
 ## Update quantity discount

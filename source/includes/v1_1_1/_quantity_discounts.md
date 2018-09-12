@@ -80,31 +80,6 @@ quantity_discount[modifier]  |  required  | Base price / Discount percentage |  
 
 ### HTTP Request
 
-`PATCH /api/v1.1.1/products/:product_id/quantity_discounts/:id`
-
-### Query Parameters
-
-Parameter | Required | Description | Validations
---------- | -------- | ----------- | -----------
-quantity_discount  |  required  | Validations: |  Must be a Hash
-quantity_discount[quantity]  |  optional  | Quantity |  Must be a number.
-quantity_discount[modifier]  |  optional  | Base price / Discount percentage |  Must be a float.
-
-
-## Update quantity discount
-
-```shell
- PUT https://subdomain.mybrightsites.com/api/v1.1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15 { "quantity_discount": { "modifier": 980.0 } }
-```
-
-> The above request returns JSON structured like this:
-
-```json
- { "id": 579, "quantity": 10, "modifier": 980.0 }
-```
-
-### HTTP Request
-
 `PUT /api/v1.1.1/products/:product_id/quantity_discounts/:id`
 
 ### Query Parameters

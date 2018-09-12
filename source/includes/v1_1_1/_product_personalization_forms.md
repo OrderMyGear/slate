@@ -148,51 +148,6 @@ EOF
 
 ### HTTP Request
 
-`PATCH /api/v1.1.1/products/:product_id/personalization_forms/:id`
-
-### Query Parameters
-
-Parameter | Description
---------- | -----------
-<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
-<div><strong>personalization_form </strong></div><div> required </div> | <div> Must be a Hash </div>
-<div><strong>personalization_form[title] </strong></div><div> optional </div> | <div>Title</div><div> Must be a String </div>
-<div><strong>personalization_form[price_modifier_type] </strong></div><div> optional </div> | <div>Price modifier type</div><div> Must be one of: $, %. </div>
-<div><strong>personalization_form[price_modifier_value] </strong></div><div> optional </div> | <div>Price modifier value</div><div> Must be a float. </div>
-<div><strong>personalization_form[position] </strong></div><div> optional </div> | <div>Position</div><div> Must be a number. </div>
-
-
-## Update personalization form
-
-```shell
-curl "https://subdomain.mybrightsites.com/api/v1.1.1/products/1/personalzation_forms/580?token=GXzAxWkkyYLsESGQTU15" \
-  -X PUT \
-  -H "Content-Type: application/json" \
-  -d @- <<'EOF'
-{
-  "personalization_form": {
-    "price_modifier_type": "$",
-    "price_modifier_value": 5.0,
-    "position": "3"
-  }
-}
-EOF
-```
-
-> The above request returns JSON structured like this:
-
-```json
-{
-  "id": 580,
-  "title": "Custom print",
-  "price_modifier_type": "$",
-  "price_modifier_value": 5.0,
-  "position": "3"
-}
-```
-
-### HTTP Request
-
 `PUT /api/v1.1.1/products/:product_id/personalization_forms/:id`
 
 ### Query Parameters
