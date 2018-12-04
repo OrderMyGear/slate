@@ -53,8 +53,8 @@ end
 # If you want Middleman to listen on a different port, you can set that below
 set :port, 4567
 
-set :versions, ['1.0', '1.1', '1.1.1']
-set :default_version, '1.1.1'
+set :versions, ['1.0', '1.1', '1.1.1', '1.1.2']
+set :default_version, '1.1.2'
 
 helpers do
   require './lib/toc_data.rb'
