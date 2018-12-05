@@ -189,6 +189,9 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.2/orders/1?token=GXzAxWkkyYLs
           "decoration": {
             "custom_text": "",
             "font": "",
+            "font_style": "",
+            "font_decoration": "",
+            "font_modifier": "",
             "size": {
               "name": "Medium",
               "price_modifier": "1.75",
@@ -219,6 +222,9 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.2/orders/1?token=GXzAxWkkyYLs
           "decoration": {
             "custom_text": "",
             "font": "",
+            "font_style": "",
+            "font_decoration": "",
+            "font_modifier": "",
             "size": {
               "name": "Medium",
               "price_modifier": "1.75",
