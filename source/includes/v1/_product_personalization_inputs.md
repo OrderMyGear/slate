@@ -3,7 +3,7 @@
 ## List personalization inputs
 
 ```shell
-curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -43,7 +43,7 @@ Parameter | Description
 ## Show personalization input
 
 ```shell
-curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -73,7 +73,7 @@ Parameter | Description
 ## Create personalization input
 
 ```shell
-curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15" \
   -X POST \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -119,7 +119,7 @@ Parameter | Description
 ## Update personalization input
 
 ```shell
-curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -164,7 +164,7 @@ Parameter | Description
 ## Delete personalization input
 
 ```shell
-curl "https://subdomain.mybrightsites.com/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15" \
   -X DELETE
 ```
 
