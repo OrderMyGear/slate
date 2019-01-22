@@ -1,3 +1,10 @@
+Deploy
+----------
+bundle exec middleman build --clean
+gsutil rsync -r -d build gs://docs.bsites-staging.com
+gsutil rsync -r -d build gs://docs.mybrightsites.com
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/lord/img/master/logo-slate.png" alt="Slate: API Documentation Generator" width="226">
   <br>
