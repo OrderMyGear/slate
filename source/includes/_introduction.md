@@ -58,8 +58,8 @@ Welcome to the Bright Sites API!
 }
 ```
 
-Added `font_style`, `font_decoration`, `font_modifier` to `decoration` json
-Added `gift_certificate` to `line_item` json
+1. Added `font_style`, `font_decoration`, `font_modifier` to `decoration` json
+2. Added `gift_certificate` to `line_item` json
 
 Affected APIs:
 
@@ -96,7 +96,7 @@ Affected APIs:
 }
 ```
 
-Added `enable_sms_notifications` to `users` json
+1. Added `enable_sms_notifications` to `users` json
 
 
 Affected APIs:
