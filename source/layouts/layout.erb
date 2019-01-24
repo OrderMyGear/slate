@@ -23,6 +23,13 @@ under the License.
   end
 %>
 
+<%
+  changelog_html = ''
+  if (changelog = current_page.data.changelog)
+    changelog_html = partial("includes/#{changelog}")
+  end
+%>
+
 <!doctype html>
 <html>
   <head>
@@ -106,6 +113,7 @@ under the License.
       <div class="dark-box"></div>
       <div class="content">
         <%= page_content %>
+        <%= changelog_html %>
       </div>
       <div class="dark-box">
         <% if language_tabs.any? %>
