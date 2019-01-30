@@ -1,6 +1,6 @@
 #  User auth tokens
 
-## Generate authentication token for a user
+## Generate a login token for the shopper to sign in directly onto the website without a username or password. The token is generated based on the username being passed in the JSON parameters.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.2/user_auth_tokens?token=GXzAxWkkyYLsESGQTU15" \

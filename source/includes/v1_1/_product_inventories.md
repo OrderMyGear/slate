@@ -1,6 +1,6 @@
 #  Product inventories
 
-## List of inventories for product
+## List all inventory levels and their corresponding IDs based on a product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories?token=GXzAxWkkyYLsESGQTU15"
@@ -39,7 +39,7 @@ Parameter | Description
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
-## Show inventories
+## Show the individual inventory level for a specific inventory ID you provide.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15"
@@ -74,7 +74,7 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Inventory ID</div><div> Must be a number. </div>
 
 
-## Create inventory
+## Create inventory levels based on a product ID you supply.
 
 ### HTTP Request
 
@@ -93,7 +93,7 @@ Parameter | Description
 <div><strong>inventory[allow_negative] </strong></div><div> required </div> | <div>Allow negative value of inventories</div><div> Must be one of: true, false, 1, 0 </div>
 
 
-## Update inventory
+## Update the inventory levels based on an inventory ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15" \
@@ -141,7 +141,7 @@ Parameter | Description
 <div><strong>inventory[allow_negative] </strong></div><div> optional </div> | <div>Allow negative value of inventories</div><div> Must be one of: true, false, 1, 0 </div>
 
 
-## Delete inventory
+## Delete the inventory levels based on an inventory ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15" \

@@ -1,6 +1,6 @@
 #  Product sub options
 
-## List of sub options for option
+## List all product sub options for a specific product option based on the option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204/sub_options?token=GXzAxWkkyYLsESGQTU15"
@@ -33,7 +33,7 @@ Parameter | Description
 <div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
 
 
-## Show sub option
+## Show you a specific product sub option for a specific sub option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204/sub_options/1234?token=GXzAxWkkyYLsESGQTU15"
@@ -64,7 +64,7 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Sub option ID</div><div> Must be a number. </div>
 
 
-## Create sub option
+## Create a product sub option based on a specific product option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204/sub_options?token=GXzAxWkkyYLsESGQTU15" \
@@ -115,7 +115,7 @@ Parameter | Description
 <div><strong>sub_option[filename] </strong></div><div> optional , nil allowed </div> | <div>Image file name</div><div> Must be a String </div>
 
 
-## Update sub option
+## Update a product sub option based on a specific sub option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204/sub_options/1234?token=GXzAxWkkyYLsESGQTU15" \
@@ -161,7 +161,7 @@ Parameter | Description
 <div><strong>sub_option[filename] </strong></div><div> optional , nil allowed </div> | <div>Image file name</div><div> Must be a String </div>
 
 
-## Delete sub option
+## Delete a product sub option based on a specific sub option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204/sub_options/559579?token=GXzAxWkkyYLsESGQTU15" \

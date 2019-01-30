@@ -1,6 +1,6 @@
 #  Users
 
-## List users
+## Show you a list of all users under a store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/users?token=GXzAxWkkyYLsESGQTU15"
@@ -46,7 +46,7 @@ Parameter | Description
 <div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
-## Show user
+## Show you the specific information for a user account based on the user ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/users/579?token=GXzAxWkkyYLsESGQTU15"
@@ -85,7 +85,7 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
 
 
-## Create user
+## Create a brand new user account in the store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/users?token=GXzAxWkkyYLsESGQTU15" \
@@ -157,7 +157,7 @@ Parameter | Description
 <div><strong>user[cuf_<custom user field id>] </strong></div><div> optional , nil allowed </div> | <div>Custom User Field</div><div> Must be a String </div>
 
 
-## Update user
+## Update information for a specific user account based on the user ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/users/579?token=GXzAxWkkyYLsESGQTU15" \
@@ -231,7 +231,7 @@ Parameter | Description
 <div><strong>user[cuf_<custom user field id>] </strong></div><div> optional , nil allowed </div> | <div>Custom User Field</div><div> Must be a String </div>
 
 
-## Delete user
+## Delete a specific user account based on the user ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/users/579?token=GXzAxWkkyYLsESGQTU15" \

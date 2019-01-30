@@ -1,6 +1,6 @@
 #  Products
 
-## List products
+## Show all products in the store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products?token=GXzAxWkkyYLsESGQTU15"
@@ -57,7 +57,7 @@ Parameter | Description
 <div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
-## Show product
+## Show a specific product configuration based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/579?token=GXzAxWkkyYLsESGQTU15"
@@ -126,7 +126,7 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
 
 
-## Create product
+## Create a brand new product for your store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products?token=GXzAxWkkyYLsESGQTU15" \
@@ -272,7 +272,7 @@ Parameter | Description
 <div><strong>product[enable_decoration_methods] </strong></div><div> optional , nil allowed </div> | <div>Enabled/Disable product decoration methods</div><div> Must be one of: true, false, 1, 0 </div>
 
 
-## Update product
+## Update a specific product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/579?token=GXzAxWkkyYLsESGQTU15" \
@@ -386,7 +386,7 @@ Parameter | Description
 <div><strong>product[enable_decoration_methods] </strong></div><div> optional , nil allowed </div> | <div>Enabled/Disable product decoration methods</div><div> Must be one of: true, false, 1, 0 </div>
 
 
-## Delete product
+## Delete a specific product from the store based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/579?token=GXzAxWkkyYLsESGQTU15" \

@@ -1,6 +1,6 @@
 #  Product logo locations
 
-## List of logo locations for a product
+## List all logo locations based on a product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/logo_locations?token=GXzAxWkkyYLsESGQTU15"
@@ -29,7 +29,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/22287/logo_locations?t
 
 
 
-## Update logo location
+## Update the logo location based on the logo locations ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/logo_locations/1?token=GXzAxWkkyYLsESGQTU15" \

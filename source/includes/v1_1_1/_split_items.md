@@ -1,6 +1,6 @@
 #  Split items
 
-## List split items
+## Show you all item splits on a specific line item within an order based on the line items ID you supply.
 
 ### HTTP Request
 
@@ -14,7 +14,7 @@ Parameter | Description
 <div><strong>line_item_id </strong></div><div> required </div> | <div>Line Item ID</div><div> Must be a number. </div>
 
 
-## Show split item
+## Show you a specific split item under a line item in an order based on the split items ID you supply.
 
 ### HTTP Request
 
@@ -29,7 +29,7 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Split Item ID</div><div> Must be a number. </div>
 
 
-## Update split item
+## Update information for a specific split item under a line item in an order based on the split items ID you supply.
 
 ### HTTP Request
 
@@ -49,7 +49,7 @@ Parameter | Description
 <div><strong>split_item[status] </strong></div><div> optional , nil allowed </div> | <div>Item status</div>
 
 
-## Delete split item
+## Delete a specific split item under a line item in an order based on the split items ID you supply.
 
 ### HTTP Request
 

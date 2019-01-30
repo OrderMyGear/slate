@@ -1,6 +1,6 @@
 #  Product options
 
-## List of options for product
+## List out all product options based on a product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GXzAxWkkyYLsESGQTU15"
@@ -35,7 +35,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GX
 
 
 
-## Show option
+## Show a specific product option based on the option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15"
@@ -70,7 +70,7 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
 
 
-## Create option
+## Create a product option for a specific product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GXzAxWkkyYLsESGQTU15" \
@@ -135,7 +135,7 @@ Parameter | Description
 <div><strong>option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
 
 
-## Update option
+## Update a specific product option based on find ption ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15" \
@@ -196,7 +196,7 @@ Parameter | Description
 <div><strong>option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
 
 
-## Delete option
+## Delete a specific product option from a product based on the option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15" \

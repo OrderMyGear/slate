@@ -52,7 +52,7 @@ Parameter | Description
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
-## Show quantity discount group
+## Show you a specific quantity discount for a product based on the quantity discount ID you supply. group
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15"
@@ -100,7 +100,7 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
 
 
-## Create quantity discount group
+## Create a new quantity discount for a specific product based on the product ID you supply. group
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discount_groups?token=GXzAxWkkyYLsESGQTU15" \
@@ -198,7 +198,7 @@ Parameter | Description
 <div><strong>quantity_discount_group[discounts][modifier] </strong></div><div> optional , nil allowed </div> | <div> Must be a float. </div>
 
 
-## Update quantity discount group
+## Update information for a specific quantity discount on a product based on the quantity discount ID you supply. group
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
@@ -269,7 +269,7 @@ Parameter | Description
 <div><strong>quantity_discount_group[discounts][modifier] </strong></div><div> optional , nil allowed </div> | <div> Must be a float. </div>
 
 
-## Delete quantity discount group
+## Delete a specific quantity discount on a product based on the quantity discount ID you supply. group
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
