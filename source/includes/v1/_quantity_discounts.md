@@ -36,7 +36,9 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts?t
 
 `GET /api/v1/products/:product_id/quantity_discounts`
 
-
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 ## Show you a specific quantity discount for a product based on the quantity discount ID you supply.
 
@@ -62,6 +64,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/5
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
 
 
@@ -99,6 +102,7 @@ EOF
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>quantity_discount </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>quantity_discount[quantity] </strong></div><div> required </div> | <div>Quantity</div><div> Must be a number. </div>
 <div><strong>quantity_discount[modifier] </strong></div><div> required </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
@@ -137,6 +141,8 @@ EOF
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
 <div><strong>quantity_discount </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>quantity_discount[quantity] </strong></div><div> optional </div> | <div>Quantity</div><div> Must be a number. </div>
 <div><strong>quantity_discount[modifier] </strong></div><div> optional </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
@@ -167,6 +173,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/5
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
 
 

@@ -1,6 +1,6 @@
 #  Product personalization forms
 
-## List out all personalizatiof forms for a specific product based on the product ID you supply.
+## List out all personalization forms for a specific product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms?token=GXzAxWkkyYLsESGQTU15"
@@ -34,6 +34,9 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms
 
 `GET /api/v1/products/:product_id/personalization_forms`
 
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
 ## Show a specific product personalization form based on the personalization ID you supply.
@@ -62,6 +65,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
 
 
@@ -103,6 +107,7 @@ EOF
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>personalization_form </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>personalization_form[title] </strong></div><div> required </div> | <div>Title</div><div> Must be a String </div>
 <div><strong>personalization_form[price_modifier_type] </strong></div><div> required </div> | <div>Price modifier type</div><div> Must be one of: $, %. </div>
@@ -147,6 +152,8 @@ EOF
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
 <div><strong>personalization_form </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>personalization_form[title] </strong></div><div> optional </div> | <div>Title</div><div> Must be a String </div>
 <div><strong>personalization_form[price_modifier_type] </strong></div><div> optional </div> | <div>Price modifier type</div><div> Must be one of: $, %. </div>
@@ -181,6 +188,6 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_form
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
-
 

@@ -123,7 +123,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/579?token=GXzAxWkkyYLs
 
 Parameter | Description
 --------- | -----------
-<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
 ## Create a brand new product for your store.
@@ -347,7 +347,7 @@ EOF
 
 Parameter | Description
 --------- | -----------
-<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>product </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>product[name] </strong></div><div> optional </div> | <div>Product name</div><div> Must be a String </div>
 <div><strong>product[sku] </strong></div><div> optional </div> | <div>Unique sku</div><div> Must be a String </div>
@@ -453,6 +453,6 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/579?token=GXzAxWkkyYLs
 
 Parameter | Description
 --------- | -----------
-<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 

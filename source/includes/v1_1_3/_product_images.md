@@ -130,7 +130,48 @@ Parameter | Description
 <div><strong>image[filename] </strong></div><div> required </div> | <div>Image file name</div><div> Must be a String </div>
 
 
-## Update a specific product based on the product ID you supply. image
+## Update a specific product image based on the product ID you supply.
+
+```shell
+curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/1/images/2?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "image": {
+    "position": 0,
+    "primary": true,
+    "thumbnail": false,
+    "image_data": "R0lGODlhbgCMAPf/APbr48VySrxTO7IgKt2qmKQdJeK8lsFjROG5p/nz7Zg3
+
+                   MNmnd7Q1MLNVS9GId71hSJMZIuzTu4UtKbeEeakhKMl8U8WYjfr18YQaIbAf
+
+                   KKwhKdKzqpQtLebFortOOejKrOjZ1Mt7aMNpVbAqLLV7bsNqR+3WwMqEWenN
+
+                   sZYxL/Ddy/Pm2e7ZxLlUQrIjNPXp3bU5MbhENbEtLtqhj5ZQTfHh0bMxL7Ip
+
+                   NsNyUYkZIrZJPcqGdYIUHb5aPKkeJnoUHd2yiJkiLKYiKLRFOsyJXKVDO8up
+
+                   osFaS+TBnK4kKti5sNaYg/z49aqYl5kqLrljUtORfMOlo/36+H4ZH8yDYq0f
+
+                   KKFYTaU9MrY8MrZBNXwXHpgaIdGVYu/byLZNP9SaZLIyOuXCtHkpJst+Wpcm",
+    "filename": "new_image.jpg"
+  }
+}
+EOF
+```
+
+> The above request returns JSON structured like this:
+
+```json
+{
+    "id": 2,
+    "primary": true,
+    "thumbnail": false,
+    "position": 0,
+    "src": "https://www.imagestorage.com/new_image.jpg"
+}
+```
 
 ### HTTP Request
 
@@ -141,7 +182,7 @@ Parameter | Description
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
-<div><strong>id </strong></div><div> optional </div> | <div>Product Image ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Product Image ID</div><div> Must be a number. </div>
 <div><strong>image </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>image[primary] </strong></div><div> optional </div> | <div>Primary Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>image[thumbnail] </strong></div><div> optional </div> | <div>Thumbnail Image switcher</div><div> Must be one of: true, false, 1, 0 </div>

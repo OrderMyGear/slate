@@ -222,6 +222,7 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>user_id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Address ID</div><div> Must be a number. </div>
 <div><strong>address </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>address[nickname] </strong></div><div> optional </div> | <div>Name of address</div><div> Must be a String </div>
 <div><strong>address[first_name] </strong></div><div> optional , nil allowed </div> | <div>First name</div><div> Must be a String </div>

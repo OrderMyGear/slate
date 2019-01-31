@@ -214,6 +214,7 @@ EOF
 
 Parameter | Description
 --------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
 <div><strong>user </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>user[username] </strong></div><div> optional </div> | <div>Unique username</div><div> Must be a String </div>
 <div><strong>user[first_name] </strong></div><div> optional </div> | <div>First name</div><div> Must be a String </div>

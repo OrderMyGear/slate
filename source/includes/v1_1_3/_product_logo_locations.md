@@ -72,6 +72,7 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Logo Location ID</div><div> Must be a number. </div>
 <div><strong>logo_location </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>logo_location[enabled] </strong></div><div> optional </div> | <div>Enable location</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>logo_location[required] </strong></div><div> optional </div> | <div>Logo is required for this location</div><div> Must be one of: true, false, 1, 0 </div>

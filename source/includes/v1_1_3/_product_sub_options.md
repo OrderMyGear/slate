@@ -47,7 +47,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/22287/options/4720
   "id": 556155,
   "name": "Small",
   "sub_sku": "",
-  "image_src": "http://www.imageprovider.com/image.jpg"
+  "image_src": "http://www.imageprovider.com/image.jpg",
   "price_modifier": "0.0",
   "position": 2
 }
@@ -93,7 +93,7 @@ EOF
   "id": 559579,
   "name": "X-Small",
   "sub_sku": "SKU123",
-  "image_src": "http://www.imageprovider.com/image.jpg"
+  "image_src": "http://www.imageprovider.com/image.jpg",
   "price_modifier": "2.0",
   "position": 3
 }
@@ -140,7 +140,7 @@ EOF
   "id": 559579,
   "name": "Large",
   "sub_sku": "SKU123",
-  "image_src": "http://www.imageprovider.com/image.jpg"
+  "image_src": "http://www.imageprovider.com/image.jpg",
   "price_modifier": "2.0",
   "position": 3
 }
@@ -156,6 +156,7 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Sub Option ID</div><div> Must be a number. </div>
 <div><strong>sub_option </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>sub_option[name] </strong></div><div> optional </div> | <div>Name of sub option</div><div> Must be a String </div>
 <div><strong>sub_option[sub_sku] </strong></div><div> optional , nil allowed </div> | <div>SKU</div><div> Must be a String </div>
@@ -179,8 +180,8 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/22287/options/4720
   "id": 559579,
   "name": "Large",
   "sub_sku": "SKU123",
-  "image_src": "http://www.imageprovider.com/image.jpg"
-  "price_modifier": "2.0"
+  "image_src": "http://www.imageprovider.com/image.jpg",
+  "price_modifier": "2.0",
   "position": 3
 }
 ```

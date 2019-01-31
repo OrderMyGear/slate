@@ -142,7 +142,7 @@ Parameter | Description
 <div><strong>option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
 
 
-## Update a specific product option based on find ption ID you supply.
+## Update a specific product option based on the option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15" \
@@ -191,6 +191,7 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
 <div><strong>option </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>option[name] </strong></div><div> optional </div> | <div>Name of option</div><div> Must be a String </div>
 <div><strong>option[friendly_name] </strong></div><div> optional , nil allowed </div> | <div>Friendly name</div><div> Must be a String </div>

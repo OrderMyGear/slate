@@ -15,7 +15,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/22287/decoration_metho
     {
       "id": 1,
       "name": "Sublimation",
-      "enabled": true,
+      "enabled": true
     }
   ]
 }
@@ -25,6 +25,11 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/22287/decoration_metho
 
 `GET /api/v1/products/:product_id/decoration_methods`
 
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
 ## Activate decorations methods under a product based on the decoration methods ID you supply.
@@ -60,6 +65,8 @@ EOF
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Decoration Method ID</div><div> Must be a number. </div>
 <div><strong>decoration_method </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>decoration_method[enabled] </strong></div><div> optional </div> | <div>Enable decoration method</div><div> Must be one of: true, false, 1, 0 </div>
 

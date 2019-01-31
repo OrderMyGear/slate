@@ -76,6 +76,44 @@ Parameter | Description
 
 ## Create inventory levels based on a product ID you supply.
 
+```shell
+curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/22287/inventories?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "inventory": {
+    "sub_option_ids": [
+      556255,
+      556156
+    ],
+    "inventory": 25,
+    "trigger": 5,
+    "track": false,
+    "allow_negative": false
+    
+  }
+}
+EOF
+```
+
+> The above request returns JSON structured like this:
+
+```json
+{
+  "id": 773,
+  "inventory": 25,
+  "trigger": 5,
+  "track": false,
+  "allow_negative": false,
+  "sub_sku": "S-Red",
+  "sub_option_ids": [
+    556255,
+    556156
+  ]
+}
+```
+
 ### HTTP Request
 
 `POST /api/v1.1.3/products/:product_id/inventories`
@@ -134,6 +172,7 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Inventory ID</div><div> Must be a number. </div>
 <div><strong>inventory </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>inventory[inventory] </strong></div><div> optional </div> | <div>Available inventories</div><div> Must be a number. </div>
 <div><strong>inventory[trigger] </strong></div><div> optional </div> | <div>Notify when inventories are low</div><div> Must be a number. </div>

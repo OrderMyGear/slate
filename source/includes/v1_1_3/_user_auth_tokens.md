@@ -5,6 +5,12 @@
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/user_auth_tokens?token=GXzAxWkkyYLsESGQTU15" \
   -X POST
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "username": "foouser"
+}
+EOF
 ```
 
 > The above request returns JSON structured like this:

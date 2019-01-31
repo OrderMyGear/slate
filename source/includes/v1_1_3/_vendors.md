@@ -118,8 +118,8 @@ EOF
   "products": [],
   "address1": "2010 Oompa-Loompa drive",
   "address2": "",
-  "city": Sweetstown,
-  "state": Texas,
+  "city": "Sweetstown",
+  "state": "Texas",
   "zip_code": 99099,
   "phone": "123123123123",
   "email": "test@test.com",
@@ -198,6 +198,7 @@ EOF
 
 Parameter | Description
 --------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Vendor ID</div><div> Must be a number. </div>
 <div><strong>vendor </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>vendor[name] </strong></div><div> optional </div> | <div>Unique name</div><div> Must be a String </div>
 <div><strong>vendor[address1] </strong></div><div> optional , nil allowed </div> | <div>First address</div><div> Must be a String </div>

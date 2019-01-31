@@ -141,6 +141,7 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Group ID</div><div> Must be a number. </div>
 <div><strong>option_group </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>option_group[name] </strong></div><div> optional </div> | <div>Name of option group</div><div> Must be a String </div>
 <div><strong>option_group[wrap_options] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be one of: true, false, 1, 0 </div>

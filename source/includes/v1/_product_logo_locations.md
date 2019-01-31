@@ -27,6 +27,11 @@ curl "https://subdomain.mybrightsites.com/api/v1/products/22287/logo_locations?t
 
 `GET /api/v1/products/:product_id/logo_locations`
 
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
 ## Update the logo location based on the logo locations ID you supply.
@@ -66,6 +71,8 @@ EOF
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Logo Location ID</div><div> Must be a number. </div>
 <div><strong>logo_location </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>logo_location[enabled] </strong></div><div> optional </div> | <div>Enable location</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>logo_location[required] </strong></div><div> optional </div> | <div>Logo is required for this location</div><div> Must be one of: true, false, 1, 0 </div>
