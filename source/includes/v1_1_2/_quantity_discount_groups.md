@@ -187,6 +187,12 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>quantity_discount_group </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>quantity_discount_group[name] </strong></div><div> required </div> | <div> Must be a String </div>
 <div><strong>quantity_discount_group[type] </strong></div><div> required </div> | <div>Type</div><div> Must be one of: percentage, fixed_price. </div>
@@ -258,6 +264,13 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+<div><strong>id </strong></div><div> required </div> | <div>Quantity discount group ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>quantity_discount_group </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>quantity_discount_group[name] </strong></div><div> optional </div> | <div> Must be a String </div>
 <div><strong>quantity_discount_group[type] </strong></div><div> optional </div> | <div>Type</div><div> Must be one of: percentage, fixed_price. </div>

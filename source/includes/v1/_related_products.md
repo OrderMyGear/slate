@@ -35,6 +35,13 @@ curl "https://subdomain.mybrightsites.com/api/v1/product/:product_id/related_pro
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>page </strong></div><div> optional </div> | <div>Pagination page number</div><div> Must be a number. </div>
 <div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
@@ -64,6 +71,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/product/1/related_products/579?
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Related product ID</div><div> Must be a number. </div>
 
 
@@ -92,6 +100,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/product/1/related_products/579?
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Related product ID</div><div> Must be a number. </div>
 
 

@@ -66,6 +66,12 @@ Parameter | Description
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>quantity_discount </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>quantity_discount[quantity] </strong></div><div> required </div> | <div>Quantity</div><div> Must be a number. </div>
 <div><strong>quantity_discount[modifier] </strong></div><div> required </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
@@ -93,9 +99,15 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>quantity_discount </strong></div><div> required </div> | <div> Must be a Hash </div>
-<div><strong>quantity_discount[quantity] </strong></div><div> optional </div> | <div>Quantity</div><div> Must be a number. </div>
-<div><strong>quantity_discount[modifier] </strong></div><div> optional </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
+<div><strong>quantity_discount[quantity] </strong></div><div> required </div> | <div>Quantity</div><div> Must be a number. </div>
+<div><strong>quantity_discount[modifier] </strong></div><div> required </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
 
 
 ## Delete a specific quantity discount on a product based on the quantity discount ID you supply.

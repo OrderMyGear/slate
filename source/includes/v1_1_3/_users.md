@@ -33,7 +33,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/users?token=GXzAxWkkyYLsESG
 
 `GET /api/v1.1.3/users`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------
@@ -141,7 +141,7 @@ EOF
 
 `POST /api/v1.1.3/users`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------
@@ -221,6 +221,12 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>user </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>user[username] </strong></div><div> optional </div> | <div>Unique username</div><div> Must be a String </div>
 <div><strong>user[first_name] </strong></div><div> optional </div> | <div>First name</div><div> Must be a String </div>

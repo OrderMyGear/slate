@@ -129,6 +129,12 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>option </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>option[name] </strong></div><div> required </div> | <div>Name of option</div><div> Must be a String </div>
 <div><strong>option[friendly_name] </strong></div><div> optional , nil allowed </div> | <div>Friendly name</div><div> Must be a String </div>
@@ -192,6 +198,12 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>option </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>option[name] </strong></div><div> optional </div> | <div>Name of option</div><div> Must be a String </div>
 <div><strong>option[friendly_name] </strong></div><div> optional , nil allowed </div> | <div>Friendly name</div><div> Must be a String </div>

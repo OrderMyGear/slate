@@ -32,7 +32,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1/orders?token=GXzAxWkkyYLsESGQ
 
 `GET /api/v1.1/orders`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------
@@ -593,6 +593,11 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>order </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>order[status] </strong></div><div> optional </div> | <div>Order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending</div>
 <div><strong>order[shipping_method] </strong></div><div> optional </div> | <div>Shipping Method</div><div> Must be a String </div>

@@ -109,6 +109,12 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>sub_option </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>sub_option[name] </strong></div><div> required </div> | <div>Name of sub option</div><div> Must be a String </div>
 <div><strong>sub_option[sub_sku] </strong></div><div> optional , nil allowed </div> | <div>SKU</div><div> Must be a String </div>
@@ -157,6 +163,12 @@ Parameter | Description
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>option_id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Sub Option ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>sub_option </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>sub_option[name] </strong></div><div> optional </div> | <div>Name of sub option</div><div> Must be a String </div>
 <div><strong>sub_option[sub_sku] </strong></div><div> optional , nil allowed </div> | <div>SKU</div><div> Must be a String </div>

@@ -25,7 +25,7 @@ EOF
 
 `POST /api/v1.1.2/user_auth_tokens`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------

@@ -34,7 +34,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/categories?token=GXzAxWkkyY
 
 `GET /api/v1.1.1/categories`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------
@@ -117,7 +117,7 @@ EOF
 
 `POST /api/v1.1.1/categories`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------
@@ -171,6 +171,12 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div> required </div> | <div>Category ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>category </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>category[name] </strong></div><div> optional </div> | <div>Unique name</div><div> Must be a String </div>
 <div><strong>category[position] </strong></div><div> optional , nil allowed </div> | <div>Category position in list</div><div> Must be a number. </div>

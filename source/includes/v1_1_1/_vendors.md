@@ -36,7 +36,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/vendors?token=GXzAxWkkyYLsE
 
 `GET /api/v1.1.1/vendors`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------
@@ -132,7 +132,7 @@ EOF
 
 `POST /api/v1.1.1/vendors`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------
@@ -195,6 +195,12 @@ EOF
 `PUT /api/v1.1.1/vendors/:id`
 
 ### Query Parameters
+
+Parameter | Description
+--------- | -----------
+<div><strong>id </strong></div><div> required </div> | <div>Vendor ID</div><div> Must be a number. </div>
+
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------

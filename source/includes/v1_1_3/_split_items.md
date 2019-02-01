@@ -115,6 +115,12 @@ Parameter | Description
 <div><strong>order_id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
 <div><strong>line_item_id </strong></div><div> required </div> | <div>Line Item ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Split Item ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>split_item </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>split_item[quantity] </strong></div><div> optional , nil allowed </div> | <div>Quantity</div><div> Must be a number. </div>
 <div><strong>split_item[tracking_number] </strong></div><div> optional , nil allowed </div> | <div>Tracking Number</div><div> Must be a String </div>

@@ -115,6 +115,13 @@ EOF
 
 Parameter | Description
 --------- | -----------
+<div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>image </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>image[primary] </strong></div><div> optional </div> | <div>Primary Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>image[thumbnail] </strong></div><div> optional </div> | <div>Thumbnail Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
@@ -176,12 +183,18 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Product Image ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>image </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>image[primary] </strong></div><div> optional </div> | <div>Primary Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>image[thumbnail] </strong></div><div> optional </div> | <div>Thumbnail Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>image[position] </strong></div><div> optional </div> | <div>Image list order</div><div> Must be a number. </div>
-<div><strong>image[image_data] </strong></div><div> optional </div> | <div>Base64 Image representation</div><div> Must be a String </div>
-<div><strong>image[filename] </strong></div><div> optional </div> | <div>Image file name</div><div> Must be a String </div>
+<div><strong>image[image_data] </strong></div><div> required </div> | <div>Base64 Image representation</div><div> Must be a String </div>
+<div><strong>image[filename] </strong></div><div> required </div> | <div>Image file name</div><div> Must be a String </div>
 
 
 ## Delete a specific product image based on the product image ID you provide.

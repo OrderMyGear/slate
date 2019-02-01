@@ -32,7 +32,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1/users?token=GXzAxWkkyYLsESGQT
 
 `GET /api/v1.1/users`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------
@@ -135,7 +135,7 @@ EOF
 
 `POST /api/v1.1/users`
 
-### Query Parameters
+### JSON Payload Parameters
 
 Parameter | Description
 --------- | -----------
@@ -151,6 +151,7 @@ Parameter | Description
 <div><strong>user[balance] </strong></div><div> optional , nil allowed </div> | <div>Balance</div><div> Must be a float. </div>
 <div><strong>user[note] </strong></div><div> optional , nil allowed </div> | <div>Create comment</div><div> Must be a String </div>
 <div><strong>user[password] </strong></div><div> optional , nil allowed </div> | <div>Password</div><div> Must be a String </div>
+<div><strong>user[enable_sms_notifications] </strong></div><div> optional </div> | <div>SMS Notification</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>user[cuf_<custom user field id>] </strong></div><div> optional , nil allowed </div> | <div>Custom User Field</div><div> Must be a String </div>
 
 
@@ -211,6 +212,12 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>user </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>user[username] </strong></div><div> optional </div> | <div>Unique username</div><div> Must be a String </div>
 <div><strong>user[first_name] </strong></div><div> optional </div> | <div>First name</div><div> Must be a String </div>

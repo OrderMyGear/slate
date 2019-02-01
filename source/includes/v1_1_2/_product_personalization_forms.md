@@ -110,6 +110,12 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>personalization_form </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>personalization_form[title] </strong></div><div> required </div> | <div>Title</div><div> Must be a String </div>
 <div><strong>personalization_form[price_modifier_type] </strong></div><div> required </div> | <div>Price modifier type</div><div> Must be one of: $, %. </div>
@@ -156,11 +162,17 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
 <div><strong>personalization_form </strong></div><div> required </div> | <div> Must be a Hash </div>
-<div><strong>personalization_form[title] </strong></div><div> optional </div> | <div>Title</div><div> Must be a String </div>
-<div><strong>personalization_form[price_modifier_type] </strong></div><div> optional </div> | <div>Price modifier type</div><div> Must be one of: $, %. </div>
-<div><strong>personalization_form[price_modifier_value] </strong></div><div> optional </div> | <div>Price modifier value</div><div> Must be a float. </div>
-<div><strong>personalization_form[position] </strong></div><div> optional </div> | <div>Position</div><div> Must be a number. </div>
+<div><strong>personalization_form[title] </strong></div><div> required </div> | <div>Title</div><div> Must be a String </div>
+<div><strong>personalization_form[price_modifier_type] </strong></div><div> required </div> | <div>Price modifier type</div><div> Must be one of: $, %. </div>
+<div><strong>personalization_form[price_modifier_value] </strong></div><div> required </div> | <div>Price modifier value</div><div> Must be a float. </div>
+<div><strong>personalization_form[position] </strong></div><div> required </div> | <div>Position</div><div> Must be a number. </div>
 
 
 ## Delete a personalization form from a product based on the personalization form ID you supply.
