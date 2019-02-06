@@ -91,7 +91,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/products/22287/inventories?
     "trigger": 5,
     "track": false,
     "allow_negative": false
-    
   }
 }
 EOF
