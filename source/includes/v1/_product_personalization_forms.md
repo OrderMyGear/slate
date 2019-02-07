@@ -1,6 +1,8 @@
 #  Product personalization forms
 
-## List out all personalization forms for a specific product based on the product ID you supply.
+## List personalization forms
+
+List out all personalization forms for a specific product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms?token=GXzAxWkkyYLsESGQTU15"
@@ -39,7 +41,9 @@ Parameter | Description
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
-## Show a specific product personalization form based on the personalization ID you supply.
+## Show personalization form
+
+Show a specific product personalization form based on the personalization ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms/580?token=GXzAxWkkyYLsESGQTU15"
@@ -69,7 +73,9 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
 
 
-## Create a product personalization form for a specific product based on the product ID you supply.
+## Create personalization form
+
+Create a product personalization form for a specific product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms?token=GXzAxWkkyYLsESGQTU15" \
@@ -121,7 +127,9 @@ Parameter | Description
 <div><strong>personalization_form[position] </strong></div><div> required </div> | <div>Position</div><div> Must be a number. </div>
 
 
-## Update a specific product personalization form assigned to a product based on the personalization form ID you supply.
+## Update personalization form
+
+Update a specific product personalization form assigned to a product based on the personalization form ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalzation_forms/580?token=GXzAxWkkyYLsESGQTU15" \
@@ -173,7 +181,9 @@ Parameter | Description
 <div><strong>personalization_form[position] </strong></div><div> required </div> | <div>Position</div><div> Must be a number. </div>
 
 
-## Delete a personalization form from a product based on the personalization form ID you supply.
+## Delete personalization form
+
+Delete a personalization form from a product based on the personalization form ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/personalization_forms/580?token=GXzAxWkkyYLsESGQTU15" \

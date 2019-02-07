@@ -1,6 +1,8 @@
 #  Quantity discounts
 
-## Show all quantity discounts under a specific product based on the product ID you supply.
+## List quantity discounts
+
+Show all quantity discounts under a specific product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts?token=GXzAxWkkyYLsESGQTU15"
@@ -40,7 +42,9 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
-## Show you a specific quantity discount for a product based on the quantity discount ID you supply.
+## Show quantity discount
+
+Show you a specific quantity discount for a product based on the quantity discount ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15"
@@ -68,7 +72,9 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
 
 
-## Create a new quantity discount for a specific product based on the product ID you supply.
+## Create quantity discount
+
+Create a new quantity discount for a specific product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts?token=GXzAxWkkyYLsESGQTU15" \
@@ -114,7 +120,9 @@ Parameter | Description
 <div><strong>quantity_discount[modifier] </strong></div><div> required </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
 
 
-## Update information for a specific quantity discount on a product based on the quantity discount ID you supply.
+## Update quantity discount
+
+Update information for a specific quantity discount on a product based on the quantity discount ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
@@ -160,7 +168,9 @@ Parameter | Description
 <div><strong>quantity_discount[modifier] </strong></div><div> required </div> | <div>Base price / Discount percentage</div><div> Must be a float. </div>
 
 
-## Delete a specific quantity discount on a product based on the quantity discount ID you supply.
+## Delete quantity discount
+
+Delete a specific quantity discount on a product based on the quantity discount ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \

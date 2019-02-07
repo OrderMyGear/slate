@@ -1,6 +1,8 @@
 #  Categories
 
-## List all product categories in the store.
+## List categories
+
+List all product categories in the store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/categories?token=GXzAxWkkyYLsESGQTU15"
@@ -42,7 +44,9 @@ Parameter | Description
 <div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
-## Show the category information based on the category ID (not name) you supply.
+## Show category
+
+Show the category information based on the category ID (not name) you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/categories/579?token=GXzAxWkkyYLsESGQTU15"
@@ -76,7 +80,9 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Category ID</div><div> Must be a number. </div>
 
 
-## Create a category in the store.
+## Create category
+
+Create a category in the store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/categories?token=GXzAxWkkyYLsESGQTU15" \
@@ -186,7 +192,9 @@ Parameter | Description
 <div><strong>category[active] </strong></div><div> optional , nil allowed </div> | <div>Enable / Disable category</div><div> Must be one of: true, false, 1, 0 </div>
 
 
-## Delete a category based on the category ID you supply.
+## Delete Category
+
+Delete a category based on the category ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/categories/579?token=GXzAxWkkyYLsESGQTU15" \

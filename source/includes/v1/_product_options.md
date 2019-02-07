@@ -1,6 +1,8 @@
 #  Product options
 
-## List out all product options based on a product ID you supply.
+## List of options for product
+
+List out all product options based on a product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GXzAxWkkyYLsESGQTU15"
@@ -39,7 +41,9 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
-## Show a specific product option based on the option ID you supply.
+## Show option
+
+Show a specific product option based on the option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15"
@@ -74,7 +78,9 @@ Parameter | Description
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
 
-## Create a product option for a specific product ID you supply.
+## Create option
+
+Create a product option for a specific product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GXzAxWkkyYLsESGQTU15" \
@@ -146,7 +152,9 @@ Parameter | Description
 <div><strong>option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
 
 
-## Update a specific product option based on the option ID you supply.
+## Update option
+
+Update a specific product option based on the option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15" \
@@ -215,7 +223,9 @@ Parameter | Description
 <div><strong>option[position] </strong></div><div> optional , nil allowed </div> | <div>Position of order</div><div> Must be a number. </div>
 
 
-## Delete a specific product option from a product based on the option ID you supply.
+## Delete option
+
+Delete a specific product option from a product based on the option ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options/47204?token=GXzAxWkkyYLsESGQTU15" \

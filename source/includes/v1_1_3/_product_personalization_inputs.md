@@ -1,6 +1,8 @@
 #  Product personalization inputs
 
-## List all personalization inputs for a specific personalization form ID you supply.
+## List personalization inputs
+
+List all personalization inputs for a specific personalization form ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15"
@@ -41,7 +43,9 @@ Parameter | Description
 <div><strong>personalization_form_id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
 
 
-## Show a specific product personalization input based on the personalization input ID you supply.
+## Show personalization input
+
+Show a specific product personalization input based on the personalization input ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15"
@@ -72,7 +76,9 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Personalization input ID</div><div> Must be a number. </div>
 
 
-## Create a product personalization input for a specific personalization form based on the form ID you supply.
+## Create personalization input
+
+Create a product personalization input for a specific personalization form based on the form ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/1/personalization_forms/101/personalization_inputs?token=GXzAxWkkyYLsESGQTU15" \
@@ -125,7 +131,9 @@ Parameter | Description
 <div><strong>personalization_input[position] </strong></div><div> required </div> | <div>Position</div><div> Must be a number. </div>
 
 
-## Update a specific product personalization input for a specific personalization input ID you supply.
+## Update personalization input
+
+Update a specific product personalization input for a specific personalization input ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15" \
@@ -178,7 +186,9 @@ Parameter | Description
 <div><strong>personalization_input[position] </strong></div><div> optional </div> | <div>Position</div><div> Must be a number. </div>
 
 
-## Delete a specific product personalization input for a specific personalization input ID you supply.
+## Delete personalization input
+
+Delete a specific product personalization input for a specific personalization input ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/products/1/personalization_forms/101/personalization_inputs/579?token=GXzAxWkkyYLsESGQTU15" \

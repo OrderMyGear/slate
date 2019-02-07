@@ -1,6 +1,8 @@
 #  Account addresses
 
-### List the account level address book for a specific user based on the user ID (not username) you supply.
+## List of Addresses for User
+
+List the account level address book for a specific user based on the user ID (not username) you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses?token=GXzAxWkkyYLsESGQTU15"
@@ -55,7 +57,8 @@ Parameter | Description
 <div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
-## Show address information (Address 1, Address 2, City, etc) for one address in the user’s address book based on the address ID you supply.
+## Show Address
+Show address information (Address 1, Address 2, City, etc) for one address in the user’s address book based on the address ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1006?token=GXzAxWkkyYLsESGQTU15"
@@ -94,7 +97,9 @@ Parameter | Description
 <div><strong>user_id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Address ID</div><div> Must be a number. </div>
 
-## Create an address for a specific user in their account level address book.
+## Create Address
+
+Create an address for a specific user in their account level address book.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses?token=GXzAxWkkyYLsESGQTU15" \
@@ -172,7 +177,9 @@ Parameter | Description
 <div><strong>address[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone</div><div> Must be a String </div>
 
 
-## Update an address in a user’s account level address book based on the address ID you supply.
+## Update address
+
+Update an address in a user’s account level address book based on the address ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1556?token=GXzAxWkkyYLsESGQTU15" \
@@ -252,7 +259,9 @@ Parameter | Description
 <div><strong>address[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone</div><div> Must be a String </div>
 
 
-## Delete an address in the user’s account level address book based on the address ID you supply.
+## Delete address
+
+Delete an address in the user’s account level address book based on the address ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses/1556?token=GXzAxWkkyYLsESGQTU15" \

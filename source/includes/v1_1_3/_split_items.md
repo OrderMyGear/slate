@@ -1,6 +1,8 @@
 #  Split items
 
-## Show you all item splits on a specific line item within an order based on the line items ID you supply.
+## List split items
+
+Show you all item splits on a specific line item within an order based on the line items ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/2089/line_items/25135/split_items?token=GXzAxWkkyYLsESGQTU15"
@@ -43,7 +45,9 @@ Parameter | Description
 <div><strong>line_item_id </strong></div><div> required </div> | <div>Line Item ID</div><div> Must be a number. </div>
 
 
-## Show you a specific split item under a line item in an order based on the split items ID you supply.
+## Show split item
+
+Show you a specific split item under a line item in an order based on the split items ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/2089/line_items/25135/split_items/108?token=GXzAxWkkyYLsESGQTU15"
@@ -75,7 +79,9 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Split Item ID</div><div> Must be a number. </div>
 
 
-## Update information for a specific split item under a line item in an order based on the split items ID you supply.
+## Update split item
+
+Update information for a specific split item under a line item in an order based on the split items ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/2089/line_items/25135/split_items/108?token=GXzAxWkkyYLsESGQTU15" \
@@ -129,7 +135,9 @@ Parameter | Description
 <div><strong>split_item[status] </strong></div><div> optional , nil allowed </div> | <div>Item status</div>
 
 
-## Delete a specific split item under a line item in an order based on the split items ID you supply.
+## Delete split item
+
+Delete a specific split item under a line item in an order based on the split items ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/2089/line_items/25135/split_items/108?token=GXzAxWkkyYLsESGQTU15" \

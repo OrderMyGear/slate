@@ -1,6 +1,8 @@
 #  Product option groups
 
-## List all product option groups based on a product ID you supply.
+## List of option groups for product
+
+List all product option groups based on a product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/option_groups?token=GXzAxWkkyYLsESGQTU15"
@@ -33,7 +35,9 @@ Parameter | Description
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
-## Show a specific product option group based on the option group ID you supply.
+## Show option group
+
+Show a specific product option group based on the option group ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/option_groups/4?token=GXzAxWkkyYLsESGQTU15"
@@ -62,7 +66,9 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Group ID</div><div> Must be a number. </div>
 
 
-## Create a product option group for a specific product ID you supply.
+## Create group
+
+Create a product option group for a specific product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/option_groups?token=GXzAxWkkyYLsESGQTU15" \
@@ -111,7 +117,9 @@ Parameter | Description
 <div><strong>option_group[option_ids] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be an Array of Integer </div>
 
 
-## Update a product option group for a specific option group ID you supply.
+## Update group
+
+Update a product option group for a specific option group ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/option_groups/5?token=GXzAxWkkyYLsESGQTU15" \
@@ -160,7 +168,9 @@ Parameter | Description
 <div><strong>option_group[option_ids] </strong></div><div> optional , nil allowed </div> | <div>Wrap options</div><div> Must be an Array of Integer </div>
 
 
-## Delete a specific product option group based on the option group ID you supply.
+## Delete group
+
+Delete a specific product option group based on the option group ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/option_groups/5?token=GXzAxWkkyYLsESGQTU15" \

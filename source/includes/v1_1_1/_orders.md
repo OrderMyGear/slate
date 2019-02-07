@@ -1,6 +1,8 @@
 #  Orders
 
-## List all orders placed in your store.
+## List orders
+
+List all orders placed in your store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders?token=GXzAxWkkyYLsESGQTU15"
@@ -44,7 +46,9 @@ Parameter | Description
 <div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
-## Show you information pertaining to one order based on the order ID you supply.
+## Show order
+
+Show you information pertaining to one order based on the order ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLsESGQTU15"
@@ -349,7 +353,9 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
 
 
-## Update order information based on the order ID you supply.
+## Update order
+
+Update order information based on the order ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLsESGQTU15" \
@@ -634,7 +640,9 @@ Parameter | Description
 <div><strong>order[billing_contact][phone] </strong></div><div> optional </div> | <div>Phone</div><div> Must be a String </div>
 
 
-## Cancel one specific order based on the order ID you supply.
+## Cancel order
+
+Cancel one specific order based on the order ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1/cancel?token=GXzAxWkkyYLsESGQTU15" \

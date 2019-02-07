@@ -1,6 +1,8 @@
 #  Product logo locations
 
-## List all logo locations based on a product ID you supply.
+## List of logo locations for a product
+
+List all logo locations based on a product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/products/22287/logo_locations?token=GXzAxWkkyYLsESGQTU15"
@@ -34,7 +36,9 @@ Parameter | Description
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
-## Update the logo location based on the logo locations ID you supply.
+## Update logo location
+
+Update the logo location based on the logo locations ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/products/22287/logo_locations/1?token=GXzAxWkkyYLsESGQTU15" \

@@ -1,6 +1,8 @@
 #  Vendors
 
-## List all vendors under a specific store.
+## List vendors
+
+List all vendors under a specific store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/vendors?token=GXzAxWkkyYLsESGQTU15"
@@ -87,7 +89,9 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Vendor ID</div><div> Must be a number. </div>
 
 
-## Create a brand new vendor for a specific store.
+## Create vendor
+
+Create a brand new vendor for a specific store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/vendors?token=GXzAxWkkyYLsESGQTU15" \
@@ -150,7 +154,9 @@ Parameter | Description
 <div><strong>vendor[active] </strong></div><div> optional , nil allowed </div> | <div>Enable / Disable vendor</div><div> Must be one of: true, false, 1, 0 </div>
 
 
-## Update the information for a specific vendor based on the vendor ID you supply.
+## Update vendor
+
+Update the information for a specific vendor based on the vendor ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/vendors/579?token=GXzAxWkkyYLsESGQTU15" \
@@ -218,7 +224,9 @@ Parameter | Description
 <div><strong>vendor[active] </strong></div><div> optional , nil allowed </div> | <div>Enable / Disable vendor</div><div> Must be one of: true, false, 1, 0 </div>
 
 
-## Delete a specific vendor from your store based on the vendor ID you supply.
+## Delete vendor
+
+Delete a specific vendor from your store based on the vendor ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/vendors/579?token=GXzAxWkkyYLsESGQTU15" \

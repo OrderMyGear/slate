@@ -1,6 +1,8 @@
 #  Product decoration methods
 
-## List whether decorations methods is activated for a product and what the decoration methods are on that product based on the product ID you supply.
+## List of decoration methods for a product
+
+List whether decorations methods is activated for a product and what the decoration methods are on that product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/decoration_methods?token=GXzAxWkkyYLsESGQTU15"
@@ -32,7 +34,9 @@ Parameter | Description
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
-## Activate decorations methods under a product based on the decoration methods ID you supply.
+## Update decoration method
+
+Activate decorations methods under a product based on the decoration methods ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/products/22287/decoration_methods/1?token=GXzAxWkkyYLsESGQTU15" \

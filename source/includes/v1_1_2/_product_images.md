@@ -1,6 +1,8 @@
 #  Product images
 
-## List all product images for the product ID you supply.
+## List of product images
+
+List all product images for the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.2/products/1/images?token=GXzAxWkkyYLsESGQTU15"
@@ -40,7 +42,9 @@ Parameter | Description
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 
 
-## Show a specific product image based on the product image ID you supply.
+## Show product image
+
+Show a specific product image based on the product image ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.2/products/579/product_images/1?token=GXzAxWkkyYLsESGQTU15"
@@ -70,7 +74,9 @@ Parameter | Description
 <div><strong>id </strong></div><div> required </div> | <div>Product Image ID</div><div> Must be a number. </div>
 
 
-## Create a product image under a specific item for the product ID you supply.
+## Create product image
+
+Create a product image under a specific item for the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.2/products/1/images?token=GXzAxWkkyYLsESGQTU15" \
@@ -136,7 +142,9 @@ Parameter | Description
 <div><strong>image[filename] </strong></div><div> required </div> | <div>Image file name</div><div> Must be a String </div>
 
 
-## Update a specific product image based on the product ID you supply.
+## Update product image
+
+Update a specific product image based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.2/products/1/images/2?token=GXzAxWkkyYLsESGQTU15" \
@@ -203,7 +211,9 @@ Parameter | Description
 <div><strong>image[filename] </strong></div><div> required </div> | <div>Image file name</div><div> Must be a String </div>
 
 
-## Delete a specific product image based on the product image ID you provide.
+## Delete product image
+
+Delete a specific product image based on the product image ID you provide.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.2/products/1/images/579?token=GXzAxWkkyYLsESGQTU15" \
