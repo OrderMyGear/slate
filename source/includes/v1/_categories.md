@@ -138,6 +138,8 @@ Parameter | Description
 
 ## Update category
 
+Update a category in the store based on the category ID (not name) you supply
+
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/categories/579?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
