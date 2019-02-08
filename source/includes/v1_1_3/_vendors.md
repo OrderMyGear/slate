@@ -46,7 +46,9 @@ Parameter | Description
 <div><strong>per_page </strong></div><div> optional </div> | <div>Pagination per page number</div><div> Must be a number. </div>
 
 
-## Show you the information for a specific vendor based on the vendor ID you supply.
+## Show vendor
+
+Show you the information for a specific vendor based on the vendor ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.3/vendors/579?token=GXzAxWkkyYLsESGQTU15"
