@@ -243,7 +243,21 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLs
           }
         }
       ],
-      "product_personalizations": [],
+      "product_personalizations": [
+        {
+          "title": "Enter Name Here",
+          "attributes": [
+            {
+              "key": "Name",
+              "value": ""
+            }
+          ],
+          "price_modifier": {
+            "modifier_type": "$",
+            "amount": "1.99"
+          }
+        }
+      ],
       "split_items":[
           {
               "id":27,
@@ -675,5 +689,3 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1/cancel?token=GXzAx
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
-
-
