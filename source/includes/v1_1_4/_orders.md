@@ -5,7 +5,7 @@
 List all orders placed in your store.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v1.1.4/orders?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -32,7 +32,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders?token=GXzAxWkkyYLsES
 
 ### HTTP Request
 
-`GET /api/v1.1.3/orders`
+`GET /api/v1.1.4/orders`
 
 ### JSON Payload Parameters
 
@@ -51,7 +51,7 @@ Parameter | Description
 Show you information pertaining to one order based on the order ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v1.1.4/orders/1?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -166,6 +166,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1?token=GXzAxWkkyYLs
       "name": "Product 1",
       "final_sku": "sku",
       "final_internal_id": "431234",
+      "tax_code": "12345",
       "quantity": 18,
       "product_price": "150.0",
       "options_price": "5.0",
@@ -296,6 +297,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1?token=GXzAxWkkyYLs
       "pdf_file_url": null,
       "product_id": 44422,
       "final_internal_id": null,
+      "tax_code": "12345",
       "product_options": [],
       "logos": [],
       "product_personalizations": [],
@@ -363,7 +365,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1?token=GXzAxWkkyYLs
 
 ### HTTP Request
 
-`GET /api/v1.1.3/orders/:id`
+`GET /api/v1.1.4/orders/:id`
 
 ### Query Parameters
 
@@ -377,7 +379,7 @@ Parameter | Description
 Update order information based on the order ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1.1.4/orders/1?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -518,6 +520,7 @@ EOF
       "name": "Shoes",
       "final_sku": "Shoes-1234",
       "final_internal_id": "431234",
+      "tax_code": "12345",
       "quantity": 2,
       "product_price": "37.5",
       "options_price": "0.0",
@@ -611,7 +614,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v1.1.3/orders/:id`
+`PUT /api/v1.1.4/orders/:id`
 
 ### Query Parameters
 
@@ -664,7 +667,7 @@ Parameter | Description
 Cancel one specific order based on the order ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1/cancel?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1.1.4/orders/1/cancel?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT
 ```
 
@@ -687,7 +690,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1/cancel?token=GXzAx
 
 ### HTTP Request
 
-`PUT /api/v1.1.3/orders/:id/cancel`
+`PUT /api/v1.1.4/orders/:id/cancel`
 
 ### Query Parameters
 
