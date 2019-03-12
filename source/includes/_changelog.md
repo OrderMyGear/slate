@@ -74,6 +74,8 @@
 
 1. Renamed `custom_tic` to `tax_code` for `products` json
 2. Added `tax_code` to `line_items` json
+3. Added `vendors` to `line_items` json 
+4. Added `supplier_id` to `logos` array in `line_items` json
 
 Affected APIs:
 

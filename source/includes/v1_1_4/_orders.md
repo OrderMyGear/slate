@@ -183,10 +183,26 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.4/orders/1?token=GXzAxWkkyYLs
           "sub_option_name": "X-Small"
         }
       ],
+      "vendors": [
+        {
+          "id": 579,
+          "name": "The Willy Wonka Company",
+          "address1": "2010 Oompa-Loompa drive",
+          "address2": "",
+          "city": "Sweetstown",
+          "state": "Texas",
+          "zip_code": "99099",
+          "phone": "123123123123",
+          "email": "test@test.com",
+          "account_number": "account123123",
+          "asi_number": "asi123456"
+        }
+      ],
       "logos": [{
           "name": "fedex",
           "charge": "10.0",
           "image_url": "/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+          "supplier_id": "VENDOR123",
           "location": {
             "id": 4,
             "name": "Top"
@@ -217,6 +233,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.4/orders/1?token=GXzAxWkkyYLs
           "name": "cop",
           "charge": null,
           "image_url": "/uploads/website/line_item_logo/image/05-01-2018/763/11.png",
+          "supplier_id": null,
           "location": {
             "id": 5,
             "name": "Right Chest"
