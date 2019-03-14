@@ -4,6 +4,8 @@
 
 > Changes 1.1.4:
 
+
+## Products JSON
 ```json
 {
   "name": "Dark Chocolate",
@@ -43,7 +45,10 @@
   "primary_category_id": 36,
   "last_edited_date": "2016-03-29",
 }
+```
 
+## Order -> Line items JSON
+```json
 {
   "line_items": [
     {
@@ -62,7 +67,14 @@
       "final_internal_id": null,
 +     "tax_code": "12345",
       "product_options": [],
-      "logos": [],
+      "logos": [
+        {
+          "name": "fedex",
+          "charge": "10.0",
+          "image_url": "/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
++         "supplier_id": "VENDOR123"
+         }
+      ],
       "product_personalizations": [],
       "split_items": [],
       "decoration_method": null,
@@ -72,10 +84,38 @@
 }
 ```
 
+## Vendors JSON
+```json
+{
+  "id": 579,
+  "name": "The Willy Wonka Company",
+  "products": [
+    {
+      "id": 100,
+      "name": "Licorice",
+      "sku": "lic-1"
+    }
+  ],
+  "address1": "2010 Oompa-Loompa drive",
+  "address2": "",
+  "city": "Sweetstown",
+  "state": "Texas",
+  "zip_code": "99099",
+  "phone": "123123123123",
+  "email": "test@test.com",
+  "account_number": "account123123",
+  "asi_number": "asi123456",
+  "active": true,
++ "global_vendor": false
+}
+```
+
+
 1. Renamed `custom_tic` to `tax_code` for `products` json
 2. Added `tax_code` to `line_items` json
 3. Added `vendors` to `line_items` json 
 4. Added `supplier_id` to `logos` array in `line_items` json
+5. Added `global_vendor` flag to `vendors` json
 
 Affected APIs:
 
@@ -83,6 +123,7 @@ Affected APIs:
 * /api/v1.1.4/orders/:order_id
 * /api/v1.1.4/orders/:order_id/line_items
 * /api/v1.1.4/orders/:order_id/line_items/:line_item_id
+* /api/v1.1.4/vendors/:id
 
 
 ## 1.1.3
