@@ -4,6 +4,8 @@
 
 > Changes 1.1.4:
 
+> /api/v1.1.4/products/:id
+
 ```json
 {
   "name": "Dark Chocolate",
@@ -45,6 +47,36 @@
 }
 ```
 
+> /api/v1.1.4/vendors/:id
+
+```json
+{
+  "id": 579,
+  "name": "The Willy Wonka Company",
+  "products": [
+    {
+      "id": 100,
+      "name": "Licorice",
+      "sku": "lic-1"
+    }
+  ],
+  "address1": "2010 Oompa-Loompa drive",
+  "address2": "",
+  "city": "Sweetstown",
+  "state": "Texas",
+  "zip_code": "99099",
+  "phone": "123123123123",
+  "email": "test@test.com",
+  "account_number": "account123123",
+  "asi_number": "asi123456",
+  "active": true,
++ "global_vendor": false
+}
+```
+
+> /api/v1.1.4/orders/:order_id
+
+
 ```json
 {
   "order_id": 1,
@@ -83,6 +115,21 @@
 +         "supplier_id": "VENDOR123"
          }
       ],
++     "vendors": [
++       {
++         "id": 579,
++         "name": "The Willy Wonka Company",
++         "address1": "2010 Oompa-Loompa drive",
++         "address2": "",
++         "city": "Sweetstown",
++         "state": "Texas",
++         "zip_code": "99099",
++         "phone": "123123123123",
++         "email": "test@test.com",
++         "account_number": "account123123",
++         "asi_number": "asi123456"
++       }
++     ],
       "product_personalizations": [],
       "split_items":[],
       "decoration_method": null,
@@ -163,31 +210,6 @@
 }
 ```
 
-```json
-{
-  "id": 579,
-  "name": "The Willy Wonka Company",
-  "products": [
-    {
-      "id": 100,
-      "name": "Licorice",
-      "sku": "lic-1"
-    }
-  ],
-  "address1": "2010 Oompa-Loompa drive",
-  "address2": "",
-  "city": "Sweetstown",
-  "state": "Texas",
-  "zip_code": "99099",
-  "phone": "123123123123",
-  "email": "test@test.com",
-  "account_number": "account123123",
-  "asi_number": "asi123456",
-  "active": true,
-+ "global_vendor": false
-}
-```
-
 1. Renamed `custom_tic` to `tax_code` for `products` json
 2. Added `tax_code` to `line_items` json
 3. Added `vendors` to `line_items` json
@@ -207,6 +229,8 @@ Affected APIs:
 ## 1.1.3
 
 > Changes 1.1.3:
+
+> /api/v1.1.3/users/:user_id
 
 ```json
 {
@@ -244,53 +268,55 @@ Affected APIs:
 
 > Changes 1.1.2:
 
+> "decoration" is a part of /api/v1.1.2/orders/:order_id
+
 ```json
 
 {
-  "decoration":{
-    "custom_text":"",
-    "font":"Playfair Display",
-    "size":null,
-    "color":null,
-    "colors":[],
-+   "font_style":"bold",
-+   "font_decoration":"Underline",
-+   "font_modifier":"Lowercase"
+  "decoration": {
+    "custom_text": "",
+    "font": "Playfair Display",
+    "size": null,
+    "color": null,
+    "colors": [],
++   "font_style": "bold",
++   "font_decoration": "Underline",
++   "font_modifier": "Lowercase"
   }
 }
+```
 
+> /api/v1.1.2/orders/:order_id/line_items/:line_item_id
+
+```json
 {
-  "line_items": [
-    {
-      "id": 5037732,
-      "name": "Gift Certificate Product Example",
-      "final_sku": "GC1",
-      "quantity": 1,
-      "product_price": "10.0",
-      "options_price": "0.0",
-      "total_price": "10.0",
-      "tax_price": null,
-      "unit_price": "10.0",
-      "pdf_status": "not_available",
-      "pdf_file_url": null,
-      "product_id": 329181,
-      "final_internal_id": null,
-      "product_options": [],
-      "logos": [],
-      "product_personalizations": [],
-      "split_items": [],
-      "decoration_method": null,
-+     "gift_certificate": {
-+       "first_name": "",
-+       "last_name": "",
-+       "email": "",
-+       "message": "",
-+       "expires_at": null,
-+       "code": "7D70CBCB88B",
-+       "amount": "10.0"
-+     }
-+   }
-  ]
+  "id": 5037732,
+  "name": "Gift Certificate Product Example",
+  "final_sku": "GC1",
+  "quantity": 1,
+  "product_price": "10.0",
+  "options_price": "0.0",
+  "total_price": "10.0",
+  "tax_price": null,
+  "unit_price": "10.0",
+  "pdf_status": "not_available",
+  "pdf_file_url": null,
+  "product_id": 329181,
+  "final_internal_id": null,
+  "product_options": [],
+  "logos": [],
+  "product_personalizations": [],
+  "split_items": [],
+  "decoration_method": null,
++ "gift_certificate": {
++   "first_name": "",
++   "last_name": "",
++   "email": "",
++   "message": "",
++   "expires_at": null,
++   "code": "7D70CBCB88B",
++   "amount": "10.0"
++ }
 }
 ```
 
