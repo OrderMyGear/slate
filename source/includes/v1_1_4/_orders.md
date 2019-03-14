@@ -61,6 +61,11 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.4/orders/1?token=GXzAxWkkyYLs
   "order_id": 1,
   "date": "2015-08-25T05:06:36-06:00",
   "status": "new",
+  "site_id": 178,
+  "site_name": "my website",
+  "site_url": "http://mywebsite.mybrightsites.com",
+  "organization_name": "Super organization",
+  "organization_id": 49,
   "custom_data_collections": [
     {
       "title": "Add a Gift Card To Your Order",
