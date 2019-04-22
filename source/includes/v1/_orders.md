@@ -34,7 +34,7 @@ curl "https://subdomain.mybrightsites.com/api/v1/orders?token=GXzAxWkkyYLsESGQTU
 
 `GET /api/v1/orders`
 
-### JSON Payload Parameters
+### Query Parameters
 
 Parameter | Description
 --------- | -----------
