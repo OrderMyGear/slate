@@ -206,7 +206,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.4/orders/1?token=GXzAxWkkyYLs
       "logos": [{
           "name": "fedex",
           "charge": "10.0",
-          "image_url": "/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
           "supplier_id": "VENDOR123",
           "location": {
             "id": 4,
@@ -237,7 +237,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.4/orders/1?token=GXzAxWkkyYLs
         {
           "name": "cop",
           "charge": null,
-          "image_url": "/uploads/website/line_item_logo/image/05-01-2018/763/11.png",
+          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/763/11.png",
           "supplier_id": null,
           "location": {
             "id": 5,
@@ -562,7 +562,7 @@ EOF
       "logos": [{
           "name": "fedex",
           "charge": "10.0",
-          "image_url": "/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
           "location": {
             "id": 4,
             "name": "Top"
@@ -572,7 +572,7 @@ EOF
         {
           "name": "cop",
           "charge": null,
-          "image_url": "/uploads/website/line_item_logo/image/05-01-2018/763/11.png",
+          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/763/11.png",
           "location": {
             "id": 5,
             "name": "Right Chest"

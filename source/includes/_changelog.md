@@ -111,7 +111,7 @@
         {
           "name": "fedex",
           "charge": "10.0",
-          "image_url": "/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
 +         "supplier_id": "VENDOR123"
          }
       ],
