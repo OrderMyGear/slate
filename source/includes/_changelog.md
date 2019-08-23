@@ -1,5 +1,97 @@
 # Changelog
 
+## 1.1.5
+
+> Changes 1.1.5:
+
+> /api/v1.1.5/orders/:id
+
+```json
+{
+  "order_id": 1,
+  "date": "2015-08-25T05:06:36-06:00",
+  "status": "new",
+  "site_id": 178,
+  "site_name": "my website",
+  "site_url": "http://mywebsite.mybrightsites.com",
++ "custom_store_id": "mycustomstore",
+  "organization_name": "Super organization",
+  "organization_id": 49,
+  "custom_data_collections": [],
+  "customer_email": "test@johndoe.com",
+  "customer_id": null,
+  "username": "Guest",
+  "item_total": "4703.0",
+  "grand_total": "3069.15",
+  "shipping_contact": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "test@johndoe.com",
+    "phone": "1234123456"
+  },
+  "shipping_address": {
+    "first_address": "2658 East 26th Street",
+    "company": "Testco LLC",
+    "second_address": "John Doe",
+    "city": "Brooklyn",
+    "state": "New York",
+    "country": "United States",
+    "zip": "11235"
+  },
+  "billing_contact": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "test@johndoe.com",
+    "phone": "1234123456"
+  },
+  "billing_address": {
+    "first_address": "2658 East 26th Street",
+    "company": "Testco LLC",
+    "second_address": "John Doe",
+    "city": "Brooklyn",
+    "state": "New York",
+    "country": "United States",
+    "zip": "11235"
+  },
+  "payment": {
+    "id": 4305,
+    "authorization": "A70A9B840C12",
+    "created_at": "2016-06-23T10:19:22-06:00",
+    "amount": "82.0",
+    "state": "refunded",
+    "details": {
+      "method": "credit card",
+      "card type": "Visa",
+      "card": "**** **** **** 1111",
+      "amount": "$82.00"
+    }
+  },
+  "payments": [],
+  "shipment": {
+    "tracking_number": "12234tracking2123",
+    "cost": "0.0",
+    "created_at": "2015-08-25T05:06:23-06:00",
+    "shipping_method": "Best Way",
+    "ship_date": "2016-08-25",
+    "in_hands_date": "2018-06-15"
+  },
+  "line_items": [],
+  "coupons_adjustments": [],
+  "balance_adjustments": [],
+  "custom_adjustments": [],
+  "required_adjustments": [],
+  "notes": []
+}
+```
+
+1. Orders are sorted by `order_id` in descending order
+2. Added `custom_store_id` to `order` json
+
+Affected APIs:
+
+* /api/v1.1.5/orders
+* /api/v1.1.5/orders/:order_id
+
 ## 1.1.4
 
 > Changes 1.1.4:

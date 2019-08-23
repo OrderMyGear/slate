@@ -638,3 +638,7 @@ html, body {
 .highlight, .highlight .w {
   background-color: $code-bg;
 }
+
+.highlight .err {
+  color: #FF0000;
+}
