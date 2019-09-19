@@ -1,5 +1,255 @@
 # Changelog
 
+## 1.1.6
+
+> Changes 1.1.6:
+
+> /api/v1.1.6/orders/:id
+
+```json
+{
+  "order_id": 249,
+  "custom_data_collections": [],
+  "customer_email": "helloworld1231@email.com",
+  "customer_id": 1624,
+  "username": "helloworld1231",
+  "item_total": "10.0",
+  "grand_total": "43.32",
+  "required_adjustments": [
+    {
+      "amount": "30.0",
+      "modifier_type": "$",
+      "note": "shipment"
+    },
+    {
+      "amount": "3.32",
+      "modifier_type": "$",
+      "note": "sales tax"
+    }
+  ],
+  "balance_adjustments": [],
+  "payment": {
+    "id": 6164,
+    "authorization": null,
+    "created_at": "2019-03-25T19:59:21.000-06:00",
+    "amount": "43.32",
+    "state": "completed",
+    "details": {
+      "method": "Custom payment",
+      "custom method name": "No Pay1",
+      "details": "",
+      "amount": "$43.32"
+    }
+  },
+  "status": "moas_pending",
+  "date": "2019-03-25T19:59:28.000-06:00",
+  "site_id": 178,
+  "site_name": "Testing & Site1",
+  "site_url": "http://bestsiteever.lvh.me:3000",
+  "organization_name": "Jurassic Deployment",
+  "organization_id": 49,
+  "custom_store_id": "test custom store id",
+  "shipping_contact": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "helloworld1231@email.com",
+    "phone": "12345678"
+  },
+  "shipping_address": {
+    "company": "",
+    "first_address": "1437 Larimer Street1",
+    "second_address": "32",
+    "city": "Denver1",
+    "state": "Colorado",
+    "country": "United States",
+    "zip": "80202"
+  },
+  "billing_contact": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "helloworld1231@email.com",
+    "phone": "12345678"
+  },
+  "billing_address": {
+    "company": "",
+    "first_address": "1437 Larimer Street1",
+    "second_address": "32",
+    "city": "Denver1",
+    "state": "Colorado",
+    "country": "United States",
+    "zip": "80202"
+  },
+  "shipment": {
+    "tracking_number": "12341234",
+    "created_at": "2019-03-25T19:59:04.000-06:00",
+    "ship_date": "2019-09-19",
+    "in_hands_date": null,
+    "shipping_method": "FedEx 2 Day Freight",
+    "cost": "30.0"
+  },
+  "payments": [
+    {
+      "id": 6164,
+      "authorization": null,
+      "created_at": "2019-03-25T19:59:21.000-06:00",
+      "amount": "43.32",
+      "state": "completed",
+      "details": {
+        "method": "Custom payment",
+        "custom method name": "No Pay1",
+        "details": "",
+        "amount": "$43.32"
+      }
+    }
+  ],
+  "line_items": [
+    {
+      "id": 10176,
+      "name": "logo1",
+      "final_sku": "l1",
+      "quantity": 1,
+      "product_price": "10.0",
+      "options_price": "0.0",
+      "total_price": "10.0",
+      "tax_price": null,
+      "unit_price": "10.0",
+      "pdf_status": "not_available",
+      "pdf_file_url": null,
+      "product_id": 44429,
+      "final_internal_id": null,
+      "tax_code": "",
+      "product_options": [
+        {
+          "option_name": "Size",
+          "sub_option_name": "Small",
+          "option_type": "size",
+          "option_id": 85557,
+          "sub_option_id": 734144
+        }
+      ],
+      "logos": [
+        {
+          "name": "test1",
+          "charge": null,
+          "image_url": "/uploads/website/line_item_logo/image/03-25-2019/838/t-shirt.png",
+          "supplier_id": null,
+          "location": null,
+          "decoration": null
+        }
+      ],
+      "product_personalizations": [],
+      "split_items": [],
+      "decoration_method": null,
+      "gift_certificate": null,
+      "vendors": [
+        {
+          "id": 1342,
+          "name": "Leeds",
+          "address1": null,
+          "address2": null,
+          "city": null,
+          "state": null,
+          "zip_code": null,
+          "phone": null,
+          "email": null,
+          "account_number": null,
+          "asi_number": null
+        }
+      ]
+    }
+  ],
+  "coupons_adjustments": [],
+  "custom_adjustments": [],
+  "notes": [],
++ "shipments": [
++   {
++     "id": 14,
++     "tracking_number": "12341",
++     "ship_date": null,
++     "note": "",
++     "shipping_method": "FedEx 2 Day Freight",
++     "line_items": [
++       {
++         "id": 10176,
++         "quantity": 1
++       }
++     ]
++   },
++   {
++     "id": 32,
++     "tracking_number": null,
++     "ship_date": null,
++     "note": null,
++     "shipping_method": "FedEx 2 Day Freight",
++     "line_items": [
++       {
++         "id": 10176,
++         "quantity": 1
++       }
++     ]
++   }
++ ]
+}
+```
+
+> /api/v1.1.6/orders/:order_id/shipments (new)
+
+```json
++ {
++   "shipments": [
++     {
++       "id": 14,
++       "tracking_number": "1234123412",
++       "ship_date": "2019-10-20",
++       "note": "Lorem ipsum",
++       "shipping_method": "FedEx 2 Day Freight",
++       "line_items": [
++         {
++           "id": 1234,
++           "quantity": 1
++         }
++       ]
++     }
++   ]
++ }
+```
+
+> /api/v1.1.6/orders/:order_id/shipping_methods (new)
+
+```json
++ {
++   "shipping_methods": [
++     "Ground",
++     "FedEx 1 Day Freight",
++     "FedEx 2 Day",
++     "FedEx 2 Day Freight",
++     "FedEx 3 Day Freight",
++     "International Economy Freight",
++     "International First",
++     "International Ground",
++     "International Priority",
++     "International Priority Freight",
++     "UPS Ground",
++     "UPS Next Day Air",
++     "UPS Next Day Air Early A.M.",
++     "UPS Second Day Air",
++     "No Shipping Method"
++   ]
++ }
+```
+
+
+1. Added `shipments` to `order` json
+2. Added [order shipments](#order-shipments)
+3. Added [shipping methods](#shipping-methods)
+
+Affected APIs:
+
+* /api/v1.1.6/orders/:order_id
+* /api/v1.1.6/orders/:order_id/shipments (new)
+* /api/v1.1.6/shipping_methods (new)
+
+
 ## 1.1.5
 
 > Changes 1.1.5:

@@ -539,6 +539,7 @@ EOF
   },
   "line_items": [
     {
+      "id": 1234,
       "name": "Shoes",
       "final_sku": "Shoes-1234",
       "final_internal_id": "431234",

@@ -5,7 +5,7 @@
 List all orders placed in your store.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v1.1.6/orders?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -32,7 +32,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders?token=GXzAxWkkyYLsES
 
 ### HTTP Request
 
-`GET /api/v1.1.1/orders`
+`GET /api/v1.1.6/orders`
 
 ### Query Parameters
 
@@ -51,7 +51,7 @@ Parameter | Description
 Show you information pertaining to one order based on the order ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v1.1.6/orders/1?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -61,6 +61,12 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLs
   "order_id": 1,
   "date": "2015-08-25T05:06:36-06:00",
   "status": "new",
+  "site_id": 178,
+  "site_name": "my website",
+  "site_url": "http://mywebsite.mybrightsites.com",
+  "custom_store_id": "mycustomstore",
+  "organization_name": "Super organization",
+  "organization_id": 49,
   "custom_data_collections": [
     {
       "title": "Add a Gift Card To Your Order",
@@ -163,9 +169,11 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLs
   },
   "line_items": [
     {
-      "name": "helloworld",
+      "id": 1234,
+      "name": "Product 1",
       "final_sku": "sku",
       "final_internal_id": "431234",
+      "tax_code": "12345",
       "quantity": 18,
       "product_price": "150.0",
       "options_price": "5.0",
@@ -182,10 +190,26 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLs
           "sub_option_name": "X-Small"
         }
       ],
+      "vendors": [
+        {
+          "id": 579,
+          "name": "The Willy Wonka Company",
+          "address1": "2010 Oompa-Loompa drive",
+          "address2": "",
+          "city": "Sweetstown",
+          "state": "Texas",
+          "zip_code": "99099",
+          "phone": "123123123123",
+          "email": "test@test.com",
+          "account_number": "account123123",
+          "asi_number": "asi123456"
+        }
+      ],
       "logos": [{
           "name": "fedex",
           "charge": "10.0",
           "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+          "supplier_id": "VENDOR123",
           "location": {
             "id": 4,
             "name": "Top"
@@ -216,6 +240,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLs
           "name": "cop",
           "charge": null,
           "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/763/11.png",
+          "supplier_id": null,
           "location": {
             "id": 5,
             "name": "Right Chest"
@@ -279,31 +304,37 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLs
       "decoration_method": {
         "name": "Embroidery",
         "price_modifier": "2.5"
-      }
+      },
+      "gift_certificate": null,
     },
     {
-      "name": "helloworld",
-      "final_sku": "sku",
-      "final_internal_id": "431234",
-      "quantity": 2,
-      "product_price": "150.0",
-      "options_price": "10.0",
-      "total_price": "320.0",
-      "tax_price": "8.0",
-      "unit_price": "160.0",
-      "product_id": 10,
-      "product_options": [
-        {
-          "option_id": 25,
-          "sub_option_id": 153,
-          "option_name": "Size",
-          "option_type": "size",
-          "sub_option_name": "Small"
-        }
-      ],
+      "id": 10139,
+      "name": "Gift Certificate example",
+      "final_sku": "GCE1",
+      "quantity": 1,
+      "product_price": "0.0",
+      "options_price": "0.0",
+      "total_price": "10.0",
+      "tax_price": null,
+      "unit_price": "10.0",
+      "pdf_status": "not_available",
+      "pdf_file_url": null,
+      "product_id": 44422,
+      "final_internal_id": null,
+      "tax_code": "12345",
+      "product_options": [],
+      "logos": [],
       "product_personalizations": [],
-      "split_items":[],
-      "decoration_method": null
+      "split_items": [],
+      "decoration_method": null,
+      "gift_certificate": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "message": "Nice work on the job today!",
+        "expires_at": "2018-12-04T09:15:50.000-07:00",
+        "code": "9FBF1F5B7029432",
+        "amount": "10.0"
+      }
     }
   ],
   "coupons_adjustments": [],
@@ -352,13 +383,28 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLs
       "modifier_type": "$"
     }
   ],
-  "notes": []
+  "notes": [],
+  "shipments": [
+    {
+      "id": 14,
+      "tracking_number": "1234123412",
+      "ship_date": "2019-10-20",
+      "note": "Lorem ipsum",
+      "shipping_method": "FedEx 2 Day Freight",
+      "line_items": [
+        {
+          "id": 1234,
+          "quantity": 1
+        }
+      ]
+    }
+  ]
 }
 ```
 
 ### HTTP Request
 
-`GET /api/v1.1.1/orders/:id`
+`GET /api/v1.1.6/orders/:id`
 
 ### Query Parameters
 
@@ -372,7 +418,7 @@ Parameter | Description
 Update order information based on the order ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1.1.6/orders/1?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -510,10 +556,11 @@ EOF
   },
   "line_items": [
     {
-      "id": 1234,
+      "id": "1234",
       "name": "Shoes",
       "final_sku": "Shoes-1234",
       "final_internal_id": "431234",
+      "tax_code": "12345",
       "quantity": 2,
       "product_price": "37.5",
       "options_price": "0.0",
@@ -607,7 +654,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v1.1.1/orders/:id`
+`PUT /api/v1.1.6/orders/:id`
 
 ### Query Parameters
 
@@ -660,7 +707,7 @@ Parameter | Description
 Cancel one specific order based on the order ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1/cancel?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v1.1.6/orders/1/cancel?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT
 ```
 
@@ -683,7 +730,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1/cancel?token=GXzAx
 
 ### HTTP Request
 
-`PUT /api/v1.1.1/orders/:id/cancel`
+`PUT /api/v1.1.6/orders/:id/cancel`
 
 ### Query Parameters
 
