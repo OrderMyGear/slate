@@ -144,14 +144,13 @@ EOF
 
 ### HTTP Request
 
-`GET /api/v1.1.6/orders/:order_id/shipments/:id`
+`POST /api/v1.1.6/orders/:order_id/shipments`
 
 ### Query Parameters
 
 Parameter | Description
 --------- | -----------
 <div><strong>order_id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
-<div><strong>id </strong></div><div> required </div> | <div>Shipment ID</div><div> Must be a number. </div>
 
 
 ### JSON Payload Parameters
@@ -192,7 +191,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.6/orders/1/shipments/39?token
 
 ### HTTP Request
 
-`GET /api/v1.1.6/orders/:order_id/shipments/:id`
+`DELETE /api/v1.1.6/orders/:order_id/shipments/:id`
 
 ### Query Parameters
 
