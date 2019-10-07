@@ -246,7 +246,7 @@ Parameter | Description
 <div><strong>product </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>product[name] </strong></div><div> required </div> | <div>Product name</div><div> Must be a String </div>
 <div><strong>product[sku] </strong></div><div> required </div> | <div>Unique sku</div><div> Must be a String </div>
-<div><strong>product[sku_separator] </strong></div><div> required </div> | <div>SKU separator</div><div> Must be a String </div>
+<div><strong>product[sku_separator] </strong></div><div> optional </div> | <div>SKU separator</div><div> Must be a String (default to "-") </div>
 <div><strong>product[internal_id] </strong></div><div> optional , nil allowed </div> | <div>Internal ID</div><div> Must be a String </div>
 <div><strong>product[base_price] </strong></div><div> required </div> | <div>Base price ($)</div><div> Must be a float. </div>
 <div><strong>product[retail_price] </strong></div><div> optional , nil allowed </div> | <div>Retail price ($)</div><div> Must be a float. </div>
@@ -370,7 +370,7 @@ Parameter | Description
 <div><strong>product </strong></div><div> required </div> | <div> Must be a Hash </div>
 <div><strong>product[name] </strong></div><div> optional </div> | <div>Product name</div><div> Must be a String </div>
 <div><strong>product[sku] </strong></div><div> optional </div> | <div>Unique sku</div><div> Must be a String </div>
-<div><strong>product[sku_separator] </strong></div><div> required </div> | <div>SKU separator</div><div> Must be a String </div>
+<div><strong>product[sku_separator] </strong></div><div> optional </div> | <div>SKU separator</div><div> Must be a String </div>
 <div><strong>product[internal_id] </strong></div><div> optional , nil allowed </div> | <div>Internal ID</div><div> Must be a String </div>
 <div><strong>product[base_price] </strong></div><div> optional </div> | <div>Base price ($)</div><div> Must be a float. </div>
 <div><strong>product[retail_price] </strong></div><div> optional , nil allowed </div> | <div>Retail price ($)</div><div> Must be a float. </div>
