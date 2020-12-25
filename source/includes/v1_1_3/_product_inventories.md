@@ -134,12 +134,12 @@ Parameter | Description
 
 Parameter | Description
 --------- | -----------
-<div><strong>image </strong></div><div> required </div> | <div> Must be a Hash </div>
-<div><strong>image[primary] </strong></div><div> optional </div> | <div>Primary Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
-<div><strong>image[thumbnail] </strong></div><div> optional </div> | <div>Thumbnail Image switcher</div><div> Must be one of: true, false, 1, 0 </div>
-<div><strong>image[position] </strong></div><div> optional </div> | <div>Image list order</div><div> Must be a number. </div>
-<div><strong>image[image_data] </strong></div><div> required </div> | <div>Base64 Image representation</div><div> Must be a String </div>
-<div><strong>image[filename] </strong></div><div> required </div> | <div>Image file name</div><div> Must be a String </div>
+<div><strong>inventory </strong></div><div> required </div> | <div> Must be a Hash </div>
+<div><strong>inventory[sub_option_ids] </strong></div><div> optional </div> | <div>Array of sub_option ids. It can be blank if there are no options for this product</div><div> Must be an Array of Integer </div>
+<div><strong>inventory[inventory] </strong></div><div> required </div> | <div>Available inventories</div><div> Must be a number. </div>
+<div><strong>inventory[trigger] </strong></div><div> required </div> | <div>Notify when inventories are low</div><div> Must be a number. </div>
+<div><strong>inventory[track] </strong></div><div> required </div> | <div>Enable / Disable inventory tracking</div><div> Must be one of: true, false, 1, 0 </div>
+<div><strong>inventory[allow_negative] </strong></div><div> required </div> | <div>Allow negative value of inventories</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update inventory

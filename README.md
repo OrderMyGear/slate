@@ -13,6 +13,8 @@ Run on localhost
 ```shell
 bundle install
 bundle exec middleman server
+
+# Go to http://localhost:4567/1.1.7.html
 ```
 
 
