@@ -7,11 +7,10 @@ gsutil rsync -r -d build gs://docs.mybrightsites.com
 gsutil rsync -r -d build gs://docs.shopepromos.com
 ```
 
-Start
+Run on localhost
 ----------
 
 ```shell
-# either run this to run locally
 bundle install
 bundle exec middleman server
 ```
