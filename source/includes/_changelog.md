@@ -4,56 +4,26 @@
 
 > Changes 2.0.0:
 
-> /api/v2.0.0/users
+> POST /api/v2.0.0/users
 
 ```json
 {
-  "name": "Chocolate",
-  "sku": "choc-1",
-+ "sku_separator": "-",
-  "internal_id": "431234",
-  "base_price": "10",
-  "retail_price": "10",
-  "cost": "10",
-  "setup_charge": "10",
-  "minimum_order_quantity": 10,
-  "maximum_order_quantity": 20,
-  "weight": "10",
-  "width": "10",
-  "height": "10",
-  "length": "10",
-  "shipping_modifier": "10",
-  "meta_title": "choco",
-  "meta_description": "tasty choco",
-  "meta_keywords": "tasty chocolate wonka",
-  "custom_url": "chocolate",
-  "description": "Very Tasty Dark Chocolate",
-  "active": true,
-  "featured": false,
-  "tax_exempt": false,
-  "shipping_exempt": false,
-  "categories": [
-    {
-      "id": 123,
-      "name": "Chocolates"
-    }
-  ],
-  "vendors": [
-    {
-      "id": 234,
-      "name": "The Willy Wonka Company"
-    }
-  ],
-  "enable_quantity_discount": false,
-  "related_products_type": "auto",
-  "enable_related_products": false,
-  "enable_product_personalization": false,
-  "enable_inventory": false,
-  "enable_logo_locations": false,
-  "enable_decoration_methods": false,
-  "primary_category_id": 36,
-  "last_edited_date": "2016-03-29T22:53:03-06:00",
-  "tax_code": "12345"
+  "user": {
+    "username": "johndoe",
+    "first_name":"John",
+    "last_name":"Doe",
+    "active":true,
+    "email":"johndoe@email.com",
+    "phone":"+1234567890",
+    "company":"BSI",
+    "title":"Support Leader",
+    "groups":["Public"],
+    "balance":12.5,
+    "password":"12345678",
+    "enable_sms_notifications":true,
+    "cuf_1": "helloworld",
+  + "dont_send_confirmation_email":true,
+  }
 }
 ```
 
