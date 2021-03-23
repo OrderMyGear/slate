@@ -14,7 +14,7 @@ Run on localhost
 bundle install
 bundle exec middleman server
 
-# Go to http://localhost:4567/1.1.7.html
+# Go to http://localhost:4567/2.0.0.html
 ```
 
 
