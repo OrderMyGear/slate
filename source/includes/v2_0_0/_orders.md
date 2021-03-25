@@ -17,7 +17,8 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/orders?token=GXzAxWkkyYLsES
       "order_id": 1,
       "shipping_method": "Best Way",
       "tracking": "12234tracking2123",
-      "date": "2015-08-28T08:34:37-06:00",
+      "created_at": "2015-08-28T08:34:37-06:00",
+      "updated_at": "2015-08-28T08:34:37-06:00",
       "status": "new",
       "customer": "test@johndoe.com",
     }
@@ -40,8 +41,10 @@ Parameter | Description
 --------- | -----------
 <div><strong>status </strong></div><div>optional</div> | <div>Filter by order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending</div>
 <div><strong>customer </strong></div><div>optional</div> | <div>Filter by customer</div><div>Must be one of: Array, String</div>
-<div><strong>date_from </strong></div><div>optional</div> | <div>Filter by date created from</div><div>Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD”</div>
-<div><strong>date_to </strong></div><div>optional</div> | <div>Filter by date created to</div><div>Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD”</div>
+<div><strong>created_at_from </strong></div><div>optional</div> | <div>Filter by date created from</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
+<div><strong>created_at_to </strong></div><div>optional</div> | <div>Filter by date created to</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
+<div><strong>updated_at_from </strong></div><div>optional</div> | <div>Filter by date updated from</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
+<div><strong>updated_at_to </strong></div><div>optional</div> | <div>Filter by date updated to</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
 <div><strong>page </strong></div><div>optional</div> | <div>Pagination page number</div><div>Must be a number</div>
 <div><strong>per_page </strong></div><div>optional</div> | <div>Pagination per page number</div><div>Must be a number</div>
 
@@ -59,7 +62,8 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/orders/1?token=GXzAxWkkyYLs
 ```json
 {
   "order_id": 1,
-  "date": "2015-08-25T05:06:36-06:00",
+  "created_at": "2015-08-25T05:06:36-06:00",
+  "updated_at": "2015-08-25T05:06:36-06:00",
   "status": "new",
   "site_id": 178,
   "site_name": "my website",
@@ -452,8 +456,14 @@ EOF
 ```json
 {
   "order_id": 9,
-  "date": "2015-07-07T07:13:56-06:00",
   "status": "completed",
+  "customer_email": "storetesting16@email.brightstores.com",
+  "customer_id": 429,
+  "username": "trex",
+  "item_total": "75.0",
+  "grand_total": "136.11",
+  "created_at": "2016-03-29T22:53:03-06:00",
+  "updated_at": "2016-03-29T22:53:03-06:00",
   "custom_data_collections": [
     {
       "title": "Add a Gift Card To Your Order",
@@ -469,11 +479,6 @@ EOF
       }
     }
   ],
-  "customer_email": "storetesting16@email.brightstores.com",
-  "customer_id": 429,
-  "username": "trex",
-  "item_total": "75.0",
-  "grand_total": "136.11",
   "shipping_contact": {
     "first_name": "John",
     "last_name": "Rex",

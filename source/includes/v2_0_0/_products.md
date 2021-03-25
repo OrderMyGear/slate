@@ -1,4 +1,4 @@
-#  Products
+# Products
 
 ## List products
 
@@ -31,7 +31,8 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products?token=GXzAxWkkyYLs
         }
       ],
       "active": true,
-      "last_edited_date": "2016-03-29T22:53:03-06:00"
+      "created_at": "2016-03-29T22:53:03-06:00",
+      "updated_at": "2016-03-29T22:53:03-06:00"
     }
   ],
   "meta": {
@@ -55,9 +56,12 @@ Parameter | Description
 <div><strong>internal_id </strong></div><div>optional</div> | <div>Filter by Internal ID</div><div>Must be a String</div>
 <div><strong>name </strong></div><div>optional</div> | <div>Filter by name</div><div>Must be a String</div>
 <div><strong>vendors </strong></div><div>optional</div> | <div>Filter by vendors</div><div>Must be one of: Array, String</div>
+<div><strong>created_at_from </strong></div><div>optional</div> | <div>Filter by date created from</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
+<div><strong>created_at_to </strong></div><div>optional</div> | <div>Filter by date created to</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
+<div><strong>updated_at_from </strong></div><div>optional</div> | <div>Filter by date updated from</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
+<div><strong>updated_at_to </strong></div><div>optional</div> | <div>Filter by date updated to</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
 <div><strong>page </strong></div><div>optional</div> | <div>Pagination page number</div><div>Must be a number</div>
 <div><strong>per_page </strong></div><div>optional</div> | <div>Pagination per page number</div><div>Must be a number</div>
-
 
 ## Show product
 
@@ -107,6 +111,30 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/579?token=GXzAxWkk
       "name": "The Willy Wonka Company"
     }
   ],
+  "sub_options": [
+    {
+      "id": 1393159,
+      "name": "Green",
+      "sub_sku": "GRN",
+      "price_modifier": "0.0",
+      "image_src": null,
+      "position": 0,
+      "product_option_id": 301559
+    }
+  ],
+  "inventories": [
+    {
+      "id": 774,
+      "inventory": 23,
+      "trigger": 6,
+      "track": false,
+      "allow_negative": false,
+      "sub_sku": "GRN",
+      "sub_option_ids": [
+        1393159
+      ]
+    }
+  ],
   "enable_quantity_discount": false,
   "related_products_type": "auto",
   "enable_related_products": false,
@@ -115,8 +143,9 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/579?token=GXzAxWkk
   "enable_logo_locations": false,
   "enable_decoration_methods": false,
   "primary_category_id": 36,
-  "last_edited_date": "2016-03-29T22:53:03-06:00",
-  "tax_code": "12345"
+  "tax_code": "12345",
+  "created_at": "2016-03-29T22:53:03-06:00",
+  "updated_at": "2016-03-29T22:53:03-06:00"
 }
 ```
 
@@ -129,7 +158,6 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/579?token=GXzAxWkk
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div>required</div> | <div>Product ID</div><div>Must be a number</div>
-
 
 ## Create product
 
@@ -222,6 +250,8 @@ EOF
       "name": "The Willy Wonka Company"
     }
   ],
+  "sub_options": [],
+  "inventories": [],
   "enable_quantity_discount": false,
   "related_products_type": "auto",
   "enable_related_products": false,
@@ -230,8 +260,9 @@ EOF
   "enable_logo_locations": false,
   "enable_decoration_methods": false,
   "primary_category_id": 36,
-  "last_edited_date": "2016-03-29",
   "tax_code": "12345",
+  "created_at": "2016-03-29T22:53:03-06:00",
+  "updated_at": "2016-03-29T22:53:03-06:00"
 }
 ```
 
@@ -280,7 +311,6 @@ Parameter | Description
 <div><strong>product[enable_product_options] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable product Options</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[enable_logo_locations] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable product logo locations</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[enable_decoration_methods] </strong></div><div>optional , nil allowed</div> | <div>Enabled/Disable product decoration methods</div><div>Must be one of: true, false, 1, 0</div>
-
 
 ## Update product
 
@@ -339,6 +369,30 @@ EOF
       "name": "The Willy Wonka Company"
     }
   ],
+  "sub_options": [
+    {
+      "id": 1393159,
+      "name": "Green",
+      "sub_sku": "GRN",
+      "price_modifier": "0.0",
+      "image_src": null,
+      "position": 0,
+      "product_option_id": 301559
+    }
+  ],
+  "inventories": [
+    {
+      "id": 774,
+      "inventory": 23,
+      "trigger": 6,
+      "track": false,
+      "allow_negative": false,
+      "sub_sku": "GRN",
+      "sub_option_ids": [
+        1393159
+      ]
+    }
+  ],
   "enable_quantity_discount": false,
   "related_products_type": "auto",
   "enable_related_products": false,
@@ -347,8 +401,9 @@ EOF
   "enable_logo_locations": false,
   "enable_decoration_methods": false,
   "primary_category_id": 36,
-  "last_edited_date": "2016-03-29",
-  "tax_code": "12345"
+  "tax_code": "12345",
+  "created_at": "2016-03-29T22:53:03-06:00",
+  "updated_at": "2016-03-29T22:53:03-06:00"
 }
 ```
 
@@ -361,7 +416,6 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div>required</div> | <div>Product ID</div><div>Must be a number</div>
-
 
 ### JSON Payload Parameters
 
@@ -404,7 +458,6 @@ Parameter | Description
 <div><strong>product[enable_product_options] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable product Options</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[enable_logo_locations] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable product logo locations</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[enable_decoration_methods] </strong></div><div>optional , nil allowed</div> | <div>Enabled/Disable product decoration methods</div><div>Must be one of: true, false, 1, 0</div>
-
 
 ## Delete product
 
@@ -455,6 +508,30 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/579?token=GXzAxWkk
       "name": "The Willy Wonka Company"
     }
   ],
+  "sub_options": [
+    {
+      "id": 1393159,
+      "name": "Green",
+      "sub_sku": "GRN",
+      "price_modifier": "0.0",
+      "image_src": null,
+      "position": 0,
+      "product_option_id": 301559
+    }
+  ],
+  "inventories": [
+    {
+      "id": 774,
+      "inventory": 23,
+      "trigger": 6,
+      "track": false,
+      "allow_negative": false,
+      "sub_sku": "GRN",
+      "sub_option_ids": [
+        1393159
+      ]
+    }
+  ],
   "enable_quantity_discount": false,
   "related_products_type": "auto",
   "enable_related_products": false,
@@ -463,8 +540,9 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/579?token=GXzAxWkk
   "enable_logo_locations": false,
   "enable_decoration_methods": false,
   "primary_category_id": 36,
-  "last_edited_date": "2016-03-29",
   "tax_code": "12345",
+  "created_at": "2016-03-29T22:53:03-06:00",
+  "updated_at": "2016-03-29T22:53:03-06:00"
 }
 ```
 
