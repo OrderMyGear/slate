@@ -1,4 +1,4 @@
-# inventories
+# Inventories
 
 ## List of all inventories in the store
 
