@@ -2,7 +2,8 @@
 
 ## List vendors
 
-List all vendors under a specific store.
+List all vendors in the store.
+Keep in mind, the response will return up to 500 records on a single page and you will need to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/vendors?token=GXzAxWkkyYLsESGQTU15"
@@ -269,5 +270,3 @@ curl "https://subdomain.mybrightsites.com/api/v1.1/vendors/579?token=GXzAxWkkyYL
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div> required </div> | <div>Vendor ID</div><div> Must be a number. </div>
-
-

@@ -2,7 +2,7 @@
 
 ## List of options for product
 
-List out all product options based on a product ID you supply.
+List all product options based on a product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/products/22287/options?token=GXzAxWkkyYLsESGQTU15"
@@ -262,4 +262,3 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Option ID</div><div> Must be a number. </div>
-

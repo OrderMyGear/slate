@@ -2,7 +2,7 @@
 
 ## List quantity discounts
 
-Show all quantity discounts under a specific product based on the product ID you supply.
+List all quantity discounts under a specific product based on the product ID you supply.
 
 ```shell
  GET https://subdomain.mybrightsites.com/api/v1.1.1/products/1/quantity_discounts?token=GXzAxWkkyYLsESGQTU15
@@ -142,5 +142,3 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Quantity discount ID</div><div> Must be a number. </div>
-
-

@@ -2,7 +2,7 @@
 
 ## List shipping methods
 
-Show all shipping methods in the store.
+List all shipping methods in the store.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v2.0.0/shipping_methods?token=GXzAxWkkyYLsESGQTU15"

@@ -3,6 +3,7 @@
 ## List orders
 
 List all orders placed in your store.
+Keep in mind, the response will return up to 500 records on a single page and you will need to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/orders?token=GXzAxWkkyYLsESGQTU15"

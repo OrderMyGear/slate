@@ -2,7 +2,7 @@
 
 ## List personalization forms
 
-List out all personalization forms for a specific product based on the product ID you supply.
+List all personalization forms for a specific product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.2/products/1/personalzation_forms?token=GXzAxWkkyYLsESGQTU15"
@@ -214,5 +214,3 @@ Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div> required </div> | <div>Product ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Personalization form ID</div><div> Must be a number. </div>
-
-

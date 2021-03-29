@@ -2,7 +2,8 @@
 
 ## List products
 
-Show all products in the store.
+List all products in the store.
+Keep in mind, the response will return up to 500 records on a single page and you will need to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v2.0.0/products?token=GXzAxWkkyYLsESGQTU15"

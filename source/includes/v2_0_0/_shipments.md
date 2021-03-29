@@ -2,7 +2,7 @@
 
 ## List shipments
 
-List out all shipments based on a order ID you supply.
+List all shipments based on a order ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v2.0.0/orders/1/shipments?token=GXzAxWkkyYLsESGQTU15"

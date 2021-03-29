@@ -2,7 +2,7 @@
 
 ## List of options for product
 
-List out all product options based on a product ID you supply.
+List all product options based on a product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/22287/options?token=GXzAxWkkyYLsESGQTU15"

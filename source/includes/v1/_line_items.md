@@ -2,7 +2,7 @@
 
 ## List line items
 
-List out all line items for a specific order ID you supply.
+List all line items for a specific order ID you supply.
 
 ### HTTP Request
 
@@ -29,5 +29,3 @@ Parameter | Description
 --------- | -----------
 <div><strong>order_id </strong></div><div> required </div> | <div>Order ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Line Item ID</div><div> Must be a number. </div>
-
-

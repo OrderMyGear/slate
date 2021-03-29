@@ -3,6 +3,7 @@
 ## List of Addresses for User
 
 List the account level address book for a specific user based on the user ID (not username) you supply.
+Keep in mind, the response will return up to 500 records on a single page and you will need to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1/users/494/addresses?token=GXzAxWkkyYLsESGQTU15"
@@ -300,5 +301,3 @@ Parameter | Description
 --------- | -----------
 <div><strong>user_id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
 <div><strong>id </strong></div><div> required </div> | <div>Address ID</div><div> Must be a number. </div>
-
-

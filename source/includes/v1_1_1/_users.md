@@ -2,7 +2,8 @@
 
 ## List users
 
-Show you a list of all users under a store.
+List all users in the store.
+Keep in mind, the response will return up to 500 records on a single page and you will need to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/users?token=GXzAxWkkyYLsESGQTU15"
@@ -287,5 +288,3 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/users/579?token=GXzAxWkkyYL
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div> required </div> | <div>User ID</div><div> Must be a number. </div>
-
-
