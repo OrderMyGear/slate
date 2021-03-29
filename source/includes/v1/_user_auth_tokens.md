@@ -2,7 +2,8 @@
 
 ## Generate authentication token for a user
 
-Generate a login token for the shopper to sign in directly onto the website without a username or password. The token is generated based on the username being passed in the JSON parameters.
+Generate a login token for the shopper to sign in directly onto the website without a username or password. The token is generated based on the username being passed in the JSON parameters. 
+This API end-point involves an SSO functionality and configuration, therefore it requires an agreement with our sales team.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1/user_auth_tokens?token=GXzAxWkkyYLsESGQTU15" \
@@ -32,5 +33,3 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>username </strong></div><div> required </div> | <div>Username</div><div> Must be a String </div>
-
-
