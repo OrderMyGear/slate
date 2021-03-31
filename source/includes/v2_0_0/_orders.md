@@ -42,10 +42,10 @@ Parameter | Description
 --------- | -----------
 <div><strong>status </strong></div><div>optional</div> | <div>Filter by order status. Available statuses: new, billed, paid, in_progress, split, shipped, completed, back_ordered, canceled, moas_pending</div>
 <div><strong>customer </strong></div><div>optional</div> | <div>Filter by customer</div><div>Must be one of: Array, String</div>
-<div><strong>created_at_from </strong></div><div>optional</div> | <div>Filter by date created from</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
-<div><strong>created_at_to </strong></div><div>optional</div> | <div>Filter by date created to</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
-<div><strong>updated_at_from </strong></div><div>optional</div> | <div>Filter by date updated from</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
-<div><strong>updated_at_to </strong></div><div>optional</div> | <div>Filter by date updated to</div><div>Invalid date format. Valid format ISO 8601, e.g. “YYYY-MM-DDThh:mm:ss”</div>
+<div><strong>created_at_from </strong></div><div>optional</div> | <div>Filter by date created from</div><div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>, e.g. “YYYY-MM-DDThh:mm:ss”. You can provide a time-zone when using this parameter. If no time-zone is provided, then MDT/MST will be used by default.</div>
+<div><strong>created_at_to </strong></div><div>optional</div> | <div>Filter by date created to</div><div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>, e.g. “YYYY-MM-DDThh:mm:ss”. You can provide a time-zone when using this parameter. If no time-zone is provided, then MDT/MST will be used by default.</div>
+<div><strong>updated_at_from </strong></div><div>optional</div> | <div>Filter by date updated from</div><div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>, e.g. “YYYY-MM-DDThh:mm:ss”. You can provide a time-zone when using this parameter. If no time-zone is provided, then MDT/MST will be used by default.</div>
+<div><strong>updated_at_to </strong></div><div>optional</div> | <div>Filter by date updated to</div><div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>, e.g. “YYYY-MM-DDThh:mm:ss”. You can provide a time-zone when using this parameter. If no time-zone is provided, then MDT/MST will be used by default.</div>
 <div><strong>page </strong></div><div>optional</div> | <div>Pagination page number</div><div>Must be a number</div>
 <div><strong>per_page </strong></div><div>optional</div> | <div>Pagination per page number</div><div>Must be a number</div>
 

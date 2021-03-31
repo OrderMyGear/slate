@@ -41,8 +41,8 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.6/users?token=GXzAxWkkyYLsESG
 Parameter | Description
 --------- | -----------
 <div><strong>groups </strong></div><div> optional </div> | <div>Filter by groups</div><div> Must be one of: Array, String. </div>
-<div><strong>date_created_from </strong></div><div> optional </div> | <div>Filter by date created from</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
-<div><strong>date_created_to </strong></div><div> optional </div> | <div>Filter by date created to</div><div> Invalid date format. Valid format: “YYYY-MM-DD hh:mm:ss” or “YYYY-MM-DD” </div>
+<div><strong>date_created_from </strong></div><div> optional </div> | <div>Filter by date created from</div><div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>, e.g. “YYYY-MM-DDThh:mm:ss”. You can provide a time-zone when using this parameter. If no time-zone is provided, then MDT/MST will be used by default.</div>
+<div><strong>date_created_to </strong></div><div> optional </div> | <div>Filter by date created to</div><div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>, e.g. “YYYY-MM-DDThh:mm:ss”. You can provide a time-zone when using this parameter. If no time-zone is provided, then MDT/MST will be used by default.</div>
 <div><strong>username </strong></div><div> optional </div> | <div>Filter by username</div><div> Must be a String </div>
 <div><strong>active </strong></div><div> optional </div> | <div>Filter by active/inactive users</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>page </strong></div><div> optional </div> | <div>Pagination page number</div><div> Must be a number. </div>
