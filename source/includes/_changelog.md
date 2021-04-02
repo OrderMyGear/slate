@@ -346,7 +346,6 @@ Affected APIs:
         }
       ],
       "product_personalizations": [],
-      "split_items": [],
       "decoration_method": null,
       "gift_certificate": null,
       "vendors": [
@@ -658,7 +657,6 @@ Affected APIs:
         }
       ],
       "product_personalizations": [],
-      "split_items": [],
       "decoration_method": null,
       "gift_certificate": null,
       "vendors": [
@@ -1052,7 +1050,6 @@ Affected APIs:
     +
   ],
   "product_personalizations": [],
-  "split_items": [],
   "decoration_method": null,
   "gift_certificate": null
 }
@@ -1233,7 +1230,6 @@ Affected APIs:
   "product_options": [],
   "logos": [],
   "product_personalizations": [],
-  "split_items": [],
   "decoration_method": null,
   +
   "gift_certificate": {

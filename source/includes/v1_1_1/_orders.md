@@ -259,7 +259,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLs
           }
         }
       ],
-      "split_items":[],
       "decoration_method": {
         "name": "Embroidery",
         "price_modifier": "2.5"
@@ -286,7 +285,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/orders/1?token=GXzAxWkkyYLs
         }
       ],
       "product_personalizations": [],
-      "split_items":[],
       "decoration_method": null
     }
   ],
@@ -550,7 +548,6 @@ EOF
           }
         }
       ],
-      "split_items":[],
       "decoration_method": null
     }
   ],

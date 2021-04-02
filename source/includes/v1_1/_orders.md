@@ -259,24 +259,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1/orders/1?token=GXzAxWkkyYLsES
           }
         }
       ],
-      "split_items":[
-          {
-              "id":27,
-              "quantity":10,
-              "tracking_number":"500",
-              "status":"In progress",
-              "ship_date":"2017-03-16",
-              "shipping_method":"Best Way123"
-          },
-          {
-              "id":36,
-              "quantity":8,
-              "tracking_number":"Test123123",
-              "status":"In progress",
-              "ship_date":"2017-03-08",
-              "shipping_method":"UPS Today Dedicated Courier"
-          }
-       ],
       "decoration_method": {
         "name": "Embroidery",
         "price_modifier": "2.5"
@@ -303,7 +285,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1/orders/1?token=GXzAxWkkyYLsES
         }
       ],
       "product_personalizations": [],
-      "split_items":[],
       "decoration_method": null
     }
   ],
@@ -567,7 +548,6 @@ EOF
           }
         }
       ],
-      "split_items":[],
       "decoration_method": null
     }
   ],
