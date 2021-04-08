@@ -153,3 +153,15 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div>required</div> | <div>Product ID</div><div>Must be a number</div>
+<div><strong>id </strong></div><div>required</div> | <div>Inventory ID</div><div>Must be a number</div>
+
+
+### JSON Payload Parameters
+
+Parameter | Description
+--------- | -----------
+<div><strong>inventories </strong></div><div>required</div> | <div>Must be a Hash</div>
+<div><strong>inventories[inventory] </strong></div><div>optional</div> | <div>Inventory Units</div><div>Must be a number</div>
+<div><strong>inventories[trigger] </strong></div><div>optional</div> | <div>Inventory Trigger</div><div>Must be a number</div>
+<div><strong>inventories[track] </strong></div><div>optional</div> | <div></div><div>Must be one of: true, false, 1, 0</div>
+<div><strong>inventories[allow_negative] </strong></div><div>optional</div> | <div></div><div>Must be one of: true, false, 1, 0</div>
