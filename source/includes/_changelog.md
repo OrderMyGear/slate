@@ -29,11 +29,6 @@
 +   ]
 + }
 ```
-1. Added [inventories](#inventories)
-
-Affected APIs:
-
-* /api/v2.0.0/inventories (new)
 
 > /api/v2.0.0/products
 
@@ -70,14 +65,6 @@ Affected APIs:
   }
 }
 ```
-
-1. Added `created_at` to `product` json
-2. Field `last_edited_date` renamed to `updated_at` in `product` json for a better consistency
-3. Added `updated_at` and `created_at` filters to query parameters, more info: [products](#products)
-
-Affected APIs:
-
-* /api/v2.0.0/products
 
 > /api/v2.0.0/products/:id
 
@@ -143,28 +130,19 @@ Affected APIs:
 +     ]
 +   }
 + ],
-"enable_quantity_discount": false,
-"related_products_type": "auto",
-"enable_related_products": false,
-"enable_product_personalization": false,
-"enable_inventory": false,
-"enable_logo_locations": false,
-"enable_decoration_methods": false,
-"primary_category_id": 36,
-"created_at": "2016-03-29T22:53:03-06:00",
-"updated_at": "2016-03-29T22:53:03-06:00",
-"tax_code": "12345"
+  "enable_quantity_discount": false,
+  "related_products_type": "auto",
+  "enable_related_products": false,
+  "enable_product_personalization": false,
+  "enable_inventory": false,
+  "enable_logo_locations": false,
+  "enable_decoration_methods": false,
+  "primary_category_id": 36,
+  "created_at": "2016-03-29T22:53:03-06:00",
+  "updated_at": "2016-03-29T22:53:03-06:00",
+  "tax_code": "12345"
 }
 ```
-
-3. Added `sub_options` to `product` json
-3. Added `inventories` to `product` json
-2. Added `created_at` to `product` json
-3. Field `last_edited_date` renamed to `updated_at` in `product` json for a better consistency
-
-Affected APIs:
-
-* /api/v2.0.0/products/:id
 
 > GET /api/v2.0.0/orders
 
@@ -189,14 +167,6 @@ Affected APIs:
   }
 }
 ```
-
-1. Added `updated_at` to `order` json
-2. Field `date` renamed to `created_at` in `order` json for a better consistency
-3. Added `updated_at` and `created_at` filters to query parameters, more info: [orders](#orders)
-
-Affected APIs:
-
-* /api/v2.0.0/orders
 
 > /api/v2.0.0/orders/:id
 
@@ -387,13 +357,6 @@ Affected APIs:
 }
 ```
 
-1. Added `updated_at` to json
-2. Field `date` renamed to `created_at` in json for a better consistency
-
-Affected APIs:
-
-* /api/v2.0.0/orders/:id
-
 > POST /api/v2.0.0/users
 
 ```json
@@ -419,24 +382,39 @@ Affected APIs:
 }
 ```
 
-1. Added `dont_send_confirmation_email` option support to `Create user` API. This field is only valid if no password is
-   sent. If a password is sent it will be ignored. If there's no password and the field is set to true, the initial
-   confirmation email is not sent.
+* /api/v2.0.0/inventories
 
-Affected APIs:
+1. Added [Inventories](#inventories)
+1. `per_page` query parameter is limited to a maximum of 500 records per page for [Inventories](#inventories)
 
-* /api/v2.0.0/users
+* /api/v2.0.0/products
 
-### All API endpoints
+1. Added `created_at` to [List products](#list-products) json
+1. Field `last_edited_date` renamed to `updated_at` in [List products](#list-products) json for a better consistency
+1. Added `updated_at` and `created_at` filters to query parameters for [List products](#list-products)
 
-* `per_page` query parameter is now limited to a maximum of 500 records per page
+* /api/v2.0.0/products/:id
 
-Affected APIs:
+1. Added `sub_options`, `inventories`, `created_at` to [Show product](#show-product) json
+1. Field `last_edited_date` renamed to `updated_at` in [Show product](#show-product) json for a better consistency
 
 * /api/v2.0.0/orders
-* /api/v2.0.0/products
+
+1. Added `updated_at` to [List orders](#list-orders) json
+1. Field `date` renamed to `created_at` in [List orders](#list-orders) json for a better consistency
+1. Added `updated_at` and `created_at` filters to query parameters for [List orders](#list-orders)
+
+* /api/v2.0.0/orders/:id
+
+1. Added `updated_at` to [Show order](#show-order) json
+1. Field `date` renamed to `created_at` in [Show order](#show-order) json for a better consistency
+
 * /api/v2.0.0/users
-* /api/v2.0.0/inventories
+
+1. Added `dont_send_confirmation_email` option support to [Create user](#create-user) API.
+   This field is only valid if no password is
+   sent. If a password is sent it will be ignored. If there's no password and the field is set to true, the initial
+   confirmation email is not sent.
 
 ---
 
