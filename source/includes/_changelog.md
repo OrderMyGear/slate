@@ -144,6 +144,42 @@
 }
 ```
 
+
+> GET /api/v2.0.0/products/:product_id/options
+> GET /api/v2.0.0/products/:product_id/options/:id
+
+```json
+{
+  "enabled": true,
+  "options": [
+    {
+      "id": 47204,
+      "name": "size",
+      "friendly_name": "Size",
+      "option_type": "size",
+      "price_modifier_type": "$",
+      "show_in_inventory": true,
+      "show_as_thumbs": false,
+      "include_in_images": false,
+      "required": false,
+      "multiple_quantity": false,
+      "position": 1,
++     "sub_options": [
++       {
++         "id": 1393159,
++         "name": "Green",
++         "sub_sku": "CLRGRN",
++         "price_modifier": "0.0",
++         "image_src": null,
++         "position": 0,
++         "product_option_id": 301559
++       }
++     ]
+    }
+  ]
+}
+```
+
 > GET /api/v2.0.0/orders
 
 ```json
@@ -382,34 +418,42 @@
 }
 ```
 
-* /api/v2.0.0/inventories
+### /api/v2.0.0/inventories
 
 1. Added [Inventories](#inventories)
 1. `per_page` query parameter is limited to a maximum of 500 records per page for [Inventories](#inventories)
 
-* /api/v2.0.0/products
+### /api/v2.0.0/products
 
 1. Added `created_at` to [List products](#list-products) json
 1. Field `last_edited_date` renamed to `updated_at` in [List products](#list-products) json for a better consistency
 1. Added `updated_at` and `created_at` filters to query parameters for [List products](#list-products)
 
-* /api/v2.0.0/products/:id
+### /api/v2.0.0/products/:id
 
 1. Added `sub_options`, `inventories`, `created_at` to [Show product](#show-product) json
 1. Field `last_edited_date` renamed to `updated_at` in [Show product](#show-product) json for a better consistency
 
-* /api/v2.0.0/orders
+### /api/v2.0.0/products/:id/options
+
+1. Added `sub_options` to [Product options](#product-options)
+
+### /api/v2.0.0/products/:id/options/:id
+
+1. Added `sub_options` to [Product options](#product-options)
+
+### /api/v2.0.0/orders
 
 1. Added `updated_at` to [List orders](#list-orders) json
 1. Field `date` renamed to `created_at` in [List orders](#list-orders) json for a better consistency
 1. Added `updated_at` and `created_at` filters to query parameters for [List orders](#list-orders)
 
-* /api/v2.0.0/orders/:id
+### /api/v2.0.0/orders/:id
 
 1. Added `updated_at` to [Show order](#show-order) json
 1. Field `date` renamed to `created_at` in [Show order](#show-order) json for a better consistency
 
-* /api/v2.0.0/users
+### /api/v2.0.0/users
 
 1. Added `dont_send_confirmation_email` option support to [Create user](#create-user) API.
    This field is only valid if no password is

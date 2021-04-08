@@ -25,7 +25,18 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/22287/options?toke
       "include_in_images": false,
       "required": false,
       "multiple_quantity": false,
-      "position": 1
+      "position": 1,
+      "sub_options": [
+        {
+          "id": 1393159,
+          "name": "Green",
+          "sub_sku": "CLRGRN",
+          "price_modifier": "0.0",
+          "image_src": null,
+          "position": 0,
+          "product_option_id": 301559
+        }
+      ]
     }
   ]
 }
@@ -64,7 +75,18 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/22287/options/4720
   "include_in_images": false,
   "required": false,
   "multiple_quantity": false,
-  "position": 1
+  "position": 1,
+  "sub_options": [
+    {
+      "id": 1393159,
+      "name": "Green",
+      "sub_sku": "CLRGRN",
+      "price_modifier": "0.0",
+      "image_src": null,
+      "position": 0,
+      "product_option_id": 301559
+    }
+  ]
 }
 ```
 
@@ -121,7 +143,8 @@ EOF
     "include_in_images": false,
     "required": true,
     "multiple_quantity": true,
-    "position": 2
+    "position": 2,
+    "sub_options": []
   }
 }
 ```
@@ -191,7 +214,8 @@ EOF
     "include_in_images": false,
     "required": false,
     "multiple_quantity": false,
-    "position": 2
+    "position": 2,
+    "sub_options": []
   }
 }
 ```
@@ -249,7 +273,8 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/22287/options/4720
     "include_in_images": false,
     "required": false,
     "multiple_quantity": false,
-    "position": 2
+    "position": 2,
+    "sub_options": []
   }
 }
 ```
