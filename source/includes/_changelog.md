@@ -58,12 +58,9 @@ Affected APIs:
         }
       ],
       "active": true,
-      -
-      "last_edited_date": "2016-03-29T22:53:03-06:00"
-      +
-      "created_at": "2016-03-29T22:53:03-06:00",
-      +
-      "updated_at": "2016-03-29T22:53:03-06:00"
+-     "last_edited_date": "2016-03-29T22:53:03-06:00",
++     "created_at": "2016-03-29T22:53:03-06:00",
++     "updated_at": "2016-03-29T22:53:03-06:00"
     }
   ],
   "meta": {
@@ -122,18 +119,17 @@ Affected APIs:
       "name": "The Willy Wonka Company"
     }
   ],
-  +
-  "sub_options": [
-    +   {
-  +     "id": 1393159,
++ "sub_options": [
++   {
++     "id": 1393159,
 +     "name": "Green",
 +     "sub_sku": "CLRGRN",
 +     "price_modifier": "0.0",
 +     "image_src": null,
 +     "position": 0,
 +     "product_option_id": 301559
-+}
-+],
++   }
++ ],
 + "inventories": [
 +   {
 +     "id": 774,
@@ -144,11 +140,9 @@ Affected APIs:
 +     "sub_sku": "GRN",
 +     "sub_option_ids": [
 +       1393159
-+
-]
-+}
-+
-],
++     ]
++   }
++ ],
 "enable_quantity_discount": false,
 "related_products_type": "auto",
 "enable_related_products": false,
@@ -181,12 +175,9 @@ Affected APIs:
       "order_id": 1,
       "shipping_method": "Best Way",
       "tracking": "12234tracking2123",
-      -
-      "date": "2015-08-28T08:34:37-06:00",
-      +
-      "updated_at": "2015-08-28T08:34:37-06:00",
-      +
-      "created_at": "2015-08-27T08:30:10-06:00",
+-     "date": "2015-08-28T08:34:37-06:00",
++     "updated_at": "2015-08-28T08:34:37-06:00",
++     "created_at": "2015-08-27T08:30:10-06:00",
       "status": "new",
       "customer": "test@johndoe.com"
     }
@@ -245,12 +236,9 @@ Affected APIs:
     }
   },
   "status": "moas_pending",
-  -
-  "date": "2019-03-25T19:59:28.000-06:00",
-  +
-  "created_at": "2019-03-25T19:59:28.000-06:00",
-  +
-  "updated_at": "2019-03-25T20:30:28.000-06:00",
+- "date": "2019-03-25T19:59:28.000-06:00",
++ "created_at": "2019-03-25T19:59:28.000-06:00",
++ "updated_at": "2019-03-25T20:30:28.000-06:00",
   "site_id": 178,
   "site_name": "Testing & Site1",
   "site_url": "http://bestsiteever.lvh.me:3000",
@@ -426,8 +414,7 @@ Affected APIs:
     "password": "12345678",
     "enable_sms_notifications": true,
     "cuf_1": "helloworld",
-    +
-    "dont_send_confirmation_email": true
++   "dont_send_confirmation_email": true
   }
 }
 ```
