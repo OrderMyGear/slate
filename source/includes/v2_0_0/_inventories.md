@@ -161,6 +161,7 @@ Parameter | Description
 Parameter | Description
 --------- | -----------
 <div><strong>inventories </strong></div><div>required</div> | <div>Must be a Hash</div>
+<div><strong>inventories[id] </strong></div><div>required</div> | <div>Inventory ID</div><div>Must be a number</div>
 <div><strong>inventories[inventory] </strong></div><div>optional</div> | <div>Inventory Units</div><div>Must be a number</div>
 <div><strong>inventories[trigger] </strong></div><div>optional</div> | <div>Inventory Trigger</div><div>Must be a number</div>
 <div><strong>inventories[track] </strong></div><div>optional</div> | <div></div><div>Must be one of: true, false, 1, 0</div>
