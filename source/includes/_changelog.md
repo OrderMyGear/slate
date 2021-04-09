@@ -106,6 +106,21 @@
       "name": "The Willy Wonka Company"
     }
   ],
++ "options": [
++   {
++     "id": 301559,
++     "name": "size",
++     "friendly_name": "Size",
++     "option_type": "size",
++     "price_modifier_type": "$",
++     "show_in_inventory": true,
++     "show_as_thumbs": false,
++     "include_in_images": false,
++     "required": true,
++     "multiple_quantity": true,
++     "position": 2
++   }
++ ],
 + "sub_options": [
 +   {
 +     "id": 1393159,
@@ -141,42 +156,6 @@
   "created_at": "2016-03-29T22:53:03-06:00",
   "updated_at": "2016-03-29T22:53:03-06:00",
   "tax_code": "12345"
-}
-```
-
-
-> GET /api/v2.0.0/products/:product_id/options
-> GET /api/v2.0.0/products/:product_id/options/:id
-
-```json
-{
-  "enabled": true,
-  "options": [
-    {
-      "id": 47204,
-      "name": "size",
-      "friendly_name": "Size",
-      "option_type": "size",
-      "price_modifier_type": "$",
-      "show_in_inventory": true,
-      "show_as_thumbs": false,
-      "include_in_images": false,
-      "required": false,
-      "multiple_quantity": false,
-      "position": 1,
-+     "sub_options": [
-+       {
-+         "id": 1393159,
-+         "name": "Green",
-+         "sub_sku": "CLRGRN",
-+         "price_modifier": "0.0",
-+         "image_src": null,
-+         "position": 0,
-+         "product_option_id": 301559
-+       }
-+     ]
-    }
-  ]
 }
 ```
 
@@ -431,16 +410,8 @@
 
 ### /api/v2.0.0/products/:id
 
-1. Added `sub_options`, `inventories`, `created_at` to [Show product](#show-product) json
+1. Added `options`, `sub_options`, `inventories`, `created_at` to [Show product](#show-product) json
 1. Field `last_edited_date` renamed to `updated_at` in [Show product](#show-product) json for a better consistency
-
-### /api/v2.0.0/products/:id/options
-
-1. Added `sub_options` to [Product options](#product-options)
-
-### /api/v2.0.0/products/:id/options/:id
-
-1. Added `sub_options` to [Product options](#product-options)
 
 ### /api/v2.0.0/orders
 

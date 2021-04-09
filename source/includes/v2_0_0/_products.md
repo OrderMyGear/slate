@@ -112,6 +112,21 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/579?token=GXzAxWkk
       "name": "The Willy Wonka Company"
     }
   ],
+  "options": [
+    {
+      "id": 301559,
+      "name": "size",
+      "friendly_name": "Size",
+      "option_type": "size",
+      "price_modifier_type": "$",
+      "show_in_inventory": true,
+      "show_as_thumbs": false,
+      "include_in_images": false,
+      "required": true,
+      "multiple_quantity": true,
+      "position": 2
+    }
+  ],
   "sub_options": [
     {
       "id": 1393159,
@@ -251,6 +266,7 @@ EOF
       "name": "The Willy Wonka Company"
     }
   ],
+  "options": [],
   "sub_options": [],
   "inventories": [],
   "enable_quantity_discount": false,
@@ -368,6 +384,21 @@ EOF
     {
       "id": 234,
       "name": "The Willy Wonka Company"
+    }
+  ],
+  "options": [
+    {
+      "id": 301559,
+      "name": "size",
+      "friendly_name": "Size",
+      "option_type": "size",
+      "price_modifier_type": "$",
+      "show_in_inventory": true,
+      "show_as_thumbs": false,
+      "include_in_images": false,
+      "required": true,
+      "multiple_quantity": true,
+      "position": 2
     }
   ],
   "sub_options": [
@@ -507,6 +538,21 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/products/579?token=GXzAxWkk
     {
       "id": 234,
       "name": "The Willy Wonka Company"
+    }
+  ],
+  "options": [
+    {
+      "id": 301559,
+      "name": "size",
+      "friendly_name": "Size",
+      "option_type": "size",
+      "price_modifier_type": "$",
+      "show_in_inventory": true,
+      "show_as_thumbs": false,
+      "include_in_images": false,
+      "required": true,
+      "multiple_quantity": true,
+      "position": 2
     }
   ],
   "sub_options": [
