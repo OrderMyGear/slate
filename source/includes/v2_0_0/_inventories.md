@@ -153,7 +153,6 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>product_id </strong></div><div>required</div> | <div>Product ID</div><div>Must be a number</div>
-<div><strong>id </strong></div><div>required</div> | <div>Inventory ID</div><div>Must be a number</div>
 
 
 ### JSON Payload Parameters
