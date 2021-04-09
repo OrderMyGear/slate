@@ -87,7 +87,7 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/inventories/44371/batch_upd
       "inventory": 100,
       "trigger": 6,
       "track": true,
-      "allow_negative": true,
+      "allow_negative": true
     },
     {
       "id": 2872,
