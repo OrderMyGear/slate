@@ -3,9 +3,10 @@
 ## List of all inventories in the store
 
 This API call request allows you to query for all inventory levels on items in your store.
+Keep in mind, the response will return up to 500 records on a single page and you will need to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.0.0/inventories?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.bsites-staging.com/api/v2.0.0/inventories?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -76,7 +77,7 @@ Parameter | Description
 Update the inventory levels based on the product ID you supply. You can provide more than 1 inventory ID for a single product ID.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.0.0/inventories/44371/batch_update?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.bsites-staging.com/api/v2.0.0/inventories/44371/batch_update?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
