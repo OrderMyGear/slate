@@ -431,6 +431,11 @@
    sent. If a password is sent it will be ignored. If there's no password and the field is set to true, the initial
    confirmation email is not sent.
 
+
+### All endpoints
+
+Since v2.0.0 we're using UTC as the default time zone
+
 ---
 
 ## 1.1.7
@@ -760,7 +765,7 @@ Affected APIs:
   "status": "new",
   "site_id": 178,
   "site_name": "my website",
-  "site_url": "http://mywebsite.mybrightsites.com",
+  "site_url": "http://mywebsite.bsites-staging.com",
 + "custom_store_id": "mycustomstore",
   "organization_name": "Super organization",
   "organization_id": 49,
@@ -923,7 +928,7 @@ Affected APIs:
   "status": "new",
 + "site_id": 178,
 + "site_name": "my website",
-+ "site_url": "http://mywebsite.mybrightsites.com",
++ "site_url": "http://mywebsite.bsites-staging.com",
 + "organization_name": "Super organization",
 + "organization_id": 49,
   "custom_data_collections": [],
@@ -950,7 +955,7 @@ Affected APIs:
         {
           "name": "fedex",
           "charge": "10.0",
-          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+          "image_url": "https://assets.bsites-staging.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
 +         "supplier_id": "VENDOR123"
          }
       ],
