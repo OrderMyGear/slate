@@ -399,7 +399,7 @@
 
 ### All endpoints
 
-As of v2.0.0 we're using UTC as the default time zone.
+Starting with v2.0.0 we're using UTC as the default time zone.
 
 ### /api/v2.0.0/inventories
 
