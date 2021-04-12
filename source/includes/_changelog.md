@@ -397,6 +397,10 @@
 }
 ```
 
+### All endpoints
+
+As of v2.0.0 we're using UTC as the default time zone.
+
 ### /api/v2.0.0/inventories
 
 1. Added [Inventories](#inventories)
@@ -430,11 +434,6 @@
    This field is only valid if no password is
    sent. If a password is sent it will be ignored. If there's no password and the field is set to true, the initial
    confirmation email is not sent.
-
-
-### All endpoints
-
-Since v2.0.0 we're using UTC as the default time zone
 
 ---
 
