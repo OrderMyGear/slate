@@ -48,7 +48,12 @@ curl "https://subdomain.bsites-staging.com/api/v2.0.0/inventories?token=GXzAxWkk
       ],
       "sub_sku": "XXS-Dkb"
     }
-  ]
+  ],
+  "meta": {
+      "total": 2,
+      "offset": 0,
+      "limit": 20
+  }
 }
 ```
 
