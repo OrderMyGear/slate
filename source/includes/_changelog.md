@@ -1,5 +1,43 @@
 # Changelog
 
+## 2.1.0
+
+> Changes 2.1.0:
+
+> /api/v2.1.0/users/:id
+
+```json
+{
+  "user": {
+    "username": "johndoe",
+    "first_name": "John",
+    "last_name": "Doe",
+    "active": true,
+    "email": "johndoe@email.com",
++   "timezone": "America/Denver",
+    "phone": "+1234567890",
+    "company": "BSI",
+    "title": "Support Leader",
+    "groups": [
+      "Public"
+    ],
+    "balance": 12.5,
+    "password": "12345678",
+    "enable_sms_notifications": true,
+    "cuf_1": "helloworld",
+    "dont_send_confirmation_email": true
+  }
+}
+```
+
+
+1. Added `timezone` to `users` json
+
+Affected APIs:
+
+* /api/v2.1.0/users/:id
+
+
 ## 2.0.0
 
 > Changes 2.0.0:
