@@ -161,7 +161,7 @@ Parameter | Description
 <div><strong>user[first_name] </strong></div><div>required</div> | <div>First name</div><div>Must be a String</div>
 <div><strong>user[last_name] </strong></div><div>required</div> | <div>Last name</div><div>Must be a String</div>
 <div><strong>user[email] </strong></div><div>required</div> | <div>Email</div><div>Must be a String</div>
-<div><strong>user[timezone] </strong></div><div>optional</div> | <div>Time zone</div><div>Must be a String. If no Time zone is set, it will default to America/Denver.</div><div><a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">The list of available time zones</a></div>
+<div><strong>user[timezone] </strong></div><div>optional</div> | <div>Time zone</div><div>Must be a String. If no Time zone is set, it will default to America/Denver.</div><div><a href="https://storage.googleapis.com/kb.brightstores.com/images/available_timezones.pdf">The list of available time zones</a></div>
 <div><strong>user[phone] </strong></div><div>optional , nil allowed</div> | <div>Phone number</div><div>Must be a String</div>
 <div><strong>user[company] </strong></div><div>optional , nil allowed</div> | <div>Company</div><div>Must be a String</div>
 <div><strong>user[title] </strong></div><div>optional , nil allowed</div> | <div>Title</div><div>Must be a String</div>
@@ -249,7 +249,7 @@ Parameter | Description
 <div><strong>user[first_name] </strong></div><div>optional</div> | <div>First name</div><div>Must be a String</div>
 <div><strong>user[last_name] </strong></div><div>optional</div> | <div>Last name</div><div>Must be a String</div>
 <div><strong>user[email] </strong></div><div>optional</div> | <div>Email</div><div>Must be a String</div>
-<div><strong>user[timezone] </strong></div><div>optional</div> | <div>Time zone</div><div>Must be a String. If no Time zone is set, it will default to America/Denver.</div><div><a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">The list of available time zones</a></div>
+<div><strong>user[timezone] </strong></div><div>optional</div> | <div>Time zone</div><div>Must be a String. If no Time zone is set, it will default to America/Denver.</div><div><a href="https://storage.googleapis.com/kb.brightstores.com/images/available_timezones.pdf">The list of available time zones</a></div>
 <div><strong>user[phone] </strong></div><div>optional , nil allowed</div> | <div>Phone number</div><div>Must be a String</div>
 <div><strong>user[company] </strong></div><div>optional , nil allowed</div> | <div>Company</div><div>Must be a String</div>
 <div><strong>user[title] </strong></div><div>optional , nil allowed</div> | <div>Title</div><div>Must be a String</div>
