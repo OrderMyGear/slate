@@ -6,7 +6,7 @@ List all users in the store.
 Keep in mind, the response will return up to 500 records on a single page and you will need to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.1.0/users?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.bsites-staging.com/api/v2.1.0/users?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -54,7 +54,7 @@ Parameter | Description
 Show you the specific information for a user account based on the user ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.1.0/users/579?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.bsites-staging.com/api/v2.1.0/users/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -97,7 +97,7 @@ Parameter | Description
 Create a brand new user account in the store.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.1.0/users?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.bsites-staging.com/api/v2.1.0/users?token=GXzAxWkkyYLsESGQTU15" \
   -X POST \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -161,7 +161,7 @@ Parameter | Description
 <div><strong>user[first_name] </strong></div><div>required</div> | <div>First name</div><div>Must be a String</div>
 <div><strong>user[last_name] </strong></div><div>required</div> | <div>Last name</div><div>Must be a String</div>
 <div><strong>user[email] </strong></div><div>required</div> | <div>Email</div><div>Must be a String</div>
-<div><strong>user[timezone] </strong></div><div>optional</div> | <div>Time zone</div><div>Must be a String. If no Time zone is set, it will default to America/Denver.</div><div><a href="https://storage.googleapis.com/kb.brightstores.com/images/available_timezones.pdf">The list of available time zones</a></div>
+<div><strong>user[timezone] </strong></div><div>optional</div> | <div>Time zone</div><div>Must be a String. If no Time zone is set, it will default to America/Denver.</div><div><a target="_blank" href="https://storage.googleapis.com/kb.brightstores.com/images/available_timezones.pdf">The list of available time zones</a></div>
 <div><strong>user[phone] </strong></div><div>optional , nil allowed</div> | <div>Phone number</div><div>Must be a String</div>
 <div><strong>user[company] </strong></div><div>optional , nil allowed</div> | <div>Company</div><div>Must be a String</div>
 <div><strong>user[title] </strong></div><div>optional , nil allowed</div> | <div>Title</div><div>Must be a String</div>
@@ -179,7 +179,7 @@ Parameter | Description
 Update information for a specific user account based on the user ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.1.0/users/579?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.bsites-staging.com/api/v2.1.0/users/579?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -249,7 +249,7 @@ Parameter | Description
 <div><strong>user[first_name] </strong></div><div>optional</div> | <div>First name</div><div>Must be a String</div>
 <div><strong>user[last_name] </strong></div><div>optional</div> | <div>Last name</div><div>Must be a String</div>
 <div><strong>user[email] </strong></div><div>optional</div> | <div>Email</div><div>Must be a String</div>
-<div><strong>user[timezone] </strong></div><div>optional</div> | <div>Time zone</div><div>Must be a String. If no Time zone is set, it will default to America/Denver.</div><div><a href="https://storage.googleapis.com/kb.brightstores.com/images/available_timezones.pdf">The list of available time zones</a></div>
+<div><strong>user[timezone] </strong></div><div>optional</div> | <div>Time zone</div><div>Must be a String. If no Time zone is set, it will default to America/Denver.</div><div><a target="_blank" href="https://storage.googleapis.com/kb.brightstores.com/images/available_timezones.pdf">The list of available time zones</a></div>
 <div><strong>user[phone] </strong></div><div>optional , nil allowed</div> | <div>Phone number</div><div>Must be a String</div>
 <div><strong>user[company] </strong></div><div>optional , nil allowed</div> | <div>Company</div><div>Must be a String</div>
 <div><strong>user[title] </strong></div><div>optional , nil allowed</div> | <div>Title</div><div>Must be a String</div>
@@ -268,7 +268,7 @@ Parameter | Description
 Delete a specific user account based on the user ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.1.0/users/579?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.bsites-staging.com/api/v2.1.0/users/579?token=GXzAxWkkyYLsESGQTU15" \
   -X DELETE
 ```
 
