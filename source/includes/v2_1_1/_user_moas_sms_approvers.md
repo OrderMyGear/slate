@@ -45,7 +45,7 @@ Parameter | Description
 --------- | -----------
 <div><strong>sms</strong></div><div>required</div> | <div>Approver sms address</div><div>Must be a String</div>
 
-## Update MOAS e-sms approver
+## Update MOAS sms approver
 
 Update specific MOAS sms approver for a user account based on the user ID and MOAS approver ID you supply.
 
