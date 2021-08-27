@@ -73,11 +73,11 @@ Added [User Notes](#user-notes) endpoint
 
 ### /api/v2.1.1/users/:id/moas_sms_approvers
 
-Added [User MOAS Sms Approvers](#user-moas-sms-approver) endpoint
+Added [User MOAS Sms Approvers](#user-moas-sms-approvers) endpoint
 
 ### /api/v2.1.1/users/:id/moas_email_approvers
 
-Added [User MOAS E-mail Approvers](#user-moas-e-mail-approver) endpoint
+Added [User MOAS E-mail Approvers](#user-moas-e-mail-approvers) endpoint
 
 ## 2.1.0
 
