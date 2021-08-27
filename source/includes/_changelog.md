@@ -1,5 +1,82 @@
 # Changelog
 
+## 2.1.1
+
+> Changes 2.1.1:
+
+> /api/v2.1.1/users/:id
+
+```json
+{
+  "user": {
+    "username": "johndoe",
+    "first_name": "John",
+    "last_name": "Doe",
+    "active": true,
+    "email": "johndoe@email.com",
+    "timezone": "America/Denver",
+    "phone": "+1234567890",
+    "company": "BSI",
+    "title": "Support Leader",
+    "groups": [
+      "Public"
+    ],
++   "notes": [
++     {
++       "id": 123,
++       "note": "hello world",
++       "username": "API",
++       "created_at": "2021-04-20T10:20:09.000Z"
++     }
++   ],
++   "moas_sms_approvers": [
++     {
++       "id": 123,
++       "phone": "+1-800-123-12345",
++       "created_at": "2021-04-20T10:20:09.000Z"
++     }
++   ],
++   "moas_email_approvers": [
++     {
++       "id": 123,
++       "email": "email@example.com",
++       "created_at": "2021-04-20T10:20:09.000Z"
++     }
++   ],  
+    "balance": 12.5,
+    "password": "12345678",
+    "enable_sms_notifications": true,
+    "cuf_1": "helloworld",
+    "dont_send_confirmation_email": true
+  }
+}
+```
+
+
+1. Added `notes` to `users` json
+2. Added `moas_email_approvers` to `users` json
+3. Added `moas_sms_approvers` to `users` json
+
+Affected APIs:
+
+* /api/v2.1.1/users/:id
+
+### All endpoints
+
+Starting with v2.1.1 `per_page` query parameter is limited to a maximum of 500 records per page for all listings.
+
+### /api/v2.1.1/users/:id/notes
+
+Added [User Notes](#user-notes) endpoint
+
+### /api/v2.1.1/users/:id/moas_sms_approvers
+
+Added [User MOAS Sms Approvers](#user-moas-sms-approver) endpoint
+
+### /api/v2.1.1/users/:id/moas_email_approvers
+
+Added [User MOAS E-mail Approvers](#user-moas-e-mail-approver) endpoint
+
 ## 2.1.0
 
 > Changes 2.1.0:
