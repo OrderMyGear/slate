@@ -1,9 +1,9 @@
-#  Users
+# Users
 
 ## List users
 
-List all users in the store.
-Keep in mind, the response will return up to 500 records on a single page and you will need to use "per_page" and "page" URL parameters to see all the records.
+List all users in the store. Keep in mind, the response will return up to 500 records on a single page and you will need
+to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
 curl "https://subdomain.bsites-staging.com/api/v2.1.1/users?token=GXzAxWkkyYLsESGQTU15"
@@ -48,7 +48,6 @@ Parameter | Description
 <div><strong>page </strong></div><div>optional</div> | <div>Pagination page number</div><div>Must be a number</div>
 <div><strong>per_page </strong></div><div>optional</div> | <div>Pagination per page number</div><div>Must be a number</div>
 
-
 ## Show user
 
 Show you the specific information for a user account based on the user ID you supply.
@@ -72,9 +71,34 @@ curl "https://subdomain.bsites-staging.com/api/v2.1.1/users/579?token=GXzAxWkkyY
   "phone": "+1234567890",
   "company": "BSI",
   "title": "Support Leader",
-  "groups": ["Public"],
+  "groups": [
+    "Public"
+  ],
   "balance": "12.5",
   "orders": [],
+  "notes": [
+    {
+      "id": 123,
+      "note": "hello world",
+      "username": "API",
+      "created_at": "2021-04-20T10:20:09.000Z"
+    }
+  ],
+  "moas_sms_approvers": [
+    {
+      "id": 123,
+      "phone": "1-800-123-12345",
+      "created_at": "2021-04-20T10:20:09.000Z"
+    }
+  ],
+  "moas_email_approvers": [
+    {
+      "id": 123,
+      "email": "email@example.com",
+      "created_at": "2021-04-20T10:20:09.000Z"
+    }
+  ],
+  "moas_activation_amount": "0.00",
   "creation_date": "2015-11-22T10:00:00-06:00",
   "last_edited_date": "2016-07-01T22:53:03-06:00",
   "enable_sms_notifications": true
@@ -90,7 +114,6 @@ curl "https://subdomain.bsites-staging.com/api/v2.1.1/users/579?token=GXzAxWkkyY
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div>required</div> | <div>User ID</div><div>Must be a number</div>
-
 
 ## Create user
 
@@ -138,9 +161,15 @@ EOF
   "phone": "+1234567890",
   "company": "BSI",
   "title": "Support Leader",
-  "groups": ["Public"],
+  "groups": [
+    "Public"
+  ],
   "balance": "12.5",
   "orders": [],
+  "notes": [],
+  "moas_sms_approvers": [],
+  "moas_email_approvers": [],
+  "moas_activation_amount": "0.00",
   "creation_date": "2015-11-22T10:00:00-06:00",
   "last_edited_date": "2016-07-01T22:53:03-06:00",
   "enable_sms_notifications": true,
@@ -170,9 +199,9 @@ Parameter | Description
 <div><strong>user[note] </strong></div><div>optional , nil allowed</div> | <div>Create comment</div><div>Must be a String</div>
 <div><strong>user[password] </strong></div><div>optional , nil allowed</div> | <div>Password</div><div>Must be a String</div>
 <div><strong>user[enable_sms_notifications] </strong></div><div>optional</div> | <div>SMS Notification</div><div>Must be one of: true, false, 1, 0</div>
+<div><strong>user[moas_activation_amount] </strong></div><div>optional</div> | <div>MOAS activation amount (requires enabled MOAS feature).</div><div>Must be a float</div>
 <div><strong>user[cuf_<custom user field id>] </strong></div><div>optional , nil allowed</div> | <div>Custom User Field</div><div>Must be a String</div>
 <div><strong>user[dont_send_confirmation_email] </strong></div><div>optional</div> | <div>Don't send user confirmation email</div><div>Must be one of: true, false, 1, 0</div><div>Only valid if no password is sent. If a password is sent it will be ignored. If there's no password and the field is set to true, the initial confirmation email is not sent</div>
-
 
 ## Update user
 
@@ -219,9 +248,15 @@ EOF
   "phone": "+1234567890",
   "company": "BSI",
   "title": "Support Leader",
-  "groups": ["Public"],
+  "groups": [
+    "Public"
+  ],
   "balance": "12.5",
   "orders": [],
+  "notes": [],
+  "moas_sms_approvers": [],
+  "moas_email_approvers": [],
+  "moas_activation_amount": "0.00",
   "creation_date": "2015-11-22T10:00:00-06:00",
   "last_edited_date": "2016-07-01T22:53:03-06:00",
   "enable_sms_notifications": true,
@@ -238,7 +273,6 @@ EOF
 Parameter | Description
 --------- | -----------
 <div><strong>id </strong></div><div>required</div> | <div>User ID</div><div>Must be a number</div>
-
 
 ### JSON Payload Parameters
 
@@ -259,9 +293,9 @@ Parameter | Description
 <div><strong>user[decrease_balance] </strong></div><div>optional , nil allowed</div> | <div>Decrease Balance</div><div>Must be a float</div>
 <div><strong>user[note] </strong></div><div>optional , nil allowed</div> | <div>Create comment</div><div>Must be a String</div>
 <div><strong>user[password] </strong></div><div>optional , nil allowed</div> | <div>Password</div><div>Must be a String</div>
+<div><strong>user[moas_activation_amount] </strong></div><div>optional</div> | <div>MOAS activation amount (requires enabled MOAS feature).</div><div>Must be a float</div>
 <div><strong>user[enable_sms_notifications] </strong></div><div>optional</div> | <div>SMS Notification</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>user[cuf_<custom user field id>] </strong></div><div>optional , nil allowed</div> | <div>Custom User Field</div><div>Must be a String</div>
-
 
 ## Delete user
 
@@ -290,6 +324,10 @@ curl "https://subdomain.bsites-staging.com/api/v2.1.1/users/579?token=GXzAxWkkyY
   "groups": [],
   "balance": "12.5",
   "orders": [],
+  "notes": [],
+  "moas_sms_approvers": [],
+  "moas_email_approvers": [],
+  "moas_activation_amount": "0.00",
   "creation_date": "2015-11-22T10:00:00-06:00",
   "enable_sms_notifications": true,
   "last_edited_date": "2016-07-01T22:53:03-06:00"

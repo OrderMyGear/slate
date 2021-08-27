@@ -43,7 +43,8 @@
 +       "created_at": "2021-04-20T10:20:09.000Z"
 +     }
 +   ],  
-    "balance": 12.5,
++   "moas_activation_amount": "0.00",  
+    "balance": "12.5",
     "password": "12345678",
     "enable_sms_notifications": true,
     "cuf_1": "helloworld",
@@ -56,6 +57,7 @@
 1. Added `notes` to `users` json
 2. Added `moas_email_approvers` to `users` json
 3. Added `moas_sms_approvers` to `users` json
+3. Added `moas_activation_amount` to `users` json
 
 Affected APIs:
 
@@ -98,7 +100,7 @@ Added [User MOAS E-mail Approvers](#user-moas-e-mail-approver) endpoint
     "groups": [
       "Public"
     ],
-    "balance": 12.5,
+    "balance": "12.5",
     "password": "12345678",
     "enable_sms_notifications": true,
     "cuf_1": "helloworld",
@@ -503,7 +505,7 @@ Affected APIs:
     "groups": [
       "Public"
     ],
-    "balance": 12.5,
+    "balance": "12.5",
     "password": "12345678",
     "enable_sms_notifications": true,
     "cuf_1": "helloworld",
