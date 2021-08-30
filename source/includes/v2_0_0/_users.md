@@ -115,7 +115,7 @@ curl "https://subdomain.mybrightsites.com/api/v2.0.0/users?token=GXzAxWkkyYLsESG
     "password":"12345678",
     "enable_sms_notifications":true,
     "cuf_1": "helloworld",
-    "dont_send_confirmation_email":false,
+    "dont_send_confirmation_email":false
   }
 }
 EOF
