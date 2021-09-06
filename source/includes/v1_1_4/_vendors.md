@@ -108,7 +108,7 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.4/vendors?token=GXzAxWkkyYLsE
     "city": "Sweetstown",
     "state": "Texas",
     "zip_code": "99099",
-    "phone": "123123123123",
+    "phone_number": "123123123123",
     "email": "test@test.com",
     "account_number": "account123123"
   }
@@ -150,7 +150,7 @@ Parameter | Description
 <div><strong>vendor[city] </strong></div><div> optional , nil allowed </div> | <div>City</div><div> Must be a String </div>
 <div><strong>vendor[state] </strong></div><div> optional , nil allowed </div> | <div>State</div><div> Must be a String </div>
 <div><strong>vendor[zip_code] </strong></div><div> optional , nil allowed </div> | <div>Zip code</div><div> Must be a String </div>
-<div><strong>vendor[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone number</div><div> Must be a String </div>
+<div><strong>vendor[phone_number] </strong></div><div> optional , nil allowed </div> | <div>Phone number</div><div> Must be a String </div>
 <div><strong>vendor[email] </strong></div><div> optional , nil allowed </div> | <div>Email address</div><div> Must be a String </div>
 <div><strong>vendor[account_number] </strong></div><div> optional , nil allowed </div> | <div>Account number</div><div> Must be a String </div>
 <div><strong>vendor[asi_number] </strong></div><div> optional , nil allowed </div> | <div>ASI number</div><div> Must be a String </div>
@@ -221,7 +221,7 @@ Parameter | Description
 <div><strong>vendor[city] </strong></div><div> optional , nil allowed </div> | <div>City</div><div> Must be a String </div>
 <div><strong>vendor[state] </strong></div><div> optional , nil allowed </div> | <div>State</div><div> Must be a String </div>
 <div><strong>vendor[zip_code] </strong></div><div> optional , nil allowed </div> | <div>Zip code</div><div> Must be a String </div>
-<div><strong>vendor[phone] </strong></div><div> optional , nil allowed </div> | <div>Phone number</div><div> Must be a String </div>
+<div><strong>vendor[phone_number] </strong></div><div> optional , nil allowed </div> | <div>Phone number</div><div> Must be a String </div>
 <div><strong>vendor[email] </strong></div><div> optional , nil allowed </div> | <div>Email address</div><div> Must be a String </div>
 <div><strong>vendor[account_number] </strong></div><div> optional , nil allowed </div> | <div>Account number</div><div> Must be a String </div>
 <div><strong>vendor[asi_number] </strong></div><div> optional , nil allowed </div> | <div>ASI number</div><div> Must be a String </div>
