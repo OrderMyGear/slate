@@ -117,7 +117,7 @@ curl "https://subdomain.bsites-staging.com/api/v2.1.0/users?token=GXzAxWkkyYLsES
     "password":"12345678",
     "enable_sms_notifications":true,
     "cuf_1": "helloworld",
-    "dont_send_confirmation_email":false,
+    "dont_send_confirmation_email":false
   }
 }
 EOF
