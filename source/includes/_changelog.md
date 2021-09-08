@@ -79,6 +79,10 @@ Added [User MOAS Sms Approvers](#user-moas-sms-approvers) endpoint
 
 Added [User MOAS E-mail Approvers](#user-moas-e-mail-approvers) endpoint
 
+### /api/v2.1.1/vendors
+
+`phone_number` param key renamed to `phone` in vendors [create](#create-vendor) and [update](#update-vendor) endpoints
+
 ## 2.1.0
 
 > Changes 2.1.0:
