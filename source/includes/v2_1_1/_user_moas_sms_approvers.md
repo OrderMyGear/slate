@@ -2,7 +2,37 @@
 
 ## List approvers
 
-To list MOAS sms approvers for a specific user please use [users show](#show-user) endpoint.
+List all user MOAS sms approvers based on a user ID you supply.
+
+```shell
+curl "https://subdomain.mybrightsites.com/api/v2.1.1/users/1/moas_sms_approvers?token=GXzAxWkkyYLsESGQTU15"
+```
+
+> The above request returns JSON structured like this:
+
+```json
+{
+  "moas_sms_approvers": [
+    {
+      "id": 579,
+      "phone": "+1-518-555-0154",
+      "created_at": "2015-11-22T10:00:00-06:00"
+    }
+  ]
+}
+```
+
+### HTTP Request
+
+`GET /api/v2.1.1/users/:user_id/moas_sms_approvers
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+<div><strong>user_id </strong></div><div>required</div> | <div>User ID</div><div>Must be a number</div>
+
+
 
 ## Create MOAS sms approver
 

@@ -2,7 +2,37 @@
 
 ## List notes
 
-To list notes for a specific user please use [users show](#show-user) endpoint.
+List all user notes based on a user ID you supply.
+
+```shell
+curl "https://subdomain.mybrightsites.com/api/v2.1.1/users/1/notes?token=GXzAxWkkyYLsESGQTU15"
+```
+
+> The above request returns JSON structured like this:
+
+```json
+{
+  "notes": [
+    {
+      "id": 579,
+      "username": "API",
+      "note": "helloworld",
+      "created_at": "2015-11-22T10:00:00-06:00"
+    }
+  ]
+}
+```
+
+### HTTP Request
+
+`GET /api/v2.1.1/users/:user_id/notes
+
+### Query Parameters
+
+Parameter | Description
+--------- | -----------
+<div><strong>user_id </strong></div><div>required</div> | <div>User ID</div><div>Must be a number</div>
+
 
 ## Create user note
 
