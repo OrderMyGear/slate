@@ -1,6 +1,6 @@
 # User MOAS e-mail approvers
 
-## List approvers
+## List MOAS e-mail approvers
 
 List all user MOAS email approvers based on a user ID you supply.
 
@@ -24,7 +24,7 @@ curl "https://subdomain.mybrightsites.com/api/v2.1.1/users/1/moas_email_approver
 
 ### HTTP Request
 
-`GET /api/v2.1.1/users/:user_id/moas_email_approvers
+`GET /api/v2.1.1/users/:user_id/moas_email_approvers`
 
 ### Query Parameters
 

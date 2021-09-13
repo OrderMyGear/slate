@@ -25,7 +25,7 @@ curl "https://subdomain.mybrightsites.com/api/v2.1.1/users/1/notes?token=GXzAxWk
 
 ### HTTP Request
 
-`GET /api/v2.1.1/users/:user_id/notes
+`GET /api/v2.1.1/users/:user_id/notes`
 
 ### Query Parameters
 
