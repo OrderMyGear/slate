@@ -80,6 +80,7 @@ curl "https://subdomain.mybrightsites.com/api/v2.2.0/products/579?token=GXzAxWkk
   "sku": "choc-1",
   "sku_separator": "-",
   "internal_id": "431234",
+  "origin_address_id": null,
   "base_price": "10",
   "retail_price": "10",
   "cost": "10",
@@ -190,6 +191,7 @@ curl "https://subdomain.mybrightsites.com/api/v2.2.0/products?token=GXzAxWkkyYLs
     "sku": "choc-1",
     "sku_separator": "-",
     "internal_id": "431234",
+    "origin_address_id": null,
     "base_price": 10,
     "retail_price": 10,
     "cost": 10,
@@ -234,6 +236,7 @@ EOF
   "sku": "choc-1",
   "sku_separator": "-",
   "internal_id": "431234",
+  "origin_address_id": null,
   "base_price": "10",
   "retail_price": "10",
   "cost": "10",
@@ -296,6 +299,7 @@ Parameter | Description
 <div><strong>product[sku] </strong></div><div>required</div> | <div>Unique sku</div><div>Must be a String</div>
 <div><strong>product[sku_separator] </strong></div><div>optional</div> | <div>SKU separator</div><div>Must be a String (default to "-")</div>
 <div><strong>product[internal_id] </strong></div><div>optional , nil allowed</div> | <div>Internal ID</div><div>Must be a String</div>
+<div><strong>product[origin_address_id] </strong></div><div>optional , nil allowed</div> | <div>Custom Shipping Origin ID</div><div>Must be a number</div>
 <div><strong>product[base_price] </strong></div><div>required</div> | <div>Base price ($)</div><div>Must be a float</div>
 <div><strong>product[retail_price] </strong></div><div>optional , nil allowed</div> | <div>Retail price ($)</div><div>Must be a float</div>
 <div><strong>product[cost] </strong></div><div>optional , nil allowed</div> | <div>Cost ($)</div><div>Must be a float</div>
@@ -340,7 +344,8 @@ curl "https://subdomain.mybrightsites.com/api/v2.2.0/products/579?token=GXzAxWkk
   -d @- <<'EOF'
 {
   "product": {
-    "name": "Dark Chocolate"
+    "name": "Dark Chocolate",
+    "origin_address_id": 123,
   }
 }
 EOF
@@ -354,6 +359,7 @@ EOF
   "sku": "choc-1",
   "sku_separator": "-",
   "internal_id": "431234",
+  "origin_address_id": 123,
   "base_price": "10",
   "retail_price": "10",
   "cost": "10",
@@ -458,6 +464,7 @@ Parameter | Description
 <div><strong>product[sku] </strong></div><div>optional</div> | <div>Unique sku</div><div>Must be a String</div>
 <div><strong>product[sku_separator] </strong></div><div>optional</div> | <div>SKU separator</div><div>Must be a String</div>
 <div><strong>product[internal_id] </strong></div><div>optional , nil allowed</div> | <div>Internal ID</div><div>Must be a String</div>
+<div><strong>product[origin_address_id] </strong></div><div>optional , nil allowed</div> | <div>Custom Shipping Origin ID</div><div>Must be a number</div>
 <div><strong>product[base_price] </strong></div><div>optional</div> | <div>Base price ($)</div><div>Must be a float</div>
 <div><strong>product[retail_price] </strong></div><div>optional , nil allowed</div> | <div>Retail price ($)</div><div>Must be a float</div>
 <div><strong>product[cost] </strong></div><div>optional , nil allowed</div> | <div>Cost ($)</div><div>Must be a float</div>
@@ -508,6 +515,7 @@ curl "https://subdomain.mybrightsites.com/api/v2.2.0/products/579?token=GXzAxWkk
   "sku": "choc-1",
   "sku_separator": "-",
   "internal_id": "431234",
+  "origin_address_id": null,
   "base_price": "10",
   "retail_price": "10",
   "cost": "10",
