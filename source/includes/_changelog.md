@@ -1,5 +1,69 @@
 # Changelog
 
+## 2.3.0
+
+> Changes 2.3.0
+
+> /api/v2.2.0/products/:id
+
+```json
+{
+  "name": "Chocolate",
+  "sku": "choc-1",
+  "sku_separator": "-",
+  "internal_id": "431234",
+  "origin_address_id": 2,
+  "base_price": "10",
+  "retail_price": "10",
+  "cost": "10",
+  "setup_charge": "10",
+  "minimum_order_quantity": 10,
+  "maximum_order_quantity": 20,
+  "weight": "10",
+  "width": "10",
+  "height": "10",
+  "length": "10",
+  "shipping_modifier": "10",
+  "meta_title": "choco",
+  "meta_description": "tasty choco",
+  "meta_keywords": "tasty chocolate wonka",
+  "custom_url": "chocolate",
+  "description": "Very Tasty Dark Chocolate",
+  "active": true,
+  "featured": false,
+  "tax_exempt": false,
+  "shipping_exempt": false,
+  "categories": [],
+  "vendors": [],
+  "options": [],
+  "sub_options": [],
+  "inventories": [],
+  "enable_quantity_discount": false,
+  "related_products_type": "auto",
+  "enable_related_products": false,
+  "enable_product_personalization": false,
+  "enable_inventory": false,
+  "enable_logo_locations": false,
+  "enable_decoration_methods": false,
+  "primary_category_id": 36,
+  "tax_code": "12345",
++ "vendor_inventory_enabled": false,
++ "inventory_vendor_id": 2354,
+  "created_at": "2016-03-29T22:53:03-06:00",
+  "updated_at": "2016-03-29T22:53:03-06:00",
+}
+```
+
+1. Added `vendor_inventory_enabled` to `products` json
+2. Added `inventory_vendor_id` to `products` json
+3. Added [Product PromoStandards](#product-promostandards) endpoint
+
+Affected APIs:
+
+* /api/v2.3.0/products/:product_id
+* /api/v2.3.0/products/:product_id/promostandards (new)
+
+
 ## 2.2.0
 
 > Changes 2.2.0:
@@ -17,7 +81,7 @@ Added [Origin Addresses](#origin-addresses) endpoint
       "id": 579,
       "name": "Chocalate",
       "sku": "choc-1",
-      "internal_id": "431234", 
+      "internal_id": "431234",
 +     "origin_address_id": 1,
       "categories": [
         {
@@ -136,8 +200,8 @@ Added `origin_address_id` to `product` json
 +       "email": "email@example.com",
 +       "created_at": "2021-04-20T10:20:09.000Z"
 +     }
-+   ],  
-+   "moas_activation_amount": "0.00",  
++   ],
++   "moas_activation_amount": "0.00",
     "balance": "12.5",
     "password": "12345678",
     "enable_sms_notifications": true,
