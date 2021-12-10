@@ -4,7 +4,366 @@
 
 > Changes 2.3.0
 
-> /api/v2.2.0/products/:id
+> /api/v2.3.0/orders/:id
+
+```json
+{
+  "order_id": 1,
+  "created_at": "2015-08-25T05:06:36-06:00",
+  "updated_at": "2015-08-25T05:06:36-06:00",
+  "status": "new",
+  "site_id": 178,
+  "site_name": "my website",
+  "site_url": "http://mywebsite.mybrightsites.com",
+  "custom_store_id": "mycustomstore",
+  "organization_name": "Super organization",
+  "organization_id": 49,
+  "custom_data_collections": [
+    {
+      "title": "Add a Gift Card To Your Order",
+      "attributes": [
+        {
+          "key": "Please select your Gift Card below:",
+          "value": "Forever 21"
+        }
+      ],
+      "price_modifier": {
+        "modifier_type": "$",
+        "amount": "25.0"
+      }
+    }
+  ],
+  "customer_email": "test@johndoe.com",
+  "customer_id": null,
+  "username": "Guest",
+  "item_total": "4703.0",
+  "grand_total": "3069.15",
+  "shipping_contact": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "test@johndoe.com",
+    "phone": "1234123456"
+  },
+  "shipping_address": {
+    "first_address": "2658 East 26th Street",
+    "company": "Testco LLC",
+    "second_address": "John Doe",
+    "city": "Brooklyn",
+    "state": "New York",
+    "country": "United States",
+    "zip": "11235"
+  },
+  "billing_contact": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "test@johndoe.com",
+    "phone": "1234123456"
+  },
+  "billing_address": {
+    "first_address": "2658 East 26th Street",
+    "company": "Testco LLC",
+    "second_address": "John Doe",
+    "city": "Brooklyn",
+    "state": "New York",
+    "country": "United States",
+    "zip": "11235"
+  },
+  "payment": {
+    "id": 4305,
+    "authorization": "A70A9B840C12",
+    "created_at": "2016-06-23T10:19:22-06:00",
+    "amount": "82.0",
+    "state": "refunded",
+    "details": {
+      "method": "credit card",
+      "card type": "Visa",
+      "card": "**** **** **** 1111",
+      "amount": "$82.00"
+    }
+  },
+  "payments": [
+    {
+      "id": 4305,
+      "authorization": "A10AA3EC513B",
+      "created_at": "2016-06-23T10:19:22-06:00",
+      "amount": "82.0",
+      "state": "refunded",
+      "details": {
+        "method": "credit card",
+        "card type": "Visa",
+        "card": "**** **** **** 1111",
+        "amount": "$82.00"
+      }
+    },
+    {
+      "id": 6215,
+      "authorization": "A10AA3EC513A",
+      "created_at": "2017-03-10T04:29:10-07:00",
+      "amount": "-82.0",
+      "state": "completed",
+      "details": {
+        "method": "credit card",
+        "card type": "Visa",
+        "card": "**** **** **** 1111",
+        "type": "Credit",
+        "amount": "-$82.00"
+      }
+    }
+  ],
+  "shipment": {
+    "tracking_number": "12234tracking2123",
+    "cost": "0.0",
+    "created_at": "2015-08-25T05:06:23-06:00",
+    "shipping_method": "Best Way",
+    "ship_date": "2016-08-25",
+    "in_hands_date": "2018-06-15"
+  },
+  "line_items": [
+    {
+      "id": 1234,
+      "name": "Product 1",
+      "final_sku": "sku",
+      "final_internal_id": "431234",
+      "tax_code": "12345",
+      "quantity": 18,
+      "product_price": "150.0",
+      "options_price": "5.0",
+      "total_price": "2790.0",
+      "tax_price": "7.75",
+      "unit_price": "155.0",
+      "product_id": 10,
+      "product_options": [
+        {
+          "option_id": 25,
+          "sub_option_id": 152,
+          "option_name": "Size",
+          "option_type": "size",
+          "sub_option_name": "X-Small"
+        }
+      ],
+      "vendors": [
+        {
+          "id": 579,
+          "name": "The Willy Wonka Company",
+          "address1": "2010 Oompa-Loompa drive",
+          "address2": "",
+          "city": "Sweetstown",
+          "state": "Texas",
+          "zip_code": "99099",
+          "phone": "123123123123",
+          "email": "test@test.com",
+          "account_number": "account123123",
+          "asi_number": "asi123456"
+        }
+      ],
+      "logos": [{
+          "name": "fedex",
+          "charge": "10.0",
+          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+          "supplier_id": "VENDOR123",
+          "location": {
+            "id": 4,
+            "name": "Top"
+          },
+          "decoration": {
+            "custom_text": "",
+            "font": "",
+            "size": {
+              "name": "Medium",
+              "price_modifier": "1.75",
+              "setup_charge": "25.0"
+            },
+            "color": {
+              "number": 1,
+              "price_modifier": "0.0",
+              "setup_charge": "0.0"
+            },
+            "colors": [
+              {
+                "color_name": "#00ff00",
+                "color_type": "hex",
+                "hex_value": "#00ff00"
+              }
+            ]
+          }
+        },
+        {
+          "name": "cop",
+          "charge": null,
+          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/763/11.png",
+          "supplier_id": null,
+          "location": {
+            "id": 5,
+            "name": "Right Chest"
+          },
+          "decoration": {
+            "custom_text": "",
+            "font": "",
+            "size": {
+              "name": "Medium",
+              "price_modifier": "1.75",
+              "setup_charge": "25.0"
+            },
+            "color": {
+              "number": 1,
+              "price_modifier": "0.0",
+              "setup_charge": "0.0"
+            },
+            "colors": [
+              {
+                "color_name": "#4e00ff",
+                "color_type": "hex",
+                "hex_value": "#4e00ff"
+              }
+            ]
+          }
+        }
+      ],
+      "product_personalizations": [
+        {
+          "title": "Enter Name Here",
+          "attributes": [
+            {
+              "key": "Name",
+              "value": ""
+            }
+          ],
+          "price_modifier": {
+            "modifier_type": "$",
+            "amount": "1.99"
+          }
+        }
+      ],
+      "decoration_method": {
+        "name": "Embroidery",
+        "price_modifier": "2.5",
++       "decorations": [
++         {
++           "location": "Top Left",
++           "logo": {
++             "name": "fedex",
++             "charge": "10.0",
++             "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/01-01-2021/123/fedex.png",
++           },
++           "custom_text": "",
++           "font": "",
++           "size": {
++             "name": "Medium",
++             "price_modifier": "1.75",
++             "setup_charge": "25.0"
++           },
++           "color": {
++             "number": 1,
++             "price_modifier": "0.0",
++             "setup_charge": "0.0"
++           },
++           "colors": [
++             {
++               "color_name": "#4e00ff",
++               "color_type": "hex",
++               "hex_value": "#4e00ff"
++             }
++           ]
++         }
++       ]
+      },
+      "gift_certificate": null,
+    },
+    {
+      "id": 10139,
+      "name": "Gift Certificate example",
+      "final_sku": "GCE1",
+      "quantity": 1,
+      "product_price": "0.0",
+      "options_price": "0.0",
+      "total_price": "10.0",
+      "tax_price": null,
+      "unit_price": "10.0",
+      "pdf_status": "not_available",
+      "pdf_file_url": null,
+      "product_id": 44422,
+      "final_internal_id": null,
+      "tax_code": "12345",
+      "product_options": [],
+      "logos": [],
+      "product_personalizations": [],
+      "decoration_method": null,
+      "gift_certificate": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "message": "Nice work on the job today!",
+        "expires_at": "2018-12-04T09:15:50.000-07:00",
+        "code": "9FBF1F5B7029432",
+        "amount": "10.0"
+      }
+    }
+  ],
+  "coupons_adjustments": [],
+  "balance_adjustments": [],
+  "custom_adjustments": [
+    {
+      "note": "quantity discount",
+      "amount": "-1080.0",
+      "modifier_type": "$"
+    },
+    {
+      "note": "quantity discount",
+      "amount": "-120.0",
+      "modifier_type": "$"
+    },
+    {
+      "note": "quantity discount",
+      "amount": "-60.0",
+      "modifier_type": "$"
+    },
+    {
+      "note": "quantity discount",
+      "amount": "-180.0",
+      "modifier_type": "$"
+    },
+    {
+      "note": "quantity discount",
+      "amount": "-360.0",
+      "modifier_type": "$"
+    }
+  ],
+  "required_adjustments": [
+    {
+      "note": "Setup Charge for helloworld",
+      "amount": "20.0",
+      "modifier_type": "$"
+    },
+    {
+      "note": null,
+      "amount": "146.15",
+      "modifier_type": "$"
+    },
+    {
+      "note": null,
+      "amount": "0.0",
+      "modifier_type": "$"
+    }
+  ],
+  "notes": [],
+  "shipments": [
+    {
+      "id": 14,
+      "tracking_number": "1234123412",
+      "ship_date": "2019-10-20",
+      "note": "Lorem ipsum",
+      "shipping_method": "FedEx 2 Day Freight",
+      "line_items": [
+        {
+          "id": 1234,
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}
+```
+
+> /api/v2.3.0/products/:id
 
 ```json
 {
@@ -57,11 +416,13 @@
 1. Added `vendor_inventory_enabled` to `products` json
 2. Added `inventory_vendor_id` to `products` json
 3. Added [Product PromoStandards](#product-promostandards) endpoint
+4. Added `decorations` under `decoration_method` to `order` show json
 
 Affected APIs:
 
 * /api/v2.3.0/products/:product_id
 * /api/v2.3.0/products/:product_id/promostandards (new)
+* /api/v2.3.0/orders/:id
 
 
 ## 2.2.0

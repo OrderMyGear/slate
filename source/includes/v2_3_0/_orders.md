@@ -290,7 +290,36 @@ curl "https://subdomain.mybrightsites.com/api/v2.3.0/orders/1?token=GXzAxWkkyYLs
       ],
       "decoration_method": {
         "name": "Embroidery",
-        "price_modifier": "2.5"
+        "price_modifier": "2.5",
+        "decorations": [
+          {
+            "location": "Top Left",
+            "logo": {
+              "name": "fedex",
+              "charge": "10.0",
+              "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+            },
+            "custom_text": "",
+            "font": "",
+            "size": {
+              "name": "Medium",
+              "price_modifier": "1.75",
+              "setup_charge": "25.0"
+            },
+            "color": {
+              "number": 1,
+              "price_modifier": "0.0",
+              "setup_charge": "0.0"
+            },
+            "colors": [
+              {
+                "color_name": "#4e00ff",
+                "color_type": "hex",
+                "hex_value": "#4e00ff"
+              }
+            ]
+          }
+        ]
       },
       "gift_certificate": null,
     },
