@@ -1,5 +1,49 @@
 # Changelog
 
+## 2.4.0
+
+> Changes 2.4.0
+
+> /api/v2.4.0/users/:id
+
+```json
+{
+  "id": 579,
+  "username": "johndoe",
+  "first_name": "John",
+  "last_name": "Doe",
+  "active": true,
+  "confirmed": true,
+  "email": "johndoe@email.com",
+  "timezone": "America/Denver",
+  "phone": "+1234567890",
+  "company": "BSI",
+  "title": "Support Leader",
+  "groups": [
+    "Public"
+  ],
+  "balance": "12.5",
+  "orders": [],
+  "notes": [],
+  "moas_sms_approvers": [],
+  "moas_email_approvers": [],
+  "moas_activation_amount": "0.00",
+  "creation_date": "2015-11-22T10:00:00-06:00",
+  "last_edited_date": "2016-07-01T22:53:03-06:00",
+  "enable_sms_notifications": true,
++ "avalara_tax_exemption_reason": "A",
+  "cuf_1": "12345678"
+}
+```
+
+Added `avalara_tax_exemption_reason` to `users` json.
+
+This field only works with the Avalara sales tax integration and will send a tax exemption reason to Avalara for them to determine if tax is exempt or not when an order is being processed for the user. <a href="https://help.avalara.com/Avalara_AvaTax_Update/Exemption_Reason_Matrix_for_US_and_Canada" target="_blank">Avalara Docs.</a>
+
+Affected APIs:
+
+* /api/v2.4.0/users/:id
+
 ## 2.3.0
 
 > Changes 2.3.0
