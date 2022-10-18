@@ -86,7 +86,26 @@ curl "https://subdomain.mybrightsites.com/api/v2.5.0/products/22287/options/4720
     "sub_sku": "SKU123",
     "price_modifier": 2,
     "image_data": "R0lGODlhbgCMAPf/APbr48VySrxTO7IgKt2qmKQdJeK8lsFjROG5p",
-    "filename": "myimage.jpg",
+    "filename": "image3.png",
+    "position": 3
+  }
+}
+EOF
+```
+
+OR
+
+```shell
+curl "https://subdomain.mybrightsites.com/api/v2.5.0/products/22287/options/47204/sub_options?token=GXzAxWkkyYLsESGQTU15" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "sub_option": {
+    "name": "X-Small",
+    "sub_sku": "SKU123",
+    "price_modifier": 2,
+    "image_url": "https://www.imagestorage.com/image3.png",
     "position": 3
   }
 }
@@ -100,7 +119,7 @@ EOF
   "id": 559579,
   "name": "X-Small",
   "sub_sku": "SKU123",
-  "image_src": "https://assets.host.com/uploads/website/product_image/image/03-30-2021/2065763/image.jpg",
+  "image_src": "https://assets.host.com/uploads/website/product_image/image/03-30-2021/2065763/image3.png",
   "price_modifier": "2.0",
   "position": 3
 }
@@ -127,8 +146,12 @@ Parameter | Description
 <div><strong>sub_option[sub_sku] </strong></div><div>optional , nil allowed</div> | <div>SKU</div><div>Must be a String</div>
 <div><strong>sub_option[price_modifier] </strong></div><div>optional , nil allowed</div> | <div>Price Modifier</div><div>Must be a float</div>
 <div><strong>sub_option[position] </strong></div><div>optional , nil allowed</div> | <div>Position of order</div><div>Must be a number</div>
-<div><strong>sub_option[image_data] </strong></div><div>optional , nil allowed</div> | <div>Base64 Image representation</div><div>Must be a String</div>
-<div><strong>sub_option[filename] </strong></div><div>optional , nil allowed</div> | <div>Image file name</div><div>Must be a String</div>
+<div><strong>sub_option[image_data] </strong></div><div>optional, nil allowed</div> | <div>Base64 Image representation</div><div>Must be a String. Must be nil when image_url was provided</div>
+<div><strong>sub_option[filename] </strong></div><div>optional, nil allowed</div> | <div>Image file name</div><div>Must be a String. Must be nil when image_url was provided</div>
+<div><strong>sub_option[image_url] </strong></div><div>optional, nil allowed</div> | <div>Remote Image URL</div><div>Must be a String containing valid image url. Must be nil when image_data + filename were provided</div>
+
+
+
 
 
 ## Update sub option
@@ -183,8 +206,9 @@ Parameter | Description
 <div><strong>sub_option[sub_sku] </strong></div><div>optional , nil allowed</div> | <div>SKU</div><div>Must be a String</div>
 <div><strong>sub_option[price_modifier] </strong></div><div>optional , nil allowed</div> | <div>Price Modifier</div><div>Must be a float</div>
 <div><strong>sub_option[position] </strong></div><div>optional , nil allowed</div> | <div>Position of order</div><div>Must be a number</div>
-<div><strong>sub_option[image_data] </strong></div><div>optional , nil allowed</div> | <div>Base64 Image representation</div><div>Must be a String</div>
-<div><strong>sub_option[filename] </strong></div><div>optional , nil allowed</div> | <div>Image file name</div><div>Must be a String</div>
+<div><strong>sub_option[image_data] </strong></div><div>optional, nil allowed</div> | <div>Base64 Image representation</div><div>Must be a String. Must be nil when image_url was provided</div>
+<div><strong>sub_option[filename] </strong></div><div>optional, nil allowed</div> | <div>Image file name</div><div>Must be a String. Must be nil when image_url was provided</div>
+<div><strong>sub_option[image_url] </strong></div><div>optional, nil allowed</div> | <div>Remote Image URL</div><div>Must be a String containing valid image url. Must be nil when image_data + filename were provided</div>
 
 
 ## Delete sub option

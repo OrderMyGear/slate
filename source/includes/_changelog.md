@@ -4,7 +4,7 @@
 
 > Changes 2.5.0
 
-> /api/v2.3.0/products/:product
+> /api/v2.5.0/products/:product
 
 ```json
 {
@@ -94,13 +94,44 @@
 }
 ```
 
+> /api/v2.5.0/products/:product_id/product_images
+
+```json
+{
+  "image": {
+    "position": 0,
+    "primary": true,
+    "thumbnail": false,
++   "image_url": "https://www.imagestorage.com/image3.jpg",
+  }
+}
+```
+
+> /api/v2.5.0/products/:product_id/product_options/:option_id/sub_options
+
+```json
+{
+  "sub_option": {
+    "name": "X-Small",
+    "sub_sku": "SKU123",
+    "price_modifier": 2,
++   "image_url": "https://www.imagestorage.com/image3.jpg",
+    "position": 3
+  }
+}
+```
+
+
 1. Added `new_product` to `products` json.
 2. Added `new_expires_at` to `products` json.
+3. Added ability to create image from `image_url` parameter in `image` and `sub_option` json 
 
 Affected APIs:
 
 * /api/v2.5.0/products/:id
 * /api/v2.5.0/products
+* /api/v2.5.0/products/:product_id/product_options
+* /api/v2.5.0/products/:product_id/product_options/:option_id/sub_options
 
 ## 2.4.0
 

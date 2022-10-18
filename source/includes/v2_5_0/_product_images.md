@@ -88,24 +88,29 @@ curl "https://subdomain.mybrightsites.com/api/v2.5.0/products/1/images?token=GXz
     "position": 0,
     "primary": true,
     "thumbnail": false,
-    "image_data": "R0lGODlhbgCMAPf/APbr48VySrxTO7IgKt2qmKQdJeK8lsFjROG5p/nz7Zg3
-
-                   MNmnd7Q1MLNVS9GId71hSJMZIuzTu4UtKbeEeakhKMl8U8WYjfr18YQaIbAf
-
-                   KKwhKdKzqpQtLebFortOOejKrOjZ1Mt7aMNpVbAqLLV7bsNqR+3WwMqEWenN
-
-                   sZYxL/Ddy/Pm2e7ZxLlUQrIjNPXp3bU5MbhENbEtLtqhj5ZQTfHh0bMxL7Ip
-
-                   NsNyUYkZIrZJPcqGdYIUHb5aPKkeJnoUHd2yiJkiLKYiKLRFOsyJXKVDO8up
-
-                   osFaS+TBnK4kKti5sNaYg/z49aqYl5kqLrljUtORfMOlo/36+H4ZH8yDYq0f
-
-                   KKFYTaU9MrY8MrZBNXwXHpgaIdGVYu/byLZNP9SaZLIyOuXCtHkpJst+Wpcm",
-    "filename": "image3.jpg"
+    "image_data": "R0lGODlhbgCMAPf/APbr48VySrxTO7IgKt2qmKQdJeK8lsFjROG5p",
+    "filename": "myimage.jpg",
   }
 }
 EOF
 ```
+
+OR 
+
+```shell
+curl "https://subdomain.mybrightsites.com/api/v2.5.0/products/1/images/2?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "image": {
+    "position": 0,
+    "primary": true,
+    "thumbnail": false,
+    "image_url": "https://www.remoteimagestorage.com/someimage.jpg",
+  }
+}
+EOF
 
 > The above request returns JSON structured like this:
 
@@ -138,8 +143,9 @@ Parameter | Description
 <div><strong>image[primary] </strong></div><div>optional</div> | <div>Primary Image switcher</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>image[thumbnail] </strong></div><div>optional</div> | <div>Thumbnail Image switcher</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>image[position] </strong></div><div>optional</div> | <div>Image list order</div><div>Must be a number</div>
-<div><strong>image[image_data] </strong></div><div>required</div> | <div>Base64 Image representation</div><div>Must be a String</div>
-<div><strong>image[filename] </strong></div><div>required</div> | <div>Image file name</div><div>Must be a String</div>
+<div><strong>image[image_data] </strong></div><div>conditionally required</div> | <div>Base64 Image representation</div><div>Must be a String, required when image_url wasn't provided</div>
+<div><strong>image[filename] </strong></div><div>conditionally required</div> | <div>Image file name</div><div>Must be a String, required when image_url wasn't provided</div>
+<div><strong>image[image_url] </strong></div><div>conditionally required</div> | <div>Remote Image URL</div><div>Must be a String containing valid image url. Required when image_data + filename were not provided</div>
 
 
 ## Update product image
@@ -156,24 +162,30 @@ curl "https://subdomain.mybrightsites.com/api/v2.5.0/products/1/images/2?token=G
     "position": 0,
     "primary": true,
     "thumbnail": false,
-    "image_data": "R0lGODlhbgCMAPf/APbr48VySrxTO7IgKt2qmKQdJeK8lsFjROG5p/nz7Zg3
-
-                   MNmnd7Q1MLNVS9GId71hSJMZIuzTu4UtKbeEeakhKMl8U8WYjfr18YQaIbAf
-
-                   KKwhKdKzqpQtLebFortOOejKrOjZ1Mt7aMNpVbAqLLV7bsNqR+3WwMqEWenN
-
-                   sZYxL/Ddy/Pm2e7ZxLlUQrIjNPXp3bU5MbhENbEtLtqhj5ZQTfHh0bMxL7Ip
-
-                   NsNyUYkZIrZJPcqGdYIUHb5aPKkeJnoUHd2yiJkiLKYiKLRFOsyJXKVDO8up
-
-                   osFaS+TBnK4kKti5sNaYg/z49aqYl5kqLrljUtORfMOlo/36+H4ZH8yDYq0f
-
-                   KKFYTaU9MrY8MrZBNXwXHpgaIdGVYu/byLZNP9SaZLIyOuXCtHkpJst+Wpcm",
-    "filename": "new_image.jpg"
+    "image_data": "R0lGODlhbgCMAPf/APbr48VySrxTO7IgKt2qmKQdJeK8lsFjROG5p",
+    "filename": "new_image.jpg",
   }
 }
 EOF
 ```
+
+OR 
+
+```shell
+curl "https://subdomain.mybrightsites.com/api/v2.5.0/products/1/images/2?token=GXzAxWkkyYLsESGQTU15" \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d @- <<'EOF'
+{
+  "image": {
+    "position": 0,
+    "primary": true,
+    "thumbnail": false,
+    "image_url": "https://www.remoteimagestorage.com/new_image.jpg",
+  }
+}
+EOF
+
 
 > The above request returns JSON structured like this:
 
@@ -207,8 +219,9 @@ Parameter | Description
 <div><strong>image[primary] </strong></div><div>optional</div> | <div>Primary Image switcher</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>image[thumbnail] </strong></div><div>optional</div> | <div>Thumbnail Image switcher</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>image[position] </strong></div><div>optional</div> | <div>Image list order</div><div>Must be a number</div>
-<div><strong>image[image_data] </strong></div><div>required</div> | <div>Base64 Image representation</div><div>Must be a String</div>
-<div><strong>image[filename] </strong></div><div>required</div> | <div>Image file name</div><div>Must be a String</div>
+<div><strong>image[image_data] </strong></div><div>conditionally required</div> | <div>Base64 Image representation</div><div>Must be a String, required when image_url wasn't provided</div>
+<div><strong>image[filename] </strong></div><div>conditionally required</div> | <div>Image file name</div><div>Must be a String, required when image_url wasn't provided</div>
+<div><strong>image[image_url] </strong></div><div>conditionally required</div> | <div>Remote Image URL</div><div>Must be a String containing valid image url. Required when image_data + filename were not provided</div>
 
 
 ## Delete product image
