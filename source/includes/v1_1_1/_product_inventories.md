@@ -82,6 +82,8 @@ Parameter | Description
 
 Create inventory levels based on a product ID you supply.
 
+This API call will be removed in early Q1 of 2023. The creation/deletion of inventory levels will be automatically handled based on the product sub-options (e.g. Colors and Sizes) added to an item. This is to make inventory levels generation much easier to do and manage.
+
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/products/22287/inventories?token=GXzAxWkkyYLsESGQTU15" \
   -X POST \
@@ -202,6 +204,8 @@ Parameter | Description
 ## Delete inventory
 
 Delete the inventory levels based on an inventory ID you supply.
+
+This API call will be removed in early Q1 of 2023. The creation/deletion of inventory levels will be automatically handled based on the product sub-options (e.g. Colors and Sizes) added to an item. This is to make inventory levels generation much easier to do and manage.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v1.1.1/products/22287/inventories/774?token=GXzAxWkkyYLsESGQTU15" \
