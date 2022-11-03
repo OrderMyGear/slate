@@ -340,8 +340,7 @@ Parameter | Description
 <div><strong>product[tax_exempt] </strong></div><div>optional , nil allowed</div> | <div>Tax exempt</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[shipping_exempt] </strong></div><div>optional , nil allowed</div> | <div>Shipping exempt</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[new_product] </strong></div><div>optional , nil allowed</div> | <div>New product</div><div>Must be one of: true, false, 1, 0</div>
-<div><strong>product[new_expires_at] </strong></div><div>optional , nil allowed</div> | <div>Unmark new product at</div>
-<div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601 (Date)</a>, e.g. “YYYY-MM-DDThh:mm:ss” or “YYYY-MM-DD”. When “YYYY-MM-DDThh:mm:ss” provided then only date part will be used.</div>
+<div><strong>product[new_expires_at] </strong></div><div>optional , nil allowed</div> | <div>Unmark new product at</div><div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601 (Date)</a>, e.g. “YYYY-MM-DDThh:mm:ss” or “YYYY-MM-DD”. When “YYYY-MM-DDThh:mm:ss” provided then only date part will be used.</div>
 <div><strong>product[enable_quantity_discount] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable quantity discounts</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[related_products_type] </strong></div><div>optional , nil allowed</div> | <div>Related products type</div><div>Must be one of: auto, custom</div>
 <div><strong>product[enable_related_products] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable related products</div><div>Must be one of: true, false, 1, 0</div>
@@ -514,8 +513,7 @@ Parameter | Description
 <div><strong>product[tax_exempt] </strong></div><div>optional , nil allowed</div> | <div>Tax exempt</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[shipping_exempt] </strong></div><div>optional , nil allowed</div> | <div>Shipping exempt</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[new_product] </strong></div><div>optional , nil allowed</div> | <div>New product</div><div>Must be one of: true, false, 1, 0</div>
-<div><strong>product[new_expires_at] </strong></div><div>optional , nil allowed</div> | <div>Unmark new product at</div>
-<div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601 (Date)</a>, e.g. “YYYY-MM-DDThh:mm:ss” or “YYYY-MM-DD”. When “YYYY-MM-DDThh:mm:ss” provided then only date part will be used.</div>
+<div><strong>product[new_expires_at] </strong></div><div>optional , nil allowed</div> | <div>Unmark new product at</div><div>Valid format is <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601 (Date)</a>, e.g. “YYYY-MM-DDThh:mm:ss” or “YYYY-MM-DD”. When “YYYY-MM-DDThh:mm:ss” provided then only date part will be used.</div>
 <div><strong>product[enable_quantity_discount] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable quantity discounts</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[related_products_type] </strong></div><div>optional , nil allowed</div> | <div>Related products type</div><div>Must be one of: auto, custom</div>
 <div><strong>product[enable_related_products] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable related products</div><div>Must be one of: true, false, 1, 0</div>
