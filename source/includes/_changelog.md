@@ -1,5 +1,227 @@
 # Changelog
 
+## 2.6.0
+
+> Changes 2.6.0
+
+> /api/v2.6.0/products/:id
+
+```json
+{
+  "name": "Chocolate",
+  "sku": "choc-1",
+  "sku_separator": "-",
+  "internal_id": "431234",
+  "origin_address_id": 2,
+  "base_price": "10",
+  "retail_price": "10",
+  "cost": "10",
+  "setup_charge": "10",
+  "minimum_order_quantity": 10,
+  "maximum_order_quantity": 20,
+  "weight": "10",
+  "width": "10",
+  "height": "10",
+  "length": "10",
+  "shipping_modifier": "10",
+  "meta_title": "choco",
+  "meta_description": "tasty choco",
+  "meta_keywords": "tasty chocolate wonka",
+  "custom_url": "chocolate",
+  "description": "Very Tasty Dark Chocolate",
+  "active": true,
+  "featured": false,
+  "tax_exempt": false,
+  "shipping_exempt": false,
+  "categories": [],
+  "vendors": [],
+  "options": [],
+  "sub_options": [],
+  "inventories": [],
+  "enable_quantity_discount": false,
+  "related_products_type": "auto",
+  "enable_related_products": false,
+  "enable_product_personalization": false,
+  "enable_inventory": false,
+  "enable_logo_locations": false,
+  "enable_decoration_methods": false,
+  "primary_category_id": 36,
+  "tax_code": "12345",
+  "vendor_inventory_enabled": false,
+  "inventory_vendor_id": 2354,
+  "new_product": false,
+  "new_expires_at": "2023-01-01",
++ "note": "This is my favourite chocolate",
+  "created_at": "2016-03-29T22:53:03-06:00",
+  "updated_at": "2016-03-29T22:53:03-06:00",
+}
+```
+
+> /api/v2.6.0/orders/:order_id/line_items/:id
+
+```json
+{
+  "id": 1234,
+  "name": "Product 1",
+  "final_sku": "sku",
+  "final_internal_id": "431234",
+  "tax_code": "12345",
+  "quantity": 18,
+  "product_price": "150.0",
+  "options_price": "5.0",
+  "total_price": "2790.0",
+  "tax_price": "7.75",
+  "unit_price": "155.0",
+  "product_id": 10,
+  "product_options": [
+    {
+      "option_id": 25,
+      "sub_option_id": 152,
+      "option_name": "Size",
+      "option_type": "size",
+      "sub_option_name": "X-Small"
+    }
+  ],
+  "vendors": [
+    {
+      "id": 579,
+      "name": "The Willy Wonka Company",
+      "address1": "2010 Oompa-Loompa drive",
+      "address2": "",
+      "city": "Sweetstown",
+      "state": "Texas",
+      "zip_code": "99099",
+      "phone": "123123123123",
+      "email": "test@test.com",
+      "account_number": "account123123",
+      "asi_number": "asi123456"
+    }
+  ],
+  "logos": [{
+      "name": "fedex",
+      "charge": "10.0",
+      "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+      "supplier_id": "VENDOR123",
+      "location": {
+        "id": 4,
+        "name": "Top"
+      },
+      "decoration": {
+        "custom_text": "",
+        "font": "",
+        "size": {
+          "name": "Medium",
+          "price_modifier": "1.75",
+          "setup_charge": "25.0"
+        },
+        "color": {
+          "number": 1,
+          "price_modifier": "0.0",
+          "setup_charge": "0.0"
+        },
+        "colors": [
+          {
+            "color_name": "#00ff00",
+            "color_type": "hex",
+            "hex_value": "#00ff00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "cop",
+      "charge": null,
+      "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/763/11.png",
+      "supplier_id": null,
+      "location": {
+        "id": 5,
+        "name": "Right Chest"
+      },
+      "decoration": {
+        "custom_text": "",
+        "font": "",
+        "size": {
+          "name": "Medium",
+          "price_modifier": "1.75",
+          "setup_charge": "25.0"
+        },
+        "color": {
+          "number": 1,
+          "price_modifier": "0.0",
+          "setup_charge": "0.0"
+        },
+        "colors": [
+          {
+            "color_name": "#4e00ff",
+            "color_type": "hex",
+            "hex_value": "#4e00ff"
+          }
+        ]
+      }
+    }
+  ],
+  "product_personalizations": [
+    {
+      "title": "Enter Name Here",
+      "attributes": [
+        {
+          "key": "Name",
+          "value": ""
+        }
+      ],
+      "price_modifier": {
+        "modifier_type": "$",
+        "amount": "1.99"
+      }
+    }
+  ],
+  "decoration_method": {
+    "name": "Embroidery",
+    "price_modifier": "2.5",
+    "decorations": [
+      {
+        "location": "Top Left",
+        "logo": {
+          "name": "fedex",
+          "charge": "10.0",
+          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+        },
+        "custom_text": "",
+        "font": "",
+        "size": {
+          "name": "Medium",
+          "price_modifier": "1.75",
+          "setup_charge": "25.0"
+        },
+        "color": {
+          "number": 1,
+          "price_modifier": "0.0",
+          "setup_charge": "0.0"
+        },
+        "colors": [
+          {
+            "color_name": "#4e00ff",
+            "color_type": "hex",
+            "hex_value": "#4e00ff"
+          }
+        ]
+      }
+    ]
+  },
+  "gift_certificate": null,
++ "note": "Product note example"
+}
+```
+
+1. Added `note` to `product` and `line_item` json.
+
+Affected APIs:
+
+* /api/v2.6.0/products/:id
+* /api/v2.6.0/orders
+* /api/v2.6.0/orders/:order_id/line_items
+* /api/v2.6.0/orders/:order_id/line_items/:id
+
 ## 2.5.0
 
 > Changes 2.5.0
@@ -56,7 +278,7 @@
 }
 ```
 
-> /api/v2.2.0/products
+> /api/v2.5.0/products
 
 ```json
 {
@@ -124,7 +346,7 @@
 
 1. Added `new_product` to `products` json.
 2. Added `new_expires_at` to `products` json.
-3. Added ability to create image from `image_url` parameter in `image` and `sub_option` json 
+3. Added ability to create image from `image_url` parameter in `image` and `sub_option` json
 
 Affected APIs:
 
