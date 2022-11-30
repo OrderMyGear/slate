@@ -105,6 +105,7 @@ curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579?token=GXzAxWkkyY
   "avalara_tax_exemption_reason": "A",
   "balance_log": [
     {
+      "id": 1,
       "note": "note",
       "balance": "12.5",
       "action": "Set",
@@ -190,6 +191,7 @@ EOF
   "cuf_1": "helloworld",
   "balance_log": [
     {
+      "id": 1,
       "note": "note",
       "balance": "12.5",
       "action": "Set",
@@ -292,6 +294,7 @@ EOF
   "cuf_1": "12345678",
   "balance_log": [
     {
+      "id": 1,
       "note": "note",
       "balance": "12.5",
       "action": "Set",
@@ -373,16 +376,7 @@ curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579?token=GXzAxWkkyY
   "enable_sms_notifications": true,
   "avalara_tax_exemption_reason": "A",
   "last_edited_date": "2016-07-01T22:53:03-06:00",
-  "balance_log": [
-    {
-      "note": "note",
-      "balance": "12.5",
-      "action": "Set",
-      "amount": "12.5",
-      "adjusted_by": "User: admin (admin@brightstores.com)",
-      "created_at": "2022-11-24T14:49:45.000Z"
-    }
-  ]
+  "balance_log": []
 }
 ```
 
