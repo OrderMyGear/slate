@@ -102,7 +102,18 @@ curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579?token=GXzAxWkkyY
   "creation_date": "2015-11-22T10:00:00-06:00",
   "last_edited_date": "2016-07-01T22:53:03-06:00",
   "enable_sms_notifications": true,
-  "avalara_tax_exemption_reason": "A"
+  "avalara_tax_exemption_reason": "A",
+  "balance_log": [
+    {
+      "id": 1,
+      "note": "note",
+      "balance": "12.5",
+      "action": "Set",
+      "amount": "12.5",
+      "adjusted_by": "User: admin (admin@brightstores.com)",
+      "created_at": "2022-11-24T14:49:45.000Z"
+    }
+  ]
 }
 ```
 
@@ -138,6 +149,7 @@ curl "https://subdomain.bsites-staging.com/api/v2.6.0/users?token=GXzAxWkkyYLsES
     "title":"Support Leader",
     "groups":["Public"],
     "balance":12.5,
+    "balance_note":"note",
     "password":"12345678",
     "enable_sms_notifications":true,
     "dont_send_confirmation_email":false,
@@ -176,7 +188,18 @@ EOF
   "last_edited_date": "2016-07-01T22:53:03-06:00",
   "enable_sms_notifications": true,
   "avalara_tax_exemption_reason": "A",
-  "cuf_1": "helloworld"
+  "cuf_1": "helloworld",
+  "balance_log": [
+    {
+      "id": 1,
+      "note": "note",
+      "balance": "12.5",
+      "action": "Set",
+      "amount": "12.5",
+      "adjusted_by": "User: admin (admin@brightstores.com)",
+      "created_at": "2022-11-24T14:49:45.000Z"
+    }
+  ]
 }
 ```
 
@@ -199,6 +222,7 @@ Parameter | Description
 <div><strong>user[title] </strong></div><div>optional , nil allowed</div> | <div>Title</div><div>Must be a String</div>
 <div><strong>user[groups] </strong></div><div>optional , nil allowed</div> | <div>Assign groups</div><div>Must be an array of String</div>
 <div><strong>user[balance] </strong></div><div>optional , nil allowed</div> | <div>Balance</div><div>Must be a float</div>
+<div><strong>user[balance_note] </strong></div><div>optional , nil allowed</div> | <div>Balance Note</div><div>Must be a String</div>
 <div><strong>user[note] </strong></div><div>optional , nil allowed</div> | <div>Create comment</div><div>Must be a String</div>
 <div><strong>user[password] </strong></div><div>optional , nil allowed</div> | <div>Password</div><div>Must be a String</div>
 <div><strong>user[enable_sms_notifications] </strong></div><div>optional</div> | <div>SMS Notification</div><div>Must be one of: true, false, 1, 0</div>
@@ -229,6 +253,7 @@ curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579?token=GXzAxWkkyY
     "title":"Support Leader",
     "groups":["Public"],
     "balance":12.5,
+    "balance_note":"note",
     "password":"12345678",
     "enable_sms_notifications": true,
     "avalara_tax_exemption_reason": "A",
@@ -266,7 +291,18 @@ EOF
   "last_edited_date": "2016-07-01T22:53:03-06:00",
   "enable_sms_notifications": true,
   "avalara_tax_exemption_reason": "A",
-  "cuf_1": "12345678"
+  "cuf_1": "12345678",
+  "balance_log": [
+    {
+      "id": 1,
+      "note": "note",
+      "balance": "12.5",
+      "action": "Set",
+      "amount": "12.5",
+      "adjusted_by": "User: admin (admin@brightstores.com)",
+      "created_at": "2022-11-24T14:49:45.000Z"
+    }
+  ]
 }
 ```
 
@@ -295,6 +331,7 @@ Parameter | Description
 <div><strong>user[title] </strong></div><div>optional , nil allowed</div> | <div>Title</div><div>Must be a String</div>
 <div><strong>user[groups] </strong></div><div>optional , nil allowed</div> | <div>Assign groups</div><div>Must be an array of String</div>
 <div><strong>user[balance] </strong></div><div>optional , nil allowed</div> | <div>Balance</div><div>Must be a float</div>
+<div><strong>user[balance_note] </strong></div><div>optional , nil allowed</div> | <div>Balance Note</div><div>Must be a String</div>
 <div><strong>user[increase_balance] </strong></div><div>optional , nil allowed</div> | <div>Increase Balance</div><div>Must be a float</div>
 <div><strong>user[decrease_balance] </strong></div><div>optional , nil allowed</div> | <div>Decrease Balance</div><div>Must be a float</div>
 <div><strong>user[note] </strong></div><div>optional , nil allowed</div> | <div>Create comment</div><div>Must be a String</div>
@@ -339,6 +376,7 @@ curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579?token=GXzAxWkkyY
   "enable_sms_notifications": true,
   "avalara_tax_exemption_reason": "A",
   "last_edited_date": "2016-07-01T22:53:03-06:00",
+  "balance_log": []
 }
 ```
 
