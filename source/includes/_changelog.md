@@ -213,14 +213,92 @@
 }
 ```
 
-1. Added `note` to `product` and `line_item` json.
+> /api/v2.6.0/users/:id
+
+```json
+{
+  "id": 579,
+  ...
++ "balance_log": [
++   {
++     "id": 1,
++     "note": "note",
++     "balance": "12.5",
++     "action": "Set",
++     "amount": "12.5",
++     "adjusted_by": "User: admin (admin@brightstores.com)",
++     "created_at": "2022-11-24T14:49:45.000Z"
++   }
++ ]
+}
+```
+
+> /api/v2.6.0/users (new)
+
+```json
+{
+  "user": {
+    "username": "johndoe",
+    "first_name":"John",
+    "last_name":"Doe",
+    "active":true,
+    "email":"johndoe@email.com",
+    "timezone": "America/Denver",
+    "phone":"+1234567890",
+    "company":"BSI",
+    "title":"Support Leader",
+    "groups":["Public"],
+    "balance":12.5,
+  + "balance_note":"note",
+    "password":"12345678",
+    "enable_sms_notifications":true,
+    "dont_send_confirmation_email":false,
+    "avalara_tax_exemption_reason": "A",
+    "cuf_1": "helloworld"
+  }
+}
+```
+
+> /api/v2.6.0/users/:id (update)
+
+```json
+{
+  "user": {
+    "username": "johndoe",
+    "first_name":"John",
+    "last_name":"Doe",
+    "active":true,
+    "email":"johndoe@email.com",
+    "timezone": "America/Denver",
+    "phone":"+1234567890",
+    "company":"BSI",
+    "title":"Support Leader",
+    "groups":["Public"],
+    "balance":12.5,
+  + "balance_note":"note",
+    "password":"12345678",
+    "enable_sms_notifications": true,
+    "avalara_tax_exemption_reason": "A",
+    "cuf_1": "12345678"
+  }
+}
+```
+
+1) Added `note` to `product` and `line_item` json.
+
+  Affected APIs:
+
+  * /api/v2.6.0/products/:id
+  * /api/v2.6.0/orders
+  * /api/v2.6.0/orders/:order_id/line_items
+  * /api/v2.6.0/orders/:order_id/line_items/:id
+
+2) Added `balance_note` and `balance_log` to `user` json.
 
 Affected APIs:
 
-* /api/v2.6.0/products/:id
-* /api/v2.6.0/orders
-* /api/v2.6.0/orders/:order_id/line_items
-* /api/v2.6.0/orders/:order_id/line_items/:id
+* /api/v2.6.0/users/:id
+* /api/v2.6.0/users
 
 ## 2.5.0
 
