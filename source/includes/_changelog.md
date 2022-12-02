@@ -284,7 +284,7 @@
 }
 ```
 
-1) Added `note` to `product` and `line_item` json.
+1. Added `note` to `product` and `line_item` json.
 
   Affected APIs:
 
@@ -293,7 +293,7 @@
   * /api/v2.6.0/orders/:order_id/line_items
   * /api/v2.6.0/orders/:order_id/line_items/:id
 
-2) Added `balance_note` and `balance_log` to `user` json.
+2. Added `balance_note` and `balance_log` to `user` json.
 
 Affected APIs:
 
