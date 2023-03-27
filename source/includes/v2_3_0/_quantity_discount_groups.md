@@ -1,6 +1,8 @@
 #  Quantity discount groups
 
-## List of quantity discount groups
+## List quantity discount groups
+
+List all quantity discount groups under a specific product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discount_groups?token=GXzAxWkkyYLsESGQTU15"
@@ -13,20 +15,21 @@ curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discoun
   "enabled": true,
   "quantity_discount_groups": [
     {
-      id: 123,
-      name: 'Default',
-      type: 'fixed_price'
-      product_options: [
+      "id": 123,
+      "name": "Default",
+      "default": true,
+      "type": "fixed_price",
+      "product_options": [
         {
-          product_option_id: 1234,
-          sub_option_ids: [432, 654]
+          "product_option_id": 1234,
+          "sub_option_ids": [432, 654]
         },
         {
-          product_option_id: 4443,
-          sub_option_ids: [985, 765]
+          "product_option_id": 4443,
+          "sub_option_ids": [985, 765]
         }
       ],
-      discounts: [
+      "discounts": [
         {
           "quantity": 10,
           "modifier": 10.0
@@ -52,30 +55,33 @@ Parameter | Description
 <div><strong>product_id </strong></div><div>required</div> | <div>Product ID</div><div>Must be a number</div>
 
 
-## Show you a specific quantity discount group for a product based on the quantity discount ID you supply.
+## Show quantity discount group
+
+Show you a specific quantity discount group for a product based on the quantity discount group ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discount_groups/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
 
 ```json
 {
-  id: 123,
-  name: 'Default',
-  type: 'fixed_price'
-  product_options: [
+  "id": 123,
+  "name": "Default",
+  "default": true,
+  "type": "fixed_price",
+  "product_options": [
     {
-      product_option_id: 1234,
-      sub_option_ids: [432, 654]
+      "product_option_id": 1234,
+      "sub_option_ids": [432, 654]
     },
     {
-      product_option_id: 4443,
-      sub_option_ids: [985, 765]
+      "product_option_id": 4443,
+      "sub_option_ids": [985, 765]
     }
   ],
-  discounts: [
+  "discounts": [
     {
       "quantity": 10,
       "modifier": 10.0
@@ -100,7 +106,9 @@ Parameter | Description
 <div><strong>id </strong></div><div>required</div> | <div>Quantity discount ID</div><div>Must be a number</div>
 
 
-## Create a new quantity discount group for a specific product based on the product ID you supply.
+## Create quantity discount group
+
+Create a new quantity discount group for a specific product based on the product ID you supply.
 
 ```shell
 curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discount_groups?token=GXzAxWkkyYLsESGQTU15" \
@@ -149,6 +157,7 @@ EOF
   "type": "percentage",
   "id": 579,
   "name": "apitest",
+  "default": false,
   "product_options": [
     {
       "product_option_id": 85315,
@@ -204,10 +213,12 @@ Parameter | Description
 <div><strong>quantity_discount_group[discounts][modifier] </strong></div><div>optional , nil allowed</div> | <div>Must be a float</div>
 
 
-## Update information for a specific quantity discount group on a product based on the quantity discount ID you supply.
+## Update quantity discount group
+
+Update information for a specific quantity discount group on a product based on the quantity discount ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discount_groups/579?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -226,6 +237,7 @@ EOF
   "type": "percentage",
   "id": 579,
   "name": "apitest2",
+  "default": false,
   "product_options": [
     {
       "product_option_id": 85315,
@@ -282,10 +294,12 @@ Parameter | Description
 <div><strong>quantity_discount_group[discounts][modifier] </strong></div><div>optional , nil allowed</div> | <div>Must be a float</div>
 
 
-## Delete a specific quantity discount group on a product based on the quantity discount ID you supply.
+## Delete quantity discount group
+
+Delete a specific quantity discount group on a product based on the quantity discount group ID you supply.
 
 ```shell
-curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discounts/579?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discount_groups/579?token=GXzAxWkkyYLsESGQTU15" \
   -X DELETE
 ```
 
@@ -296,6 +310,7 @@ curl "https://subdomain.mybrightsites.com/api/v2.3.0/products/1/quantity_discoun
     "type": "percentage",
     "id": 579,
     "name": "apitest",
+    "default": false,
     "product_options": [],
     "discounts": []
 }
