@@ -163,7 +163,6 @@ curl "https://subdomain.mybrightsites.com/api/v2.5.0/products/579?token=GXzAxWkk
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "vendor_inventory_enabled": false,
   "inventory_vendor_id": 2354,
@@ -230,7 +229,6 @@ curl "https://subdomain.mybrightsites.com/api/v2.5.0/products?token=GXzAxWkkyYLs
     "enable_product_personalization": false,
     "enable_inventory": false,
     "enable_logo_locations": false,
-    "enable_decoration_methods": false,
     "primary_category_id": 36,
     "vendor_inventory_enabled": false,
     "inventory_vendor_id": 2354
@@ -291,7 +289,6 @@ EOF
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "tax_code": "12345",,
   "vendor_inventory_enabled": false,
@@ -348,7 +345,6 @@ Parameter | Description
 <div><strong>product[enable_inventory] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable inventory</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[enable_product_options] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable product Options</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[enable_logo_locations] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable product logo locations</div><div>Must be one of: true, false, 1, 0</div>
-<div><strong>product[enable_decoration_methods] </strong></div><div>optional , nil allowed</div> | <div>Enabled/Disable product decoration methods</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[vendor_inventory_enabled] </strong></div><div>optional</div> | <div>Enabled/Disable vendor inventory</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[inventory_vendor_id] </strong></div><div>optional , nil allowed</div> | <div>Set supplier for you inventory</div><div>Must be a number</div>
 
@@ -458,7 +454,6 @@ EOF
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "tax_code": "12345",
   "vendor_inventory_enabled": false,
@@ -521,7 +516,6 @@ Parameter | Description
 <div><strong>product[enable_inventory] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable inventory</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[enable_product_options] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable product Options</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[enable_logo_locations] </strong></div><div>optional , nil allowed</div> | <div>Enable/Disable product logo locations</div><div>Must be one of: true, false, 1, 0</div>
-<div><strong>product[enable_decoration_methods] </strong></div><div>optional , nil allowed</div> | <div>Enabled/Disable product decoration methods</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[vendor_inventory_enabled] </strong></div><div>optional</div> | <div>Enabled/Disable vendor inventory</div><div>Must be one of: true, false, 1, 0</div>
 <div><strong>product[inventory_vendor_id] </strong></div><div>optional , nil allowed</div> | <div>Set supplier for you inventory</div><div>Must be a number</div>
 
@@ -622,7 +616,6 @@ curl "https://subdomain.mybrightsites.com/api/v2.5.0/products/579?token=GXzAxWkk
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "tax_code": "12345",
   "vendor_inventory_enabled": false,

@@ -1,6 +1,5 @@
 No examples: List line items
 No examples: Show line item
-No params: List of decoration methods for a product
 No params: List of product images
 No examples: Update product image
 No params: List of inventories for product

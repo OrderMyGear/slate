@@ -44,7 +44,6 @@
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "tax_code": "12345",
   "vendor_inventory_enabled": false,
@@ -105,27 +104,6 @@
       "location": {
         "id": 4,
         "name": "Top"
-      },
-      "decoration": {
-        "custom_text": "",
-        "font": "",
-        "size": {
-          "name": "Medium",
-          "price_modifier": "1.75",
-          "setup_charge": "25.0"
-        },
-        "color": {
-          "number": 1,
-          "price_modifier": "0.0",
-          "setup_charge": "0.0"
-        },
-        "colors": [
-          {
-            "color_name": "#00ff00",
-            "color_type": "hex",
-            "hex_value": "#00ff00"
-          }
-        ]
       }
     },
     {
@@ -136,27 +114,6 @@
       "location": {
         "id": 5,
         "name": "Right Chest"
-      },
-      "decoration": {
-        "custom_text": "",
-        "font": "",
-        "size": {
-          "name": "Medium",
-          "price_modifier": "1.75",
-          "setup_charge": "25.0"
-        },
-        "color": {
-          "number": 1,
-          "price_modifier": "0.0",
-          "setup_charge": "0.0"
-        },
-        "colors": [
-          {
-            "color_name": "#4e00ff",
-            "color_type": "hex",
-            "hex_value": "#4e00ff"
-          }
-        ]
       }
     }
   ],
@@ -175,39 +132,6 @@
       }
     }
   ],
-  "decoration_method": {
-    "name": "Embroidery",
-    "price_modifier": "2.5",
-    "decorations": [
-      {
-        "location": "Top Left",
-        "logo": {
-          "name": "fedex",
-          "charge": "10.0",
-          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
-        },
-        "custom_text": "",
-        "font": "",
-        "size": {
-          "name": "Medium",
-          "price_modifier": "1.75",
-          "setup_charge": "25.0"
-        },
-        "color": {
-          "number": 1,
-          "price_modifier": "0.0",
-          "setup_charge": "0.0"
-        },
-        "colors": [
-          {
-            "color_name": "#4e00ff",
-            "color_type": "hex",
-            "hex_value": "#4e00ff"
-          }
-        ]
-      }
-    ]
-  },
   "gift_certificate": null,
 + "note": "Product note example"
 }
@@ -344,7 +268,6 @@ Affected APIs:
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "tax_code": "12345",
   "vendor_inventory_enabled": false,
@@ -641,27 +564,6 @@ Affected APIs:
           "location": {
             "id": 4,
             "name": "Top"
-          },
-          "decoration": {
-            "custom_text": "",
-            "font": "",
-            "size": {
-              "name": "Medium",
-              "price_modifier": "1.75",
-              "setup_charge": "25.0"
-            },
-            "color": {
-              "number": 1,
-              "price_modifier": "0.0",
-              "setup_charge": "0.0"
-            },
-            "colors": [
-              {
-                "color_name": "#00ff00",
-                "color_type": "hex",
-                "hex_value": "#00ff00"
-              }
-            ]
           }
         },
         {
@@ -672,27 +574,6 @@ Affected APIs:
           "location": {
             "id": 5,
             "name": "Right Chest"
-          },
-          "decoration": {
-            "custom_text": "",
-            "font": "",
-            "size": {
-              "name": "Medium",
-              "price_modifier": "1.75",
-              "setup_charge": "25.0"
-            },
-            "color": {
-              "number": 1,
-              "price_modifier": "0.0",
-              "setup_charge": "0.0"
-            },
-            "colors": [
-              {
-                "color_name": "#4e00ff",
-                "color_type": "hex",
-                "hex_value": "#4e00ff"
-              }
-            ]
           }
         }
       ],
@@ -711,39 +592,6 @@ Affected APIs:
           }
         }
       ],
-      "decoration_method": {
-        "name": "Embroidery",
-        "price_modifier": "2.5",
-+       "decorations": [
-+         {
-+           "location": "Top Left",
-+           "logo": {
-+             "name": "fedex",
-+             "charge": "10.0",
-+             "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/01-01-2021/123/fedex.png",
-+           },
-+           "custom_text": "",
-+           "font": "",
-+           "size": {
-+             "name": "Medium",
-+             "price_modifier": "1.75",
-+             "setup_charge": "25.0"
-+           },
-+           "color": {
-+             "number": 1,
-+             "price_modifier": "0.0",
-+             "setup_charge": "0.0"
-+           },
-+           "colors": [
-+             {
-+               "color_name": "#4e00ff",
-+               "color_type": "hex",
-+               "hex_value": "#4e00ff"
-+             }
-+           ]
-+         }
-+       ]
-      },
       "gift_certificate": null,
     },
     {
@@ -764,7 +612,6 @@ Affected APIs:
       "product_options": [],
       "logos": [],
       "product_personalizations": [],
-      "decoration_method": null,
       "gift_certificate": {
         "first_name": "John",
         "last_name": "Doe",
@@ -880,7 +727,6 @@ Affected APIs:
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "tax_code": "12345",
 + "vendor_inventory_enabled": false,
@@ -893,7 +739,6 @@ Affected APIs:
 1. Added `vendor_inventory_enabled` to `products` json
 2. Added `inventory_vendor_id` to `products` json
 3. Added [Product PromoStandards](#product-promostandards) endpoint
-4. Added `decorations` under `decoration_method` to `order` show json
 
 Affected APIs:
 
@@ -987,7 +832,6 @@ Added `origin_address_id` to `products` json
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "created_at": "2016-03-29T22:53:03-06:00",
   "updated_at": "2016-03-29T22:53:03-06:00",
@@ -1268,7 +1112,6 @@ Affected APIs:
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "created_at": "2016-03-29T22:53:03-06:00",
   "updated_at": "2016-03-29T22:53:03-06:00",
@@ -1432,11 +1275,9 @@ Affected APIs:
           "image_url": "/uploads/website/line_item_logo/image/03-25-2019/838/t-shirt.png",
           "supplier_id": null,
           "location": null,
-          "decoration": null
         }
       ],
       "product_personalizations": [],
-      "decoration_method": null,
       "gift_certificate": null,
       "vendors": [
         {
@@ -1604,7 +1445,6 @@ Starting with v2.0.0 we're using UTC as the default time zone.
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "last_edited_date": "2016-03-29T22:53:03-06:00",
   "tax_code": "12345"
@@ -1752,12 +1592,10 @@ Affected APIs:
           "image_url": "/uploads/website/line_item_logo/image/03-25-2019/838/t-shirt.png",
           "supplier_id": null,
           "location": null,
-          "decoration": null
         }
       ],
       "product_personalizations": [],
       "split_items": [],
-      "decoration_method": null,
       "gift_certificate": null,
       "vendors": [
         {
@@ -2001,7 +1839,6 @@ Affected APIs:
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "last_edited_date": "2016-03-29",
 }
@@ -2092,7 +1929,6 @@ Affected APIs:
 +     ],
       "product_personalizations": [],
       "split_items":[],
-      "decoration_method": null,
       "gift_certificate": null,
     }
   ],
@@ -2228,24 +2064,6 @@ Affected APIs:
 
 > Changes 1.1.2:
 
-> "decoration" is a part of /api/v1.1.2/orders/:order_id
-
-```json
-
-{
-  "decoration": {
-    "custom_text": "",
-    "font": "Playfair Display",
-    "size": null,
-    "color": null,
-    "colors": [],
-+   "font_style": "bold",
-+   "font_decoration": "Underline",
-+   "font_modifier": "Lowercase"
-  }
-}
-```
-
 > /api/v1.1.2/orders/:order_id/line_items/:line_item_id
 
 ```json
@@ -2267,7 +2085,6 @@ Affected APIs:
   "logos": [],
   "product_personalizations": [],
   "split_items": [],
-  "decoration_method": null,
 + "gift_certificate": {
 +   "first_name": "",
 +   "last_name": "",
@@ -2280,8 +2097,7 @@ Affected APIs:
 }
 ```
 
-1. Added `font_style`, `font_decoration`, `font_modifier` to `decoration` json
-2. Added `gift_certificate` to `line_item` json
+1. Added `gift_certificate` to `line_item` json
 
 Affected APIs:
 
