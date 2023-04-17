@@ -114,7 +114,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/products/579?token=GXzAxWkk
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "last_edited_date": "2016-03-29T22:53:03-06:00"
 }
@@ -174,7 +173,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/products?token=GXzAxWkkyYLs
     "enable_product_personalization": false,
     "enable_inventory": false,
     "enable_logo_locations": false,
-    "enable_decoration_methods": false,
     "primary_category_id": 36
   }
 }
@@ -227,7 +225,6 @@ EOF
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "last_edited_date": "2016-03-29"
 }
@@ -276,7 +273,6 @@ Parameter | Description
 <div><strong>product[enable_inventory] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable inventory</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>product[enable_product_options] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product Options</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>product[enable_logo_locations] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product logo locations</div><div> Must be one of: true, false, 1, 0 </div>
-<div><strong>product[enable_decoration_methods] </strong></div><div> optional , nil allowed </div> | <div>Enabled/Disable product decoration methods</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Update product
@@ -342,7 +338,6 @@ EOF
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "last_edited_date": "2016-03-29"
 }
@@ -398,7 +393,6 @@ Parameter | Description
 <div><strong>product[enable_inventory] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable inventory</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>product[enable_product_options] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product Options</div><div> Must be one of: true, false, 1, 0 </div>
 <div><strong>product[enable_logo_locations] </strong></div><div> optional , nil allowed </div> | <div>Enable/Disable product logo locations</div><div> Must be one of: true, false, 1, 0 </div>
-<div><strong>product[enable_decoration_methods] </strong></div><div> optional , nil allowed </div> | <div>Enabled/Disable product decoration methods</div><div> Must be one of: true, false, 1, 0 </div>
 
 
 ## Delete product
@@ -456,7 +450,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.1/products/579?token=GXzAxWkk
   "enable_product_personalization": false,
   "enable_inventory": false,
   "enable_logo_locations": false,
-  "enable_decoration_methods": false,
   "primary_category_id": 36,
   "last_edited_date": "2016-03-29"
 }

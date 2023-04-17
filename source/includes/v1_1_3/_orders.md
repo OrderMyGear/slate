@@ -190,27 +190,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1?token=GXzAxWkkyYLs
           "location": {
             "id": 4,
             "name": "Top"
-          },
-          "decoration": {
-            "custom_text": "",
-            "font": "",
-            "size": {
-              "name": "Medium",
-              "price_modifier": "1.75",
-              "setup_charge": "25.0"
-            },
-            "color": {
-              "number": 1,
-              "price_modifier": "0.0",
-              "setup_charge": "0.0"
-            },
-            "colors": [
-              {
-                "color_name": "#00ff00",
-                "color_type": "hex",
-                "hex_value": "#00ff00"
-              }
-            ]
           }
         },
         {
@@ -220,27 +199,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1?token=GXzAxWkkyYLs
           "location": {
             "id": 5,
             "name": "Right Chest"
-          },
-          "decoration": {
-            "custom_text": "",
-            "font": "",
-            "size": {
-              "name": "Medium",
-              "price_modifier": "1.75",
-              "setup_charge": "25.0"
-            },
-            "color": {
-              "number": 1,
-              "price_modifier": "0.0",
-              "setup_charge": "0.0"
-            },
-            "colors": [
-              {
-                "color_name": "#4e00ff",
-                "color_type": "hex",
-                "hex_value": "#4e00ff"
-              }
-            ]
           }
         }
       ],
@@ -259,10 +217,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1?token=GXzAxWkkyYLs
           }
         }
       ],
-      "decoration_method": {
-        "name": "Embroidery",
-        "price_modifier": "2.5"
-      },
       "gift_certificate": null,
     },
     {
@@ -282,7 +236,6 @@ curl "https://subdomain.mybrightsites.com/api/v1.1.3/orders/1?token=GXzAxWkkyYLs
       "product_options": [],
       "logos": [],
       "product_personalizations": [],
-      "decoration_method": null,
       "gift_certificate": {
         "first_name": "John",
         "last_name": "Doe",
@@ -524,8 +477,7 @@ EOF
           "location": {
             "id": 4,
             "name": "Top"
-          },
-          "decoration": null
+          }
         },
         {
           "name": "cop",
@@ -534,8 +486,7 @@ EOF
           "location": {
             "id": 5,
             "name": "Right Chest"
-          },
-          "decoration": null
+          }
         }
       ],
       "product_personalizations": [
@@ -552,8 +503,7 @@ EOF
             "amount": "1.99"
           }
         }
-      ],
-      "decoration_method": null
+      ]
     }
   ],
   "coupons_adjustments": [],
