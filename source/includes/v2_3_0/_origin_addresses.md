@@ -6,7 +6,7 @@ List all origin addresses in the store. Keep in mind, the response will return u
 to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.3.0/origin_addresses?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v2.3.0/origin_addresses?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:

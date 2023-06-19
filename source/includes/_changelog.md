@@ -1,5 +1,42 @@
 # Changelog
 
+## 2.6.1
+
+> Changes 2.6.1
+
+> /api/v2.6.1/users
+
+```shell
+curl "https://subdomain.mybrightsites.com/api/v2.6.1/users?token=GXzAxWkkyYLsESGQTU15&email=john@example.com"
+```
+```json
+{
+  "users": [
+    {
+      "id": 579,
+      "name": "John Doe",
+      "username": "johndoe",
+    + "email": "john@example.com",
+      "balance": "12.5",
+      "active": true,
+      "creation_date": "2015-11-22T10:00:00-06:00",
+      "last_edited_date": "2016-07-01T22:53:03-06:00"
+    }
+  ],
+  "meta": {
+    "total": 1,
+    "offset": 0,
+    "limit": 0
+  }
+}
+```
+
+1. Added `email` to `users` json. Also added ability to filter `users` by email address.
+
+  Affected APIs:
+
+  * /api/v2.6.1/users
+
 ## 2.6.0
 
 > Changes 2.6.0
@@ -1719,7 +1756,7 @@ Affected APIs:
   "status": "new",
   "site_id": 178,
   "site_name": "my website",
-  "site_url": "http://mywebsite.bsites-staging.com",
+  "site_url": "http://mywebsite.mybrightsites.com",
 + "custom_store_id": "mycustomstore",
   "organization_name": "Super organization",
   "organization_id": 49,
@@ -1881,7 +1918,7 @@ Affected APIs:
   "status": "new",
 + "site_id": 178,
 + "site_name": "my website",
-+ "site_url": "http://mywebsite.bsites-staging.com",
++ "site_url": "http://mywebsite.mybrightsites.com",
 + "organization_name": "Super organization",
 + "organization_id": 49,
   "custom_data_collections": [],
@@ -1908,7 +1945,7 @@ Affected APIs:
         {
           "name": "fedex",
           "charge": "10.0",
-          "image_url": "https://assets.bsites-staging.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
+          "image_url": "https://assets.mybrightsites.com/uploads/website/line_item_logo/image/05-01-2018/762/fedex.png",
 +         "supplier_id": "VENDOR123"
          }
       ],

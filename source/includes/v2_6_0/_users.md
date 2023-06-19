@@ -6,7 +6,7 @@ List all users in the store. Keep in mind, the response will return up to 500 re
 to use "per_page" and "page" URL parameters to see all the records.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.6.0/users?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v2.6.0/users?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -53,7 +53,7 @@ Parameter | Description
 Show you the specific information for a user account based on the user ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v2.6.0/users/579?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -132,7 +132,7 @@ Parameter | Description
 Create a brand new user account in the store.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.6.0/users?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.6.0/users?token=GXzAxWkkyYLsESGQTU15" \
   -X POST \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -236,7 +236,7 @@ Parameter | Description
 Update information for a specific user account based on the user ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.6.0/users/579?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -346,7 +346,7 @@ Parameter | Description
 Delete a specific user account based on the user ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.6.0/users/579?token=GXzAxWkkyYLsESGQTU15" \
   -X DELETE
 ```
 

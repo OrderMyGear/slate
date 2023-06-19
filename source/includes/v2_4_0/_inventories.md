@@ -8,7 +8,7 @@ Keep in mind, the response will return up to 500 records on a single page and yo
 This request will skip vendor's inventory levels and only return the store's inventory levels.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.4.0/inventories?token=GXzAxWkkyYLsESGQTU15"
+curl "https://subdomain.mybrightsites.com/api/v2.4.0/inventories?token=GXzAxWkkyYLsESGQTU15"
 ```
 
 > The above request returns JSON structured like this:
@@ -86,7 +86,7 @@ Update the inventory levels based on the product ID you supply. You can provide 
 You can't update inventory levels for a product that has a vendor's inventory enabled.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.4.0/inventories/44371/batch_update?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.4.0/inventories/44371/batch_update?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'

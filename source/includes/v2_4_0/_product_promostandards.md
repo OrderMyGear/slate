@@ -55,7 +55,7 @@ Parameter | Description
 Update promostandards items based on the product ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.4.0/products/22287/promostandards/batch_update?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.4.0/products/22287/promostandards/batch_update?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'

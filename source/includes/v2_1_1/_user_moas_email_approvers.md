@@ -38,7 +38,7 @@ Parameter | Description
 Create a new MOAS e-mail approver for the user.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.1.1/users/123/moas_email_approvers?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.1.1/users/123/moas_email_approvers?token=GXzAxWkkyYLsESGQTU15" \
   -X POST \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -79,7 +79,7 @@ Parameter | Description
 Update specific MOAS e-mail approver for a user account based on the user ID and MOAS approver ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.1.1/users/579/moas_email_approvers/123?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.1.1/users/579/moas_email_approvers/123?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -121,7 +121,7 @@ Parameter | Description
 Delete a specific MOAS approver for a user account based on the user ID and MOAS approver ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.1.1/users/579/moas_email_approvers/123?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.1.1/users/579/moas_email_approvers/123?token=GXzAxWkkyYLsESGQTU15" \
   -X DELETE
 ```
 

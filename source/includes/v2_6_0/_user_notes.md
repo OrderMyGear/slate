@@ -39,7 +39,7 @@ Parameter | Description
 Create a new note for the user.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/123/notes?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.6.0/users/123/notes?token=GXzAxWkkyYLsESGQTU15" \
   -X POST \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -82,7 +82,7 @@ Parameter | Description
 Update specific user note for a user account based on the user ID and note ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579/notes/123?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.6.0/users/579/notes/123?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -127,7 +127,7 @@ Parameter | Description
 Delete a specific user note for a user account based on the user ID and note ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.6.0/users/579/notes/123?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.6.0/users/579/notes/123?token=GXzAxWkkyYLsESGQTU15" \
   -X DELETE
 ```
 

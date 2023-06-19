@@ -39,7 +39,7 @@ Parameter | Description
 Create a new MOAS sms approver for the user.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.5.0/users/123/moas_sms_approvers?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.5.0/users/123/moas_sms_approvers?token=GXzAxWkkyYLsESGQTU15" \
   -X POST \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -80,7 +80,7 @@ Parameter | Description
 Update specific MOAS sms approver for a user account based on the user ID and MOAS approver ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.5.0/users/579/moas_sms_approvers/123?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.5.0/users/579/moas_sms_approvers/123?token=GXzAxWkkyYLsESGQTU15" \
   -X PUT \
   -H "Content-Type: application/json" \
   -d @- <<'EOF'
@@ -122,7 +122,7 @@ Parameter | Description
 Delete a specific MOAS approver for a user account based on the user ID and MOAS approver ID you supply.
 
 ```shell
-curl "https://subdomain.bsites-staging.com/api/v2.5.0/users/579/moas_sms_approvers/123?token=GXzAxWkkyYLsESGQTU15" \
+curl "https://subdomain.mybrightsites.com/api/v2.5.0/users/579/moas_sms_approvers/123?token=GXzAxWkkyYLsESGQTU15" \
   -X DELETE
 ```
 
