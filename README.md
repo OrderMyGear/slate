@@ -2,7 +2,7 @@ Deploy
 ----------
 ```shell
 bundle exec middleman build --clean
-gsutil rsync -r -d build gs://docs.mybrightsites.com
+gsutil rsync -r -d build gs://docs.bsites-staging.com
 gsutil rsync -r -d build gs://docs.mybrightsites.com
 gsutil rsync -r -d build gs://docs.shopepromos.com
 ```
