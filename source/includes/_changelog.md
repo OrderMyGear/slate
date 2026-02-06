@@ -1,5 +1,100 @@
 # Changelog
 
+## 2.7.0
+
+1. Added `one_source_items` to `product` json. This array exposes GTIN/UPC values and additional metadata for products sourced from OneSource catalog.
+
+> Changes 2.7.0
+
+Affected APIs:
+
+> /api/v2.7.0/products/:id
+
+**Note:** The `one_source_items` field is only present for products with `origin: "one_source"`. For products with other origins (e.g., `local`, `promostandards`), this field is not included in the response.
+
+```json
+{
+  "name": "Chocolate",
+  "sku": "choc-1",
+  "sku_separator": "-",
+  "internal_id": "431234",
+  "origin_address_id": 2,
+  "base_price": "10",
+  "retail_price": "10",
+  "cost": "10",
+  "setup_charge": "10",
+  "minimum_order_quantity": 10,
+  "maximum_order_quantity": 20,
+  "weight": "10",
+  "width": "10",
+  "height": "10",
+  "length": "10",
+  "shipping_modifier": "10",
+  "meta_title": "choco",
+  "meta_description": "tasty choco",
+  "meta_keywords": "tasty chocolate wonka",
+  "custom_url": "chocolate",
+  "description": "Very Tasty Dark Chocolate",
+  "active": true,
+  "featured": false,
+  "tax_exempt": false,
+  "shipping_exempt": false,
+  "categories": [],
+  "vendors": [],
+  "options": [],
+  "sub_options": [],
+  "inventories": [],
+  "enable_quantity_discount": false,
+  "related_products_type": "auto",
+  "enable_related_products": false,
+  "enable_product_personalization": false,
+  "enable_inventory": false,
+  "enable_logo_locations": false,
+  "primary_category_id": 36,
+  "tax_code": "12345",
+  "vendor_inventory_enabled": false,
+  "inventory_vendor_id": 2354,
+  "new_product": false,
+  "new_expires_at": "2023-01-01",
+  "note": "This is my favourite chocolate",
++ "one_source_items": [
+    {
+      "id": 1,
+      "part_id": "1327421",
+      "gtin": "00614141234567",
+      "unspsc": "50202306",
+      "color_id": 10,
+      "size_id": 20,
+      "track_inventory": true,
+      "allow_negative_inventory": true
+    },
+    {
+      "id": 2,
+      "part_id": "1327422",
+      "gtin": "00614141234574",
+      "unspsc": "50202306",
+      "color_id": 11,
+      "size_id": 20,
+      "track_inventory": true,
+      "allow_negative_inventory": true
+    },
+    {
+      "id": 3,
+      "part_id": "1327431",
+      "gtin": null,
+      "unspsc": null,
+      "color_id": 12,
+      "size_id": 20,
+      "track_inventory": true,
+      "allow_negative_inventory": true
+    }
+  ],
+  "created_at": "2016-03-29T22:53:03-06:00",
+  "updated_at": "2016-03-29T22:53:03-06:00",
+}
+```
+
+
 ## 2.6.1
 
 > Changes 2.6.1
