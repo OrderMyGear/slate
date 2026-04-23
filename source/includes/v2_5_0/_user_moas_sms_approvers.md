@@ -102,7 +102,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v2.5.0/users/:user_id/moas_sms_approvers/:id`
+`PUT|PATCH /api/v2.5.0/users/:user_id/moas_sms_approvers/:id`
 
 ### Query Parameters
 

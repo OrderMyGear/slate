@@ -269,7 +269,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v1.1.2/products/:product_id/quantity_discount_groups/:id`
+`PUT|PATCH /api/v1.1.2/products/:product_id/quantity_discount_groups/:id`
 
 ### Query Parameters
 

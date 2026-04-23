@@ -225,7 +225,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v2.0.0/users/:id`
+`PUT|PATCH /api/v2.0.0/users/:id`
 
 ### Query Parameters
 

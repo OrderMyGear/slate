@@ -177,7 +177,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v1.1.7/products/:product_id/inventories/:id`
+`PUT|PATCH /api/v1.1.7/products/:product_id/inventories/:id`
 
 ### Query Parameters
 

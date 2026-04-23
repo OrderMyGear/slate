@@ -99,7 +99,7 @@ Update information for a specific quantity discount on a product based on the qu
 
 ### HTTP Request
 
-`PUT /api/v2.2.0/products/:product_id/quantity_discounts/:id`
+`PUT|PATCH /api/v2.2.0/products/:product_id/quantity_discounts/:id`
 
 ### Query Parameters
 

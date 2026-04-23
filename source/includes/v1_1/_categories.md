@@ -173,7 +173,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v1.1/categories/:id`
+`PUT|PATCH /api/v1.1/categories/:id`
 
 ### Query Parameters
 

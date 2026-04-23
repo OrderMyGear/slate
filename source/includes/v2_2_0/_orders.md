@@ -590,7 +590,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v2.2.0/orders/:id`
+`PUT|PATCH /api/v2.2.0/orders/:id`
 
 ### Query Parameters
 
@@ -666,7 +666,7 @@ curl "https://subdomain.mybrightsites.com/api/v2.2.0/orders/1/cancel?token=GXzAx
 
 ### HTTP Request
 
-`PUT /api/v2.2.0/orders/:id/cancel`
+`PUT|PATCH /api/v2.2.0/orders/:id/cancel`
 
 ### Query Parameters
 

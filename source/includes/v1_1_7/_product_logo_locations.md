@@ -69,7 +69,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v1.1.7/products/:product_id/logo_locations/:id`
+`PUT|PATCH /api/v1.1.7/products/:product_id/logo_locations/:id`
 
 ### Query Parameters
 

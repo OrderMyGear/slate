@@ -101,7 +101,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v2.2.0/users/:user_id/moas_email_approvers/:id`
+`PUT|PATCH /api/v2.2.0/users/:user_id/moas_email_approvers/:id`
 
 ### Query Parameters
 

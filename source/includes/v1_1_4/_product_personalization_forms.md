@@ -162,7 +162,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v1.1.4/products/:product_id/personalization_forms/:id`
+`PUT|PATCH /api/v1.1.4/products/:product_id/personalization_forms/:id`
 
 ### Query Parameters
 

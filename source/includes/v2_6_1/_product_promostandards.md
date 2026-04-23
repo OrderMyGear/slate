@@ -113,7 +113,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v2.6.1/products/:product_id/promostandards/batch_update`
+`PUT|PATCH /api/v2.6.1/products/:product_id/promostandards/batch_update`
 
 ### Query Parameters
 

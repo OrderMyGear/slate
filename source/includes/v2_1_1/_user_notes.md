@@ -105,7 +105,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v2.1.1/users/:user_id/notes/:id`
+`PUT|PATCH /api/v2.1.1/users/:user_id/notes/:id`
 
 ### Query Parameters
 

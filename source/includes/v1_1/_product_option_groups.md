@@ -148,7 +148,7 @@ EOF
 
 ### HTTP Request
 
-`PUT /api/v1.1/products/:product_id/option_groups/:id`
+`PUT|PATCH /api/v1.1/products/:product_id/option_groups/:id`
 
 ### Query Parameters
 
