@@ -2,7 +2,9 @@
 
 ## 2.7.0
 
-1. Added `one_source_items` to `product` json. This array exposes GTIN/UPC values and additional metadata for products sourced from OneSource catalog.
+1. **Deprecation notice:** Authenticating via the `?token=your_api_token` query parameter is now deprecated and will be removed in a future release. All endpoints continue to accept the query parameter for now, but clients should migrate to the `X-API-TOKEN: your_api_token` HTTP header. See [Authentication](#authentication) for details.
+
+2. Added `one_source_items` to `product` json. This array exposes GTIN/UPC values and additional metadata for products sourced from OneSource catalog.
 
 > Changes 2.7.0
 
